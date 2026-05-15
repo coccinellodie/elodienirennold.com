@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elodie Nirennold | Ostéo · Hypnose · Coaching Intégratif</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --brun:        #977A5C;
+  --brun-fonce:  #4C320D;
+  --brun-moyen:  #8B572A;
+  --vert:        #8BA288;
+  --vert-sapin:  #243D1F;
+  --rose:        #B69A94;
+  --rose-clair:  #CEA39B;
+  --rose-pale:   #EDD8D4;
+  --rose-vapeur: #F5EDEB;
+  --creme:       #F7F1E8;
+  --creme-fonce: #EDE3D5;
+  --blanc:       #FDFAF6;
+}
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+
+body {
+  font-family:'Jost', sans-serif;
+  font-weight:300;
+  background:var(--blanc);
+  color:var(--brun-fonce);
+  overflow-x:hidden;
+}
+
+::-webkit-scrollbar { width:3px; }
+::-webkit-scrollbar-track { background:var(--creme); }
+::-webkit-scrollbar-thumb { background:var(--rose); border-radius:2px; }
+
+/* ─── NAV ─── */
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:200;
+  display:flex; justify-content:space-between; align-items:center;
+  padding:1.4rem 5rem;
+  background:rgba(253,250,246,0.94);
+  backdrop-filter:blur(24px);
+  border-bottom:1px solid rgba(182,154,148,0.14);
+}
+.nav-logo {
+  font-family:'Cormorant Garamond', serif;
+  font-weight:400; font-size:0.95rem;
+  letter-spacing:0.22em; text-transform:uppercase;
+  color:var(--brun-fonce); text-decoration:none;
+  display:flex; align-items:center; gap:0.9rem;
+}
+.nav-logo-coccinelle {
+  width:28px; height:28px;
+  background:url('/mnt/user-data/uploads/IMG_0616.png') center/cover;
+  border-radius:50%;
+  flex-shrink:0;
+  opacity:0.85;
+}
+.nav-links { display:flex; gap:2.8rem; list-style:none; }
+.nav-links a {
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.7rem; letter-spacing:0.22em; text-transform:uppercase;
+  color:var(--brun); text-decoration:none; transition:color 0.3s;
+}
+.nav-links a:hover { color:var(--brun-fonce); }
+.nav-cta {
+  font-family:'Jost', sans-serif; font-weight:400;
+  font-size:0.7rem; letter-spacing:0.18em; text-transform:uppercase;
+  color:var(--blanc); background:var(--vert-sapin);
+  padding:0.75rem 1.8rem; border-radius:50px;
+  text-decoration:none; transition:background 0.35s, transform 0.2s;
+  box-shadow:0 4px 20px rgba(36,61,31,0.16);
+}
+.nav-cta:hover { background:var(--brun-fonce); transform:translateY(-1px); }
+
+/* ─── HERO ─── */
+.hero {
+  min-height:100vh;
+  display:grid; grid-template-columns:52% 48%;
+  position:relative; overflow:hidden;
+}
+.hero::before {
+  content:'';
+  position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse at 40% 60%, rgba(245,237,235,0.9) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 20%, rgba(237,216,212,0.3) 0%, transparent 45%);
+  pointer-events:none; z-index:0;
+}
+.hero-left {
+  display:flex; flex-direction:column; justify-content:center;
+  padding:10rem 4rem 8rem 8rem;
+  position:relative; z-index:2;
+}
+.hero-eyebrow {
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.65rem; letter-spacing:0.36em; text-transform:uppercase;
+  color:var(--rose); margin-bottom:2.5rem;
+  display:flex; align-items:center; gap:1.2rem;
+}
+.hero-eyebrow::before {
+  content:''; display:block; width:32px; height:1px; background:var(--rose); opacity:0.7;
+}
+.hero-name {
+  font-family:'Cormorant Garamond', serif; font-weight:300;
+  font-size:clamp(4rem, 6.5vw, 7rem);
+  line-height:0.92; letter-spacing:0.01em;
+  color:var(--brun-fonce); margin-bottom:2rem;
+}
+.hero-tagline {
+  font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:300;
+  font-size:clamp(1.55rem, 2.6vw, 2.1rem);
+  line-height:1.35; color:var(--brun-moyen);
+  margin-bottom:1.4rem; max-width:420px;
+}
+.hero-sub {
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.88rem; line-height:2; color:var(--brun);
+  max-width:380px; margin-bottom:3.5rem;
+  letter-spacing:0.02em;
+}
+.hero-actions {
+  display:flex; align-items:center; gap:2rem; flex-wrap:wrap;
+}
+.btn-primary {
+  font-family:'Jost', sans-serif; font-weight:400;
+  font-size:0.7rem; letter-spacing:0.22em; text-transform:uppercase;
+  color:var(--blanc); background:var(--vert-sapin);
+  padding:1.1rem 2.6rem; border-radius:50px;
+  text-decoration:none; display:inline-block;
+  box-shadow:0 8px 28px rgba(36,61,31,0.18);
+  transition:background 0.35s, transform 0.2s, box-shadow 0.35s;
+}
+.btn-primary:hover {
+  background:var(--brun-fonce); transform:translateY(-2px);
+  box-shadow:0 14px 36px rgba(76,50,13,0.2);
+}
+.btn-ghost {
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase;
+  color:var(--brun); text-decoration:none;
+  display:inline-flex; align-items:center; gap:0.7rem;
+  transition:color 0.3s, gap 0.3s;
+  border-bottom:1px solid rgba(182,154,148,0.3);
+  padding-bottom:0.2rem;
+}
+.btn-ghost:hover { color:var(--brun-fonce); gap:1rem; border-color:var(--rose); }
+.hero-badges {
+  display:flex; gap:0.8rem; margin-top:4rem; flex-wrap:wrap;
+}
+.badge {
+  display:inline-flex; align-items:center; gap:0.5rem;
+  background:transparent; border:1px solid rgba(182,154,148,0.3);
+  border-radius:50px; padding:0.4rem 1rem;
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.65rem; letter-spacing:0.16em; text-transform:uppercase;
+  color:var(--brun);
+}
+.badge-dot {
+  width:5px; height:5px; border-radius:50%; background:var(--rose-clair); flex-shrink:0;
+}
+.hero-right { position:relative; overflow:hidden; }
+.hero-img {
+  width:100%; height:100%; object-fit:cover; object-position:top center;
+  filter:sepia(8%) brightness(0.97) saturate(0.88);
+}
+.hero-img-overlay {
+  position:absolute; inset:0;
+  background:
+    linear-gradient(to right, var(--blanc) 0%, rgba(253,250,246,0.06) 20%),
+    linear-gradient(to top, rgba(76,50,13,0.08) 0%, transparent 40%);
+}
+
+/* coccinelle flottante hero */
+.hero-coccinelle {
+  position:absolute; bottom:4rem; right:3.5rem;
+  width:110px; height:110px;
+  background:url('https://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_9000,w_1200,f_auto,q_auto/2144049/366284_325846.png') center/contain no-repeat;
+  opacity:0.55;
+  animation:float 6s ease-in-out infinite;
+}
+@keyframes float {
+  0%,100% { transform:translateY(0); }
+  50% { transform:translateY(-12px); }
+}
+
+.hero-stat {
+  position:absolute; bottom:3.5rem; right:3rem;
+  background:rgba(253,250,246,0.94); backdrop-filter:blur(16px);
+  border:1px solid rgba(182,154,148,0.18);
+  border-radius:20px; padding:1.6rem 2rem;
+  box-shadow:0 12px 40px rgba(76,50,13,0.08);
+}
+.hero-stat-num {
+  font-family:'Cormorant Garamond', serif; font-weight:300;
+  font-size:3rem; color:var(--brun-fonce); line-height:1; margin-bottom:0.3rem;
+}
+.hero-stat-label {
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.63rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--rose);
+}
+
+/* ─── BANDEAU ─── */
+.ticker {
+  background:var(--rose-pale);
+  border-top:1px solid rgba(182,154,148,0.18);
+  border-bottom:1px solid rgba(182,154,148,0.18);
+  padding:1.1rem 0; overflow:hidden;
+}
+.ticker-track {
+  display:flex; gap:0; width:max-content;
+  animation:ticker 35s linear infinite;
+}
+.ticker-item {
+  font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:300;
+  font-size:0.95rem; color:var(--rose); letter-spacing:0.08em;
+  white-space:nowrap; padding:0 3.5rem;
+  display:flex; align-items:center; gap:1.5rem;
+}
+.ticker-item::after { content:'◦'; font-style:normal; color:var(--rose-clair); opacity:0.7; }
+@keyframes ticker { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+/* ─── CITATION RESPIRATION ─── */
+.citation {
+  padding:7rem 8rem;
+  display:flex; flex-direction:column; align-items:center;
+  text-align:center; position:relative; overflow:hidden;
+}
+.citation.light { background:var(--blanc); }
+.citation.warm { background:var(--creme); }
+.citation.dark { background:var(--vert-sapin); }
+
+.citation::before {
+  content:'';
+  position:absolute; inset:0;
+  background:radial-gradient(ellipse at 50% 50%, rgba(237,216,212,0.25) 0%, transparent 70%);
+  pointer-events:none;
+}
+.citation.dark::before {
+  background:radial-gradient(ellipse at 50% 50%, rgba(182,154,148,0.1) 0%, transparent 70%);
+}
+
+.citation-mark {
+  font-family:'Cormorant Garamond', serif; font-weight:300;
+  font-size:6rem; line-height:0.6;
+  color:var(--rose-clair); opacity:0.5;
+  margin-bottom:1.5rem; display:block;
+}
+.citation.dark .citation-mark { color:var(--rose-clair); opacity:0.3; }
+
+.citation-text {
+  font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:300;
+  font-size:clamp(1.5rem, 2.5vw, 2.2rem);
+  line-height:1.5; max-width:680px;
+  position:relative; z-index:1;
+  margin-bottom:2rem;
+}
+.citation.light .citation-text,
+.citation.warm .citation-text { color:var(--brun-fonce); }
+.citation.dark .citation-text { color:rgba(247,241,232,0.9); }
+
+.citation-author {
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.65rem; letter-spacing:0.28em; text-transform:uppercase;
+  position:relative; z-index:1;
+}
+.citation.light .citation-author,
+.citation.warm .citation-author { color:var(--rose); }
+.citation.dark .citation-author { color:var(--rose-clair); opacity:0.7; }
+
+.citation-coccinelle {
+  margin-top:2.5rem; position:relative; z-index:1;
+  width:60px; height:60px; opacity:0.4;
+}
+
+/* ─── SECTION MIROIR ─── */
+.mirror {
+  padding:11rem 8rem;
+  display:grid; grid-template-columns:1fr 1fr; gap:8rem;
+  align-items:center; background:var(--blanc);
+  position:relative;
+}
+.mirror::after {
+  content:'';
+  position:absolute; bottom:-120px; right:-100px;
+  width:450px; height:450px; border-radius:50%;
+  background:radial-gradient(circle, var(--rose-vapeur) 0%, transparent 65%);
+  pointer-events:none;
+}
+.section-label {
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.63rem; letter-spacing:0.36em; text-transform:uppercase;
+  color:var(--rose); margin-bottom:2rem;
+  display:flex; align-items:center; gap:1rem;
+}
+.section-label::before {
+  content:''; display:block; width:24px; height:1px; background:var(--rose); opacity:0.6;
+}
+.mirror-title {
+  font-family:'Cormorant Garamond', serif; font-weight:400;
+  font-size:clamp(2.3rem, 3.8vw, 3.6rem); line-height:1.1;
+  color:var(--brun-fonce); margin-bottom:3.5rem;
+  letter-spacing:-0.01em;
+}
+.mirror-title em { color:var(--rose); font-style:italic; font-weight:300; }
+
+.mirror-list { list-style:none; display:flex; flex-direction:column; gap:1.6rem; }
+.mirror-list li {
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.88rem; line-height:1.9; color:var(--brun);
+  padding-left:2.2rem; position:relative; letter-spacing:0.01em;
+}
+.mirror-list li::before {
+  content:'';
+  position:absolute; left:0; top:0.82em;
+  width:7px; height:7px; border-radius:50%;
+  background:transparent; border:1.5px solid var(--rose-clair);
+}
+
+.mirror-right { position:relative; }
+.mirror-card {
+  background:var(--creme); border-radius:28px;
+  padding:4rem; position:relative; overflow:hidden;
+  border:1px solid rgba(182,154,148,0.12);
+}
+.mirror-card::before {
+  content:'';
+  position:absolute; top:-50px; right:-50px;
+  width:220px; height:220px; border-radius:50%;
+  background:radial-gradient(circle, var(--rose-pale) 0%, transparent 70%);
+}
+.mirror-card::after {
+  content:'';
+  position:absolute; bottom:-30px; left:-30px;
+  width:140px; height:140px; border-radius:50%;
+  background:radial-gradient(circle, rgba(139,162,136,0.12) 0%, transparent 70%);
+}
+.mirror-quote {
+  font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:300;
+  font-size:1.6rem; line-height:1.5; color:var(--brun-fonce);
+  margin-bottom:3rem; position:relative; z-index:1;
+}
+.mirror-quote-mark {
+  font-family:'Cormorant Garamond', serif; font-size:5rem; font-weight:300;
+  color:var(--rose-clair); opacity:0.4; line-height:0.8;
+  display:block; margin-bottom:0.8rem;
+}
+.mirror-cta {
+  background:var(--vert-sapin); border-radius:18px;
+  padding:2.2rem 2.4rem;
+  display:flex; flex-direction:column; gap:1.2rem; position:relative; z-index:1;
+}
+.mirror-cta p {
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.83rem; line-height:1.85; color:rgba(247,241,232,0.8);
+  letter-spacing:0.01em;
+}
+.mirror-cta a {
+  font-family:'Jost', sans-serif; font-weight:400;
+  font-size:0.68rem; letter-spacing:0.22em; text-transform:uppercase;
+  color:var(--rose-pale); text-decoration:none;
+  display:inline-flex; align-items:center; gap:0.6rem;
+  transition:gap 0.3s;
+}
+.mirror-cta a::after { content:'→'; }
+.mirror-cta a:hover { gap:1rem; }
+
+/* ─── PORTES D'ENTRÉE ─── */
+.portes {
+  padding:11rem 8rem;
+  background:var(--creme);
+  position:relative; overflow:hidden;
+}
+.portes::before {
+  content:'';
+  position:absolute; top:-100px; right:-80px;
+  width:400px; height:400px; border-radius:50%;
+  background:radial-gradient(circle, var(--rose-vapeur) 0%, transparent 65%);
+  pointer-events:none;
+}
+.portes-header { text-align:center; margin-bottom:6rem; }
+.portes-header .section-label { justify-content:center; }
+.portes-header .section-label::before { display:none; }
+.portes-title {
+  font-family:'Cormorant Garamond', serif; font-weight:400;
+  font-size:clamp(2.3rem, 3.8vw, 3.4rem);
+  color:var(--brun-fonce); line-height:1.15; margin-bottom:1.4rem;
+  letter-spacing:-0.01em;
+}
+.portes-sub {
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.86rem; line-height:2; color:var(--brun);
+  max-width:460px; margin:0 auto; letter-spacing:0.02em;
+}
+
+.portes-grid {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:1.8rem;
+  align-items:stretch;
+}
+
+.porte-card {
+  background:var(--blanc); border-radius:28px;
+  padding:3.8rem 3rem;
+  border:1px solid rgba(182,154,148,0.12);
+  transition:transform 0.5s ease, box-shadow 0.5s ease, border-color 0.4s;
+  position:relative; overflow:hidden;
+  display:flex; flex-direction:column;
+  text-decoration:none; color:inherit;
+  cursor:pointer;
+}
+.porte-card::before {
+  content:''; position:absolute; inset:0; border-radius:28px;
+  background:radial-gradient(circle at 90% 10%, var(--rose-vapeur) 0%, transparent 50%);
+  opacity:0; transition:opacity 0.5s;
+}
+.porte-card:hover {
+  transform:translateY(-12px);
+  box-shadow:0 28px 80px rgba(76,50,13,0.09);
+  border-color:rgba(182,154,148,0.28);
+}
+.porte-card:hover::before { opacity:1; }
+
+.porte-lettre {
+  font-family:'Cormorant Garamond', serif; font-weight:300;
+  font-size:4.5rem; line-height:1; color:var(--rose-pale);
+  margin-bottom:1.8rem; display:block; position:relative; z-index:1;
+  transition:color 0.4s;
+}
+.porte-card:hover .porte-lettre { color:var(--rose-clair); }
+
+.porte-phrase {
+  font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:400;
+  font-size:1.35rem; line-height:1.4; color:var(--brun-fonce);
+  margin-bottom:1.8rem; position:relative; z-index:1;
+}
+.porte-desc {
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.82rem; line-height:1.9; color:var(--brun);
+  position:relative; z-index:1; flex:1;
+  margin-bottom:2.4rem; letter-spacing:0.01em;
+}
+.porte-tag {
+  display:inline-flex; align-items:center; gap:0.5rem;
+  border:1px solid rgba(182,154,148,0.28); border-radius:50px;
+  padding:0.4rem 1rem;
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.63rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--rose);
+  position:relative; z-index:1; align-self:flex-start;
+  transition:background 0.35s, color 0.35s, border-color 0.35s;
+}
+.porte-card:hover .porte-tag {
+  background:var(--vert-sapin); color:var(--rose-pale); border-color:var(--vert-sapin);
+}
+
+/* ─── S'ÉLOIGNER / ALLER VERS ─── */
+.direction {
+  padding:11rem 8rem;
+  background:var(--blanc);
+  position:relative; overflow:hidden;
+}
+.direction-header { text-align:center; margin-bottom:6rem; }
+.direction-header .section-label { justify-content:center; }
+.direction-header .section-label::before { display:none; }
+.direction-title {
+  font-family:'Cormorant Garamond', serif; font-weight:400;
+  font-size:clamp(2.2rem, 3.5vw, 3.2rem); line-height:1.2;
+  color:var(--brun-fonce); letter-spacing:-0.01em;
+}
+.direction-title em { font-style:italic; color:var(--rose); }
+
+.direction-grid {
+  display:grid; grid-template-columns:1fr auto 1fr; gap:0;
+  max-width:980px; margin:0 auto; align-items:stretch;
+}
+.direction-col {
+  border-radius:28px;
+  padding:4rem 3.5rem;
+  position:relative; overflow:hidden;
+}
+.direction-col.eloigner {
+  background:var(--creme);
+  border:1px solid rgba(182,154,148,0.15);
+  border-top:2px solid var(--rose-clair);
+  border-radius:28px 0 0 28px;
+}
+.direction-col.vers {
+  background:var(--vert-sapin);
+  border-radius:0 28px 28px 0;
+}
+
+.direction-sep {
+  display:flex; align-items:center; justify-content:center;
+  width:60px;
+  background:linear-gradient(to right, var(--creme), var(--vert-sapin));
+  position:relative; z-index:2;
+}
+.direction-sep-inner {
+  width:48px; height:48px; border-radius:50%;
+  background:var(--blanc); border:1.5px solid rgba(182,154,148,0.3);
+  display:flex; align-items:center; justify-content:center;
+  font-family:'Cormorant Garamond', serif; font-size:1.4rem; color:var(--brun-fonce);
+  box-shadow:0 4px 16px rgba(76,50,13,0.08);
+  flex-shrink:0;
+}
+
+.direction-col-label {
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.63rem; letter-spacing:0.32em; text-transform:uppercase;
+  margin-bottom:2.5rem; display:flex; align-items:center; gap:0.8rem;
+}
+.direction-col.eloigner .direction-col-label { color:var(--rose); }
+.direction-col.vers .direction-col-label { color:var(--rose-clair); opacity:0.8; }
+.direction-col-label::before {
+  content:''; display:block; width:18px; height:1px;
+}
+.direction-col.eloigner .direction-col-label::before { background:var(--rose); opacity:0.6; }
+.direction-col.vers .direction-col-label::before { background:var(--rose-clair); opacity:0.5; }
+
+.direction-list { list-style:none; display:flex; flex-direction:column; gap:1.3rem; }
+.direction-list li {
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.85rem; line-height:1.8;
+  padding-left:1.8rem; position:relative; letter-spacing:0.01em;
+}
+.direction-col.eloigner .direction-list li { color:var(--brun); }
+.direction-col.vers .direction-list li { color:rgba(247,241,232,0.82); }
+.direction-list li::before {
+  content:'';
+  position:absolute; left:0; top:0.74em;
+  width:6px; height:6px; border-radius:50%;
+}
+.direction-col.eloigner .direction-list li::before {
+  background:transparent; border:1.5px solid var(--rose-clair);
+}
+.direction-col.vers .direction-list li::before {
+  background:rgba(206,163,155,0.35); border:1.5px solid rgba(206,163,155,0.5);
+}
+
+/* ─── APPROCHE ─── */
+.approach {
+  padding:11rem 8rem;
+  background:var(--creme);
+  position:relative; overflow:hidden;
+}
+.approach::before {
+  content:'';
+  position:absolute; bottom:-80px; left:-80px;
+  width:380px; height:380px; border-radius:50%;
+  background:radial-gradient(circle, var(--rose-vapeur) 0%, transparent 65%);
+  pointer-events:none;
+}
+.approach-header { text-align:center; margin-bottom:7rem; }
+.approach-header .section-label { justify-content:center; }
+.approach-header .section-label::before { display:none; }
+.approach-title {
+  font-family:'Cormorant Garamond', serif; font-weight:400;
+  font-size:clamp(2.2rem, 3.5vw, 3.2rem);
+  color:var(--brun-fonce); margin-bottom:1.4rem; letter-spacing:-0.01em;
+  line-height:1.2;
+}
+.approach-sub {
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.86rem; line-height:2; color:var(--brun);
+  max-width:460px; margin:0 auto; letter-spacing:0.02em;
+}
+
+.approach-grid {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:1.8rem;
+}
+.approach-card {
+  background:var(--blanc); border-radius:24px;
+  padding:3.5rem 2.8rem;
+  border:1px solid rgba(182,154,148,0.1);
+  transition:transform 0.5s ease, box-shadow 0.5s ease;
+  position:relative; overflow:hidden;
+}
+.approach-card::after {
+  content:''; position:absolute; inset:0; border-radius:24px;
+  background:radial-gradient(circle at 85% 15%, var(--rose-vapeur) 0%, transparent 55%);
+  opacity:0; transition:opacity 0.5s;
+}
+.approach-card:hover {
+  transform:translateY(-10px);
+  box-shadow:0 24px 70px rgba(76,50,13,0.08);
+}
+.approach-card:hover::after { opacity:1; }
+.approach-icon {
+  width:42px; height:42px; border-radius:50%;
+  background:var(--rose-pale); display:flex; align-items:center; justify-content:center;
+  margin-bottom:2rem; font-size:1.1rem; position:relative; z-index:1;
+  border:1px solid rgba(182,154,148,0.2);
+}
+.approach-card-title {
+  font-family:'Cormorant Garamond', serif; font-weight:500;
+  font-size:1.3rem; color:var(--brun-fonce);
+  margin-bottom:1.2rem; position:relative; z-index:1; line-height:1.3;
+}
+.approach-card-text {
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.82rem; line-height:1.95; color:var(--brun);
+  position:relative; z-index:1; letter-spacing:0.01em;
+}
+/* phrase signature dans la carte */
+.approach-card-signature {
+  margin-top:1.8rem; padding-top:1.8rem;
+  border-top:1px solid rgba(182,154,148,0.18);
+  font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:300;
+  font-size:0.95rem; line-height:1.6; color:var(--rose);
+  position:relative; z-index:1;
+}
+
+/* ─── QUIZ ─── */
+.quiz {
+  padding:11rem 8rem;
+  background:var(--blanc);
+  display:grid; grid-template-columns:1fr 1.1fr; gap:8rem;
+  align-items:center; position:relative; overflow:hidden;
+}
+.quiz::after {
+  content:'';
+  position:absolute; top:-60px; right:-60px;
+  width:320px; height:320px; border-radius:50%;
+  background:radial-gradient(circle, var(--rose-vapeur) 0%, transparent 70%);
+  pointer-events:none;
+}
+.quiz-visual { position:relative; }
+.quiz-card {
+  background:var(--creme); border-radius:28px;
+  padding:4.5rem 4rem;
+  box-shadow:0 20px 70px rgba(76,50,13,0.06);
+  border:1px solid rgba(182,154,148,0.15);
+  position:relative; overflow:hidden;
+}
+.quiz-card::before {
+  content:'';
+  position:absolute; top:0; right:0;
+  width:180px; height:180px;
+  background:radial-gradient(circle at top right, var(--rose-pale) 0%, transparent 65%);
+  border-radius:0 28px 0 100%;
+}
+.quiz-emoji { font-size:3.2rem; display:block; margin-bottom:1.8rem; }
+.quiz-card-title {
+  font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:300;
+  font-size:1.7rem; line-height:1.35; color:var(--brun-fonce); margin-bottom:1.8rem;
+}
+.quiz-tag {
+  display:inline-flex; align-items:center; gap:0.5rem;
+  border:1px solid rgba(182,154,148,0.3); border-radius:50px; padding:0.4rem 1.1rem;
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.65rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--rose);
+}
+.quiz-floating {
+  position:absolute; top:-2.5rem; right:-2rem;
+  background:var(--vert-sapin); border-radius:18px;
+  padding:1.4rem 1.8rem; z-index:2;
+  box-shadow:0 10px 36px rgba(36,61,31,0.18);
+}
+.quiz-floating span:first-child {
+  font-family:'Cormorant Garamond', serif; font-weight:300;
+  font-size:2.2rem; color:var(--creme); display:block; line-height:1;
+}
+.quiz-floating span:last-child {
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.6rem; letter-spacing:0.18em; text-transform:uppercase;
+  color:var(--rose-clair); margin-top:0.3rem; display:block;
+}
+.quiz-title {
+  font-family:'Cormorant Garamond', serif; font-weight:400;
+  font-size:clamp(2rem, 3vw, 2.8rem); line-height:1.2;
+  color:var(--brun-fonce); margin-bottom:1.8rem; letter-spacing:-0.01em;
+}
+.quiz-desc {
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.86rem; line-height:2; color:var(--brun);
+  margin-bottom:3rem; letter-spacing:0.01em;
+}
+.quiz-points { list-style:none; display:flex; flex-direction:column; gap:1.2rem; margin-bottom:3rem; }
+.quiz-points li {
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.83rem; line-height:1.75; color:var(--brun);
+  display:flex; align-items:flex-start; gap:1rem; letter-spacing:0.01em;
+}
+.quiz-points li::before {
+  content:''; flex-shrink:0;
+  width:6px; height:6px; border-radius:50%;
+  background:transparent; border:1.5px solid var(--rose-clair); margin-top:0.56em;
+}
+
+/* ─── TÉMOIGNAGES ─── */
+.testimonials {
+  padding:11rem 8rem;
+  background:var(--vert-sapin);
+  position:relative; overflow:hidden;
+}
+.testimonials::before {
+  content:'';
+  position:absolute; top:-120px; right:-120px;
+  width:550px; height:550px; border-radius:50%;
+  background:radial-gradient(circle, rgba(182,154,148,0.1) 0%, transparent 65%);
+  pointer-events:none;
+}
+.testimonials .section-label { color:var(--rose-clair); opacity:0.8; }
+.testimonials .section-label::before { background:var(--rose-clair); }
+.testimonials-title {
+  font-family:'Cormorant Garamond', serif; font-weight:300;
+  font-size:clamp(2.2rem, 3.5vw, 3.2rem); color:var(--creme);
+  margin-bottom:6rem; line-height:1.15; letter-spacing:-0.01em;
+}
+.testimonials-grid {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:1.8rem;
+}
+.testimonial-card {
+  background:rgba(253,250,246,0.04);
+  border:1px solid rgba(253,250,246,0.08);
+  border-radius:22px; padding:3rem;
+  transition:background 0.4s, transform 0.4s;
+  position:relative; overflow:hidden;
+}
+.testimonial-card::before {
+  content:'"';
+  font-family:'Cormorant Garamond', serif; font-size:6rem; font-weight:300;
+  color:var(--rose-clair); opacity:0.15;
+  position:absolute; top:0.8rem; left:1.4rem; line-height:1;
+}
+.testimonial-card:hover {
+  background:rgba(253,250,246,0.08); transform:translateY(-5px);
+}
+.testimonial-text {
+  font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:300;
+  font-size:1.05rem; line-height:1.8; color:var(--creme);
+  opacity:0.88; margin-bottom:2.2rem; position:relative; z-index:1;
+}
+.testimonial-author {
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.63rem; letter-spacing:0.24em; text-transform:uppercase;
+  color:var(--rose-clair); opacity:0.6;
+}
+.placeholder {
+  display:inline-block; background:rgba(255,120,100,0.12);
+  border:1px dashed rgba(255,120,100,0.35); border-radius:50px;
+  color:#c0392b; font-family:'Jost', sans-serif; font-style:normal;
+  font-size:0.62rem; letter-spacing:0.1em; padding:0.15em 0.6em;
+  vertical-align:middle; margin-left:0.4em;
+}
+
+/* ─── CONTACT ─── */
+.contact {
+  padding:11rem 8rem;
+  background:var(--blanc);
+  display:grid; grid-template-columns:1fr 1fr; gap:8rem;
+  align-items:start; position:relative; overflow:hidden;
+}
+.contact::before {
+  content:'';
+  position:absolute; bottom:-100px; left:-80px;
+  width:420px; height:420px; border-radius:50%;
+  background:radial-gradient(circle, var(--rose-vapeur) 0%, transparent 65%);
+  pointer-events:none;
+}
+.contact-title {
+  font-family:'Cormorant Garamond', serif; font-weight:400;
+  font-size:clamp(2.2rem, 3.5vw, 3.2rem); line-height:1.15;
+  color:var(--brun-fonce); margin-bottom:1.6rem; letter-spacing:-0.01em;
+}
+.contact-title em { color:var(--rose); font-style:italic; font-weight:300; }
+.contact-desc {
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.86rem; line-height:2; color:var(--brun);
+  margin-bottom:3.5rem; letter-spacing:0.01em;
+}
+.contact-infos { display:flex; flex-direction:column; gap:1.2rem; }
+.contact-info {
+  display:flex; align-items:flex-start; gap:1.2rem;
+  padding:1.2rem 1.5rem; border-radius:16px;
+  background:var(--creme); border:1px solid rgba(182,154,148,0.14);
+}
+.contact-info-icon {
+  width:34px; height:34px; border-radius:50%;
+  background:var(--rose-pale); display:flex; align-items:center; justify-content:center;
+  font-size:0.85rem; flex-shrink:0;
+  border:1px solid rgba(182,154,148,0.18);
+}
+.contact-info-label {
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.62rem; letter-spacing:0.24em; text-transform:uppercase;
+  color:var(--rose); margin-bottom:0.3rem; display:block;
+}
+.contact-info-value {
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.83rem; line-height:1.6; color:var(--brun-fonce);
+}
+.contact-urgence {
+  margin-top:2rem; padding:1.8rem 2rem;
+  background:var(--rose-vapeur); border-radius:18px;
+  border-left:2px solid var(--rose-clair);
+}
+.contact-urgence p {
+  font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:300;
+  font-size:1.05rem; line-height:1.7; color:var(--brun-fonce); margin-bottom:1rem;
+}
+.contact-urgence a {
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase;
+  color:var(--vert-sapin); text-decoration:none;
+  display:inline-flex; align-items:center; gap:0.5rem; transition:gap 0.3s;
+}
+.contact-urgence a::after { content:'→'; }
+.contact-urgence a:hover { gap:0.8rem; }
+
+.contact-cards { display:flex; flex-direction:column; gap:1.2rem; }
+.contact-card {
+  background:var(--creme); border-radius:22px;
+  padding:2.5rem 2.8rem;
+  border:1px solid rgba(182,154,148,0.14);
+  transition:border-color 0.4s, transform 0.4s, box-shadow 0.4s;
+  text-decoration:none; display:block;
+}
+.contact-card:hover {
+  border-color:rgba(182,154,148,0.3); transform:translateY(-4px);
+  box-shadow:0 16px 50px rgba(76,50,13,0.06);
+}
+.contact-card h3 {
+  font-family:'Cormorant Garamond', serif; font-weight:500;
+  font-size:1.2rem; color:var(--brun-fonce); margin-bottom:0.8rem; line-height:1.3;
+}
+.contact-card p {
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.81rem; line-height:1.8; color:var(--brun); margin-bottom:1.4rem;
+  letter-spacing:0.01em;
+}
+.contact-card-link {
+  font-family:'Jost', sans-serif; font-weight:400;
+  font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase;
+  color:var(--vert-sapin); display:inline-flex; align-items:center; gap:0.5rem;
+  transition:gap 0.3s;
+}
+.contact-card-link::after { content:'→'; }
+.contact-card:hover .contact-card-link { gap:0.8rem; }
+
+/* ─── FOOTER ─── */
+footer {
+  background:var(--brun-fonce);
+  padding:4rem 8rem;
+  display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:2rem;
+  position:relative; overflow:hidden;
+}
+footer::before {
+  content:'';
+  position:absolute; top:-80px; right:-80px;
+  width:280px; height:280px; border-radius:50%;
+  background:radial-gradient(circle, rgba(182,154,148,0.08) 0%, transparent 70%);
+}
+.footer-brand {
+  display:flex; align-items:center; gap:1rem;
+}
+.footer-name {
+  font-family:'Cormorant Garamond', serif; font-weight:300;
+  font-size:1rem; letter-spacing:0.18em; text-transform:uppercase;
+  color:var(--creme); opacity:0.75;
+}
+.footer-links { display:flex; gap:2.8rem; list-style:none; }
+.footer-links a {
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.65rem; letter-spacing:0.18em; text-transform:uppercase;
+  color:var(--creme); opacity:0.38; text-decoration:none; transition:opacity 0.3s;
+}
+.footer-links a:hover { opacity:0.85; }
+.footer-copy {
+  font-family:'Jost', sans-serif; font-weight:200;
+  font-size:0.65rem; color:var(--creme); opacity:0.25; letter-spacing:0.12em;
+}
+
+/* ─── ANIMATIONS ─── */
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(30px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity:0; }
+  to   { opacity:1; }
+}
+.reveal {
+  opacity:0; transform:translateY(30px);
+  transition:opacity 1s ease, transform 1s ease;
+}
+.reveal.visible { opacity:1; transform:translateY(0); }
+.reveal-delay-1 { transition-delay:0.12s; }
+.reveal-delay-2 { transition-delay:0.24s; }
+.reveal-delay-3 { transition-delay:0.36s; }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width:1100px) {
+  nav { padding:1.2rem 2rem; }
+  .nav-links { display:none; }
+  .hero { grid-template-columns:1fr; min-height:auto; }
+  .hero-left { padding:7rem 2rem 3rem; order:1; }
+  .hero-right { order:2; height:70vw; max-height:440px; }
+  .hero-stat { bottom:1.5rem; right:1.5rem; padding:1rem 1.4rem; }
+  .hero-stat-num { font-size:2rem; }
+  .hero-coccinelle { width:70px; height:70px; bottom:2rem; right:1.5rem; }
+  .mirror, .quiz, .contact { grid-template-columns:1fr; gap:3.5rem; }
+  .approach-grid, .testimonials-grid, .portes-grid { grid-template-columns:1fr; gap:1.4rem; }
+  .direction-grid { grid-template-columns:1fr; gap:1.5rem; }
+  .direction-sep { display:none; }
+  .direction-col.eloigner { border-radius:22px; }
+  .direction-col.vers { border-radius:22px; }
+  .mirror, .approach, .quiz, .testimonials, .contact,
+  .portes, .direction, .citation, footer {
+    padding-left:2rem; padding-right:2rem;
+  }
+  .mirror, .approach, .quiz, .testimonials, .contact, .portes, .direction {
+    padding-top:6rem; padding-bottom:6rem;
+  }
+  .citation { padding:5rem 2rem; }
+  footer { padding:3rem 2rem; flex-direction:column; align-items:flex-start; gap:1.4rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <span>Elodie Nirennold</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#par-ou-commencer">Par où commencer</a></li>
+    <li><a href="#approche">L'approche</a></li>
+    <li><a href="#temoignages">Témoignages</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="https://tidycal.com/elodie-nirennold" target="_blank" class="nav-cta">Prendre rendez-vous</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Ostéo · Hypnose · Coaching Intégratif</p>
+    <h1 class="hero-name">Elodie<br>Nirennold</h1>
+    <p class="hero-tagline">Assez survécu. Il est temps d'habiter ta vie.</p>
+    <p class="hero-sub">
+      Le corps garde la mémoire de tout ce que tu n'as pas pu exprimer et laisser circuler. On commence par là.
+    </p>
+    <div class="hero-actions">
+      <a href="#par-ou-commencer" class="btn-primary">Par où commencer ?</a>
+      <a href="#approche" class="btn-ghost">Découvrir l'approche</a>
+    </div>
+    <div class="hero-badges">
+      <span class="badge"><span class="badge-dot"></span>Levallois-Perret</span>
+      <span class="badge"><span class="badge-dot"></span>Visio</span>
+      <span class="badge"><span class="badge-dot"></span>18 ans de pratique</span>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img
+      src="https://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_630,w_1200,f_auto,q_auto/2144049/B6B32226-E849-421E-82C6-485F9475D09C.jpg"
+      alt="Elodie Nirennold" class="hero-img">
+    <div class="hero-img-overlay"></div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">18+</div>
+      <div class="hero-stat-label">ans de pratique</div>
+    </div>
+  </div>
+</section>
+
+<!-- BANDEAU -->
+<div class="ticker">
+  <div class="ticker-track">
+    <span class="ticker-item">Ostéopathie somato-émotionnelle</span>
+    <span class="ticker-item">Hypnothérapie</span>
+    <span class="ticker-item">Coaching intégratif</span>
+    <span class="ticker-item">Leaders sensibles & atypiques</span>
+    <span class="ticker-item">Survie relationnelle</span>
+    <span class="ticker-item">Corps · Émotions · Système nerveux</span>
+    <span class="ticker-item">Levallois-Perret & Visio</span>
+    <span class="ticker-item">Ostéopathie somato-émotionnelle</span>
+    <span class="ticker-item">Hypnothérapie</span>
+    <span class="ticker-item">Coaching intégratif</span>
+    <span class="ticker-item">Leaders sensibles & atypiques</span>
+    <span class="ticker-item">Survie relationnelle</span>
+    <span class="ticker-item">Corps · Émotions · Système nerveux</span>
+    <span class="ticker-item">Levallois-Perret & Visio</span>
+  </div>
+</div>
+
+<!-- CITATION 1 -->
+<div class="citation light reveal">
+  <span class="citation-mark">"</span>
+  <p class="citation-text">Si tu écoutes ton corps lorsqu'il chuchote, tu n'auras pas à l'entendre crier.</p>
+  <span class="citation-author">Sagesse tibétaine</span>
+</div>
+
+<!-- MIROIR -->
+<section class="mirror" id="miroir">
+  <div class="mirror-left">
+    <p class="section-label reveal">Tu te reconnais ici ?</p>
+    <h2 class="mirror-title reveal reveal-delay-1">
+      Tu as appris à tenir.<br><em>Maintenant, apprends à recevoir.</em>
+    </h2>
+    <ul class="mirror-list reveal reveal-delay-2">
+      <li>Tu donnes sans compter — mais recevoir te met mal à l'aise, comme si tu te retrouvais aussitôt en dette.</li>
+      <li>Un message sans réponse. Un silence qui dure. Quand le lien vacille, quelque chose en toi vacille aussi.</li>
+      <li>Tu tiens tout. Et silencieusement, tu as peur de t'effondrer.</li>
+      <li>Tu as beaucoup compris sur toi-même. Et pourtant, ça ne change pas vraiment.</li>
+      <li>Ton corps a commencé à parler plus fort que les mots. Tu ne peux plus l'ignorer.</li>
+    </ul>
+  </div>
+  <div class="mirror-right reveal reveal-delay-2">
+    <div class="mirror-card">
+      <span class="mirror-quote-mark">"</span>
+      <blockquote class="mirror-quote">
+        Tu survives dans le lien.<br>On est là pour que tu y vives.
+      </blockquote>
+      <div class="mirror-cta">
+        <p>Identifie précisément où ton énergie se disperse et reçois des pistes concrètes pour reprendre le pouvoir.</p>
+        <a href="https://programmes.elodienirennold.com/quiz-diagnostic-sablier-interieur" target="_blank">Faire le quiz Sablier Intérieur</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTES D'ENTRÉE -->
+<section class="portes" id="par-ou-commencer">
+  <div class="portes-header">
+    <p class="section-label reveal">Par où commencer ?</p>
+    <h2 class="portes-title reveal reveal-delay-1">Trois états.<br>Une seule direction.</h2>
+    <p class="portes-sub reveal reveal-delay-2">Peu importe où tu en es, le fil est le même : revenir à toi, depuis le corps.</p>
+  </div>
+  <div class="portes-grid">
+
+    <a href="/accompagnements" class="porte-card reveal">
+      <span class="porte-lettre">A</span>
+      <p class="porte-phrase">"Mon corps me parle. Je ne peux plus l'ignorer."</p>
+      <p class="porte-desc">Douleurs inexpliquées, fatigue profonde, tensions persistantes. Tu sens confusément que c'est lié à autre chose qu'une cause physique. Le corps a commencé à parler plus fort que les mots.</p>
+      <span class="porte-tag">Ostéo somato-émotionnelle · Hypnose</span>
+    </a>
+
+    <a href="/accompagnements" class="porte-card reveal reveal-delay-1">
+      <span class="porte-lettre">B</span>
+      <p class="porte-phrase">"J'ai tout compris. Rien ne change vraiment."</p>
+      <p class="porte-desc">Tu as fait de la psy, des formations, du développement personnel. Tu te connais bien. Et pourtant les mêmes schémas reviennent. La tête comprend. Le corps, lui, continue de réagir comme avant.</p>
+      <span class="porte-tag">Coaching intégratif</span>
+    </a>
+
+    <a href="/accompagnements" class="porte-card reveal reveal-delay-2">
+      <span class="porte-lettre">C</span>
+      <p class="porte-phrase">"Je tiens. Mais je veux vivre autrement."</p>
+      <p class="porte-desc">Tu fonctionnes — même bien, de l'extérieur. Mais quelque chose en toi sait que tu passes à côté de quelque chose d'essentiel. Tu veux changer concrètement ta façon d'être au quotidien.</p>
+      <span class="porte-tag">Coaching intégratif</span>
+    </a>
+
+  </div>
+</section>
+
+<!-- CITATION 2 — Elodie -->
+<div class="citation warm reveal">
+  <span class="citation-mark">"</span>
+  <p class="citation-text">Tout ce qui ne s'exprime pas s'imprime — dans l'inconscient et dans les mémoires cellulaires du corps.</p>
+  <span class="citation-author">Elodie Nirennold</span>
+</div>
+
+<!-- S'ÉLOIGNER / ALLER VERS -->
+<section class="direction">
+  <div class="direction-header">
+    <p class="section-label reveal">Le chemin</p>
+    <h2 class="direction-title reveal reveal-delay-1">D'abord <em>s'éloigner de.</em><br>Puis <em>aller vers.</em></h2>
+  </div>
+  <div class="direction-grid">
+
+    <div class="direction-col eloigner reveal">
+      <p class="direction-col-label">S'éloigner de</p>
+      <ul class="direction-list">
+        <li>La peur silencieuse de craquer ou de décevoir</li>
+        <li>La surveillance permanente de l'état du lien</li>
+        <li>L'épuisement de comprendre sans que rien ne change</li>
+        <li>Recevoir en calculant déjà comment rembourser</li>
+        <li>Tenir à bout de bras, en silence</li>
+        <li>Les schémas qui se rejouent malgré toi</li>
+      </ul>
+    </div>
+
+    <div class="direction-sep">
+      <div class="direction-sep-inner">→</div>
+    </div>
+
+    <div class="direction-col vers reveal reveal-delay-1">
+      <p class="direction-col-label">Aller vers</p>
+      <ul class="direction-list">
+        <li>Recevoir sans se sentir aussitôt redevable</li>
+        <li>Rester stable même quand le lien se fragilise</li>
+        <li>Agir depuis un endroit sûr en toi, pas depuis la peur</li>
+        <li>Vivre selon ce qui t'anime, pas selon ce qu'on attend</li>
+        <li>Une direction que tu reconnais dans ton corps avant de la comprendre dans ta tête</li>
+        <li>La liberté et la paix qui ne dépendent plus de l'extérieur</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- APPROCHE -->
+<section class="approach" id="approche">
+  <div class="approach-header">
+    <p class="section-label reveal">L'approche</p>
+    <h2 class="approach-title reveal reveal-delay-1">La transformation durable ne passe pas par la tête.<br>Elle passe par le corps.</h2>
+    <p class="approach-sub reveal reveal-delay-2">Ce que le mental n'a pas réussi à intégrer, le corps, lui, attend qu'on l'écoute.</p>
+  </div>
+  <div class="approach-grid">
+
+    <div class="approach-card reveal">
+      <div class="approach-icon">🌿</div>
+      <h3 class="approach-card-title">Ostéopathie somato-émotionnelle</h3>
+      <p class="approach-card-text">Le corps sait ce que le mental n'a pas réussi à intégrer. Ce que les mots n'ont pas pu dire, il le tient dans ses tissus, ses fascias, sa posture. On libère ce qui est enkysté — pour redonner au corps sa capacité naturelle d'équilibration.</p>
+      <p class="approach-card-signature">Je ne suis qu'un outil facilitateur de l'intelligence extraordinaire qui existe déjà au cœur de tes cellules.</p>
+    </div>
+
+    <div class="approach-card reveal reveal-delay-1">
+      <div class="approach-icon">🌙</div>
+      <h3 class="approach-card-title">Hypnose & accès à l'inconscient</h3>
+      <p class="approach-card-text">En accédant aux strates profondes, on reprogramme les schémas qui se rejouent sans ton accord. Non pour supprimer le symptôme qui te protège — mais pour lui permettre d'être compris, régulé, apaisé à la source.</p>
+      <p class="approach-card-signature">L'hypnose n'endort pas. Elle éveille à tout notre potentiel.</p>
+    </div>
+
+    <div class="approach-card reveal reveal-delay-2">
+      <div class="approach-icon">✦</div>
+      <h3 class="approach-card-title">Coaching intégratif</h3>
+      <p class="approach-card-text">La prise de conscience ne suffit pas. Il faut un système nerveux régulé et de nouvelles connexions pour que ce qui a changé en séance tienne dans ta vie réelle — tes décisions, tes relations, tes journées.</p>
+      <p class="approach-card-signature">Continuer séance par séance permet de soulager. S'engager dans un cadre permet de ne plus dépendre des séances pour aller mieux.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CITATION 3 — Jung -->
+<div class="citation dark reveal">
+  <span class="citation-mark">"</span>
+  <p class="citation-text">Les crises, les bouleversements et la maladie ne surgissent pas par hasard. Ils nous servent d'indicateurs pour rectifier une trajectoire, explorer de nouvelles orientations.</p>
+  <span class="citation-author">Carl Gustav Jung</span>
+</div>
+
+<!-- QUIZ -->
+<section class="quiz">
+  <div class="quiz-visual reveal">
+    <div class="quiz-card">
+      <span class="quiz-emoji">⏳</span>
+      <p class="quiz-card-title">Le Quiz<br>Sablier Intérieur</p>
+      <span class="quiz-tag">✦ Gratuit · 10 minutes</span>
+    </div>
+    <div class="quiz-floating">
+      <span>9</span>
+      <span>dimensions explorées</span>
+    </div>
+  </div>
+  <div class="quiz-content reveal reveal-delay-1">
+    <p class="section-label">Diagnostic offert</p>
+    <h2 class="quiz-title">Où est-ce que tu t'épuises à force de te trahir ?</h2>
+    <p class="quiz-desc">Une cartographie honnête de ton énergie. Pas pour te coller une étiquette — pour voir clairement ce qui fuit, ce qui retient, ce qui attend.</p>
+    <ul class="quiz-points">
+      <li>Une cartographie de ton énergie Corps · Cœur · Esprit</li>
+      <li>Le miroir de tes auto-trahisons invisibles</li>
+      <li>Des pistes concrètes adaptées à ton score</li>
+      <li>Un premier pas vers ce qui change vraiment</li>
+    </ul>
+    <a href="https://programmes.elodienirennold.com/quiz-diagnostic-sablier-interieur" target="_blank" class="btn-primary">Je fais mon bilan gratuit</a>
+  </div>
+</section>
+
+<!-- TÉMOIGNAGES -->
+<section class="testimonials" id="temoignages">
+  <p class="section-label reveal">Témoignages</p>
+  <h2 class="testimonials-title reveal reveal-delay-1">Ils m'ont fait confiance. ♡</h2>
+  <div class="testimonials-grid">
+    <div class="testimonial-card reveal">
+      <p class="testimonial-text">À compléter avec tes vrais témoignages clients. <span class="placeholder">placeholder</span></p>
+      <p class="testimonial-author">Prénom, profession</p>
+    </div>
+    <div class="testimonial-card reveal reveal-delay-1">
+      <p class="testimonial-text">À compléter avec tes vrais témoignages clients. <span class="placeholder">placeholder</span></p>
+      <p class="testimonial-author">Prénom, profession</p>
+    </div>
+    <div class="testimonial-card reveal reveal-delay-2">
+      <p class="testimonial-text">À compléter avec tes vrais témoignages clients. <span class="placeholder">placeholder</span></p>
+      <p class="testimonial-author">Prénom, profession</p>
+    </div>
+  </div>
+</section>
+
+<!-- CITATION 4 — Einstein -->
+<div class="citation warm reveal">
+  <span class="citation-mark">"</span>
+  <p class="citation-text">Le mental intuitif est un don sacré, le mental rationnel est un serviteur fidèle. Nous avons créé une société qui honore le serviteur et a oublié le don.</p>
+  <span class="citation-author">Albert Einstein</span>
+</div>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-left">
+    <p class="section-label reveal">Contact</p>
+    <h2 class="contact-title reveal reveal-delay-1">Commençons<br>par <em>nous rencontrer.</em></h2>
+    <p class="contact-desc reveal reveal-delay-2">Que ce soit en cabinet à Levallois-Perret ou en visio, la première étape est souvent la plus difficile à franchir — et la plus nécessaire.</p>
+    <div class="contact-infos reveal reveal-delay-2">
+      <div class="contact-info">
+        <div class="contact-info-icon">📍</div>
+        <div>
+          <span class="contact-info-label">Cabinet</span>
+          <span class="contact-info-value">Levallois-Perret (92)<br>Mar · Mer · Ven · Sam</span>
+        </div>
+      </div>
+      <div class="contact-info">
+        <div class="contact-info-icon">💻</div>
+        <div>
+          <span class="contact-info-label">En ligne</span>
+          <span class="contact-info-value">Séances disponibles en visio</span>
+        </div>
+      </div>
+      <div class="contact-info">
+        <div class="contact-info-icon">✦</div>
+        <div>
+          <span class="contact-info-label">Instagram</span>
+          <span class="contact-info-value"><a href="https://instagram.com/coccinellodie" target="_blank" style="color:var(--brun-fonce);text-decoration:none;border-bottom:1px solid rgba(182,154,148,0.4);">@coccinellodie</a></span>
+        </div>
+      </div>
+    </div>
+    <div class="contact-urgence reveal reveal-delay-3">
+      <p>Tu traverses une période particulièrement difficile en ce moment ?</p>
+      <a href="mailto:contact@elodienirennold.com">Écris-moi directement</a>
+    </div>
+  </div>
+  <div class="contact-cards reveal reveal-delay-1">
+    <a href="https://tidycal.com/elodie-nirennold" target="_blank" class="contact-card">
+      <h3>Séance en cabinet ou en visio</h3>
+      <p>Ostéopathie somato-émotionnelle, hypnose, ou première séance d'exploration — réserve directement en ligne.</p>
+      <span class="contact-card-link">Réserver sur Tidycal</span>
+    </a>
+    <a href="mailto:contact@elodienirennold.com" class="contact-card">
+      <h3>Accompagnement coaching</h3>
+      <p>Tu sens qu'il te faut quelque chose de plus profond, sur la durée ? Écris-moi, on voit ensemble ce qui est juste.</p>
+      <span class="contact-card-link">Me contacter</span>
+    </a>
+    <a href="/mon-parcours" class="contact-card">
+      <h3>Mon parcours</h3>
+      <p>Je n'enseigne pas ce que j'ai lu. Je transmets ce que j'ai traversé. Ce que je propose, j'en suis revenue.</p>
+      <span class="contact-card-link">Lire mon parcours</span>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <span class="footer-name">Elodie Nirennold</span>
+  </div>
+  <ul class="footer-links">
+    <li><a href="/pour-qui">Pour qui</a></li>
+    <li><a href="/accompagnements">Accompagnements</a></li>
+    <li><a href="/mon-parcours">Mon parcours</a></li>
+    <li><a href="https://instagram.com/coccinellodie" target="_blank">Instagram</a></li>
+    <li><a href="#">Mentions légales</a></li>
+  </ul>
+  <span class="footer-copy">© 2026 Elodie Nirennold</span>
+</footer>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold:0.1 });
+reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

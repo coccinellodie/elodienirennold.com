@@ -149,20 +149,9 @@ nav {
   padding-bottom:0.2rem;
 }
 .btn-ghost:hover { color:var(--brun-fonce); gap:1rem; border-color:var(--rose); }
-.hero-badges {
-  display:flex; gap:0.8rem; margin-top:4rem; flex-wrap:wrap;
-}
-.badge {
-  display:inline-flex; align-items:center; gap:0.5rem;
-  background:transparent; border:1px solid rgba(182,154,148,0.3);
-  border-radius:50px; padding:0.4rem 1rem;
-  font-family:'Jost', sans-serif; font-weight:300;
-  font-size:0.65rem; letter-spacing:0.16em; text-transform:uppercase;
-  color:var(--brun);
-}
-.badge-dot {
-  width:5px; height:5px; border-radius:50%; background:var(--rose-clair); flex-shrink:0;
-}
+
+
+
 .hero-right { position:relative; overflow:hidden; }
 .hero-img {
   width:100%; height:100%; object-fit:cover; object-position:top center;
@@ -663,9 +652,10 @@ nav {
 }
 .quiz-floating {
   position:absolute; top:-2.5rem; right:-2rem;
-  background:var(--brun-fonce); border-radius:18px;
+  background:linear-gradient(135deg, var(--brun-moyen) 0%, var(--brun-fonce) 100%);
+  border-radius:18px;
   padding:1.4rem 1.8rem; z-index:2;
-  box-shadow:0 10px 36px rgba(76,50,13,0.25);
+  box-shadow:0 10px 36px rgba(76,50,13,0.25), inset 0 1px 0 rgba(255,255,255,0.1);
 }
 .quiz-floating span:first-child {
   font-family:'Cormorant Garamond', serif; font-weight:300;
@@ -802,23 +792,7 @@ nav {
   font-family:'Jost', sans-serif; font-weight:300;
   font-size:0.83rem; line-height:1.6; color:var(--brun-fonce);
 }
-.contact-urgence {
-  margin-top:2rem; padding:1.8rem 2rem;
-  background:var(--rose-vapeur); border-radius:18px;
-  border-left:2px solid var(--rose-clair);
-}
-.contact-urgence p {
-  font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:300;
-  font-size:1.05rem; line-height:1.7; color:var(--brun-fonce); margin-bottom:1rem;
-}
-.contact-urgence a {
-  font-family:'Jost', sans-serif; font-weight:300;
-  font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase;
-  color:var(--vert-sapin); text-decoration:none;
-  display:inline-flex; align-items:center; gap:0.5rem; transition:gap 0.3s;
-}
-.contact-urgence a::after { content:'→'; }
-.contact-urgence a:hover { gap:0.8rem; }
+
 
 .contact-cards { display:flex; flex-direction:column; gap:1.2rem; }
 .contact-card {
@@ -1088,6 +1062,102 @@ footer::before {
   .citation-slide { flex:0 0 100%; }
 }
 
+
+.hero-badges {
+  display:flex; gap:0.8rem; margin-top:4rem; flex-wrap:wrap;
+}
+.badge {
+  display:inline-flex; align-items:center; gap:0.5rem;
+  background:transparent; border:1px solid rgba(182,154,148,0.3);
+  border-radius:50px; padding:0.4rem 1rem;
+  font-family:'Jost',sans-serif; font-weight:300;
+  font-size:0.65rem; letter-spacing:0.16em; text-transform:uppercase;
+  color:var(--brun);
+}
+.badge-dot {
+  width:5px; height:5px; border-radius:50%; background:var(--rose-clair); flex-shrink:0;
+}
+
+/* ─── PILIERS ─── */
+.piliers {
+  padding:8rem 8rem;
+  background:linear-gradient(160deg, var(--creme-fonce) 0%, var(--rose-vapeur) 45%, var(--creme) 100%);
+  position:relative; overflow:hidden;
+}
+.piliers::before {
+  content:'';
+  position:absolute; top:-80px; right:-80px;
+  width:380px; height:380px; border-radius:50%;
+  background:radial-gradient(circle, rgba(182,154,148,0.1) 0%, transparent 65%);
+  pointer-events:none;
+}
+.piliers-header {
+  text-align:center; margin-bottom:5rem;
+}
+.piliers-header .section-label { color:var(--rose); opacity:1; }
+.piliers-header .section-label::before { background:var(--rose); opacity:0.5; }
+.piliers-title {
+  font-family:'Cormorant Garamond', serif; font-weight:300;
+  font-size:clamp(1.6rem, 2.8vw, 2.4rem); line-height:1.3;
+  color:var(--brun-fonce); opacity:0.75; max-width:520px; margin:0 auto;
+  font-style:italic;
+}
+.piliers-grid {
+  display:grid; grid-template-columns:1fr 1fr; gap:2rem;
+  max-width:900px; margin:0 auto;
+}
+.pilier-card {
+  background:rgba(253,250,246,0.85);
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(182,154,148,0.2);
+  border-top:2px solid var(--rose-clair);
+  border-radius:0 0 22px 22px;
+  padding:3.5rem 3.5rem;
+  position:relative; overflow:hidden;
+  transition:background 0.4s;
+}
+.pilier-card:hover { background:rgba(253,250,246,0.09); }
+.pilier-num {
+  font-family:'Cormorant Garamond', serif; font-weight:300;
+  font-size:4rem; line-height:1; color:var(--rose-clair);
+  opacity:0.2; position:absolute; top:1.5rem; right:2rem;
+  font-style:italic;
+}
+.pilier-name {
+  font-family:'Cormorant Garamond', serif; font-weight:400;
+  font-size:1.6rem; color:var(--brun-fonce);
+  margin-bottom:1.5rem; line-height:1.2;
+  position:relative; z-index:1;
+}
+.pilier-desc {
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.84rem; line-height:1.95;
+  color:var(--brun);
+  position:relative; z-index:1;
+  margin-bottom:2rem;
+}
+.pilier-signals {
+  list-style:none; display:flex; flex-direction:column; gap:0.7rem;
+  position:relative; z-index:1;
+}
+.pilier-signals li {
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.8rem; line-height:1.7;
+  color:var(--brun-fonce); opacity:0.6;
+  padding-left:1.4rem; position:relative;
+  font-style:italic;
+}
+.pilier-signals li::before {
+  content:'';
+  position:absolute; left:0; top:0.68em;
+  width:5px; height:5px; border-radius:50%;
+  background:var(--rose-clair); opacity:0.4;
+}
+@media(max-width:1100px) {
+  .piliers { padding:6rem 2rem; }
+  .piliers-grid { grid-template-columns:1fr; }
+}
+
 /* ─── ANIMATIONS ─── */
 @keyframes fadeUp {
   from { opacity:0; transform:translateY(30px); }
@@ -1161,7 +1231,7 @@ footer::before {
     <h1 class="hero-name">Elodie<br>Nirennold</h1>
     <p class="hero-tagline">Assez survécu. Il est temps d'habiter ta vie.</p>
     <p class="hero-sub">
-      Le corps garde la mémoire de tout ce que tu n'as pas pu exprimer et laisser circuler. On commence par là.
+      Le corps garde la mémoire de tout ce que tu n'as pas pu exprimer. On commence par là.
     </p>
     <div class="hero-actions">
       <a href="#par-ou-commencer" class="btn-primary">Par où commencer ?</a>
@@ -1170,7 +1240,7 @@ footer::before {
     <div class="hero-badges">
       <span class="badge"><span class="badge-dot"></span>Levallois-Perret</span>
       <span class="badge"><span class="badge-dot"></span>Visio</span>
-      <span class="badge"><span class="badge-dot"></span>18 ans de pratique</span>
+      <span class="badge"><span class="badge-dot"></span>+18 ans de pratique</span>
     </div>
   </div>
   <div class="hero-right">
@@ -1178,10 +1248,6 @@ footer::before {
       src="https://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_630,w_1200,f_auto,q_auto/2144049/B6B32226-E849-421E-82C6-485F9475D09C.jpg"
       alt="Elodie Nirennold" class="hero-img">
     <div class="hero-img-overlay"></div>
-    <div class="hero-stat">
-      <div class="hero-stat-num">18+</div>
-      <div class="hero-stat-label">ans de pratique</div>
-    </div>
   </div>
 </section>
 
@@ -1217,24 +1283,60 @@ footer::before {
       Tu as appris à tenir.<br><em>Maintenant, apprends à recevoir.</em>
     </h2>
     <ul class="mirror-list reveal reveal-delay-2">
-      <li>Tu donnes sans compter — mais recevoir te met mal à l'aise, comme si tu te retrouvais aussitôt en dette.</li>
-      <li>Un message sans réponse. Un silence qui dure. Quand le lien vacille, quelque chose en toi vacille aussi.</li>
-      <li>Tu tiens tout. Et silencieusement, tu as peur de t'effondrer.</li>
-      <li>Tu as beaucoup compris sur toi-même. Et pourtant, ça ne change pas vraiment.</li>
-      <li>Ton corps a commencé à parler plus fort que les mots. Tu ne peux plus l'ignorer.</li>
+      <li>Tu donnes sans compter. Recevoir te met en dette.</li>
+      <li>Un message sans réponse. Un silence qui dure. Quelque chose vacille.</li>
+      <li>Tu tiens tout. Tu as peur de t'effondrer.</li>
+      <li>Tu as tout compris. Les mêmes schémas reviennent.</li>
+      <li>Ton corps a commencé à parler plus fort. Tu ne peux plus l'ignorer.</li>
     </ul>
   </div>
   <div class="mirror-right reveal reveal-delay-2">
     <div class="mirror-card">
       <span class="mirror-quote-mark">“</span>
       <blockquote class="mirror-quote">
-        Tu survives dans le lien.<br>On est là pour que tu y vives.
+        Tu survis dans le lien.<br>On est là pour que tu y vives.
       </blockquote>
       <div class="mirror-cta">
-        <p>Identifie précisément où ton énergie se disperse et reçois des pistes concrètes pour reprendre le pouvoir.</p>
+        <p>Identifie où ton énergie se disperse. Reçois des pistes concrètes.</p>
         <a href="https://programmes.elodienirennold.com/quiz-diagnostic-sablier-interieur" target="_blank">Faire le quiz Sablier Intérieur</a>
       </div>
     </div>
+  </div>
+</section>
+
+
+<!-- PILIERS -->
+<section class="piliers">
+  <div class="piliers-header">
+    <p class="section-label reveal">Ce que j'accompagne en profondeur</p>
+    <h2 class="piliers-title reveal reveal-delay-1">Deux réalités que beaucoup vivent<br>sans jamais les nommer.</h2>
+  </div>
+  <div class="piliers-grid">
+
+    <div class="pilier-card reveal">
+      <span class="pilier-num">01</span>
+      <h3 class="pilier-name">Peur de l'effondrement</h3>
+      <p class="pilier-desc">Tu tiens. De l'extérieur, tu assures. Mais intérieurement, quelque chose surveille en permanence — prêt à craquer si tu relâches. Ce n'est pas de la fragilité. C'est l'épuisement de tenir sans filet depuis trop longtemps.</p>
+      <ul class="pilier-signals">
+        <li>Craquer. Décevoir. Perdre pied.</li>
+        <li>Ne plus pouvoir tenir si tu relâches le contrôle.</li>
+        <li>Peur silencieuse de replonger dans un état d'effondrement.</li>
+        <li>Mental qui tourne la nuit, corps qui ne relâche pas.</li>
+      </ul>
+    </div>
+
+    <div class="pilier-card reveal reveal-delay-1">
+      <span class="pilier-num">02</span>
+      <h3 class="pilier-name">Survie relationnelle</h3>
+      <p class="pilier-desc">Quand le lien vacille, quelque chose en toi vacille aussi. Tu surveilles l'état du lien en permanence — avec les autres, avec toi-même. Tu donnes avant qu'on demande. Tu t'effaces avant qu'on reproche. Ce n'est pas de la générosité. C'est une stratégie de survie.</p>
+      <ul class="pilier-signals">
+        <li>Panique quand une relation devient floue ou silencieuse.</li>
+        <li>Donner avant qu'on demande. S'effacer avant qu'on reproche.</li>
+        <li>Recevoir en calculant déjà comment rembourser.</li>
+        <li>Ne pas savoir tenir ta place sans perdre le lien.</li>
+      </ul>
+    </div>
+
   </div>
 </section>
 
@@ -1243,28 +1345,28 @@ footer::before {
   <div class="portes-header">
     <p class="section-label reveal">Par où commencer ?</p>
     <h2 class="portes-title reveal reveal-delay-1">Trois états.<br>Une seule direction.</h2>
-    <p class="portes-sub reveal reveal-delay-2">Peu importe où tu en es, le fil est le même : revenir à toi, depuis le corps.</p>
+    <p class="portes-sub reveal reveal-delay-2">Le fil est le même. Revenir à toi, depuis le corps.</p>
   </div>
   <div class="portes-grid">
 
-    <a href="/accompagnements.html" class="porte-card reveal">
+    <a href="/accompagnements.html#corps" class="porte-card reveal">
       <span class="porte-lettre">A</span>
       <p class="porte-phrase">"Mon corps me parle. Je ne peux plus l'ignorer."</p>
-      <p class="porte-desc">Douleurs inexpliquées, fatigue profonde, tensions persistantes. Tu sens confusément que c'est lié à autre chose qu'une cause physique. Le corps a commencé à parler plus fort que les mots.</p>
+      <p class="porte-desc">Douleurs inexpliquées, fatigue profonde, tensions qui reviennent. Le corps a commencé à parler plus fort.</p>
       <span class="porte-tag">Ostéo somato-émotionnelle · Hypnose</span>
     </a>
 
-    <a href="/accompagnements.html" class="porte-card reveal reveal-delay-1">
+    <a href="/accompagnements.html#schemas" class="porte-card reveal reveal-delay-1">
       <span class="porte-lettre">B</span>
       <p class="porte-phrase">"J'ai tout compris. Rien ne change vraiment."</p>
-      <p class="porte-desc">Tu as fait de la psy, des formations, du développement personnel. Tu te connais bien. Et pourtant les mêmes schémas reviennent. La tête comprend. Le corps, lui, continue de réagir comme avant.</p>
+      <p class="porte-desc">Tu t'es beaucoup travaillé. Les mêmes schémas reviennent. La tête comprend. Le corps, lui, continue de réagir comme avant.</p>
       <span class="porte-tag">Coaching intégratif</span>
     </a>
 
-    <a href="/accompagnements.html" class="porte-card reveal reveal-delay-2">
+    <a href="/accompagnements.html#direction" class="porte-card reveal reveal-delay-2">
       <span class="porte-lettre">C</span>
       <p class="porte-phrase">"Je tiens. Mais je veux vivre autrement."</p>
-      <p class="porte-desc">Tu fonctionnes — même bien, de l'extérieur. Mais quelque chose en toi sait que tu passes à côté de quelque chose d'essentiel. Tu veux changer concrètement ta façon d'être au quotidien.</p>
+      <p class="porte-desc">Tu fonctionnes même bien, de l'extérieur. Mais quelque chose en toi sait que tu passes à côté de quelque chose d'essentiel. Tu veux changer concrètement ta façon d'être au quotidien.</p>
       <span class="porte-tag">Coaching intégratif</span>
     </a>
 
@@ -1275,7 +1377,7 @@ footer::before {
 <section class="direction">
   <div class="direction-header">
     <p class="section-label reveal">Le chemin</p>
-    <h2 class="direction-title reveal reveal-delay-1">D'abord <em>s'éloigner de.</em><br>Puis <em>aller vers.</em></h2>
+    <h2 class="direction-title reveal reveal-delay-1">D'abord <em>s'éloigner de.</em><br>Ensuite <em>aller vers.</em></h2>
   </div>
   <div class="direction-grid">
 
@@ -1315,7 +1417,7 @@ footer::before {
   <div class="approach-header">
     <p class="section-label reveal">L'approche</p>
     <h2 class="approach-title reveal reveal-delay-1">La transformation durable ne passe pas par la tête.<br>Elle passe par le corps.</h2>
-    <p class="approach-sub reveal reveal-delay-2">Ce que le mental n'a pas réussi à intégrer, le corps, lui, attend qu'on l'écoute.</p>
+    <p class="approach-sub reveal reveal-delay-2">Ce que le mental n'a pas réussi à intégrer, le corps l'attend.</p>
   </div>
   <div class="approach-grid">
 
@@ -1342,15 +1444,15 @@ footer::before {
     <div class="approach-card reveal reveal-delay-1">
       <div class="approach-icon"><svg width="18" height="22" viewBox="0 0 18 22" fill="none" stroke="#4C320D" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 C7 4 4 8 4 11 C4 14 7 18 13 20 C10 19 7 16 7 11 C7 6 10 3 13 2Z"/></svg></div>
       <h3 class="approach-card-title">Hypnose</h3>
-      <p class="approach-card-text">En accédant aux strates profondes, on reprogramme les schémas qui se rejouent sans ton accord. Non pour supprimer le symptôme qui te protège — mais pour lui permettre d'être compris, régulé, apaisé à la source.</p>
+      <p class="approach-card-text">En accédant aux strates profondes, on reprogramme les schémas qui se rejouent sans ton accord. Non pour supprimer le symptôme qui te protège mais pour lui permettre d'être compris, régulé, apaisé à la source.</p>
       <p class="approach-card-signature">L'hypnose n'endort pas. Elle éveille à tout notre potentiel.</p>
     </div>
 
     <div class="approach-card reveal reveal-delay-2">
       <div class="approach-icon">✦</div>
       <h3 class="approach-card-title">Coaching intégratif</h3>
-      <p class="approach-card-text">La prise de conscience ne suffit pas. Il faut un système nerveux régulé et de nouvelles connexions pour que ce qui a changé en séance tienne dans ta vie réelle — tes décisions, tes relations, tes journées.</p>
-      <p class="approach-card-signature">Continuer séance par séance permet de soulager. S'engager dans un cadre permet de ne plus dépendre des séances pour aller mieux.</p>
+      <p class="approach-card-text">La prise de conscience ne suffit pas. Il faut un système nerveux régulé et de nouvelles connexions pour que ce qui a changé en séance tienne dans ta vie réelle tes décisions, tes relations, tes journées.</p>
+      <p class="approach-card-signature">Continuer séance par séance soulage. Un cadre dans la durée transforme.</p>
     </div>
 
   </div>
@@ -1412,12 +1514,12 @@ footer::before {
   <div class="quiz-content reveal reveal-delay-1">
     <p class="section-label">Diagnostic offert</p>
     <h2 class="quiz-title">Où est-ce que tu t'épuises à force de te trahir ?</h2>
-    <p class="quiz-desc">Une cartographie honnête de ton énergie. Pas pour te coller une étiquette — pour voir clairement ce qui fuit, ce qui retient, ce qui attend.</p>
+    <p class="quiz-desc">Une cartographie honnête de ton énergie. Pas pour te coller une étiquette pour voir clairement ce qui fuit, ce qui retient, ce qui attend.</p>
     <ul class="quiz-points">
       <li>Une cartographie de ton énergie Corps · Cœur · Esprit</li>
       <li>Le miroir de tes auto-trahisons invisibles</li>
       <li>Des pistes concrètes adaptées à ton score</li>
-      <li>Un premier pas vers ce qui change vraiment</li>
+      <li>Un premier pas concret</li>
     </ul>
     <a href="https://programmes.elodienirennold.com/quiz-diagnostic-sablier-interieur" target="_blank" class="btn-primary">Je fais mon bilan gratuit</a>
   </div>
@@ -1426,7 +1528,7 @@ footer::before {
 <!-- TÉMOIGNAGES -->
 <section class="testimonials" id="temoignages">
   <p class="section-label reveal">Témoignages</p>
-  <h2 class="testimonials-title reveal reveal-delay-1">Ils m'ont fait confiance ♡</h2>
+  <h2 class="testimonials-title reveal reveal-delay-1">Ils m'ont fait confiance <span style="font-size:0.6em;opacity:0.5;vertical-align:middle;">♡</span></h2>
 
   <style>
   .temoignages-widget { max-width:100%; }
@@ -1582,7 +1684,7 @@ footer::before {
           <div class="t-avatar">
           <svg viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="white" opacity="0.9"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="white" opacity="0.75"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="white" opacity="0.6"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="white" opacity="0.9"/></svg>
         </div>
-                    <p class="t-text">Ces deux séances m'ont été extrêmement bénéfiques, tant physiquement — mes douleurs au dos se sont instantanément calmées — que mentalement. J'ai retrouvé un sommeil serein, arrêté les insomnies, et une vraie paix intérieure. C'est très complet, très professionnel et à la fois très humain et réconfortant.</p>
+                    <p class="t-text">Ces deux séances m'ont été extrêmement bénéfiques, tant physiquement mes douleurs au dos se sont instantanément calmées que mentalement. J'ai retrouvé un sommeil serein, arrêté les insomnies, et une vraie paix intérieure. C'est très complet, très professionnel et à la fois très humain et réconfortant.</p>
           <p class="t-name">— Virginie Groussard</p>
         </div>
 
@@ -1661,7 +1763,7 @@ footer::before {
   <div class="contact-left">
     <p class="section-label reveal">Contact</p>
     <h2 class="contact-title reveal reveal-delay-1">Commençons<br>par <em>nous rencontrer.</em></h2>
-    <p class="contact-desc reveal reveal-delay-2">Que ce soit en cabinet à Levallois-Perret ou en visio, la première étape est souvent la plus difficile à franchir — et la plus nécessaire.</p>
+    <p class="contact-desc reveal reveal-delay-2">En cabinet à Levallois-Perret ou en visio. La première séance est souvent celle qui change tout.</p>
     <div class="contact-infos reveal reveal-delay-2">
       <div class="contact-info">
         <div class="contact-info-icon">📍</div>
@@ -1685,25 +1787,21 @@ footer::before {
         </div>
       </div>
     </div>
-    <div class="contact-urgence reveal reveal-delay-3">
-      <p>Tu traverses une période particulièrement difficile en ce moment ?</p>
-      <a href="mailto:contact@elodienirennold.com">Écris-moi directement</a>
-    </div>
   </div>
   <div class="contact-cards reveal reveal-delay-1">
     <a href="https://tidycal.com/elodie-nirennold" target="_blank" class="contact-card">
       <h3>Séance en cabinet ou en visio</h3>
-      <p>Ostéopathie somato-émotionnelle, hypnose, ou première séance d'exploration — réserve directement en ligne.</p>
+      <p>Ostéopathie somato-émotionnelle ou hypnose. Réservation directe en ligne.</p>
       <span class="contact-card-link">Réserver sur Tidycal</span>
     </a>
-    <a href="mailto:contact@elodienirennold.com" class="contact-card">
+    <a href="https://tidycal.com/elodie-nirennold/appel-clarte-gratuit-coaching-integratif" target="_blank" class="contact-card">
       <h3>Accompagnement coaching</h3>
-      <p>Tu sens qu'il te faut quelque chose de plus profond, sur la durée ? Écris-moi, on voit ensemble ce qui est juste.</p>
-      <span class="contact-card-link">Me contacter</span>
+      <p>Un accompagnement dans la durée. Commence par un appel clarté gratuit.</p>
+      <span class="contact-card-link">Réserver l'appel clarté</span>
     </a>
     <a href="/mon-parcours.html" class="contact-card">
       <h3>Mon parcours</h3>
-      <p>Je n'enseigne pas ce que j'ai lu. Je transmets ce que j'ai traversé. Ce que je propose, j'en suis revenue.</p>
+      <p>Je n'enseigne pas ce que j'ai lu. Je transmets ce que j'ai traversé.</p>
       <span class="contact-card-link">Lire mon parcours</span>
     </a>
   </div>
@@ -1782,40 +1880,15 @@ footer::before {
         <span class="footer-name">Elodie Nirennold</span>
         <span class="footer-tagline">Ostéopathie · Hypnose · Coaching Intégratif</span>
       </div>
-      <div class="footer-nav">
-        <div class="footer-col">
-          <span class="footer-col-title">Navigation</span>
-          <ul>
-            <li><a href="#par-ou-commencer">Par où commencer</a></li>
-            <li><a href="#approche">L'approche</a></li>
-            <li><a href="#temoignages">Témoignages</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <span class="footer-col-title">Rendez-vous</span>
-          <ul>
-            <li><a href="https://tidycal.com/elodie-nirennold" target="_blank">Coaching · Visio</a></li>
-            <li><a href="https://www.doctolib.fr/osteopathe/neuilly-sur-seine/elodie-nirennold" target="_blank">Ostéopathie · Doctolib</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <span class="footer-col-title">Suivre</span>
-          <ul>
-            <li><a href="https://instagram.com/coccinellodie" target="_blank">Instagram</a></li>
-            <li><a href="https://g.page/r/CZgoML18fI5QEAE/review" target="_blank">Laisser un avis Google</a></li>
-          </ul>
-        </div>
-      </div>
     </div>
     <div class="footer-bottom">
       <span class="footer-copy">© 2026 Elodie Nirennold · Levallois-Perret</span>
       <div class="footer-legal">
-        <a href="/mentions-legales.html">Mentions légales</a>
+        <a href="https://coccinellodie.github.io/elodienirennold.com/mentions-legales.html">Mentions légales</a>
         <span class="footer-sep">·</span>
-        <a href="/politique-de-confidentialite.html">Politique de confidentialité</a>
+        <a href="https://coccinellodie.github.io/elodienirennold.com/politique-de-confidentialite.html">Politique de confidentialité</a>
         <span class="footer-sep">·</span>
-        <a href="/cgv.html">CGV</a>
+        <a href="https://coccinellodie.github.io/elodienirennold.com/cgv.html">CGV</a>
       </div>
     </div>
   </div>

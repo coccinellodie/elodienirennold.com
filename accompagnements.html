@@ -83,6 +83,106 @@ footer{background:var(--creme-fonce);padding:2.5rem 8rem;display:flex;justify-co
   .page-cta{padding:6rem 2rem;}
   footer{padding:2rem;flex-direction:column;align-items:flex-start;}
 }
+
+/* ─── COACHING DESC ─── */
+.coaching-desc {
+  padding:8rem 8rem;
+  background:var(--creme);
+  position:relative; overflow:hidden;
+}
+.coaching-desc::before {
+  content:'';
+  position:absolute; top:-80px; right:-80px;
+  width:380px; height:380px; border-radius:50%;
+  background:radial-gradient(circle, var(--rose-vapeur) 0%, transparent 65%);
+  pointer-events:none;
+}
+.coaching-desc-inner { max-width:1100px; margin:0 auto; }
+.coaching-desc-lead { max-width:720px; margin-bottom:5rem; }
+.coaching-desc-title {
+  font-family:'Cormorant Garamond', serif; font-weight:400;
+  font-size:clamp(2rem, 3.5vw, 3rem); color:var(--brun-fonce);
+  line-height:1.15; margin-bottom:2rem; letter-spacing:-0.01em;
+}
+.coaching-desc-sub {
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.86rem; line-height:2; color:var(--brun);
+  margin-bottom:1rem;
+}
+.coaching-desc-cols {
+  display:grid; grid-template-columns:1fr 1fr; gap:2.5rem;
+  margin-bottom:5rem;
+}
+.coaching-desc-col {
+  background:var(--blanc); border-radius:20px;
+  padding:3rem; border:1px solid rgba(182,154,148,0.12);
+}
+.coaching-desc-col-title {
+  font-family:'Cormorant Garamond', serif; font-weight:500;
+  font-size:1.1rem; color:var(--brun-fonce);
+  margin-bottom:1.8rem; padding-bottom:1rem;
+  border-bottom:1px solid rgba(182,154,148,0.18);
+}
+.coaching-desc-list {
+  list-style:none; display:flex; flex-direction:column; gap:0.9rem;
+}
+.coaching-desc-list li {
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.83rem; line-height:1.8; color:var(--brun);
+  padding-left:1.6rem; position:relative;
+}
+.coaching-desc-list li::before {
+  content:''; position:absolute; left:0; top:0.72em;
+  width:6px; height:6px; border-radius:50%;
+  background:transparent; border:1.5px solid var(--rose-clair);
+}
+.coaching-desc-cadre {
+  display:grid; grid-template-columns:1fr 1fr; gap:4rem;
+  align-items:center;
+  background:var(--vert-sapin); border-radius:28px;
+  padding:4rem 4.5rem;
+  position:relative; overflow:hidden;
+}
+.coaching-desc-cadre::before {
+  content:'';
+  position:absolute; top:-60px; right:-60px;
+  width:250px; height:250px; border-radius:50%;
+  background:radial-gradient(circle, rgba(182,154,148,0.1) 0%, transparent 70%);
+  pointer-events:none;
+}
+.coaching-desc-cadre-title {
+  font-family:'Cormorant Garamond', serif; font-weight:400;
+  font-size:1.3rem; color:var(--creme);
+  margin-bottom:1.5rem; line-height:1.3;
+}
+.coaching-desc-cadre-text p {
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.84rem; line-height:1.95;
+  color:rgba(247,241,232,0.72); margin-bottom:0.8rem;
+}
+.coaching-desc-cadre-cta {
+  display:flex; flex-direction:column; gap:1.2rem; align-items:flex-start;
+}
+.coaching-desc-cadre-question {
+  font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:300;
+  font-size:1.1rem; color:rgba(247,241,232,0.8);
+  margin-bottom:0.5rem;
+}
+.btn-ghost-coaching {
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase;
+  color:rgba(247,241,232,0.45); text-decoration:none;
+  display:inline-flex; align-items:center; gap:0.5rem;
+  border-bottom:1px solid rgba(247,241,232,0.2); padding-bottom:0.2rem;
+  transition:color 0.3s, border-color 0.3s;
+}
+.btn-ghost-coaching:hover { color:rgba(247,241,232,0.8); border-color:var(--rose-clair); }
+@media(max-width:1100px) {
+  .coaching-desc { padding:5rem 2rem; }
+  .coaching-desc-cols { grid-template-columns:1fr; }
+  .coaching-desc-cadre { grid-template-columns:1fr; gap:2.5rem; padding:3rem 2rem; }
+}
+
 </style>
 </head>
 <body>
@@ -94,8 +194,8 @@ footer{background:var(--creme-fonce);padding:2.5rem 8rem;display:flex;justify-co
 
 <div class="page-header">
   <p class="page-label">Accompagnements</p>
-  <h1 class="page-title">Par où tu arrives,<br>le fil est le même.</h1>
-  <p class="page-sub">Revenir à toi, depuis le corps. Chaque accompagnement s'adapte à où tu en es — pas à une case préétablie.</p>
+  <h1 class="page-title">Ce dont tu as besoin<br>est déjà là.</h1>
+  <p class="page-sub">Trois approches complémentaires. Un fil commun : revenir à toi, depuis le corps.</p>
 </div>
 
 <!-- OSTÉO -->
@@ -104,7 +204,11 @@ footer{background:var(--creme-fonce);padding:2.5rem 8rem;display:flex;justify-co
     <p class="acc-label">Porte A</p>
     <h2 class="acc-title">Ostéopathie<br>somato-émotionnelle</h2>
     <p class="acc-subtitle">"Mon corps me parle. Je ne peux plus l'ignorer."</p>
-    <p class="acc-desc">Le corps sait ce que le mental n'a pas réussi à intégrer. Douleurs inexpliquées, tensions qui reviennent, fatigue profonde — ce que les mots n'ont pas pu dire, il le tient dans ses tissus, ses fascias, sa posture. On libère ce qui est enkysté pour redonner au corps sa capacité naturelle d'équilibration.</p>
+    <p class="acc-desc">Et si nous avions perdu le réflexe de nous fier à notre corps ? Et si nous avions oublié qu'il est un allié précieux qui nous délivre des informations chaque jour ?</p>
+    <p class="acc-desc">Je suis convaincue que tout ce qui ne s'exprime pas s'imprime dans l'inconscient et dans les mémoires cellulaires du corps. Les émotions sont de l'énergie en mouvement. Réprimées depuis des années, elles créent des nœuds énergétiques qui entraînent des dysfonctionnements dans notre santé. La somatisation devient alors le dernier recours de l'organisme pour exprimer ce qui est cristallisé.</p>
+    <p class="acc-desc">L'approche somato-émotionnelle donne au corps la possibilité de se libérer des contraintes et des mémoires inscrites dans les tissus. À l'aide de techniques manuelles fonctionnelles et énergétiques douces sur l'appareil locomoteur, j'explore les déséquilibres et blocages. En plaçant le corps dans les meilleures conditions possibles, celui-ci retrouve ses capacités naturelles d'équilibration et son potentiel d'auto-guérison.</p>
+    <p class="acc-desc">Ma spécialité est de faire le pont entre le corps et l'esprit collecter les informations et émotions engrammées dans les structures en déséquilibre, adapter la stratégie thérapeutique, et procéder à un soin sur-mesure. L'équilibre du bassin est au cœur de ma pratique, car il constitue l'assise véritable de l'ensemble de l'organisme.</p>
+    <p class="acc-desc" style="font-style:italic;color:var(--rose);font-family:'Cormorant Garamond',serif;font-size:0.95rem;">Séances proposées à partir de 4 ans, avec accord parental.</p>
     <ul class="acc-list">
       <li>Douleurs physiques à composante émotionnelle</li>
       <li>Fatigue chronique, épuisement nerveux</li>
@@ -112,10 +216,7 @@ footer{background:var(--creme-fonce);padding:2.5rem 8rem;display:flex;justify-co
       <li>Corps en alerte permanente</li>
       <li>Après un choc émotionnel ou traumatique</li>
     </ul>
-    <div class="acc-tarif">
-      <span>Sur devis</span>
-      <span>Cabinet · Levallois-Perret</span>
-    </div>
+    
     <a href="https://www.doctolib.fr/osteopathe/neuilly-sur-seine/elodie-nirennold" target="_blank" class="btn-primary">Réserver sur Doctolib</a>
   </div>
   <div class="acc-visual">
@@ -148,7 +249,10 @@ footer{background:var(--creme-fonce);padding:2.5rem 8rem;display:flex;justify-co
     <p class="acc-label">Porte A · suite</p>
     <h2 class="acc-title">Hypnose &<br>accès à l'inconscient</h2>
     <p class="acc-subtitle">"J'ai tout compris. Rien ne change vraiment."</p>
-    <p class="acc-desc">Ton corps a tout retenu. En accédant aux strates profondes, on reprogramme les schémas qui se rejouent sans ton accord : peur du lien, difficulté à recevoir, survie chronique. Non pour supprimer le symptôme qui te protège — mais pour lui permettre d'être compris, régulé, apaisé à la source.</p>
+    <p class="acc-desc">Je pratique une hypnose douce et puissante dérivée de l'hypnose ericksonienne et de la méthode SAJECE. Je t'invite à suivre un chemin de transformation à travers des histoires métaphoriques. Les images et symboles cachés dans ces récits sont autant de graines de changement semées dans le subconscient pour remettre de la sécurité sur les douleurs passées et révéler de nouvelles ressources.</p>
+    <p class="acc-desc">La lecture énergétique de ta structure me permet de rapidement cibler les freins émotionnels prioritaires. Il ne s'agit pas de supprimer le symptôme qui te protège, mais de lui permettre d'être compris, régulé, apaisé à la source. Je t'accompagne à la rencontre des différentes parts de toi qui cohabitent parfois dans la dissonance celles qui protègent, contrôlent, fuient, portent la douleur. Plutôt que de lutter contre elles, je crée un espace sécurisé où chacune peut être entendue et réhabilitée dans sa juste fonction.</p>
+    <p class="acc-desc">Cette réconciliation intérieure permet de sortir des luttes internes silencieuses et d'ouvrir un chemin plus doux, plus stable vers ton équilibre profond. L'hypnose remet du mouvement là où la peur a progressivement figé les structures.</p>
+    <p class="acc-desc" style="font-style:italic;color:var(--rose);font-family:'Cormorant Garamond',serif;font-size:0.95rem;">Séances proposées à partir de 4 ans, avec accord parental.</p>
     <ul class="acc-list">
       <li>Stress, anxiété, insomnies</li>
       <li>Peur du rejet, de l'abandon, de l'effondrement</li>
@@ -156,10 +260,7 @@ footer{background:var(--creme-fonce);padding:2.5rem 8rem;display:flex;justify-co
       <li>Arrêt du tabac, troubles du sommeil</li>
       <li>Blocages émotionnels profonds</li>
     </ul>
-    <div class="acc-tarif">
-      <span>Sur devis</span>
-      <span>Cabinet ou Visio</span>
-    </div>
+    
     <a href="https://tidycal.com/elodie-nirennold" target="_blank" class="btn-primary">Réserver</a>
   </div>
 </section>
@@ -170,59 +271,92 @@ footer{background:var(--creme-fonce);padding:2.5rem 8rem;display:flex;justify-co
     <p class="acc-label">Porte B & C</p>
     <h2 class="acc-title">Coaching<br>intégratif</h2>
     <p class="acc-subtitle">"Je veux que ça change vraiment. Et que ça tienne."</p>
-    <p class="acc-desc">La prise de conscience ne suffit pas. Il faut un système nerveux régulé et de nouvelles connexions pour que ce qui a changé en séance tienne dans ta vie réelle. Cet accompagnement mêle coaching intégratif, hypnose, approche somatique et lecture énergétique pour une action précise.</p>
-    <ul class="acc-list">
-      <li>Survie relationnelle — peur de perdre le lien</li>
-      <li>Difficulté à recevoir sans se sentir redevable</li>
-      <li>Hyper-responsabilité, sur-adaptation</li>
-      <li>Peur de craquer ou de décevoir</li>
-      <li>Vouloir vivre autrement, pas juste comprendre</li>
-    </ul>
-    <div style="margin-bottom:1.5rem;">
-      <div class="acc-tarif" style="margin-bottom:0.8rem;display:flex;flex-direction:column;align-items:flex-start;padding:1.2rem 1.6rem;border-radius:16px;">
-        <span style="font-family:'Jost',sans-serif;font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--rose);margin-bottom:0.4rem;">Séance ponctuelle</span>
-        <span style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--brun-fonce);">150 €</span>
-      </div>
-      <div class="acc-tarif" style="margin-bottom:0.8rem;display:flex;flex-direction:column;align-items:flex-start;padding:1.2rem 1.6rem;border-radius:16px;">
-        <span style="font-family:'Jost',sans-serif;font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--rose);margin-bottom:0.4rem;">Pack 6 séances + portail Notion</span>
-        <span style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--brun-fonce);">1 030 €</span>
-      </div>
-      <div class="acc-tarif" style="display:flex;flex-direction:column;align-items:flex-start;padding:1.2rem 1.6rem;border-radius:16px;">
-        <span style="font-family:'Jost',sans-serif;font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--rose);margin-bottom:0.4rem;">Accompagnement complet</span>
-        <span style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--brun-fonce);">2 050 €</span>
-      </div>
-    </div>
-    <a href="https://tidycal.com/elodie-nirennold/seance-coaching-integratif" target="_blank" class="btn-primary">Réserver une séance</a>
-    <a href="mailto:contact@elodienirennold.com" class="btn-ghost">Me contacter</a>
+    <p class="acc-desc">Le coaching intégratif est un accompagnement profond qui relie le corps, le système nerveux, les mécanismes intérieurs et la vie concrète. Pour sortir durablement des schémas d'épuisement, de sur-adaptation et de survie relationnelle.</p>
+    <p class="acc-desc">Il s'adresse aux personnes hypersensibles, lucides, exigeantes, souvent en posture de responsabilité, qui sentent qu'elles ne peuvent plus avancer uniquement par effort ou contrôle.</p>
   </div>
   <div class="acc-visual">
     <div class="acc-card">
-      <p class="acc-card-title">"Continuer séance par séance permet de soulager. S'engager dans un cadre permet de ne plus dépendre des séances pour aller mieux."</p>
+      <p class="acc-card-title">"Je ne travaille pas uniquement avec ce que tu me dis. Je travaille avec ce que ton système exprime."</p>
       <ul class="acc-card-items">
-        <li>6 sessions individuelles d'1h30</li>
-        <li>En présentiel ou en visio</li>
-        <li>Portail Notion personnalisé</li>
-        <li>Synthèses et axes d'ancrage entre séances</li>
-        <li>Analyse Human Design incluse (offre complète)</li>
+        <li>Corps, système nerveux, mécanismes intérieurs</li>
+        <li>Lecture énergétique fine de ta structure</li>
+        <li>Outils d'intégration entre les séances</li>
+        <li>Espace Notion personnalisé de suivi</li>
       </ul>
     </div>
   </div>
 </section>
 
+<!-- COACHING INTÉGRATIF DESCRIPTION -->
+<section class="coaching-desc">
+  <div class="coaching-desc-inner">
+
+    <div class="coaching-desc-lead">
+      <p class="section-label">Le coaching intégratif</p>
+      <h2 class="coaching-desc-title">Tu tiens tout à l'extérieur.<br>Tu vis avec la peur de craquer à l'intérieur.</h2>
+      <p class="coaching-desc-sub">Un accompagnement profond et sur mesure qui relie le corps, le système nerveux, les mécanismes intérieurs et la vie concrète. Pour sortir durablement des schémas d'épuisement, de sur-adaptation et de tension intérieure.</p>
+      <p class="coaching-desc-sub">Il ne s'agit pas de te corriger ni de te pousser à devenir quelqu'un d'autre. Il s'agit de comprendre ton fonctionnement, d'apaiser ce qui est en surcharge et de réintégrer les parts de toi mises de côté pour tenir, performer ou protéger les autres.</p>
+    </div>
+
+    <div class="coaching-desc-cols">
+
+      <div class="coaching-desc-col">
+        <h3 class="coaching-desc-col-title">Ce que ça change concrètement</h3>
+        <ul class="coaching-desc-list">
+          <li>Désamorcer la peur de l'effondrement — craquer, replonger, perdre pied</li>
+          <li>Sortir de la survie relationnelle</li>
+          <li>Faire équipe avec toi-même — sans culpabilité</li>
+          <li>Apprendre à recevoir sans te sentir aussitôt en dette</li>
+          <li>Retrouver une sécurité intérieure stable même quand l'extérieur vacille</li>
+          <li>Vivre selon ce qui t'anime — pas selon ce qu'on attend</li>
+        </ul>
+      </div>
+
+      <div class="coaching-desc-col">
+        <h3 class="coaching-desc-col-title">Ce que tu cesses de faire</h3>
+        <ul class="coaching-desc-list">
+          <li>Te définir par ta capacité à tenir</li>
+          <li>Paniquer quand le lien devient incertain</li>
+          <li>Te trahir pour maintenir l'équilibre autour de toi</li>
+          <li>Hyperanalyser les silences et micro-signaux relationnels</li>
+          <li>Fonctionner en mode survie plutôt qu'en mode présence</li>
+          <li>Laisser la peur du rejet piloter tes décisions</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="coaching-desc-cadre">
+      <div class="coaching-desc-cadre-text">
+        <p class="coaching-desc-cadre-title">Séance ponctuelle ou cadre dans la durée ?</p>
+        <p>Les séances ponctuelles ouvrent. Elles soulagent. Elles créent un déplacement réel.</p>
+        <p>Mais sans cadre, l'énergie libérée retourne vers les anciens automatismes. Non par manque de volonté — c'est un fonctionnement physiologique. Tant que le corps reste en alerte, la tête comprend. Le système, lui, revient à ce qu'il connaît.</p>
+        <p>S'engager dans un cadre permet de ne plus dépendre des séances pour aller mieux. De construire une base intérieure stable. Que les changements tiennent.</p>
+      </div>
+      <div class="coaching-desc-cadre-cta">
+        <p class="coaching-desc-cadre-question">Tu veux savoir si cet accompagnement est fait pour toi ?</p>
+        <a href="https://tidycal.com/elodie-nirennold/appel-clarte-gratuit-coaching-integratif" target="_blank" class="btn-primary">Appel clarté gratuit · 45 min</a>
+        <a href="https://tidycal.com/elodie-nirennold/seance-coaching-integratif" target="_blank" class="btn-ghost-coaching">Ou réserver une séance</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <div class="page-cta">
   <h2>Tu ne sais pas encore<br>par où commencer ?</h2>
-  <p>Écris-moi. On trouve ensemble le cadre le plus juste pour ta situation — sans engagement.</p>
+  <p>Écris-moi. On trouve ensemble le cadre le plus juste pour ta situation sans engagement.</p>
   <a href="mailto:contact@elodienirennold.com" class="btn-primary-light">Me contacter</a>
 </div>
 
 <footer>
   <span class="footer-copy">© 2026 Elodie Nirennold · Levallois-Perret</span>
   <div class="footer-legal">
-    <a href="/mentions-legales.html">Mentions légales</a>
+    <a href="https://coccinellodie.github.io/elodienirennold.com/mentions-legales.html">Mentions légales</a>
     <span class="footer-sep">·</span>
-    <a href="/politique-de-confidentialite.html">Politique de confidentialité</a>
+    <a href="https://coccinellodie.github.io/elodienirennold.com/politique-de-confidentialite.html">Politique de confidentialité</a>
     <span class="footer-sep">·</span>
-    <a href="/cgv.html">CGV</a>
+    <a href="https://coccinellodie.github.io/elodienirennold.com/cgv.html">CGV</a>
   </div>
 </footer>
 </body>

@@ -2,8 +2,8 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="noindex, nofollow"> 
 <title>Elodie Nirennold | Ostéo · Hypnose · Coaching Intégratif</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -246,11 +246,18 @@ nav {
 
 .citation-mark {
   font-family:'Cormorant Garamond', serif; font-weight:300;
-  font-size:6rem; line-height:0.6;
-  color:var(--rose-clair); opacity:0.5;
-  margin-bottom:1.5rem; display:block;
+  font-size:9rem; line-height:0.5;
+  color:var(--rose-clair); opacity:0.6;
+  margin-bottom:1rem; display:block;
+  font-style:italic; letter-spacing:-0.05em;
 }
-.citation.dark .citation-mark { color:var(--rose-clair); opacity:0.3; }
+.citation.dark .citation-mark {
+  font-family:'Cormorant Garamond', serif; font-weight:300;
+  font-size:9rem; line-height:0.5;
+  color:var(--rose-clair); opacity:0.6;
+  margin-bottom:1rem; display:block;
+  font-style:italic; letter-spacing:-0.05em;
+}
 
 .citation-text {
   font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:300;
@@ -345,9 +352,10 @@ nav {
   margin-bottom:3rem; position:relative; z-index:1;
 }
 .mirror-quote-mark {
-  font-family:'Cormorant Garamond', serif; font-size:5rem; font-weight:300;
-  color:var(--rose-clair); opacity:0.4; line-height:0.8;
-  display:block; margin-bottom:0.8rem;
+  font-family:'Cormorant Garamond', serif; font-size:8rem; font-weight:300;
+  color:var(--rose-clair); opacity:0.5; line-height:0.7;
+  display:block; margin-bottom:0.6rem;
+  font-style:italic; letter-spacing:-0.05em;
 }
 .mirror-cta {
   background:var(--vert-sapin); border-radius:18px;
@@ -655,18 +663,18 @@ nav {
 }
 .quiz-floating {
   position:absolute; top:-2.5rem; right:-2rem;
-  background:var(--vert-sapin); border-radius:18px;
+  background:var(--brun-fonce); border-radius:18px;
   padding:1.4rem 1.8rem; z-index:2;
-  box-shadow:0 10px 36px rgba(36,61,31,0.18);
+  box-shadow:0 10px 36px rgba(76,50,13,0.25);
 }
 .quiz-floating span:first-child {
   font-family:'Cormorant Garamond', serif; font-weight:300;
-  font-size:2.2rem; color:var(--creme); display:block; line-height:1;
+  font-size:2.2rem; color:var(--blanc); display:block; line-height:1;
 }
 .quiz-floating span:last-child {
   font-family:'Jost', sans-serif; font-weight:300;
   font-size:0.6rem; letter-spacing:0.18em; text-transform:uppercase;
-  color:var(--rose-clair); margin-top:0.3rem; display:block;
+  color:var(--rose-pale); margin-top:0.3rem; display:block; opacity:0.9;
 }
 .quiz-title {
   font-family:'Cormorant Garamond', serif; font-weight:400;
@@ -693,21 +701,21 @@ nav {
 /* ─── TÉMOIGNAGES ─── */
 .testimonials {
   padding:11rem 8rem;
-  background:var(--vert-sapin);
+  background:var(--blanc);
   position:relative; overflow:hidden;
 }
 .testimonials::before {
   content:'';
   position:absolute; top:-120px; right:-120px;
   width:550px; height:550px; border-radius:50%;
-  background:radial-gradient(circle, rgba(182,154,148,0.1) 0%, transparent 65%);
+  background:radial-gradient(circle, var(--rose-vapeur) 0%, transparent 65%);
   pointer-events:none;
 }
-.testimonials .section-label { color:var(--rose-clair); opacity:0.8; }
-.testimonials .section-label::before { background:var(--rose-clair); }
+.testimonials .section-label { color:var(--rose); opacity:1; }
+.testimonials .section-label::before { background:var(--rose); }
 .testimonials-title {
   font-family:'Cormorant Garamond', serif; font-weight:300;
-  font-size:clamp(2.2rem, 3.5vw, 3.2rem); color:var(--creme);
+  font-size:clamp(2.2rem, 3.5vw, 3.2rem); color:var(--brun-fonce);
   margin-bottom:6rem; line-height:1.15; letter-spacing:-0.01em;
 }
 .testimonials-grid {
@@ -721,10 +729,11 @@ nav {
   position:relative; overflow:hidden;
 }
 .testimonial-card::before {
-  content:'"';
-  font-family:'Cormorant Garamond', serif; font-size:6rem; font-weight:300;
-  color:var(--rose-clair); opacity:0.15;
-  position:absolute; top:0.8rem; left:1.4rem; line-height:1;
+  content:'\201C';
+  font-family:'Cormorant Garamond', serif; font-size:7rem; font-weight:300;
+  color:var(--rose-clair); opacity:0.35;
+  position:absolute; top:-0.5rem; left:1.2rem; line-height:1;
+  font-style:italic;
 }
 .testimonial-card:hover {
   background:rgba(253,250,246,0.08); transform:translateY(-5px);
@@ -841,37 +850,242 @@ nav {
 .contact-card-link::after { content:'→'; }
 .contact-card:hover .contact-card-link { gap:0.8rem; }
 
+
+/* ─── INSTAGRAM ─── */
+.instagram-section {
+  padding:10rem 8rem;
+  background:var(--blanc);
+  position:relative; overflow:hidden;
+}
+.instagram-section::before {
+  content:'';
+  position:absolute; bottom:-80px; right:-80px;
+  width:350px; height:350px; border-radius:50%;
+  background:radial-gradient(circle, var(--rose-vapeur) 0%, transparent 65%);
+  pointer-events:none;
+}
+.instagram-inner { max-width:1100px; margin:0 auto; }
+.instagram-header { text-align:center; margin-bottom:4rem; }
+.instagram-title-row {
+  display:flex; align-items:center; justify-content:center;
+  gap:1rem; margin-bottom:1rem;
+}
+.ig-svg { width:28px; height:28px; flex-shrink:0; }
+.instagram-title {
+  font-family:'Cormorant Garamond',serif; font-weight:400;
+  font-size:clamp(2rem,3.5vw,3rem); color:var(--brun-fonce);
+  letter-spacing:-0.01em; line-height:1;
+}
+.instagram-tagline {
+  font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:300;
+  font-size:1.05rem; color:var(--rose); letter-spacing:0.06em;
+  margin-bottom:0.8rem;
+}
+.instagram-handle {
+  font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:300;
+  font-size:1rem; letter-spacing:0.06em;
+  color:var(--brun); opacity:0.65; text-decoration:none;
+  transition:opacity 0.3s;
+}
+.instagram-handle:hover { opacity:1; }
+.ig-grid {
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:8px; margin-bottom:3rem;
+}
+.ig-cell {
+  position:relative; overflow:hidden; border-radius:10px;
+  background:var(--rose-pale); cursor:pointer;
+  aspect-ratio:4/5; display:block;
+}
+.ig-tall { aspect-ratio:unset; grid-row:span 2; }
+.ig-cell img {
+  width:100%; height:100%; object-fit:cover; object-position:center top;
+  display:block; transition:transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+.ig-cell:hover img { transform:scale(1.05); }
+.ig-overlay {
+  position:absolute; inset:0;
+  background:linear-gradient(170deg, rgba(36,61,31,0) 40%, rgba(36,61,31,0.55) 100%);
+  opacity:0; transition:opacity 0.3s;
+  display:flex; align-items:flex-end; padding:1rem;
+}
+.ig-cell:hover .ig-overlay { opacity:1; }
+.ig-overlay span {
+  font-family:'Jost',sans-serif; font-weight:300;
+  font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase;
+  color:rgba(255,255,255,0.9);
+}
+.ig-cta { text-align:center; }
+@media(max-width:1100px) {
+  .instagram-section { padding:6rem 2rem; }
+  .ig-grid { grid-template-columns:repeat(3,1fr); }
+  .ig-tall { aspect-ratio:4/5; grid-row:span 1; }
+}
+@media(max-width:580px) {
+  .ig-grid { grid-template-columns:repeat(2,1fr); }
+}
+
 /* ─── FOOTER ─── */
 footer {
-  background:var(--brun-fonce);
-  padding:4rem 8rem;
-  display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:2rem;
+  background:var(--creme-fonce);
   position:relative; overflow:hidden;
 }
 footer::before {
   content:'';
   position:absolute; top:-80px; right:-80px;
-  width:280px; height:280px; border-radius:50%;
-  background:radial-gradient(circle, rgba(182,154,148,0.08) 0%, transparent 70%);
+  width:300px; height:300px; border-radius:50%;
+  background:radial-gradient(circle, rgba(182,154,148,0.12) 0%, transparent 70%);
+  pointer-events:none;
 }
-.footer-brand {
-  display:flex; align-items:center; gap:1rem;
+.footer-inner {
+  max-width:1400px; margin:0 auto;
+  padding:5rem 8rem 3rem;
+  position:relative; z-index:1;
 }
+.footer-top {
+  display:grid; grid-template-columns:1fr 2fr;
+  gap:6rem; padding-bottom:4rem;
+  border-bottom:1px solid rgba(182,154,148,0.2);
+  margin-bottom:2.5rem;
+}
+.footer-brand { display:flex; flex-direction:column; gap:0.8rem; }
 .footer-name {
-  font-family:'Cormorant Garamond', serif; font-weight:300;
-  font-size:1rem; letter-spacing:0.18em; text-transform:uppercase;
-  color:var(--creme); opacity:0.75;
+  font-family:'Cormorant Garamond', serif; font-weight:400;
+  font-size:1.6rem; letter-spacing:0.06em;
+  color:var(--brun-fonce); line-height:1.1;
 }
-.footer-links { display:flex; gap:2.8rem; list-style:none; }
-.footer-links a {
+.footer-tagline {
   font-family:'Jost', sans-serif; font-weight:300;
-  font-size:0.65rem; letter-spacing:0.18em; text-transform:uppercase;
-  color:var(--creme); opacity:0.38; text-decoration:none; transition:opacity 0.3s;
+  font-size:0.65rem; letter-spacing:0.22em; text-transform:uppercase;
+  color:var(--rose); opacity:0.8;
 }
-.footer-links a:hover { opacity:0.85; }
+.footer-nav { display:grid; grid-template-columns:repeat(3,1fr); gap:3rem; }
+.footer-col { display:flex; flex-direction:column; gap:1.2rem; }
+.footer-col-title {
+  font-family:'Jost', sans-serif; font-weight:400;
+  font-size:0.6rem; letter-spacing:0.3em; text-transform:uppercase;
+  color:var(--brun-fonce); opacity:0.45;
+  padding-bottom:0.8rem;
+  border-bottom:1px solid rgba(182,154,148,0.18);
+}
+.footer-col ul { list-style:none; display:flex; flex-direction:column; gap:0.7rem; }
+.footer-col ul li a {
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.78rem; letter-spacing:0.06em;
+  color:var(--brun); text-decoration:none; opacity:0.7;
+  transition:opacity 0.3s, color 0.3s;
+}
+.footer-col ul li a:hover { opacity:1; color:var(--brun-fonce); }
+.footer-bottom {
+  display:flex; justify-content:space-between; align-items:center;
+  flex-wrap:wrap; gap:1.2rem;
+}
 .footer-copy {
-  font-family:'Jost', sans-serif; font-weight:200;
-  font-size:0.65rem; color:var(--creme); opacity:0.25; letter-spacing:0.12em;
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.63rem; letter-spacing:0.14em;
+  color:var(--brun); opacity:0.38;
+}
+.footer-legal { display:flex; align-items:center; gap:0.8rem; }
+.footer-legal a {
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.63rem; letter-spacing:0.1em;
+  color:var(--brun); opacity:0.4; text-decoration:none;
+  transition:opacity 0.3s;
+}
+.footer-legal a:hover { opacity:0.9; }
+.footer-sep { color:var(--rose); opacity:0.4; font-size:0.65rem; }
+.footer-links { display:none; }
+
+
+
+
+/* ─── CITATIONS CAROUSEL ─── */
+.citations-section {
+  padding:8rem 8rem;
+  background:var(--creme);
+  position:relative; overflow:hidden;
+}
+.citations-section::before {
+  content:'';
+  position:absolute; top:-80px; left:-80px;
+  width:380px; height:380px; border-radius:50%;
+  background:radial-gradient(circle, var(--rose-vapeur) 0%, transparent 65%);
+  pointer-events:none;
+}
+.citations-carousel-outer { overflow:hidden; }
+.citations-track {
+  display:flex; gap:1.5rem;
+  transition:transform 0.65s cubic-bezier(0.4,0,0.2,1);
+  will-change:transform;
+}
+.citation-slide {
+  flex:0 0 calc(50% - 0.75rem);
+  min-width:280px;
+  background:var(--blanc);
+  border-radius:24px; padding:3.5rem 3.5rem;
+  border:1px solid rgba(182,154,148,0.12);
+  position:relative; overflow:hidden;
+  transition:transform 0.4s ease, box-shadow 0.4s;
+}
+.citation-slide:hover {
+  transform:translateY(-4px);
+  box-shadow:0 16px 50px rgba(76,50,13,0.07);
+}
+.citation-slide.dark {
+  background:var(--vert-sapin);
+  border-color:transparent;
+}
+.citation-slide::before {
+  content:'“';
+  font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:300;
+  font-size:8rem; line-height:0.5; letter-spacing:-0.05em;
+  position:absolute; top:1rem; left:2rem;
+  opacity:0.15; pointer-events:none;
+  color:var(--rose-clair);
+}
+.citation-slide-text {
+  font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:300;
+  font-size:clamp(1.1rem,1.6vw,1.4rem); line-height:1.65;
+  margin-bottom:2rem; position:relative; z-index:1;
+}
+.citation-slide:not(.dark) .citation-slide-text { color:var(--brun-fonce); }
+.citation-slide.dark .citation-slide-text { color:rgba(247,241,232,0.9); }
+.citation-slide-author {
+  font-family:'Jost',sans-serif; font-weight:300;
+  font-size:0.62rem; letter-spacing:0.28em; text-transform:uppercase;
+  display:flex; align-items:center; gap:0.8rem;
+  position:relative; z-index:1;
+}
+.citation-slide:not(.dark) .citation-slide-author { color:var(--rose); }
+.citation-slide.dark .citation-slide-author { color:var(--rose-clair); opacity:0.7; }
+.citation-slide-author::before {
+  content:''; display:block; width:18px; height:1px; flex-shrink:0;
+}
+.citation-slide:not(.dark) .citation-slide-author::before { background:var(--rose); opacity:0.5; }
+.citation-slide.dark .citation-slide-author::before { background:var(--rose-clair); opacity:0.4; }
+.citations-nav {
+  display:flex; align-items:center; justify-content:center;
+  gap:1.5rem; margin-top:2.5rem;
+}
+.citations-nav-btn {
+  width:42px; height:42px; border-radius:50%;
+  border:1.5px solid rgba(182,154,148,0.3);
+  background:transparent; color:var(--brun);
+  cursor:pointer; display:flex; align-items:center; justify-content:center;
+  transition:all 0.25s ease;
+}
+.citations-nav-btn:hover { border-color:var(--rose); color:var(--rose); }
+.citations-nav-btn svg { width:16px; height:16px; }
+.citations-nav-dots { display:flex; gap:7px; align-items:center; }
+.c-dot {
+  width:5px; height:5px; border-radius:50%;
+  background:rgba(182,154,148,0.3); transition:all 0.3s ease; cursor:pointer;
+}
+.c-dot.active { width:20px; border-radius:3px; background:var(--rose); }
+@media(max-width:1100px) {
+  .citations-section { padding:5rem 2rem; }
+  .citation-slide { flex:0 0 100%; }
 }
 
 /* ─── ANIMATIONS ─── */
@@ -894,6 +1108,10 @@ footer::before {
 
 /* ─── RESPONSIVE ─── */
 @media (max-width:1100px) {
+  .footer-inner { padding:4rem 2rem 2.5rem; }
+  .footer-top { grid-template-columns:1fr; gap:3rem; }
+  .footer-nav { grid-template-columns:repeat(2,1fr); gap:2rem; }
+  .footer-bottom { flex-direction:column; align-items:flex-start; }
   nav { padding:1.2rem 2rem; }
   .nav-links { display:none; }
   .hero { grid-template-columns:1fr; min-height:auto; }
@@ -987,11 +1205,8 @@ footer::before {
   </div>
 </div>
 
-<!-- CITATION 1 -->
-<div class="citation light reveal">
-  <span class="citation-mark">"</span>
-  <p class="citation-text">Si tu écoutes ton corps lorsqu'il chuchote, tu n'auras pas à l'entendre crier.</p>
-  <span class="citation-author">Sagesse tibétaine</span>
+
+  <div class="cite-sep"></div>
 </div>
 
 <!-- MIROIR -->
@@ -1011,7 +1226,7 @@ footer::before {
   </div>
   <div class="mirror-right reveal reveal-delay-2">
     <div class="mirror-card">
-      <span class="mirror-quote-mark">"</span>
+      <span class="mirror-quote-mark">“</span>
       <blockquote class="mirror-quote">
         Tu survives dans le lien.<br>On est là pour que tu y vives.
       </blockquote>
@@ -1032,21 +1247,21 @@ footer::before {
   </div>
   <div class="portes-grid">
 
-    <a href="/accompagnements" class="porte-card reveal">
+    <a href="/accompagnements.html" class="porte-card reveal">
       <span class="porte-lettre">A</span>
       <p class="porte-phrase">"Mon corps me parle. Je ne peux plus l'ignorer."</p>
       <p class="porte-desc">Douleurs inexpliquées, fatigue profonde, tensions persistantes. Tu sens confusément que c'est lié à autre chose qu'une cause physique. Le corps a commencé à parler plus fort que les mots.</p>
       <span class="porte-tag">Ostéo somato-émotionnelle · Hypnose</span>
     </a>
 
-    <a href="/accompagnements" class="porte-card reveal reveal-delay-1">
+    <a href="/accompagnements.html" class="porte-card reveal reveal-delay-1">
       <span class="porte-lettre">B</span>
       <p class="porte-phrase">"J'ai tout compris. Rien ne change vraiment."</p>
       <p class="porte-desc">Tu as fait de la psy, des formations, du développement personnel. Tu te connais bien. Et pourtant les mêmes schémas reviennent. La tête comprend. Le corps, lui, continue de réagir comme avant.</p>
       <span class="porte-tag">Coaching intégratif</span>
     </a>
 
-    <a href="/accompagnements" class="porte-card reveal reveal-delay-2">
+    <a href="/accompagnements.html" class="porte-card reveal reveal-delay-2">
       <span class="porte-lettre">C</span>
       <p class="porte-phrase">"Je tiens. Mais je veux vivre autrement."</p>
       <p class="porte-desc">Tu fonctionnes — même bien, de l'extérieur. Mais quelque chose en toi sait que tu passes à côté de quelque chose d'essentiel. Tu veux changer concrètement ta façon d'être au quotidien.</p>
@@ -1055,13 +1270,6 @@ footer::before {
 
   </div>
 </section>
-
-<!-- CITATION 2 — Elodie -->
-<div class="citation warm reveal">
-  <span class="citation-mark">"</span>
-  <p class="citation-text">Tout ce qui ne s'exprime pas s'imprime — dans l'inconscient et dans les mémoires cellulaires du corps.</p>
-  <span class="citation-author">Elodie Nirennold</span>
-</div>
 
 <!-- S'ÉLOIGNER / ALLER VERS -->
 <section class="direction">
@@ -1112,15 +1320,28 @@ footer::before {
   <div class="approach-grid">
 
     <div class="approach-card reveal">
-      <div class="approach-icon">🌿</div>
+      <div class="approach-icon"><svg width="22" height="26" viewBox="0 0 22 26" fill="#4C320D" stroke="none">
+  <!-- Curved stem -->
+  <path d="M7 25 Q5 22 6 18 Q7 14 11 12 Q13 8 12 4" fill="none" stroke="#4C320D" stroke-width="1.6" stroke-linecap="round"/>
+  <!-- Bottom left leaf -->
+  <path d="M6 19 Q1 18 1 14 Q4 13 7 16 Q7.5 17.5 6 19Z"/>
+  <!-- Bottom right leaf -->
+  <path d="M9 18 Q12 14 17 15 Q17 18 13 19 Q11 19.5 9 18Z"/>
+  <!-- Middle left leaf -->
+  <path d="M8 13 Q3 11 3 7 Q7 7 9 10 Q9.5 11.5 8 13Z"/>
+  <!-- Middle right leaf -->
+  <path d="M11 12 Q14 8 19 8 Q19 12 15 13 Q13 13.5 11 12Z"/>
+  <!-- Top leaf -->
+  <path d="M12 7 Q10 3 12 1 Q14 3 13 7 Q12.5 7.5 12 7Z"/>
+</svg></div>
       <h3 class="approach-card-title">Ostéopathie somato-émotionnelle</h3>
-      <p class="approach-card-text">Le corps sait ce que le mental n'a pas réussi à intégrer. Ce que les mots n'ont pas pu dire, il le tient dans ses tissus, ses fascias, sa posture. On libère ce qui est enkysté — pour redonner au corps sa capacité naturelle d'équilibration.</p>
+      <p class="approach-card-text">Le corps sait ce que le mental n'a pas réussi à intégrer. Ce que les mots n'ont pas pu dire, il le tient dans ses tissus, ses fascias, sa posture. On libère ce qui est enkysté pour redonner au corps sa capacité naturelle d'équilibration.</p>
       <p class="approach-card-signature">Je ne suis qu'un outil facilitateur de l'intelligence extraordinaire qui existe déjà au cœur de tes cellules.</p>
     </div>
 
     <div class="approach-card reveal reveal-delay-1">
-      <div class="approach-icon">🌙</div>
-      <h3 class="approach-card-title">Hypnose & accès à l'inconscient</h3>
+      <div class="approach-icon"><svg width="18" height="22" viewBox="0 0 18 22" fill="none" stroke="#4C320D" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 C7 4 4 8 4 11 C4 14 7 18 13 20 C10 19 7 16 7 11 C7 6 10 3 13 2Z"/></svg></div>
+      <h3 class="approach-card-title">Hypnose</h3>
       <p class="approach-card-text">En accédant aux strates profondes, on reprogramme les schémas qui se rejouent sans ton accord. Non pour supprimer le symptôme qui te protège — mais pour lui permettre d'être compris, régulé, apaisé à la source.</p>
       <p class="approach-card-signature">L'hypnose n'endort pas. Elle éveille à tout notre potentiel.</p>
     </div>
@@ -1135,12 +1356,45 @@ footer::before {
   </div>
 </section>
 
-<!-- CITATION 3 — Jung -->
-<div class="citation dark reveal">
-  <span class="citation-mark">"</span>
-  <p class="citation-text">Les crises, les bouleversements et la maladie ne surgissent pas par hasard. Ils nous servent d'indicateurs pour rectifier une trajectoire, explorer de nouvelles orientations.</p>
-  <span class="citation-author">Carl Gustav Jung</span>
-</div>
+
+<!-- CITATIONS CAROUSEL -->
+<section class="citations-section">
+  <div class="citations-carousel-outer">
+    <div class="citations-track" id="c-track">
+
+      <div class="citation-slide">
+        <p class="citation-slide-text">Si tu écoutes ton corps lorsqu’il chuchote, tu n’auras pas à l’entendre crier.</p>
+        <span class="citation-slide-author">Sagesse tibétaine</span>
+      </div>
+
+
+      <div class="citation-slide">
+        <p class="citation-slide-text">Chaque patient porte son propre médecin en lui. Nous excellons lorsque nous offrons au médecin qui réside en chaque patient l’occasion de se mettre au travail.</p>
+        <span class="citation-slide-author">Dr Albert Schweitzer</span>
+      </div>
+
+      <div class="citation-slide dark">
+        <p class="citation-slide-text">Le mental intuitif est un don sacré, le mental rationnel est un serviteur fidèle. Nous avons créé une société qui honore le serviteur et a oublié le don.</p>
+        <span class="citation-slide-author">Albert Einstein</span>
+      </div>
+
+      <div class="citation-slide">
+        <p class="citation-slide-text">Les crises, les bouleversements et la maladie ne surgissent pas par hasard. Ils nous servent d’indicateurs pour rectifier une trajectoire, explorer de nouvelles orientations.</p>
+        <span class="citation-slide-author">Carl Gustav Jung</span>
+      </div>
+
+    </div>
+  </div>
+  <div class="citations-nav">
+    <button class="citations-nav-btn" id="c-prev" aria-label="Précédent">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <div class="citations-nav-dots" id="c-dots"></div>
+    <button class="citations-nav-btn" id="c-next" aria-label="Suivant">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+  </div>
+</section>
 
 <!-- QUIZ -->
 <section class="quiz">
@@ -1167,34 +1421,240 @@ footer::before {
     </ul>
     <a href="https://programmes.elodienirennold.com/quiz-diagnostic-sablier-interieur" target="_blank" class="btn-primary">Je fais mon bilan gratuit</a>
   </div>
-</section>
+</section></div>
 
 <!-- TÉMOIGNAGES -->
 <section class="testimonials" id="temoignages">
   <p class="section-label reveal">Témoignages</p>
-  <h2 class="testimonials-title reveal reveal-delay-1">Ils m'ont fait confiance. ♡</h2>
-  <div class="testimonials-grid">
-    <div class="testimonial-card reveal">
-      <p class="testimonial-text">À compléter avec tes vrais témoignages clients. <span class="placeholder">placeholder</span></p>
-      <p class="testimonial-author">Prénom, profession</p>
+  <h2 class="testimonials-title reveal reveal-delay-1">Ils m'ont fait confiance ♡</h2>
+
+  <style>
+  .temoignages-widget { max-width:100%; }
+  .google-badge {
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--creme); border:1px solid rgba(182,154,148,0.2);
+    border-radius:40px; padding:6px 18px 6px 10px;
+    font-size:0.72rem; font-weight:400; font-family:'Jost',sans-serif;
+    color:var(--brun); letter-spacing:0.1em; text-transform:uppercase;
+    margin-bottom:3rem;
+  }
+  .g-icon { width:20px; height:20px; }
+  .carousel-outer { position:relative; overflow:hidden; }
+  .carousel-track {
+    display:flex; gap:1.5rem;
+    transition:transform 0.6s cubic-bezier(0.4,0,0.2,1);
+    will-change:transform;
+  }
+  .t-card {
+    flex:0 0 calc(33.333% - 1rem);
+    min-width:280px;
+    background:var(--vert-sapin);
+    border-radius:20px; padding:2.8rem 2.2rem 2rem;
+    display:flex; flex-direction:column; align-items:center; gap:1rem;
+    position:relative; overflow:hidden;
+    transition:transform 0.35s ease, box-shadow 0.35s;
+    cursor:pointer;
+    box-shadow:0 4px 24px rgba(36,61,31,0.15);
+    text-align:center;
+  }
+  .t-card:hover { transform:translateY(-5px); box-shadow:0 16px 50px rgba(36,61,31,0.2); }
+  .t-card::before { display:none; }
+  .t-stars { display:flex; gap:3px; justify-content:center; }
+  .t-star { color:#f2c55a; font-size:1rem; }
+  .t-avatar {
+    width:52px; height:52px; border-radius:50%;
+    background:linear-gradient(135deg, var(--rose-pale), var(--rose-clair));
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+    box-shadow:0 4px 14px rgba(0,0,0,0.15);
+  }
+  .t-avatar svg { width:28px; height:28px; }
+  .t-text {
+    font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:300;
+    font-size:1rem; line-height:1.78; color:rgba(247,241,232,0.88);
+    flex:1; position:relative; z-index:1;
+    display:-webkit-box; -webkit-line-clamp:7; -webkit-box-orient:vertical; overflow:hidden;
+  }
+  .t-name {
+    font-family:'Jost',sans-serif; font-weight:400;
+    font-size:0.63rem; letter-spacing:0.22em; text-transform:uppercase;
+    color:var(--rose-clair); margin-top:0.4rem; opacity:0.8;
+  }
+  .carousel-nav {
+    display:flex; align-items:center; justify-content:center;
+    gap:1.5rem; margin-top:2.5rem;
+  }
+  .nav-btn {
+    width:42px; height:42px; border-radius:50%;
+    border:1.5px solid rgba(182,154,148,0.3);
+    background:transparent; color:var(--brun);
+    cursor:pointer; display:flex; align-items:center; justify-content:center;
+    transition:all 0.25s ease;
+  }
+  .nav-btn:hover { border-color:var(--rose); color:var(--rose); }
+  .nav-btn svg { width:16px; height:16px; }
+  .nav-dots { display:flex; gap:7px; align-items:center; }
+  .t-dot {
+    width:5px; height:5px; border-radius:50%;
+    background:rgba(182,154,148,0.3); transition:all 0.3s ease; cursor:pointer;
+  }
+  .t-dot.active { width:20px; border-radius:3px; background:var(--vert-sapin); }
+  .temoignages-cta { text-align:center; margin-top:2.5rem; }
+  .temoignages-cta a {
+    display:inline-flex; align-items:center; gap:0.6rem;
+    border:1px solid rgba(182,154,148,0.3); border-radius:50px;
+    padding:0.85rem 2rem;
+    font-family:'Jost',sans-serif; font-weight:300;
+    font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase;
+    color:var(--brun); text-decoration:none;
+    transition:all 0.3s ease;
+  }
+  .temoignages-cta a:hover { border-color:var(--vert-sapin); color:var(--vert-sapin); }
+  @media(max-width:900px) { .t-card { flex:0 0 calc(50% - 0.75rem); } }
+  @media(max-width:580px) { .t-card { flex:0 0 100%; } }
+  </style>
+
+  <div class="temoignages-widget reveal">
+    <div class="google-badge">
+      <svg class="g-icon" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+      37 avis · Note 5/5
     </div>
-    <div class="testimonial-card reveal reveal-delay-1">
-      <p class="testimonial-text">À compléter avec tes vrais témoignages clients. <span class="placeholder">placeholder</span></p>
-      <p class="testimonial-author">Prénom, profession</p>
+
+    <div class="carousel-outer">
+      <div class="carousel-track" id="t-track">
+
+        <div class="t-card" onclick="window.open('https://g.page/r/CZgoML18fI5QEAE/review','_blank')">
+          <div class="t-stars"><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span></div>
+          <div class="t-avatar">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="white" opacity="0.9"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="white" opacity="0.75"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="white" opacity="0.6"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="white" opacity="0.9"/></svg>
+        </div>
+                    <p class="t-text">J'ai consulté Elodie pour une première séance d'ostéopathie et j'ai été profondément impressionnée par la qualité de son accompagnement. Son approche est à la fois douce, précise et extrêmement bienveillante. Je me suis sentie écoutée, en confiance et pleinement accueillie. Les effets se sont fait sentir progressivement, avec une réelle sensation de rééquilibrage global.</p>
+          <p class="t-name">— Donia Ben Ghorbal</p>
+        </div>
+
+        <div class="t-card" onclick="window.open('https://g.page/r/CZgoML18fI5QEAE/review','_blank')">
+          <div class="t-stars"><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span></div>
+          <div class="t-avatar">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="white" opacity="0.9"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="white" opacity="0.75"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="white" opacity="0.6"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="white" opacity="0.9"/></svg>
+        </div>
+                    <p class="t-text">J'ai eu la chance de suivre un coaching intégratif avec Élodie pendant près d'un an. Je ne m'attendais pas à des résultats aussi profonds en si peu de temps ! J'ai pu découvrir des aspects de moi-même que je n'avais jamais explorés en 36 ans de vie. Je ressens aujourd'hui un immense soulagement et une vraie clarté. Merci infiniment, Élodie.</p>
+          <p class="t-name">— Laetitia Bizot</p>
+        </div>
+
+        <div class="t-card" onclick="window.open('https://g.page/r/CZgoML18fI5QEAE/review','_blank')">
+          <div class="t-stars"><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span></div>
+          <div class="t-avatar">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="white" opacity="0.9"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="white" opacity="0.75"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="white" opacity="0.6"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="white" opacity="0.9"/></svg>
+        </div>
+                    <p class="t-text">Je recommande chaleureusement Elodie. C'est une ostéopathe exceptionnelle et les résultats ont été véritablement remarquables ! Non seulement elle a pris en charge mes problèmes physiques, mais son approche a également exploré l'aspect émotionnel, me permettant de libérer mes émotions et de retrouver une énergie nouvelle.</p>
+          <p class="t-name">— Raluca Nicolescu</p>
+        </div>
+
+        <div class="t-card" onclick="window.open('https://g.page/r/CZgoML18fI5QEAE/review','_blank')">
+          <div class="t-stars"><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span></div>
+          <div class="t-avatar">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="white" opacity="0.9"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="white" opacity="0.75"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="white" opacity="0.6"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="white" opacity="0.9"/></svg>
+        </div>
+                    <p class="t-text">L'expérience la plus bouleversante que j'ai pu vivre. Atteinte d'eczéma sévère depuis mon plus jeune âge, une séance d'hypnose a TOUT fait disparaître du jour au lendemain. Je vois Elodie régulièrement depuis et elle m'aide à affronter mes peurs, mes craintes et à apprendre à profiter de la vie !</p>
+          <p class="t-name">— Manon Prévot</p>
+        </div>
+
+        <div class="t-card" onclick="window.open('https://g.page/r/CZgoML18fI5QEAE/review','_blank')">
+          <div class="t-stars"><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span></div>
+          <div class="t-avatar">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="white" opacity="0.9"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="white" opacity="0.75"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="white" opacity="0.6"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="white" opacity="0.9"/></svg>
+        </div>
+                    <p class="t-text">La séance a été une véritable révélation, me permettant de mieux comprendre les liens entre mon corps et mes émotions. J'ai retrouvé un meilleur équilibre et surtout la douleur physique a disparu ! Merci pour votre écoute attentive et votre bienveillance.</p>
+          <p class="t-name">— Georgina Kpochan</p>
+        </div>
+
+        <div class="t-card" onclick="window.open('https://g.page/r/CZgoML18fI5QEAE/review','_blank')">
+          <div class="t-stars"><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span></div>
+          <div class="t-avatar">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="white" opacity="0.9"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="white" opacity="0.75"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="white" opacity="0.6"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="white" opacity="0.9"/></svg>
+        </div>
+                    <p class="t-text">Je suis tombé sur Elodie pour une douleur forte au niveau de la nuque. Après quelques séances d'ostéo, j'ai suivi un accompagnement plus long qui m'a réellement aidé à passer une période troublée. L'approche psycho-corporelle a été un vrai tournant et a aidé à mobiliser une nouvelle impulsion de vie. Je la conseille vivement depuis maintenant 2 ans.</p>
+          <p class="t-name">— Yh MNG</p>
+        </div>
+
+        <div class="t-card" onclick="window.open('https://g.page/r/CZgoML18fI5QEAE/review','_blank')">
+          <div class="t-stars"><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span><span class="t-star">★</span></div>
+          <div class="t-avatar">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="white" opacity="0.9"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="white" opacity="0.75"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="white" opacity="0.6"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="white" opacity="0.9"/></svg>
+        </div>
+                    <p class="t-text">Ces deux séances m'ont été extrêmement bénéfiques, tant physiquement — mes douleurs au dos se sont instantanément calmées — que mentalement. J'ai retrouvé un sommeil serein, arrêté les insomnies, et une vraie paix intérieure. C'est très complet, très professionnel et à la fois très humain et réconfortant.</p>
+          <p class="t-name">— Virginie Groussard</p>
+        </div>
+
+      </div>
     </div>
-    <div class="testimonial-card reveal reveal-delay-2">
-      <p class="testimonial-text">À compléter avec tes vrais témoignages clients. <span class="placeholder">placeholder</span></p>
-      <p class="testimonial-author">Prénom, profession</p>
+
+    <div class="carousel-nav">
+      <button class="nav-btn" id="t-prev" aria-label="Précédent">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="nav-dots" id="t-dots"></div>
+      <button class="nav-btn" id="t-next" aria-label="Suivant">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+
+    <div class="temoignages-cta">
+      <a href="https://g.page/r/CZgoML18fI5QEAE/review" target="_blank" rel="noopener">
+        ✦ &nbsp;Laisser un avis Google
+      </a>
     </div>
   </div>
-</section>
 
-<!-- CITATION 4 — Einstein -->
-<div class="citation warm reveal">
-  <span class="citation-mark">"</span>
-  <p class="citation-text">Le mental intuitif est un don sacré, le mental rationnel est un serviteur fidèle. Nous avons créé une société qui honore le serviteur et a oublié le don.</p>
-  <span class="citation-author">Albert Einstein</span>
-</div>
+  <script>
+  (function(){
+    const track = document.getElementById('t-track');
+    const dotsContainer = document.getElementById('t-dots');
+    const prevBtn = document.getElementById('t-prev');
+    const nextBtn = document.getElementById('t-next');
+    let current = 0;
+    function getVisible() {
+      const w = window.innerWidth;
+      if (w <= 580) return 1;
+      if (w <= 900) return 2;
+      return 3;
+    }
+    const total = track.children.length;
+    function maxIndex() { return Math.max(0, total - getVisible()); }
+    function buildDots() {
+      dotsContainer.innerHTML = '';
+      const count = maxIndex() + 1;
+      for (let i = 0; i < count; i++) {
+        const d = document.createElement('div');
+        d.className = 't-dot' + (i === current ? ' active' : '');
+        d.addEventListener('click', () => goTo(i));
+        dotsContainer.appendChild(d);
+      }
+    }
+    function goTo(index) {
+      current = Math.max(0, Math.min(index, maxIndex()));
+      const cardWidth = track.children[0].offsetWidth + 24;
+      track.style.transform = 'translateX(-' + (current * cardWidth) + 'px)';
+      document.querySelectorAll('.t-dot').forEach((d, i) => d.classList.toggle('active', i === current));
+    }
+    prevBtn.addEventListener('click', () => goTo(current - 1));
+    nextBtn.addEventListener('click', () => goTo(current + 1));
+    let autoTimer = setInterval(() => goTo(current + 1 > maxIndex() ? 0 : current + 1), 5000);
+    [prevBtn, nextBtn].forEach(b => b.addEventListener('click', () => {
+      clearInterval(autoTimer);
+      autoTimer = setInterval(() => goTo(current + 1 > maxIndex() ? 0 : current + 1), 5000);
+    }));
+    track.addEventListener('touchstart', e => { track._startX = e.touches[0].clientX; }, { passive: true });
+    track.addEventListener('touchend', e => {
+      const diff = track._startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1);
+    });
+    window.addEventListener('resize', () => { goTo(0); buildDots(); });
+    buildDots(); goTo(0);
+  })();
+  </script>
+
+</section>
 
 <!-- CONTACT -->
 <section class="contact" id="contact">
@@ -1241,7 +1701,7 @@ footer::before {
       <p>Tu sens qu'il te faut quelque chose de plus profond, sur la durée ? Écris-moi, on voit ensemble ce qui est juste.</p>
       <span class="contact-card-link">Me contacter</span>
     </a>
-    <a href="/mon-parcours" class="contact-card">
+    <a href="/mon-parcours.html" class="contact-card">
       <h3>Mon parcours</h3>
       <p>Je n'enseigne pas ce que j'ai lu. Je transmets ce que j'ai traversé. Ce que je propose, j'en suis revenue.</p>
       <span class="contact-card-link">Lire mon parcours</span>
@@ -1249,22 +1709,162 @@ footer::before {
   </div>
 </section>
 
+<!-- INSTAGRAM -->
+<section class="instagram-section" id="instagram">
+  <div class="instagram-inner">
+    <div class="instagram-header reveal">
+      <p class="section-label">Instagram</p>
+      <div class="instagram-title-row">
+        <svg class="ig-svg" viewBox="0 0 24 24" fill="none">
+          <defs>
+            <linearGradient id="ig-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#B69A94"/>
+              <stop offset="50%" stop-color="#977A5C"/>
+              <stop offset="100%" stop-color="#243D1F"/>
+            </linearGradient>
+          </defs>
+          <rect x="2" y="2" width="20" height="20" rx="5.5" stroke="url(#ig-grad)" stroke-width="1.6" fill="none"/>
+          <circle cx="12" cy="12" r="4.2" stroke="url(#ig-grad)" stroke-width="1.5" fill="none"/>
+          <circle cx="17.4" cy="6.6" r="1" fill="url(#ig-grad)"/>
+        </svg>
+        <h2 class="instagram-title">Sur Instagram</h2>
+      </div>
+      <p class="instagram-tagline">Quelques graines d’inspiration et de réflexion</p>
+      <a class="instagram-handle" href="https://www.instagram.com/coccinellodie" target="_blank">@coccinellodie</a>
+    </div>
+
+    <div class="ig-grid reveal reveal-delay-1">
+      <a class="ig-cell" href="https://www.instagram.com/coccinellodie" target="_blank">
+        <img src="https://d1yei2z3i6k35z.cloudfront.net/308464/69cc2e253afa01.04202019_IMG_1833.jpg" alt="">
+        <div class="ig-overlay"><span>Voir</span></div>
+      </a>
+      <a class="ig-cell ig-tall" href="https://www.instagram.com/coccinellodie" target="_blank">
+        <img src="https://d1yei2z3i6k35z.cloudfront.net/308464/69cc2e253bd665.58491676_564F6042-29F1-46AD-B3B5-3331CA9F6D4D.JPG" alt="">
+        <div class="ig-overlay"><span>Voir</span></div>
+      </a>
+      <a class="ig-cell" href="https://www.instagram.com/coccinellodie" target="_blank">
+        <img src="https://d1yei2z3i6k35z.cloudfront.net/308464/69cc2e253c83f6.29724821_IMG_7101.JPG" alt="">
+        <div class="ig-overlay"><span>Voir</span></div>
+      </a>
+      <a class="ig-cell ig-tall" href="https://www.instagram.com/coccinellodie" target="_blank">
+        <img src="https://d1yei2z3i6k35z.cloudfront.net/308464/69cc2e253e5a70.58882318_IMG_8910.JPG" alt="">
+        <div class="ig-overlay"><span>Voir</span></div>
+      </a>
+      <a class="ig-cell" href="https://www.instagram.com/coccinellodie" target="_blank">
+        <img src="https://d1yei2z3i6k35z.cloudfront.net/308464/69cc2e253e5479.79361615_IMG_4544.jpg" alt="">
+        <div class="ig-overlay"><span>Voir</span></div>
+      </a>
+      <a class="ig-cell" href="https://www.instagram.com/coccinellodie" target="_blank">
+        <img src="https://d1yei2z3i6k35z.cloudfront.net/308464/69cc2e2541b742.63176206_IMG_45442.jpg" alt="">
+        <div class="ig-overlay"><span>Voir</span></div>
+      </a>
+      <a class="ig-cell" href="https://www.instagram.com/coccinellodie" target="_blank">
+        <img src="https://d1yei2z3i6k35z.cloudfront.net/308464/69cc2e253d58a9.97709351_IMG_6272.JPG" alt="">
+        <div class="ig-overlay"><span>Voir</span></div>
+      </a>
+      <a class="ig-cell" href="https://www.instagram.com/coccinellodie" target="_blank">
+        <img src="https://d1yei2z3i6k35z.cloudfront.net/308464/69cc2e253ed9a3.31510832_IMG_7723.JPG" alt="">
+        <div class="ig-overlay"><span>Voir</span></div>
+      </a>
+    </div>
+
+    <div class="ig-cta reveal">
+      <a href="https://www.instagram.com/coccinellodie" target="_blank" class="btn-primary">Me suivre sur Instagram</a>
+    </div>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
-  <div class="footer-brand">
-    <span class="footer-name">Elodie Nirennold</span>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="footer-name">Elodie Nirennold</span>
+        <span class="footer-tagline">Ostéopathie · Hypnose · Coaching Intégratif</span>
+      </div>
+      <div class="footer-nav">
+        <div class="footer-col">
+          <span class="footer-col-title">Navigation</span>
+          <ul>
+            <li><a href="#par-ou-commencer">Par où commencer</a></li>
+            <li><a href="#approche">L'approche</a></li>
+            <li><a href="#temoignages">Témoignages</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <span class="footer-col-title">Rendez-vous</span>
+          <ul>
+            <li><a href="https://tidycal.com/elodie-nirennold" target="_blank">Coaching · Visio</a></li>
+            <li><a href="https://www.doctolib.fr/osteopathe/neuilly-sur-seine/elodie-nirennold" target="_blank">Ostéopathie · Doctolib</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <span class="footer-col-title">Suivre</span>
+          <ul>
+            <li><a href="https://instagram.com/coccinellodie" target="_blank">Instagram</a></li>
+            <li><a href="https://g.page/r/CZgoML18fI5QEAE/review" target="_blank">Laisser un avis Google</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Elodie Nirennold · Levallois-Perret</span>
+      <div class="footer-legal">
+        <a href="/mentions-legales.html">Mentions légales</a>
+        <span class="footer-sep">·</span>
+        <a href="/politique-de-confidentialite.html">Politique de confidentialité</a>
+        <span class="footer-sep">·</span>
+        <a href="/cgv.html">CGV</a>
+      </div>
+    </div>
   </div>
-  <ul class="footer-links">
-    <li><a href="/pour-qui">Pour qui</a></li>
-    <li><a href="/accompagnements">Accompagnements</a></li>
-    <li><a href="/mon-parcours">Mon parcours</a></li>
-    <li><a href="https://instagram.com/coccinellodie" target="_blank">Instagram</a></li>
-    <li><a href="#">Mentions légales</a></li>
-  </ul>
-  <span class="footer-copy">© 2026 Elodie Nirennold</span>
 </footer>
 
 <script>
+
+// Citations carousel
+(function(){
+  const track = document.getElementById('c-track');
+  const dotsContainer = document.getElementById('c-dots');
+  const prevBtn = document.getElementById('c-prev');
+  const nextBtn = document.getElementById('c-next');
+  if (!track) return;
+  let current = 0;
+  function getVisible() { return window.innerWidth <= 1100 ? 1 : 2; }
+  const total = track.children.length;
+  function maxIndex() { return Math.max(0, total - getVisible()); }
+  function buildDots() {
+    dotsContainer.innerHTML = '';
+    for (let i = 0; i <= maxIndex(); i++) {
+      const d = document.createElement('div');
+      d.className = 'c-dot' + (i === current ? ' active' : '');
+      d.addEventListener('click', () => goTo(i));
+      dotsContainer.appendChild(d);
+    }
+  }
+  function goTo(index) {
+    current = Math.max(0, Math.min(index, maxIndex()));
+    const cardWidth = track.children[0].offsetWidth + 24;
+    track.style.transform = 'translateX(-' + (current * cardWidth) + 'px)';
+    document.querySelectorAll('.c-dot').forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+  prevBtn.addEventListener('click', () => goTo(current - 1));
+  nextBtn.addEventListener('click', () => goTo(current + 1));
+  let autoTimer = setInterval(() => goTo(current + 1 > maxIndex() ? 0 : current + 1), 5500);
+  [prevBtn, nextBtn].forEach(b => b.addEventListener('click', () => {
+    clearInterval(autoTimer);
+    autoTimer = setInterval(() => goTo(current + 1 > maxIndex() ? 0 : current + 1), 5500);
+  }));
+  track.addEventListener('touchstart', e => { track._sx = e.touches[0].clientX; }, { passive:true });
+  track.addEventListener('touchend', e => {
+    const diff = track._sx - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1);
+  });
+  window.addEventListener('resize', () => { goTo(0); buildDots(); });
+  buildDots(); goTo(0);
+})();
+
 const reveals = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {

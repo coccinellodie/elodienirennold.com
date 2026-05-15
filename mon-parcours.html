@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Mon parcours · Elodie Nirennold</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--brun:#977A5C;--brun-fonce:#4C320D;--brun-moyen:#8B572A;--vert:#8BA288;--vert-sapin:#243D1F;--rose:#B69A94;--rose-clair:#CEA39B;--rose-pale:#EDD8D4;--rose-vapeur:#F5EDEB;--creme:#F7F1E8;--creme-fonce:#EDE3D5;--blanc:#FDFAF6;}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Jost',sans-serif;font-weight:300;background:var(--blanc);color:var(--brun-fonce);overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:1.4rem 5rem;background:rgba(253,250,246,0.94);backdrop-filter:blur(24px);border-bottom:1px solid rgba(182,154,148,0.14);}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:0.95rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--brun-fonce);text-decoration:none;}
+.nav-back{font-family:'Jost',sans-serif;font-weight:300;font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--brun);text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;transition:color 0.3s;}
+.nav-back::before{content:'←';}
+.nav-back:hover{color:var(--brun-fonce);}
+
+.page-hero{min-height:60vh;display:grid;grid-template-columns:55% 45%;position:relative;overflow:hidden;padding-top:6rem;}
+.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 40% 60%,rgba(245,237,235,0.9) 0%,transparent 55%);pointer-events:none;}
+.hero-left{display:flex;flex-direction:column;justify-content:center;padding:6rem 4rem 6rem 8rem;position:relative;z-index:2;}
+.hero-label{font-family:'Jost',sans-serif;font-weight:300;font-size:0.65rem;letter-spacing:0.36em;text-transform:uppercase;color:var(--rose);margin-bottom:2rem;display:flex;align-items:center;gap:1rem;}
+.hero-label::before{content:'';display:block;width:24px;height:1px;background:var(--rose);opacity:0.6;}
+.hero-title{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(3rem,6vw,5.5rem);line-height:0.95;color:var(--brun-fonce);margin-bottom:2rem;}
+.hero-sub{font-family:'Jost',sans-serif;font-weight:300;font-size:0.88rem;line-height:2;color:var(--brun);max-width:400px;}
+.hero-right{position:relative;overflow:hidden;}
+.hero-img{width:100%;height:100%;object-fit:cover;object-position:top center;filter:sepia(8%) brightness(0.97) saturate(0.88);}
+.hero-img-overlay{position:absolute;inset:0;background:linear-gradient(to right,var(--blanc) 0%,rgba(253,250,246,0.06) 20%),linear-gradient(to top,rgba(76,50,13,0.08) 0%,transparent 40%);}
+
+/* SIGNATURE BLOCK */
+.signature{padding:6rem 8rem;background:var(--vert-sapin);position:relative;overflow:hidden;}
+.signature::before{content:'';position:absolute;top:-80px;right:-80px;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(182,154,148,0.1) 0%,transparent 65%);pointer-events:none;}
+.signature-inner{max-width:720px;margin:0 auto;text-align:center;}
+.signature-quote{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(1.4rem,2.5vw,2rem);line-height:1.6;color:rgba(247,241,232,0.92);margin-bottom:2rem;}
+.signature-author{font-family:'Jost',sans-serif;font-weight:300;font-size:0.63rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--rose-clair);opacity:0.7;}
+
+/* TIMELINE */
+.timeline-section{padding:8rem 8rem;background:var(--blanc);}
+.timeline-header{margin-bottom:5rem;}
+.section-label{font-family:'Jost',sans-serif;font-weight:300;font-size:0.63rem;letter-spacing:0.36em;text-transform:uppercase;color:var(--rose);margin-bottom:1.5rem;display:flex;align-items:center;gap:1rem;}
+.section-label::before{content:'';display:block;width:22px;height:1px;background:var(--rose);opacity:0.6;}
+.timeline-title{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(2rem,3.5vw,3rem);color:var(--brun-fonce);line-height:1.15;}
+
+.timeline{display:grid;grid-template-columns:120px 1px 1fr;gap:0;position:relative;}
+.timeline-year{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:1.4rem;color:var(--rose-clair);padding-top:0.2rem;text-align:right;padding-right:2.5rem;}
+.timeline-line{background:linear-gradient(to bottom,var(--rose-pale),rgba(237,216,212,0.1));position:relative;}
+.timeline-line::before{content:'';position:absolute;top:0.5rem;left:50%;transform:translateX(-50%);width:10px;height:10px;border-radius:50%;background:var(--blanc);border:2px solid var(--rose-clair);}
+.timeline-content{padding:0 0 3.5rem 2.5rem;}
+.timeline-content h3{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:1.15rem;color:var(--brun-fonce);margin-bottom:0.4rem;}
+.timeline-content p{font-family:'Jost',sans-serif;font-weight:300;font-size:0.8rem;line-height:1.8;color:var(--brun);opacity:0.8;}
+.timeline-content .school{font-family:'Jost',sans-serif;font-weight:300;font-size:0.72rem;letter-spacing:0.1em;color:var(--rose);margin-top:0.3rem;}
+
+/* DIPLOMES NATIONAUX */
+.diplomes{padding:2rem 8rem 8rem;}
+.diplomes-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:3rem;}
+.diplome-card{background:var(--creme);border-radius:20px;padding:3rem;border:1px solid rgba(182,154,148,0.15);position:relative;overflow:hidden;}
+.diplome-card::before{content:'';position:absolute;top:-30px;right:-30px;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,var(--rose-pale) 0%,transparent 70%);}
+.diplome-year{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:1.8rem;color:var(--rose-clair);margin-bottom:0.8rem;display:block;}
+.diplome-title{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:1.2rem;color:var(--brun-fonce);margin-bottom:0.4rem;}
+.diplome-school{font-family:'Jost',sans-serif;font-weight:300;font-size:0.75rem;letter-spacing:0.1em;color:var(--brun);opacity:0.7;}
+
+/* CTA */
+.page-cta{padding:7rem 8rem;background:var(--creme-fonce);text-align:center;}
+.page-cta h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(1.8rem,3vw,2.6rem);color:var(--brun-fonce);margin-bottom:1.5rem;line-height:1.2;}
+.page-cta p{font-family:'Jost',sans-serif;font-weight:300;font-size:0.86rem;line-height:2;color:var(--brun);max-width:480px;margin:0 auto 3rem;}
+.btn-primary{font-family:'Jost',sans-serif;font-weight:400;font-size:0.7rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--blanc);background:var(--vert-sapin);padding:1.1rem 2.6rem;border-radius:50px;text-decoration:none;display:inline-block;box-shadow:0 8px 28px rgba(36,61,31,0.18);transition:background 0.35s,transform 0.2s;}
+.btn-primary:hover{background:var(--brun-fonce);transform:translateY(-2px);}
+
+footer{background:var(--creme-fonce);padding:2.5rem 8rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.2rem;border-top:1px solid rgba(182,154,148,0.18);}
+.footer-copy{font-family:'Jost',sans-serif;font-weight:300;font-size:0.63rem;letter-spacing:0.14em;color:var(--brun);opacity:0.4;}
+.footer-legal{display:flex;align-items:center;gap:0.8rem;}
+.footer-legal a{font-family:'Jost',sans-serif;font-weight:300;font-size:0.63rem;letter-spacing:0.1em;color:var(--brun);opacity:0.45;text-decoration:none;transition:opacity 0.3s;}
+.footer-legal a:hover{opacity:0.9;}
+.footer-sep{color:var(--rose);opacity:0.4;}
+
+@media(max-width:1100px){
+  nav{padding:1.2rem 2rem;}
+  .page-hero{grid-template-columns:1fr;min-height:auto;}
+  .hero-left{padding:8rem 2rem 3rem;}
+  .hero-right{height:60vw;}
+  .signature,.timeline-section,.diplomes,.page-cta{padding-left:2rem;padding-right:2rem;}
+  .diplomes-grid{grid-template-columns:1fr;}
+  .timeline{grid-template-columns:80px 1px 1fr;}
+  footer{padding:2rem;flex-direction:column;align-items:flex-start;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">Elodie Nirennold</a>
+  <a href="/" class="nav-back">Retour</a>
+</nav>
+
+<section class="page-hero">
+  <div class="hero-left">
+    <p class="hero-label">Mon parcours</p>
+    <h1 class="hero-title">Je n'enseigne pas<br>ce que j'ai lu.</h1>
+    <p class="hero-sub">Je transmets ce que j'ai traversé. Ce que je propose, j'en suis revenue — par le corps, par l'expérience, par l'erreur.</p>
+  </div>
+  <div class="hero-right">
+    <img src="https://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_630,w_1200,f_auto,q_auto/2144049/B6B32226-E849-421E-82C6-485F9475D09C.jpg" alt="Elodie Nirennold" class="hero-img">
+    <div class="hero-img-overlay"></div>
+  </div>
+</section>
+
+<div class="signature">
+  <div class="signature-inner">
+    <p class="signature-quote">Ce que je transmets, je l'ai traversé. Pas dans les livres. Dans mon corps, mes relations, mes propres effondrements et reconstructions. Je suis une praticienne qui apprend par l'expérience directe — y compris quand elle coûte. Surtout quand elle coûte.</p>
+    <span class="signature-author">Elodie Nirennold</span>
+  </div>
+</div>
+
+<section class="timeline-section">
+  <div class="timeline-header">
+    <p class="section-label">Formations</p>
+    <h2 class="timeline-title">Un parcours construit<br>par l'expérience</h2>
+  </div>
+
+  <div class="diplomes" style="padding:0 0 5rem 0;">
+    <p class="section-label">Diplômes nationaux</p>
+    <div class="diplomes-grid">
+      <div class="diplome-card">
+        <span class="diplome-year">2014</span>
+        <p class="diplome-title">Diplôme d'Ostéopathe (DO)</p>
+        <p class="diplome-school">Maison de la Thérapie Manuelle (MTM)</p>
+      </div>
+      <div class="diplome-card">
+        <span class="diplome-year">2008</span>
+        <p class="diplome-title">Diplôme d'État de Masseur-Kinésithérapeute (DE)</p>
+        <p class="diplome-school">École d'Assas — Paris 15ème</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="section-label">Autres formations</p>
+  <div class="timeline">
+
+    <div class="timeline-year">2023</div>
+    <div class="timeline-line"></div>
+    <div class="timeline-content">
+      <h3>Coaching Pleine Confiance & Théorie Polyvagale</h3>
+      <p class="school">Ludovic Leroux</p>
+      <h3 style="margin-top:1.2rem;">(R)ÉVOLUTION DH — Human Design</h3>
+      <p class="school">Mélanie Mouchet</p>
+    </div>
+
+    <div class="timeline-year">2021</div>
+    <div class="timeline-line"></div>
+    <div class="timeline-content">
+      <h3>Neuro-Somato-Quantique</h3>
+      <p class="school">NSQ — Joachim Roberfroid</p>
+      <h3 style="margin-top:1.2rem;">Scan Thérapeutique</h3>
+      <p class="school">Laurent Marchand</p>
+    </div>
+
+    <div class="timeline-year">2020</div>
+    <div class="timeline-line"></div>
+    <div class="timeline-content">
+      <h3>Méthode des 2 points — Résonance Quantique</h3>
+      <p class="school">Frauke Kaluzinski et JM Triplet</p>
+      <h3 style="margin-top:1.2rem;">Communication Quantique Écriture</h3>
+      <p class="school">Agathe Bourasset</p>
+    </div>
+
+    <div class="timeline-year">2019</div>
+    <div class="timeline-line"></div>
+    <div class="timeline-content">
+      <h3>Maître Praticien en Hypnose & Coaching SAJECE</h3>
+      <p class="school">Groupe SAJECE — Camille Griselin</p>
+      <h3 style="margin-top:1.2rem;">Approche Somato-émotionnelle en ostéopathie</h3>
+      <p class="school">CNFK — Roger Fiammetti</p>
+    </div>
+
+    <div class="timeline-year">2018</div>
+    <div class="timeline-line"></div>
+    <div class="timeline-content">
+      <h3>Thérapie Manuelle — Méthode Bounine</h3>
+      <p class="school">FMB — Nicolas Bounine</p>
+    </div>
+
+    <div class="timeline-year">2017</div>
+    <div class="timeline-line"></div>
+    <div class="timeline-content">
+      <h3>Maître Praticien en Hypnose Ericksonienne, Conversationnelle & PNL</h3>
+      <p class="school">CICH</p>
+      <h3 style="margin-top:1.2rem;">Kinésiologie — Outils de base & Santé par le Toucher</h3>
+      <p class="school">EKMA</p>
+      <h3 style="margin-top:1.2rem;">1er et 2ème degrés en Soins Énergétiques Reiki</h3>
+      <p class="school">Reiki France</p>
+    </div>
+
+  </div>
+</section>
+
+<div class="page-cta">
+  <h2>Vous sentez que c'est<br>la suite juste pour vous ?</h2>
+  <p>Je vous invite à me contacter pour voir ensemble quel cadre est le plus juste pour votre situation.</p>
+  <a href="mailto:contact@elodienirennold.com" class="btn-primary">Me contacter</a>
+</div>
+
+<footer>
+  <span class="footer-copy">© 2026 Elodie Nirennold · Levallois-Perret</span>
+  <div class="footer-legal">
+    <a href="/mentions-legales.html">Mentions légales</a>
+    <span class="footer-sep">·</span>
+    <a href="/politique-de-confidentialite.html">Politique de confidentialité</a>
+    <span class="footer-sep">·</span>
+    <a href="/cgv.html">CGV</a>
+  </div>
+</footer>
+</body>
+</html>

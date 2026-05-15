@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Pour qui · Elodie Nirennold</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--brun:#977A5C;--brun-fonce:#4C320D;--vert-sapin:#243D1F;--rose:#B69A94;--rose-clair:#CEA39B;--rose-pale:#EDD8D4;--rose-vapeur:#F5EDEB;--creme:#F7F1E8;--creme-fonce:#EDE3D5;--blanc:#FDFAF6;}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Jost',sans-serif;font-weight:300;background:var(--blanc);color:var(--brun-fonce);overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:1.4rem 5rem;background:rgba(253,250,246,0.94);backdrop-filter:blur(24px);border-bottom:1px solid rgba(182,154,148,0.14);}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:0.95rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--brun-fonce);text-decoration:none;}
+.nav-back{font-family:'Jost',sans-serif;font-weight:300;font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--brun);text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;transition:color 0.3s;}
+.nav-back::before{content:'←';}
+.nav-back:hover{color:var(--brun-fonce);}
+
+.page-header{padding:12rem 8rem 7rem;background:var(--blanc);position:relative;overflow:hidden;}
+.page-header::before{content:'';position:absolute;top:-80px;right:-80px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,var(--rose-vapeur) 0%,transparent 65%);pointer-events:none;}
+.page-label{font-family:'Jost',sans-serif;font-weight:300;font-size:0.65rem;letter-spacing:0.36em;text-transform:uppercase;color:var(--rose);margin-bottom:2rem;display:flex;align-items:center;gap:1rem;}
+.page-label::before{content:'';display:block;width:24px;height:1px;background:var(--rose);opacity:0.6;}
+.page-title{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(3rem,6vw,5.5rem);line-height:0.95;color:var(--brun-fonce);margin-bottom:2rem;letter-spacing:-0.01em;}
+.page-sub{font-family:'Jost',sans-serif;font-weight:300;font-size:0.9rem;line-height:2;color:var(--brun);max-width:520px;}
+
+/* MIROIR */
+.miroir{padding:8rem 8rem;background:var(--creme);position:relative;overflow:hidden;}
+.miroir::after{content:'';position:absolute;bottom:-80px;left:-80px;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,var(--rose-vapeur) 0%,transparent 65%);pointer-events:none;}
+.section-label{font-family:'Jost',sans-serif;font-weight:300;font-size:0.63rem;letter-spacing:0.36em;text-transform:uppercase;color:var(--rose);margin-bottom:2rem;display:flex;align-items:center;gap:1rem;}
+.section-label::before{content:'';display:block;width:22px;height:1px;background:var(--rose);opacity:0.6;}
+.section-title{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(2rem,3.5vw,3rem);color:var(--brun-fonce);line-height:1.15;margin-bottom:3rem;}
+.miroir-list{list-style:none;display:flex;flex-direction:column;gap:1.4rem;max-width:680px;}
+.miroir-list li{font-family:'Jost',sans-serif;font-weight:300;font-size:0.9rem;line-height:1.9;color:var(--brun);padding-left:2rem;position:relative;}
+.miroir-list li::before{content:'';position:absolute;left:0;top:0.75em;width:7px;height:7px;border-radius:50%;background:transparent;border:1.5px solid var(--rose-clair);}
+
+/* ELOIGNER / VERS */
+.direction{padding:8rem 8rem;background:var(--blanc);}
+.direction-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:0;max-width:960px;margin:3rem auto 0;}
+.dir-col{border-radius:28px;padding:4rem 3.5rem;position:relative;overflow:hidden;}
+.dir-col.eloigner{background:var(--creme);border:1px solid rgba(182,154,148,0.15);border-top:2px solid var(--rose-clair);border-radius:28px 0 0 28px;}
+.dir-col.vers{background:var(--vert-sapin);border-radius:0 28px 28px 0;}
+.dir-sep{display:flex;align-items:center;justify-content:center;width:60px;background:linear-gradient(to right,var(--creme),var(--vert-sapin));}
+.dir-sep-inner{width:48px;height:48px;border-radius:50%;background:var(--blanc);border:1.5px solid rgba(182,154,148,0.3);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--brun-fonce);box-shadow:0 4px 16px rgba(76,50,13,0.08);flex-shrink:0;}
+.dir-label{font-family:'Jost',sans-serif;font-weight:300;font-size:0.62rem;letter-spacing:0.32em;text-transform:uppercase;margin-bottom:2.5rem;display:flex;align-items:center;gap:0.8rem;}
+.dir-col.eloigner .dir-label{color:var(--rose);}
+.dir-col.vers .dir-label{color:var(--rose-clair);opacity:0.8;}
+.dir-label::before{content:'';display:block;width:18px;height:1px;}
+.dir-col.eloigner .dir-label::before{background:var(--rose);opacity:0.5;}
+.dir-col.vers .dir-label::before{background:var(--rose-clair);opacity:0.4;}
+.dir-list{list-style:none;display:flex;flex-direction:column;gap:1.2rem;}
+.dir-list li{font-family:'Jost',sans-serif;font-weight:300;font-size:0.85rem;line-height:1.8;padding-left:1.8rem;position:relative;}
+.dir-col.eloigner .dir-list li{color:var(--brun);}
+.dir-col.vers .dir-list li{color:rgba(247,241,232,0.82);}
+.dir-list li::before{content:'';position:absolute;left:0;top:0.74em;width:6px;height:6px;border-radius:50%;}
+.dir-col.eloigner .dir-list li::before{background:transparent;border:1.5px solid var(--rose-clair);}
+.dir-col.vers .dir-list li::before{background:rgba(206,163,155,0.35);border:1.5px solid rgba(206,163,155,0.5);}
+
+/* PROFIL */
+.profil{padding:8rem 8rem;background:var(--creme-fonce);}
+.profil-inner{max-width:760px;}
+.profil-cards{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:3rem;}
+.profil-card{background:var(--blanc);border-radius:20px;padding:2.5rem;border:1px solid rgba(182,154,148,0.12);position:relative;overflow:hidden;}
+.profil-card::before{content:'';position:absolute;top:-20px;right:-20px;width:100px;height:100px;border-radius:50%;background:radial-gradient(circle,var(--rose-pale) 0%,transparent 70%);}
+.profil-card-title{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:1.1rem;color:var(--brun-fonce);margin-bottom:0.8rem;position:relative;z-index:1;}
+.profil-card-text{font-family:'Jost',sans-serif;font-weight:300;font-size:0.82rem;line-height:1.9;color:var(--brun);position:relative;z-index:1;}
+
+/* PAS POUR */
+.pas-pour{padding:8rem 8rem;background:var(--blanc);}
+.pas-pour-inner{max-width:760px;}
+.pas-list{list-style:none;display:flex;flex-direction:column;gap:1.2rem;margin-top:2.5rem;}
+.pas-list li{font-family:'Jost',sans-serif;font-weight:300;font-size:0.86rem;line-height:1.85;color:var(--brun);padding-left:2rem;position:relative;}
+.pas-list li::before{content:'';position:absolute;left:0;top:0.72em;width:6px;height:6px;border-radius:50%;background:transparent;border:1.5px solid rgba(182,154,148,0.4);}
+
+/* CTA */
+.page-cta{padding:8rem 8rem;background:var(--vert-sapin);text-align:center;position:relative;overflow:hidden;}
+.page-cta::before{content:'';position:absolute;top:-80px;right:-80px;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(182,154,148,0.1) 0%,transparent 65%);}
+.page-cta h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(2rem,3.5vw,3rem);color:var(--creme);margin-bottom:1.5rem;line-height:1.2;position:relative;z-index:1;}
+.page-cta p{font-family:'Jost',sans-serif;font-weight:300;font-size:0.86rem;line-height:2;color:rgba(247,241,232,0.7);max-width:440px;margin:0 auto 3rem;position:relative;z-index:1;}
+.btn-light{font-family:'Jost',sans-serif;font-weight:400;font-size:0.7rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--vert-sapin);background:var(--creme);padding:1rem 2.4rem;border-radius:50px;text-decoration:none;display:inline-block;box-shadow:0 8px 28px rgba(0,0,0,0.15);transition:background 0.35s,transform 0.2s;position:relative;z-index:1;}
+.btn-light:hover{background:var(--blanc);transform:translateY(-2px);}
+
+footer{background:var(--creme-fonce);padding:2.5rem 8rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.2rem;border-top:1px solid rgba(182,154,148,0.18);}
+.footer-copy{font-family:'Jost',sans-serif;font-weight:300;font-size:0.63rem;letter-spacing:0.14em;color:var(--brun);opacity:0.4;}
+.footer-legal{display:flex;align-items:center;gap:0.8rem;}
+.footer-legal a{font-family:'Jost',sans-serif;font-weight:300;font-size:0.63rem;color:var(--brun);opacity:0.45;text-decoration:none;transition:opacity 0.3s;letter-spacing:0.1em;}
+.footer-legal a:hover{opacity:0.9;}
+.footer-sep{color:var(--rose);opacity:0.4;}
+
+@media(max-width:1100px){
+  nav{padding:1.2rem 2rem;}
+  .page-header,.miroir,.direction,.profil,.pas-pour,.page-cta{padding-left:2rem;padding-right:2rem;}
+  .direction-grid{grid-template-columns:1fr;gap:1.5rem;}
+  .dir-sep{display:none;}
+  .dir-col.eloigner,.dir-col.vers{border-radius:22px;}
+  .profil-cards{grid-template-columns:1fr;}
+  footer{padding:2rem;flex-direction:column;align-items:flex-start;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">Elodie Nirennold</a>
+  <a href="/" class="nav-back">Retour</a>
+</nav>
+
+<div class="page-header">
+  <p class="page-label">Pour qui</p>
+  <h1 class="page-title">Tu tiens tout.<br>Et tu as peur<br>de t'effondrer.</h1>
+  <p class="page-sub">De l'extérieur, tu assures. Mais intérieurement, quelque chose surveille en permanence. L'état du lien. L'état des autres. L'état de toi.</p>
+</div>
+
+<section class="miroir">
+  <p class="section-label">Tu te reconnais ici ?</p>
+  <h2 class="section-title">Ce que tu vis,<br>de l'intérieur</h2>
+  <ul class="miroir-list">
+    <li>Tu donnes sans compter — mais recevoir te met mal à l'aise, comme si tu te retrouvais aussitôt en dette.</li>
+    <li>Un message sans réponse. Un silence qui dure. Quand le lien vacille, quelque chose en toi vacille aussi — pas juste de l'inconfort.</li>
+    <li>Tu tiens tout. Et silencieusement, tu as peur de t'effondrer.</li>
+    <li>Tu as beaucoup compris sur toi-même. Et pourtant, les mêmes schémas reviennent.</li>
+    <li>Ton corps a commencé à parler plus fort que les mots. Tu ne peux plus l'ignorer.</li>
+    <li>Tu te sens souvent incompris — trop sensible, trop intense, trop exigeant.</li>
+    <li>Tu t'effaces avant qu'on ne te le reproche. Tu donnes avant qu'on ne te demande.</li>
+    <li>Tu fonctionnes par sprints d'intensité — le "régulier imposé" ne te ressemble pas.</li>
+  </ul>
+</section>
+
+<section class="direction">
+  <p class="section-label">Le chemin</p>
+  <h2 class="section-title" style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(2rem,3.5vw,3rem);color:var(--brun-fonce);line-height:1.15;">D'abord <em style="font-style:italic;color:var(--rose);">s'éloigner de.</em><br>Puis <em style="font-style:italic;color:var(--rose);">aller vers.</em></h2>
+  <div class="direction-grid">
+    <div class="dir-col eloigner">
+      <p class="dir-label">S'éloigner de</p>
+      <ul class="dir-list">
+        <li>La peur silencieuse de craquer ou de décevoir</li>
+        <li>La surveillance permanente de l'état du lien</li>
+        <li>L'épuisement de comprendre sans que rien ne change</li>
+        <li>Recevoir en calculant déjà comment rembourser</li>
+        <li>Tenir à bout de bras, en silence</li>
+        <li>Les schémas qui se rejouent malgré toi</li>
+      </ul>
+    </div>
+    <div class="dir-sep"><div class="dir-sep-inner">→</div></div>
+    <div class="dir-col vers">
+      <p class="dir-label">Aller vers</p>
+      <ul class="dir-list">
+        <li>Recevoir sans se sentir aussitôt redevable</li>
+        <li>Rester stable même quand le lien se fragilise</li>
+        <li>Agir depuis un endroit sûr en toi, pas depuis la peur</li>
+        <li>Vivre selon ce qui t'anime, pas selon ce qu'on attend</li>
+        <li>Une direction que tu reconnais dans ton corps avant de la comprendre dans ta tête</li>
+        <li>La liberté et la paix qui ne dépendent plus de l'extérieur</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="profil">
+  <div class="profil-inner">
+    <p class="section-label">Profils</p>
+    <h2 class="section-title">Les personnes que j'accompagne</h2>
+    <div class="profil-cards">
+      <div class="profil-card">
+        <h3 class="profil-card-title">Leaders sensibles & atypiques</h3>
+        <p class="profil-card-text">Souvent neuro-divergents, vous pensez vite, ressentez fort, vous engagez pleinement. Vous êtes souvent piliers pour les autres — mais intérieurement sous tension.</p>
+      </div>
+      <div class="profil-card">
+        <h3 class="profil-card-title">Hyperactifs du développement personnel</h3>
+        <p class="profil-card-text">Vous avez fait de la psy, des formations, du coaching. Vous vous connaissez bien. Et pourtant quelque chose ne s'est pas encore résolu.</p>
+      </div>
+      <div class="profil-card">
+        <h3 class="profil-card-title">Corps qui parlent fort</h3>
+        <p class="profil-card-text">Douleurs inexpliquées, fatigue persistante, tensions chroniques. Vous sentez confusément que c'est lié à autre chose qu'une cause purement physique.</p>
+      </div>
+      <div class="profil-card">
+        <h3 class="profil-card-title">Post-crise, en consolidation</h3>
+        <p class="profil-card-text">Vous ne voulez plus juste soulager ponctuellement. Vous voulez que ça tienne. Vous êtes prêt à construire quelque chose de stable, de durable, de réel.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pas-pour">
+  <div class="pas-pour-inner">
+    <p class="section-label">Pas pour</p>
+    <h2 class="section-title" style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(1.8rem,3vw,2.6rem);color:var(--brun-fonce);line-height:1.15;">Ce n'est pas fait pour vous si</h2>
+    <ul class="pas-list">
+      <li>Vous cherchez uniquement un soulagement ponctuel sans envie d'aller plus loin</li>
+      <li>Vous n'êtes pas prêt à vous engager dans un cadre pour que les changements tiennent</li>
+      <li>Vous cherchez à être compris et écouté, mais pas questionné ni challengé</li>
+      <li>Vous voulez être rassuré sans toucher à ce qui maintient vos problématiques</li>
+      <li>Vous cherchez une validation plutôt qu'un regard honnête sur ce qui bloque</li>
+      <li>Vous êtes en phase aiguë de crise et avez besoin en priorité d'un suivi psychiatrique ou médical</li>
+    </ul>
+  </div>
+</section>
+
+<div class="page-cta">
+  <h2>Vous vous reconnaissez<br>dans tout ça ?</h2>
+  <p>Découvrez les accompagnements disponibles ou contactez-moi directement.</p>
+  <a href="/accompagnements.html" class="btn-light">Voir les accompagnements</a>
+</div>
+
+<footer>
+  <span class="footer-copy">© 2026 Elodie Nirennold · Levallois-Perret</span>
+  <div class="footer-legal">
+    <a href="/mentions-legales.html">Mentions légales</a>
+    <span class="footer-sep">·</span>
+    <a href="/politique-de-confidentialite.html">Politique de confidentialité</a>
+    <span class="footer-sep">·</span>
+    <a href="/cgv.html">CGV</a>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Accompagnements · Elodie Nirennold</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--brun:#977A5C;--brun-fonce:#4C320D;--vert-sapin:#243D1F;--rose:#B69A94;--rose-clair:#CEA39B;--rose-pale:#EDD8D4;--rose-vapeur:#F5EDEB;--creme:#F7F1E8;--creme-fonce:#EDE3D5;--blanc:#FDFAF6;}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Jost',sans-serif;font-weight:300;background:var(--blanc);color:var(--brun-fonce);overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:1.4rem 5rem;background:rgba(253,250,246,0.94);backdrop-filter:blur(24px);border-bottom:1px solid rgba(182,154,148,0.14);}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:0.95rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--brun-fonce);text-decoration:none;}
+.nav-back{font-family:'Jost',sans-serif;font-weight:300;font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--brun);text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;transition:color 0.3s;}
+.nav-back::before{content:'←';}
+.nav-back:hover{color:var(--brun-fonce);}
+
+.page-header{padding:12rem 8rem 6rem;background:var(--creme-fonce);position:relative;overflow:hidden;}
+.page-header::before{content:'';position:absolute;top:-80px;right:-80px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,var(--rose-vapeur) 0%,transparent 65%);pointer-events:none;}
+.page-label{font-family:'Jost',sans-serif;font-weight:300;font-size:0.65rem;letter-spacing:0.36em;text-transform:uppercase;color:var(--rose);margin-bottom:1.5rem;display:flex;align-items:center;gap:1rem;}
+.page-label::before{content:'';display:block;width:24px;height:1px;background:var(--rose);opacity:0.6;}
+.page-title{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(2.5rem,5vw,4.5rem);line-height:1;color:var(--brun-fonce);letter-spacing:-0.01em;margin-bottom:1.5rem;}
+.page-sub{font-family:'Jost',sans-serif;font-weight:300;font-size:0.88rem;line-height:2;color:var(--brun);max-width:560px;}
+
+/* PORTES D'ENTRÉE */
+.portes-header{padding:6rem 8rem 2rem;text-align:center;}
+.section-label{font-family:'Jost',sans-serif;font-weight:300;font-size:0.63rem;letter-spacing:0.36em;text-transform:uppercase;color:var(--rose);margin-bottom:1.5rem;display:flex;align-items:center;justify-content:center;gap:1rem;}
+.section-label::before{content:'';display:block;width:22px;height:1px;background:var(--rose);opacity:0.6;}
+.section-title{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(2rem,3.5vw,3rem);color:var(--brun-fonce);line-height:1.15;}
+
+/* ACCOMPAGNEMENTS */
+.accompagnement{padding:5rem 8rem;display:grid;grid-template-columns:1fr 1fr;gap:7rem;align-items:center;position:relative;}
+.accompagnement:nth-child(even){background:var(--creme);}
+.accompagnement:nth-child(odd){background:var(--blanc);}
+.acc-reversed .acc-text{order:2;}
+.acc-reversed .acc-visual{order:1;}
+.acc-label{font-family:'Jost',sans-serif;font-weight:300;font-size:0.63rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--rose);margin-bottom:1.5rem;display:flex;align-items:center;gap:0.8rem;}
+.acc-label::before{content:'';display:block;width:18px;height:1px;background:var(--rose);opacity:0.5;}
+.acc-title{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(1.8rem,3vw,2.6rem);color:var(--brun-fonce);line-height:1.15;margin-bottom:1rem;letter-spacing:-0.01em;}
+.acc-subtitle{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:1.1rem;color:var(--rose);margin-bottom:2rem;}
+.acc-desc{font-family:'Jost',sans-serif;font-weight:300;font-size:0.86rem;line-height:2;color:var(--brun);margin-bottom:2.5rem;}
+.acc-list{list-style:none;display:flex;flex-direction:column;gap:0.9rem;margin-bottom:3rem;}
+.acc-list li{font-family:'Jost',sans-serif;font-weight:300;font-size:0.84rem;line-height:1.8;color:var(--brun);padding-left:1.8rem;position:relative;}
+.acc-list li::before{content:'';position:absolute;left:0;top:0.7em;width:6px;height:6px;border-radius:50%;background:transparent;border:1.5px solid var(--rose-clair);}
+.acc-tarif{display:inline-flex;align-items:center;gap:0.8rem;background:var(--rose-pale);border-radius:50px;padding:0.6rem 1.4rem;margin-bottom:2rem;}
+.acc-tarif span:first-child{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.3rem;color:var(--brun-fonce);}
+.acc-tarif span:last-child{font-family:'Jost',sans-serif;font-weight:300;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--brun);}
+.btn-primary{font-family:'Jost',sans-serif;font-weight:400;font-size:0.7rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--blanc);background:var(--vert-sapin);padding:1rem 2.4rem;border-radius:50px;text-decoration:none;display:inline-block;box-shadow:0 8px 28px rgba(36,61,31,0.18);transition:background 0.35s,transform 0.2s;}
+.btn-primary:hover{background:var(--brun-fonce);transform:translateY(-2px);}
+.btn-ghost{font-family:'Jost',sans-serif;font-weight:300;font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--brun);text-decoration:none;display:inline-flex;align-items:center;gap:0.6rem;border-bottom:1px solid rgba(182,154,148,0.3);padding-bottom:0.2rem;transition:color 0.3s,border-color 0.3s;margin-left:1.5rem;}
+.btn-ghost:hover{color:var(--brun-fonce);border-color:var(--rose);}
+
+.acc-visual{position:relative;}
+.acc-card{background:var(--vert-sapin);border-radius:28px;padding:4rem 3.5rem;position:relative;overflow:hidden;}
+.acc-card::before{content:'';position:absolute;top:-40px;right:-40px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(182,154,148,0.12) 0%,transparent 70%);}
+.acc-card-title{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:1.4rem;color:rgba(247,241,232,0.9);margin-bottom:2rem;line-height:1.4;position:relative;z-index:1;}
+.acc-card-items{list-style:none;display:flex;flex-direction:column;gap:1rem;position:relative;z-index:1;}
+.acc-card-items li{font-family:'Jost',sans-serif;font-weight:300;font-size:0.82rem;line-height:1.8;color:rgba(247,241,232,0.75);padding-left:1.5rem;position:relative;}
+.acc-card-items li::before{content:'✦';position:absolute;left:0;top:0;font-size:0.5rem;color:var(--rose-clair);opacity:0.6;}
+
+/* CTA FINAL */
+.page-cta{padding:8rem 8rem;background:var(--vert-sapin);text-align:center;position:relative;overflow:hidden;}
+.page-cta::before{content:'';position:absolute;top:-80px;left:-80px;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(182,154,148,0.1) 0%,transparent 65%);}
+.page-cta h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(2rem,3.5vw,3rem);color:var(--creme);margin-bottom:1.5rem;line-height:1.2;position:relative;z-index:1;}
+.page-cta p{font-family:'Jost',sans-serif;font-weight:300;font-size:0.86rem;line-height:2;color:rgba(247,241,232,0.7);max-width:480px;margin:0 auto 3rem;position:relative;z-index:1;}
+.btn-primary-light{font-family:'Jost',sans-serif;font-weight:400;font-size:0.7rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--vert-sapin);background:var(--creme);padding:1rem 2.4rem;border-radius:50px;text-decoration:none;display:inline-block;box-shadow:0 8px 28px rgba(0,0,0,0.15);transition:background 0.35s,transform 0.2s;position:relative;z-index:1;}
+.btn-primary-light:hover{background:var(--blanc);transform:translateY(-2px);}
+
+footer{background:var(--creme-fonce);padding:2.5rem 8rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.2rem;border-top:1px solid rgba(182,154,148,0.18);}
+.footer-copy{font-family:'Jost',sans-serif;font-weight:300;font-size:0.63rem;letter-spacing:0.14em;color:var(--brun);opacity:0.4;}
+.footer-legal{display:flex;align-items:center;gap:0.8rem;}
+.footer-legal a{font-family:'Jost',sans-serif;font-weight:300;font-size:0.63rem;color:var(--brun);opacity:0.45;text-decoration:none;transition:opacity 0.3s;letter-spacing:0.1em;}
+.footer-legal a:hover{opacity:0.9;}
+.footer-sep{color:var(--rose);opacity:0.4;}
+
+@media(max-width:1100px){
+  nav{padding:1.2rem 2rem;}
+  .page-header,.portes-header{padding-left:2rem;padding-right:2rem;}
+  .accompagnement{grid-template-columns:1fr;gap:3rem;padding:4rem 2rem;}
+  .acc-reversed .acc-text,.acc-reversed .acc-visual{order:unset;}
+  .page-cta{padding:6rem 2rem;}
+  footer{padding:2rem;flex-direction:column;align-items:flex-start;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">Elodie Nirennold</a>
+  <a href="/" class="nav-back">Retour</a>
+</nav>
+
+<div class="page-header">
+  <p class="page-label">Accompagnements</p>
+  <h1 class="page-title">Par où tu arrives,<br>le fil est le même.</h1>
+  <p class="page-sub">Revenir à toi, depuis le corps. Chaque accompagnement s'adapte à où tu en es — pas à une case préétablie.</p>
+</div>
+
+<!-- OSTÉO -->
+<section class="accompagnement" id="corps">
+  <div class="acc-text">
+    <p class="acc-label">Porte A</p>
+    <h2 class="acc-title">Ostéopathie<br>somato-émotionnelle</h2>
+    <p class="acc-subtitle">"Mon corps me parle. Je ne peux plus l'ignorer."</p>
+    <p class="acc-desc">Le corps sait ce que le mental n'a pas réussi à intégrer. Douleurs inexpliquées, tensions qui reviennent, fatigue profonde — ce que les mots n'ont pas pu dire, il le tient dans ses tissus, ses fascias, sa posture. On libère ce qui est enkysté pour redonner au corps sa capacité naturelle d'équilibration.</p>
+    <ul class="acc-list">
+      <li>Douleurs physiques à composante émotionnelle</li>
+      <li>Fatigue chronique, épuisement nerveux</li>
+      <li>Tensions dans la poitrine, le ventre, la gorge</li>
+      <li>Corps en alerte permanente</li>
+      <li>Après un choc émotionnel ou traumatique</li>
+    </ul>
+    <div class="acc-tarif">
+      <span>Sur devis</span>
+      <span>Cabinet · Levallois-Perret</span>
+    </div>
+    <a href="https://www.doctolib.fr/osteopathe/neuilly-sur-seine/elodie-nirennold" target="_blank" class="btn-primary">Réserver sur Doctolib</a>
+  </div>
+  <div class="acc-visual">
+    <div class="acc-card">
+      <p class="acc-card-title">"Je ne suis qu'un outil facilitateur de l'intelligence extraordinaire qui existe déjà au cœur de tes cellules."</p>
+      <ul class="acc-card-items">
+        <li>Techniques manuelles fonctionnelles et énergétiques</li>
+        <li>Lecture énergétique des déséquilibres</li>
+        <li>Équilibre du bassin comme fondation</li>
+        <li>Séance sur mesure, intuitive et précise</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- HYPNOSE -->
+<section class="accompagnement acc-reversed" id="hypnose">
+  <div class="acc-visual">
+    <div class="acc-card">
+      <p class="acc-card-title">"L'hypnose n'endort pas. Elle éveille à tout notre potentiel."</p>
+      <ul class="acc-card-items">
+        <li>Hypnose ericksonienne et SAJECE</li>
+        <li>Histoires métaphoriques et graines de changement</li>
+        <li>Accès aux différentes parts de soi</li>
+        <li>Reprogrammation des schémas inconscients</li>
+      </ul>
+    </div>
+  </div>
+  <div class="acc-text">
+    <p class="acc-label">Porte A · suite</p>
+    <h2 class="acc-title">Hypnose &<br>accès à l'inconscient</h2>
+    <p class="acc-subtitle">"J'ai tout compris. Rien ne change vraiment."</p>
+    <p class="acc-desc">Ton corps a tout retenu. En accédant aux strates profondes, on reprogramme les schémas qui se rejouent sans ton accord : peur du lien, difficulté à recevoir, survie chronique. Non pour supprimer le symptôme qui te protège — mais pour lui permettre d'être compris, régulé, apaisé à la source.</p>
+    <ul class="acc-list">
+      <li>Stress, anxiété, insomnies</li>
+      <li>Peur du rejet, de l'abandon, de l'effondrement</li>
+      <li>Schémas relationnels récurrents</li>
+      <li>Arrêt du tabac, troubles du sommeil</li>
+      <li>Blocages émotionnels profonds</li>
+    </ul>
+    <div class="acc-tarif">
+      <span>Sur devis</span>
+      <span>Cabinet ou Visio</span>
+    </div>
+    <a href="https://tidycal.com/elodie-nirennold" target="_blank" class="btn-primary">Réserver</a>
+  </div>
+</section>
+
+<!-- COACHING -->
+<section class="accompagnement" id="schemas">
+  <div class="acc-text">
+    <p class="acc-label">Porte B & C</p>
+    <h2 class="acc-title">Coaching<br>intégratif</h2>
+    <p class="acc-subtitle">"Je veux que ça change vraiment. Et que ça tienne."</p>
+    <p class="acc-desc">La prise de conscience ne suffit pas. Il faut un système nerveux régulé et de nouvelles connexions pour que ce qui a changé en séance tienne dans ta vie réelle. Cet accompagnement mêle coaching intégratif, hypnose, approche somatique et lecture énergétique pour une action précise.</p>
+    <ul class="acc-list">
+      <li>Survie relationnelle — peur de perdre le lien</li>
+      <li>Difficulté à recevoir sans se sentir redevable</li>
+      <li>Hyper-responsabilité, sur-adaptation</li>
+      <li>Peur de craquer ou de décevoir</li>
+      <li>Vouloir vivre autrement, pas juste comprendre</li>
+    </ul>
+    <div style="margin-bottom:1.5rem;">
+      <div class="acc-tarif" style="margin-bottom:0.8rem;display:flex;flex-direction:column;align-items:flex-start;padding:1.2rem 1.6rem;border-radius:16px;">
+        <span style="font-family:'Jost',sans-serif;font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--rose);margin-bottom:0.4rem;">Séance ponctuelle</span>
+        <span style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--brun-fonce);">150 €</span>
+      </div>
+      <div class="acc-tarif" style="margin-bottom:0.8rem;display:flex;flex-direction:column;align-items:flex-start;padding:1.2rem 1.6rem;border-radius:16px;">
+        <span style="font-family:'Jost',sans-serif;font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--rose);margin-bottom:0.4rem;">Pack 6 séances + portail Notion</span>
+        <span style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--brun-fonce);">1 030 €</span>
+      </div>
+      <div class="acc-tarif" style="display:flex;flex-direction:column;align-items:flex-start;padding:1.2rem 1.6rem;border-radius:16px;">
+        <span style="font-family:'Jost',sans-serif;font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--rose);margin-bottom:0.4rem;">Accompagnement complet</span>
+        <span style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--brun-fonce);">2 050 €</span>
+      </div>
+    </div>
+    <a href="https://tidycal.com/elodie-nirennold/seance-coaching-integratif" target="_blank" class="btn-primary">Réserver une séance</a>
+    <a href="mailto:contact@elodienirennold.com" class="btn-ghost">Me contacter</a>
+  </div>
+  <div class="acc-visual">
+    <div class="acc-card">
+      <p class="acc-card-title">"Continuer séance par séance permet de soulager. S'engager dans un cadre permet de ne plus dépendre des séances pour aller mieux."</p>
+      <ul class="acc-card-items">
+        <li>6 sessions individuelles d'1h30</li>
+        <li>En présentiel ou en visio</li>
+        <li>Portail Notion personnalisé</li>
+        <li>Synthèses et axes d'ancrage entre séances</li>
+        <li>Analyse Human Design incluse (offre complète)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="page-cta">
+  <h2>Tu ne sais pas encore<br>par où commencer ?</h2>
+  <p>Écris-moi. On trouve ensemble le cadre le plus juste pour ta situation — sans engagement.</p>
+  <a href="mailto:contact@elodienirennold.com" class="btn-primary-light">Me contacter</a>
+</div>
+
+<footer>
+  <span class="footer-copy">© 2026 Elodie Nirennold · Levallois-Perret</span>
+  <div class="footer-legal">
+    <a href="/mentions-legales.html">Mentions légales</a>
+    <span class="footer-sep">·</span>
+    <a href="/politique-de-confidentialite.html">Politique de confidentialité</a>
+    <span class="footer-sep">·</span>
+    <a href="/cgv.html">CGV</a>
+  </div>
+</footer>
+</body>
+</html>

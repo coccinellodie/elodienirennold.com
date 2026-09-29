@@ -183,6 +183,43 @@ footer{background:var(--creme-fonce);padding:2.5rem 8rem;display:flex;justify-co
   .coaching-desc-cadre { grid-template-columns:1fr; gap:2.5rem; padding:3rem 2rem; }
 }
 
+
+/* ─── COACHING PAS POUR ─── */
+.coaching-pas-pour {
+  padding:4rem 8rem 0;
+  background:var(--creme);
+}
+.coaching-pas-pour-inner {
+  max-width:1100px; margin:0 auto;
+  background:var(--blanc); border-radius:20px;
+  padding:3rem 3.5rem;
+  border:1px solid rgba(182,154,148,0.12);
+  border-left:2px solid rgba(182,154,148,0.3);
+}
+.coaching-pas-pour-title {
+  font-family:'Cormorant Garamond', serif; font-weight:500;
+  font-size:1.2rem; color:var(--brun-fonce);
+  margin-bottom:2rem; margin-top:1rem;
+}
+.coaching-pas-list {
+  list-style:none; display:grid;
+  grid-template-columns:1fr 1fr; gap:0.8rem 3rem;
+}
+.coaching-pas-list li {
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.82rem; line-height:1.8; color:var(--brun);
+  padding-left:1.5rem; position:relative;
+}
+.coaching-pas-list li::before {
+  content:''; position:absolute; left:0; top:0.72em;
+  width:5px; height:5px; border-radius:50%;
+  background:transparent; border:1.5px solid rgba(182,154,148,0.4);
+}
+@media(max-width:1100px) {
+  .coaching-pas-pour { padding:3rem 2rem 0; }
+  .coaching-pas-list { grid-template-columns:1fr; }
+}
+
 </style>
 </head>
 <body>
@@ -194,7 +231,7 @@ footer{background:var(--creme-fonce);padding:2.5rem 8rem;display:flex;justify-co
 
 <div class="page-header">
   <p class="page-label">Accompagnements</p>
-  <h1 class="page-title">Ce dont tu as besoin<br>est déjà là.</h1>
+  <h1 class="page-title">Ton corps sait<br>avant ta tête.</h1>
   <p class="page-sub">Trois approches complémentaires. Un fil commun : revenir à toi, depuis le corps.</p>
 </div>
 
@@ -204,10 +241,11 @@ footer{background:var(--creme-fonce);padding:2.5rem 8rem;display:flex;justify-co
     <p class="acc-label">Porte A</p>
     <h2 class="acc-title">Ostéopathie<br>somato-émotionnelle</h2>
     <p class="acc-subtitle">"Mon corps me parle. Je ne peux plus l'ignorer."</p>
-    <p class="acc-desc">Et si nous avions perdu le réflexe de nous fier à notre corps ? Et si nous avions oublié qu'il est un allié précieux qui nous délivre des informations chaque jour ?</p>
+    <p class="acc-desc">Et si tu avais perdu le réflexe de te fier à ton corps ? Et si tu avais oublié qu'il est un allié précieux qui te délivre des informations chaque jour ?</p>
     <p class="acc-desc">Je suis convaincue que tout ce qui ne s'exprime pas s'imprime dans l'inconscient et dans les mémoires cellulaires du corps. Les émotions sont de l'énergie en mouvement. Réprimées depuis des années, elles créent des nœuds énergétiques qui entraînent des dysfonctionnements dans notre santé. La somatisation devient alors le dernier recours de l'organisme pour exprimer ce qui est cristallisé.</p>
     <p class="acc-desc">L'approche somato-émotionnelle donne au corps la possibilité de se libérer des contraintes et des mémoires inscrites dans les tissus. À l'aide de techniques manuelles fonctionnelles et énergétiques douces sur l'appareil locomoteur, j'explore les déséquilibres et blocages. En plaçant le corps dans les meilleures conditions possibles, celui-ci retrouve ses capacités naturelles d'équilibration et son potentiel d'auto-guérison.</p>
-    <p class="acc-desc">Ma spécialité est de faire le pont entre le corps et l'esprit collecter les informations et émotions engrammées dans les structures en déséquilibre, adapter la stratégie thérapeutique, et procéder à un soin sur-mesure. L'équilibre du bassin est au cœur de ma pratique, car il constitue l'assise véritable de l'ensemble de l'organisme.</p>
+    <p class="acc-desc">Ma spécialité est de faire le pont entre le corps et l'esprit : collecter les informations et émotions engrammées dans les structures en déséquilibre, adapter la stratégie thérapeutique, et procéder à un soin sur-mesure. L'équilibre du bassin est au cœur de ma pratique, car il constitue l'assise véritable de l'ensemble de l'organisme.</p>
+    <p class="acc-desc">Le massage de réharmonisation et d'ancrage complète ce travail quand le corps a besoin d'une approche plus enveloppante — régulation du système nerveux, relâchement des tensions de fond, retour au ressenti.</p>
     <p class="acc-desc" style="font-style:italic;color:var(--rose);font-family:'Cormorant Garamond',serif;font-size:0.95rem;">Séances proposées à partir de 4 ans, avec accord parental.</p>
     <ul class="acc-list">
       <li>Douleurs physiques à composante émotionnelle</li>
@@ -215,9 +253,10 @@ footer{background:var(--creme-fonce);padding:2.5rem 8rem;display:flex;justify-co
       <li>Tensions dans la poitrine, le ventre, la gorge</li>
       <li>Corps en alerte permanente</li>
       <li>Après un choc émotionnel ou traumatique</li>
+      <li>Besoin d'ancrage, de régulation douce du système nerveux</li>
     </ul>
     
-    <a href="https://www.doctolib.fr/osteopathe/neuilly-sur-seine/elodie-nirennold" target="_blank" class="btn-primary">Réserver sur Doctolib</a>
+    <a href="https://www.doctolib.fr/osteopathe/neuilly-sur-seine/elodie-nirennold" target="_blank" class="btn-primary">Réserver</a>
   </div>
   <div class="acc-visual">
     <div class="acc-card">
@@ -232,22 +271,45 @@ footer{background:var(--creme-fonce);padding:2.5rem 8rem;display:flex;justify-co
   </div>
 </section>
 
-<!-- HYPNOSE -->
-<section class="accompagnement acc-reversed" id="hypnose">
+
+<!-- MASSAGE -->
+<section class="accompagnement" id="massage">
+  <div class="acc-text">
+    <p class="acc-label">Porte A · complément</p>
+    <h2 class="acc-title">Massage de réharmonisation<br>& ancrage</h2>
+    <p class="acc-subtitle">Une expérience holistique entre libération corporelle, soin énergétique et décodage émotionnel.</p>
+    <p class="acc-desc">Ton corps sait, il ne triche jamais. Chaque tension, chaque crispation, chaque signe de fatigue est un message en attente d'être entendu. Ce massage t'invite à descendre de la tête au corps, à relancer les flux bloqués et à te reconnecter à ton intelligence somato-émotionnelle.</p>
+    <p class="acc-desc">J'utilise une approche intuitive et ancrée, nourrie par mes ressentis des déséquilibres mécaniques, ma lecture énergétique du corps, et ma capacité à poser des mots sur les émotions qui demandent à être conscientisées et libérées. Ce soin agit autant sur le plan physique que sur les mémoires émotionnelles profondes.</p>
+    <p class="acc-desc" style="font-style:italic;color:var(--rose);font-family:'Cormorant Garamond',serif;font-size:0.95rem;">Adapté aux adultes comme aux enfants. Ce soin est doux, profond, libérateur et respecte toujours le rythme intérieur de chacun.</p>
+    <ul class="acc-list">
+      <li>Tu te sens dispersé, tendu ou en surcharge mentale</li>
+      <li>Tu te sens déconnecté de ton corps</li>
+      <li>Tu ressens une fatigue que le sommeil ne soulage plus</li>
+      <li>Tes émotions débordent, ou au contraire s'anesthésient</li>
+      <li>Tu traverses une période de transition ou de transformation intérieure</li>
+      <li>Tu rêves d'un espace doux pour déposer, relâcher, libérer tes inconforts</li>
+    </ul>
+    <a href="https://tidycal.com/elodie-nirennold" target="_blank" class="btn-primary">Réserver</a>
+  </div>
   <div class="acc-visual">
     <div class="acc-card">
-      <p class="acc-card-title">"L'hypnose n'endort pas. Elle éveille à tout notre potentiel."</p>
+      <p class="acc-card-title">"Quand le corps se relâche, l'émotion circule et l'harmonie revient."</p>
       <ul class="acc-card-items">
-        <li>Hypnose ericksonienne et SAJECE</li>
-        <li>Histoires métaphoriques et graines de changement</li>
-        <li>Accès aux différentes parts de soi</li>
-        <li>Reprogrammation des schémas inconscients</li>
+        <li>Dos, membres inférieurs, pieds</li>
+        <li>Soin somatique et énergétique</li>
+        <li>Lecture des mémoires cellulaires et des fascias</li>
+        <li>Temps d'échange pour intégrer les informations émotionnelles</li>
+        <li>Chaque séance s'adapte à ce que ton corps est prêt à libérer</li>
       </ul>
     </div>
   </div>
-  <div class="acc-text">
+</section>
+
+<!-- HYPNOSE -->
+<section class="accompagnement" id="hypnose">
+<div class="acc-text">
     <p class="acc-label">Porte A · suite</p>
-    <h2 class="acc-title">Hypnose &<br>accès à l'inconscient</h2>
+    <h2 class="acc-title">Hypnose</h2>
     <p class="acc-subtitle">"J'ai tout compris. Rien ne change vraiment."</p>
     <p class="acc-desc">Je pratique une hypnose douce et puissante dérivée de l'hypnose ericksonienne et de la méthode SAJECE. Je t'invite à suivre un chemin de transformation à travers des histoires métaphoriques. Les images et symboles cachés dans ces récits sont autant de graines de changement semées dans le subconscient pour remettre de la sécurité sur les douleurs passées et révéler de nouvelles ressources.</p>
     <p class="acc-desc">La lecture énergétique de ta structure me permet de rapidement cibler les freins émotionnels prioritaires. Il ne s'agit pas de supprimer le symptôme qui te protège, mais de lui permettre d'être compris, régulé, apaisé à la source. Je t'accompagne à la rencontre des différentes parts de toi qui cohabitent parfois dans la dissonance celles qui protègent, contrôlent, fuient, portent la douleur. Plutôt que de lutter contre elles, je crée un espace sécurisé où chacune peut être entendue et réhabilitée dans sa juste fonction.</p>
@@ -263,9 +325,18 @@ footer{background:var(--creme-fonce);padding:2.5rem 8rem;display:flex;justify-co
     
     <a href="https://tidycal.com/elodie-nirennold" target="_blank" class="btn-primary">Réserver</a>
   </div>
+  <div class="acc-visual">
+    <div class="acc-card">
+      <p class="acc-card-title">"L'hypnose n'endort pas. Elle éveille à tout notre potentiel."</p>
+      <ul class="acc-card-items">
+        <li>Hypnose ericksonienne et SAJECE</li>
+        <li>Histoires métaphoriques et graines de changement</li>
+        <li>Accès aux différentes parts de soi</li>
+        <li>Reprogrammation des schémas inconscients</li>
+      </ul>
+    </div>
+  </div>
 </section>
-
-<!-- COACHING -->
 <section class="accompagnement" id="schemas">
   <div class="acc-text">
     <p class="acc-label">Porte B & C</p>
@@ -342,6 +413,22 @@ footer{background:var(--creme-fonce);padding:2.5rem 8rem;display:flex;justify-co
 
   </div>
 </section>
+
+
+<div class="coaching-pas-pour">
+  <div class="coaching-pas-pour-inner">
+    <p class="section-label">À préciser</p>
+    <h3 class="coaching-pas-pour-title">Cet accompagnement n'est pas fait pour toi si</h3>
+    <ul class="coaching-pas-list">
+      <li>Tu cherches uniquement un soulagement ponctuel sans envie d'aller plus loin</li>
+      <li>Tu n'es pas prêt à t'engager dans un cadre sur plusieurs mois pour que les changements tiennent</li>
+      <li>Tu cherches à être compris et écouté, mais pas questionné ni challengé</li>
+      <li>Tu veux être rassuré sans toucher à ce qui maintient tes schémas</li>
+      <li>Tu cherches une validation plutôt qu'un regard honnête sur ce qui bloque</li>
+      <li>Tu es en phase aiguë de crise et as besoin en priorité d'un suivi psychiatrique ou médical</li>
+    </ul>
+  </div>
+</div>
 
 <div class="page-cta">
   <h2>Tu ne sais pas encore<br>par où commencer ?</h2>

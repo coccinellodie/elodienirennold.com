@@ -78,6 +78,8 @@ nav {
 .nav-cta:hover { background:var(--brun-fonce); transform:translateY(-1px); }
 
 /* ─── HERO ─── */
+.hero-name { font-family:'Cormorant Garamond', serif; font-weight:300; font-size:clamp(3.5rem,7vw,6rem); line-height:0.95; color:var(--brun-fonce); margin-bottom:0.8rem; letter-spacing:-0.02em; }
+.hero-artiste { font-family:'Jost', sans-serif; font-weight:300; font-size:0.65rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--rose); opacity:0.85; margin-bottom:1.5rem; display:block; }
 .hero {
   min-height:100vh;
   display:grid; grid-template-columns:52% 48%;
@@ -105,12 +107,7 @@ nav {
 .hero-eyebrow::before {
   content:''; display:block; width:32px; height:1px; background:var(--rose); opacity:0.7;
 }
-.hero-name {
-  font-family:'Cormorant Garamond', serif; font-weight:300;
-  font-size:clamp(4rem, 6.5vw, 7rem);
-  line-height:0.92; letter-spacing:0.01em;
-  color:var(--brun-fonce); margin-bottom:2rem;
-}
+
 .hero-tagline {
   font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:300;
   font-size:clamp(1.55rem, 2.6vw, 2.1rem);
@@ -435,7 +432,7 @@ nav {
 .porte-lettre {
   font-family:'Cormorant Garamond', serif; font-weight:300;
   font-size:5rem; line-height:0.9; letter-spacing:-0.01em;
-  color:rgba(36,61,31,0.12);
+  color:var(--rose-clair);
   margin-bottom:1.6rem; display:block;
 }
 .porte-phrase {
@@ -1177,6 +1174,14 @@ footer::before {
   .piliers-grid { grid-template-columns:1fr; }
 }
 
+
+.mirror-text { position:relative; }
+.mirror-sablier-wrap {
+  position:absolute; top:1.5rem; right:1.5rem;
+  opacity:0.3; z-index:1;
+}
+.mirror-sablier { display:block; }
+
 /* ─── ANIMATIONS ─── */
 @keyframes fadeUp {
   from { opacity:0; transform:translateY(30px); }
@@ -1248,9 +1253,10 @@ footer::before {
   <div class="hero-left">
     <p class="hero-eyebrow">Ostéo · Hypnose · Coaching Intégratif</p>
     <h1 class="hero-name">Elodie<br>Nirennold</h1>
-    <p class="hero-tagline">Assez survécu. Il est temps d'habiter ta vie.</p>
+    <p class="hero-artiste">✧ Artiste de la résilience</p>
+  <p class="hero-tagline">Assez survécu<br>Il est temps d'habiter ta vie</p>
     <p class="hero-sub">
-      Le corps garde la mémoire de tout ce que tu n'as pas pu exprimer. On commence par là.
+      Le corps garde en mémoire tout ce que tu n'as pas pu exprimer ou intégrer.
     </p>
     <div class="hero-actions">
       <a href="#par-ou-commencer" class="btn-primary">Par où commencer ?</a>
@@ -1264,8 +1270,8 @@ footer::before {
   </div>
   <div class="hero-right">
     <img
-      src="https://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_630,w_1200,f_auto,q_auto/2144049/B6B32226-E849-421E-82C6-485F9475D09C.jpg"
-      alt="Elodie Nirennold" class="hero-img">
+      src="https://coccinellodie.github.io/elodienirennold.com/photo%20pro%20cab%20Elodie%20Nirennold.JPG"
+      alt="" class="hero-img">
     <div class="hero-img-overlay"></div>
   </div>
 </section>
@@ -1312,8 +1318,8 @@ footer::before {
   <div class="mirror-right reveal reveal-delay-2">
     <div class="mirror-card">
       <span class="mirror-quote-mark">“</span>
-      <blockquote class="mirror-quote">
-        Tu survis dans le lien.<br>On est là pour que tu y vives.
+      <div class="mirror-sablier-wrap"><svg class="mirror-sablier" width="28" height="38" viewBox="0 0 28 38" fill="none" stroke="#B69A94" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="1" x2="24" y2="1"/><line x1="4" y1="37" x2="24" y2="37"/><path d="M5 1 C5 1 8 8 14 14 C20 20 23 28 23 37"/><path d="M23 1 C23 1 20 8 14 14 C8 20 5 28 5 37"/><path d="M9 24 C10 26 12 27 14 27 C16 27 18 26 19 24"/></svg></div><blockquote class="mirror-quote">
+        Tu survis dans le lien.<br>Je suis là pour t'aider à y vivre et t'épanouir.
       </blockquote>
       <div class="mirror-cta">
         <p>Identifie où ton énergie se disperse. Reçois des pistes concrètes.</p>
@@ -1385,7 +1391,7 @@ footer::before {
     <a href="https://coccinellodie.github.io/elodienirennold.com/accompagnements.html#direction" class="porte-card reveal reveal-delay-2">
       <span class="porte-lettre">C</span>
       <p class="porte-phrase">"Je tiens. Mais je veux vivre autrement."</p>
-      <p class="porte-desc">Tu fonctionnes, même bien de l'extérieur. Mais quelque chose sait que tu passes à côté de quelque chose d'essentiel.</p>
+      <p class="porte-desc">Tu fonctionnes, même bien de l'extérieur. Mais quelque chose sait que tu passes à côté de quelque chose d'essentiel. Tu as envie d'un changement profond et durable.</p>
       <span class="porte-tag">Coaching intégratif</span>
     </a>
 
@@ -1407,7 +1413,7 @@ footer::before {
         <li>La surveillance permanente de l'état du lien</li>
         <li>L'épuisement de comprendre sans que rien ne change</li>
         <li>Recevoir en calculant déjà comment rembourser</li>
-        <li>Tenir à bout de bras, en silence</li>
+        <li>Tu as appris à tenir, fuir et t'anesthésier. Et maintenant tu veux apprendre à développer ta sécurité intérieure et ta capacité à recevoir.</li>
         <li>Les schémas qui se rejouent malgré toi</li>
       </ul>
     </div>
@@ -1486,6 +1492,11 @@ footer::before {
       <div class="citation-slide">
         <p class="citation-slide-text">Si tu écoutes ton corps lorsqu’il chuchote, tu n’auras pas à l’entendre crier.</p>
         <span class="citation-slide-author">Sagesse tibétaine</span>
+      </div>
+
+      <div class="citation-slide dark">
+        <p class="citation-slide-text">Ta souffrance te pousse jusqu'à ce que ta vision te porte.</p>
+        <span class="citation-slide-author">Michael Beckwith</span>
       </div>
 
 
@@ -1972,5 +1983,47 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold:0.1 });
 reveals.forEach(el => observer.observe(el));
 </script>
+
+
+<!-- DOCTOLIB FLOATING BUTTON -->
+<style>
+@media screen and (max-width: 767px) {
+  #doctolib-btn { display: none !important; }
+}
+#doctolib-btn {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background-color: #B69A94;
+  color: white;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  padding: 0 24px;
+  height: 48px;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  z-index: 9999;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+#doctolib-btn img {
+  height: 19px;
+  margin-left: 6px;
+}
+#doctolib-btn {
+  font-family: Roboto, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+</style>
+<a id="doctolib-btn" 
+   href="https://www.doctolib.fr/osteopathe/neuilly-sur-seine/elodie-nirennold/booking?bookingFunnelSource=external_referral&utm_campaign=website-button&utm_source=elodie-nirennold-website-button&utm_medium=referral&utm_content=withoutpreview-blue-floating-bottom-right&utm_term=elodie-nirennold" 
+   target="_blank">
+  Doctolib <img src="https://pro.doctolib.fr/external_button/doctolib-white-transparent.png" alt="" style="height:19px;margin-left:6px;" onerror="this.style.display='none'">
+</a>
+
+
 </body>
 </html>

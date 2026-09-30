@@ -79,7 +79,7 @@ nav {
 
 /* ─── HERO ─── */
 .hero-name { font-family:'Cormorant Garamond', serif; font-weight:300; font-size:clamp(3.5rem,7vw,6rem); line-height:0.95; color:var(--brun-fonce); margin-bottom:0.8rem; letter-spacing:-0.02em; }
-.hero-artiste { font-family:'Jost', sans-serif; font-weight:300; font-size:0.65rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--rose); opacity:0.85; margin-bottom:1.5rem; display:block; }
+.hero-artiste { font-family:'Jost', sans-serif; font-weight:300; font-size:0.65rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--rose); opacity:0.85; margin-bottom:1.5rem; display:flex; align-items:center; gap:0.6rem; }
 .hero {
   min-height:auto;
   display:grid; grid-template-columns:52% 48%;
@@ -100,9 +100,10 @@ nav {
 }
 .hero-eyebrow {
   font-family:'Jost', sans-serif; font-weight:300;
-  font-size:0.65rem; letter-spacing:0.36em; text-transform:uppercase;
+  font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase;
   color:var(--rose); margin-bottom:2.5rem;
   display:flex; align-items:center; gap:1.2rem;
+  white-space:nowrap;
 }
 .hero-eyebrow::before {
   content:''; display:block; width:32px; height:1px; background:var(--rose); opacity:0.7;
@@ -1249,7 +1250,7 @@ footer::before {
 <!-- HERO -->
 <section class="hero">
   <div class="hero-left">
-    <p class="hero-eyebrow">Ostéo · Hypnose · Coaching Intégratif</p>
+    <p class="hero-eyebrow">Ostéo somato-émotionnelle · Hypnose · Coaching intégratif</p>
     <h1 class="hero-name">Elodie<br>Nirennold</h1>
     <p class="hero-artiste">✧ Artiste de la résilience</p>
     <p class="hero-tagline">Assez survécu<br>Il est temps d'habiter ta vie</p>
@@ -2019,7 +2020,7 @@ reveals.forEach(el => observer.observe(el));
 <a id="doctolib-btn" 
    href="https://www.doctolib.fr/osteopathe/neuilly-sur-seine/elodie-nirennold/booking?bookingFunnelSource=external_referral&utm_campaign=website-button&utm_source=elodie-nirennold-website-button&utm_medium=referral&utm_content=withoutpreview-blue-floating-bottom-right&utm_term=elodie-nirennold" 
    target="_blank">
-  <span style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:15px;font-weight:600;letter-spacing:0.01em;color:white;">Doctolib</span>
+  <img src="https://coccinellodie.github.io/elodienirennold.com/doctolib-white-transparent.png" alt="Doctolib" style="height:19px;display:block;">
 </a>
 
 

@@ -644,11 +644,6 @@ nav {
   pointer-events:none;
 }
 .quiz-visual { position:relative; }
-.quiz-question-mark {
-  position:absolute; top:1.5rem; left:1.8rem;
-  width:70px; height:auto;
-  opacity:0.9; z-index:2;
-}
 .quiz-card { position:relative;
   background:var(--creme); border-radius:28px;
   padding:4.5rem 4rem;
@@ -676,10 +671,8 @@ nav {
 }
 .quiz-floating {
   position:absolute; top:-1.5rem; right:-1.5rem;
-  background:linear-gradient(135deg, #F7F1E8 0%, #EDE3D5 60%, #E8D8C4 100%);
-  border-radius:18px;
-  padding:1.4rem 1.8rem; z-index:2;
-  box-shadow:0 8px 28px rgba(76,50,13,0.15), inset 0 1px 0 rgba(255,255,255,0.8);
+  background:transparent;
+  padding:0; z-index:2;
 }
 .quiz-floating span:first-child {
   font-family:'Cormorant Garamond', serif; font-weight:300;
@@ -1562,13 +1555,12 @@ footer::before {
 <section class="quiz" id="quiz">
   <div class="quiz-visual reveal">
     <div class="quiz-card">
-      <img src="https://coccinellodie.github.io/elodienirennold.com/question-mark.png" alt="" class="quiz-question-mark">
+      
       <p class="quiz-card-title">Ton corps parle<br>Quelque chose en toi résiste encore<br>Tes liens t'épuisent<br><span style="font-family:'Jost',sans-serif;font-weight:200;font-style:normal;font-size:0.6em;letter-spacing:0.04em;opacity:0.75;">Ce bilan t'aide à savoir par où commencer</span></p>
       <span class="quiz-tag">✦ Gratuit · 6 minutes · 21 questions</span>
     </div>
     <div class="quiz-floating">
-      <span>21</span>
-      <span>questions</span>
+      <img src="https://coccinellodie.github.io/elodienirennold.com/question-mark.png" alt="" style="width:70px;height:auto;display:block;">
     </div>
   </div>
   <div class="quiz-content reveal reveal-delay-1">

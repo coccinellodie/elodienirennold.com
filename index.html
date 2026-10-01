@@ -644,6 +644,11 @@ nav {
   pointer-events:none;
 }
 .quiz-visual { position:relative; }
+.quiz-question-mark {
+  position:absolute; top:1.5rem; left:1.8rem;
+  width:70px; height:auto;
+  opacity:0.9; z-index:2;
+}
 .quiz-card { position:relative;
   background:var(--creme); border-radius:28px;
   padding:4.5rem 4rem;
@@ -670,20 +675,20 @@ nav {
   font-size:0.65rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--rose);
 }
 .quiz-floating {
-  position:absolute; top:-2.5rem; right:-2rem;
-  background:linear-gradient(135deg, var(--brun-moyen) 0%, var(--brun-fonce) 100%);
+  position:absolute; top:-1.5rem; right:-1.5rem;
+  background:linear-gradient(135deg, #F7F1E8 0%, #EDE3D5 60%, #E8D8C4 100%);
   border-radius:18px;
   padding:1.4rem 1.8rem; z-index:2;
-  box-shadow:0 10px 36px rgba(76,50,13,0.25), inset 0 1px 0 rgba(255,255,255,0.1);
+  box-shadow:0 8px 28px rgba(76,50,13,0.15), inset 0 1px 0 rgba(255,255,255,0.8);
 }
 .quiz-floating span:first-child {
   font-family:'Cormorant Garamond', serif; font-weight:300;
-  font-size:2.2rem; color:var(--blanc); display:block; line-height:1;
+  font-size:2.2rem; color:var(--brun-fonce); display:block; line-height:1;
 }
 .quiz-floating span:last-child {
   font-family:'Jost', sans-serif; font-weight:300;
   font-size:0.6rem; letter-spacing:0.18em; text-transform:uppercase;
-  color:var(--rose-pale); margin-top:0.3rem; display:block; opacity:0.9;
+  color:var(--brun); margin-top:0.3rem; display:block; opacity:0.7;
 }
 .quiz-title {
   font-family:'Cormorant Garamond', serif; font-weight:400;
@@ -1557,7 +1562,7 @@ footer::before {
 <section class="quiz" id="quiz">
   <div class="quiz-visual reveal">
     <div class="quiz-card">
-      <span class="quiz-emoji"><img src="https://coccinellodie.github.io/elodienirennold.com/question-mark.png" alt="" style="width:60px;height:auto;display:block;opacity:0.85;"></span>
+      <img src="https://coccinellodie.github.io/elodienirennold.com/question-mark.png" alt="" class="quiz-question-mark">
       <p class="quiz-card-title">Ton corps parle<br>Quelque chose en toi résiste encore<br>Tes liens t'épuisent<br><span style="font-family:'Jost',sans-serif;font-weight:200;font-style:normal;font-size:0.6em;letter-spacing:0.04em;opacity:0.75;">Ce bilan t'aide à savoir par où commencer</span></p>
       <span class="quiz-tag">✦ Gratuit · 6 minutes · 21 questions</span>
     </div>

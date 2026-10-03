@@ -497,8 +497,8 @@
 <div id="screen-results" class="screen" style="gap:28px; justify-content:flex-start; padding-top:80px;">
 
   <div style="text-align:center; width:100%;">
-    <h1 id="results-greeting">Tes resultats</h1>
-    <p class="muted italic" style="margin-top:8px;">Voici ce que ton questionnaire revele, et par ou commencer.</p>
+    <h1 id="results-greeting">Tes résultats</h1>
+    <p class="muted italic" style="margin-top:8px;">Voici ce que ton questionnaire révèle, et par où commencer.</p>
   </div>
 
   <!-- Scores visuels -->
@@ -531,18 +531,18 @@
   <!-- Et maintenant -->
   <div class="now-card">
     <h2>Et maintenant ?</h2>
-    <p>Tu as un eclairage sur la ou tu en es, dans ton corps, dans ce qui resiste encore, et dans tes liens. Certaines zones parlent plus fort que d'autres. C'est une information precieuse.</p>
-    <p>La prochaine etape, c'est de choisir par ou commencer. Pas par ou tu devrais. Par ou quelque chose en toi dit oui.</p>
-    <p>Si tu as des questions, si tu veux savoir quel cadre serait le plus juste pour toi, ou si quelque chose a resonne sans que tu saches encore quoi en faire :</p>
+    <p>Tu as un éclairage sur là où tu en es, dans ton corps, dans ce qui résiste encore, et dans tes liens. Certaines zones parlent plus fort que d'autres. C'est une information précieuse.</p>
+    <p>La prochaine étape, c'est de choisir par où commencer. Pas par où tu devrais. Par où quelque chose en toi dit oui.</p>
+    <p>Si tu as des questions, si tu veux savoir quel cadre serait le plus juste pour toi, ou si quelque chose a résonné sans que tu saches encore quoi en faire :</p>
     <div class="now-ctas">
-      <a href="https://tidycal.com/elodie-nirennold/appel-clarte-gratuit-coaching-integratif" target="_blank" class="btn-cta">Appel clarte gratuit · 45 min →</a>
+      <a href="https://tidycal.com/elodie-nirennold/appel-clarte-gratuit-coaching-integratif" target="_blank" class="btn-cta">Appel clarté gratuit · 45 min →</a>
       <a href="mailto:contact@elodienirennold.com" style="color:rgba(255,255,255,0.75); font-size:0.9rem; text-decoration:underline;">Ecrire directement : contact@elodienirennold.com</a>
     </div>
-    <p class="now-note">Je reponds a chaque message personnellement.</p>
+    <p class="now-note">Je réponds à chaque message personnellement.</p>
   </div>
 
   <div class="divider"></div>
-  <p class="footer-note">Elodie Nirennold · Osteopathe somato-emotionnelle · Hypnotherapeute · Coach integratif<br>Levallois-Perret · En cabinet et a distance</p>
+  <p class="footer-note">Elodie Nirennold · Ostéopathe somato-émotionnelle · Hypnothérapeute · Coach intégratif<br>Levallois-Perret · En cabinet et à distance</p>
 </div>
 
 <script>
@@ -556,26 +556,26 @@ const QUESTIONS = [
   // CORPS (dim 0) - 7 questions
   { dim:0, text:"Mon corps porte quelque chose. Tensions chroniques, douleurs que rien ne résout vraiment, un inconfort qui s'est installé dans le fond.", options:[
     { letter:'A', text:"Non, mon corps est globalement calme.", score:1 },
-    { letter:'B', text:"Parfois, quand le stress monte. Ca passe.", score:2 },
+    { letter:'B', text:"Parfois, quand le stress monte. Ça passe.", score:2 },
     { letter:'C', text:"Souvent. Mon corps parle avant que j'aie le temps de comprendre.", score:3 },
-    { letter:'D', text:"Tout le temps. Mon corps est mon premier signal — et il crie.", score:4 },
+    { letter:'D', text:"Tout le temps. Mon corps est mon premier signal, et il crie.", score:4 },
   ]},
-  { dim:0, text:"Je vis beaucoup dans ma tête. Je peux passer des heures sans sentir mes pieds sur le sol. Mon corps, je l'oublie — ou je l'ignore pour tenir.", options:[
+  { dim:0, text:"Je vis beaucoup dans ma tête. Je peux passer des heures sans sentir mes pieds sur le sol. Mon corps, je l'oublie, ou je l'ignore pour tenir.", options:[
     { letter:'A', text:"C'est ma réalité. Je ne sais plus vraiment ce que mon corps ressent.", score:4 },
     { letter:'B', text:"Un peu, surtout sous pression.", score:2 },
     { letter:'C', text:"Non. Je suis présent dans mes sensations.", score:1 },
     { letter:'D', text:"Souvent. Des journées entières ou je fonctionne en mode automatique, coupé de moi.", score:3 },
   ]},
-  { dim:0, text:"Mon système nerveux ne se pose pas vraiment. Sursauts, vigilance permanente, difficulté a me détendre même quand rien ne justifie l'alerte.", options:[
+  { dim:0, text:"Mon système nerveux ne se pose pas vraiment. Sursauts, vigilance permanente, difficulté à me détendre même quand rien ne justifie l'alerte.", options:[
     { letter:'A', text:"Parfois, dans certains contextes précis.", score:2 },
     { letter:'B', text:"Presque tout le temps. Mon corps ne descend plus. Il est en alerte même au repos.", score:4 },
     { letter:'C', text:"Rarement. Je suis globalement posé.", score:1 },
-    { letter:'D', text:"Régulièrement. Me détendre vraiment — je ne sais plus comment c'est.", score:3 },
+    { letter:'D', text:"Régulièrement. Me détendre vraiment, je ne sais plus comment c'est.", score:3 },
   ]},
   { dim:0, text:"Mon corps a traversé des chocs : traumatismes, accidents, chirurgies, ou des années de tension accumulée sans espace pour être digérée. Ma tête a géré. Mais tout n'est pas intégré.", options:[
     { letter:'A', text:"Pas vraiment. Pas de choc identifiable.", score:1 },
     { letter:'B', text:"Peut-être. Il y a eu des choses, mais je ne sais pas si elles jouent encore.", score:2 },
-    { letter:'C', text:"Oui. Ca ne s'est pas totalement digéré, et je le sens.", score:3 },
+    { letter:'C', text:"Oui. Ça ne s'est pas totalement digéré, et je le sens.", score:3 },
     { letter:'D', text:"Clairement. Mon corps porte des mémoires que les mots ne peuvent pas atteindre.", score:4 },
   ]},
   { dim:0, text:"La fatigue que je vis ne passe pas avec le sommeil. Je dors et je me réveille aussi épuisé qu'avant. C'est une fatigue d'un autre ordre.", options:[
@@ -588,76 +588,76 @@ const QUESTIONS = [
     { letter:'A', text:"Oui. Habiter mon corps, je ne sais plus comment c'est.", score:4 },
     { letter:'B', text:"Je me sens globalement ancré.", score:1 },
     { letter:'C', text:"Souvent difficile. Je flotte plus que j'habite.", score:3 },
-    { letter:'D', text:"Pas toujours facile, mais ca revient.", score:2 },
+    { letter:'D', text:"Pas toujours facile, mais ça revient.", score:2 },
   ]},
-  { dim:0, text:"Mon corps réagit avant que ma tête comprenne. Une tension dans l'air, une décision a prendre, une relation difficile : je le sens d'abord dans mon ventre, ma gorge, mes épaules.", options:[
+  { dim:0, text:"Mon corps réagit avant que ma tête comprenne. Une tension dans l'air, une décision à prendre, une relation difficile : je le sens d'abord dans mon ventre, ma gorge, mes épaules.", options:[
     { letter:'A', text:"Tout le temps. Mon corps est mon baromètre le plus fiable.", score:4 },
-    { letter:'B', text:"Parfois. Il m'arrive de remarquer des sensations physiques liées a une situation.", score:2 },
+    { letter:'B', text:"Parfois. Il m'arrive de remarquer des sensations physiques liées à une situation.", score:2 },
     { letter:'C', text:"Rarement. Je traite d'abord par la pensée.", score:1 },
-    { letter:'D', text:"Souvent. Mon corps capte des choses que ma tête met du temps a formuler.", score:3 },
+    { letter:'D', text:"Souvent. Mon corps capte des choses que ma tête met du temps à formuler.", score:3 },
   ]},
 
   // INCONSCIENT (dim 1) - 7 questions
-  { dim:1, text:"J'ai travaillé sur moi. Thérapie, lectures, développement personnel. Je comprends beaucoup de choses. Et pourtant, les mêmes schémas reviennent. Comme si comprendre ne suffisait pas a changer.", options:[
+  { dim:1, text:"J'ai travaillé sur moi. Thérapie, lectures, développement personnel. Je comprends beaucoup de choses. Et pourtant, les mêmes schémas reviennent. Comme si comprendre ne suffisait pas à changer.", options:[
     { letter:'A', text:"Pas encore vraiment. Je n'ai pas fait ce type de travail.", score:1 },
     { letter:'B', text:"Un peu. Des éclairs de compréhension, mais les vieilles habitudes restent.", score:2 },
-    { letter:'C', text:"Souvent. Je comprends d'ou ca vient. Mais ca ne change pas durablement.", score:3 },
+    { letter:'C', text:"Souvent. Je comprends d'où ça vient. Mais ça ne change pas durablement.", score:3 },
     { letter:'D', text:"C'est ma réalité depuis des années. La tête a tout compris. Le système, lui, continue.", score:4 },
   ]},
   { dim:1, text:"Je me regarde faire. Je vois exactement ce que je suis en train de reproduire. Et je le fais quand même. Comme si une autre partie de moi avait pris le relais.", options:[
-    { letter:'A', text:"Rarement. Quand je comprends, ca change.", score:1 },
+    { letter:'A', text:"Rarement. Quand je comprends, ça change.", score:1 },
     { letter:'B', text:"Parfois.", score:2 },
     { letter:'C', text:"Souvent. La volonté et la logique ne suffisent pas.", score:3 },
     { letter:'D', text:"Tout le temps. Je me regarde faire sans pouvoir m'arrêter.", score:4 },
   ]},
-  { dim:1, text:"La nuit, mon mental tourne. Ruminations, scénarios, conversations a refaire. Il ne s'arrête pas vraiment. Le calme, je le simule plus que je le vis.", options:[
+  { dim:1, text:"La nuit, mon mental tourne. Ruminations, scénarios, conversations à refaire. Il ne s'arrête pas vraiment. Le calme, je le simule plus que je le vis.", options:[
     { letter:'A', text:"Non. Je m'endors facilement, mon sommeil est calme.", score:1 },
     { letter:'B', text:"Parfois, avant un événement stressant.", score:2 },
     { letter:'C', text:"Régulièrement. Le soir, le mental s'emballe.", score:3 },
     { letter:'D', text:"Presque toutes les nuits. Mon cerveau ne descend pas. Le silence m'est devenu étranger.", score:4 },
   ]},
-  { dim:1, text:"En fond, il y a une peur silencieuse. Pas forcément nommée. Mais elle pilote : peur de craquer, de décevoir, de prendre trop de place — ou pas assez. Elle prend des décisions a ma place.", options:[
+  { dim:1, text:"En fond, il y a une peur silencieuse. Pas forcément nommée. Mais elle pilote : peur de craquer, de décevoir, de prendre trop de place, ou pas assez. Elle prend des décisions à ma place.", options:[
     { letter:'A', text:"Non. Mes peurs sont gérables et conscientes.", score:1 },
     { letter:'B', text:"Un peu. Cette peur existe, mais elle ne prend pas toute la place.", score:2 },
     { letter:'C', text:"Oui. Elle influence mes choix plus que je ne le voudrais.", score:3 },
-    { letter:'D', text:"Clairement. La peur de l'effondrement est la, tout le temps. Elle pilote en silence.", score:4 },
+    { letter:'D', text:"Clairement. La peur de l'effondrement est là, tout le temps. Elle pilote en silence.", score:4 },
   ]},
-  { dim:1, text:"Il y a des émotions, des réactions, des blocages que je n'arrive pas a atteindre par la tête. Comme s'ils étaient ailleurs. Hors de portée du raisonnement, même quand je cherche.", options:[
-    { letter:'A', text:"Non. J'arrive généralement a accéder a ce que je ressens.", score:1 },
+  { dim:1, text:"Il y a des émotions, des réactions, des blocages que je n'arrive pas à atteindre par la tête. Comme s'ils étaient ailleurs. Hors de portée du raisonnement, même quand je cherche.", options:[
+    { letter:'A', text:"Non. J'arrive généralement à accéder à ce que je ressens.", score:1 },
     { letter:'B', text:"Parfois. Certaines émotions restent floues ou inaccessibles.", score:2 },
     { letter:'C', text:"Souvent. Il y a des couches en moi que la réflexion n'atteint pas.", score:3 },
     { letter:'D', text:"Oui. Ce que je cherche ne passera pas par les mots. Je le sais.", score:4 },
   ]},
-  { dim:1, text:"Je performe. Je livre. Je gère. Et j'ai aussi un besoin profond de prouver — ma valeur, ma compétence, que je mérite ma place. Ce besoin me coûte, mais je ne sais pas comment m'en défaire.", options:[
+  { dim:1, text:"Je performe. Je livre. Je gère. Et j'ai aussi un besoin profond de prouver : ma valeur, ma compétence, que je mérite ma place. Ce besoin me coûte, mais je ne sais pas comment m'en défaire.", options:[
     { letter:'A', text:"Non. Je n'ai pas ce type de pression intérieure.", score:1 },
     { letter:'B', text:"Un peu. Parfois je surexplique ou je sur-délivre sans vraiment savoir pourquoi.", score:2 },
-    { letter:'C', text:"Oui. Le besoin de prouver est la, régulièrement.", score:3 },
+    { letter:'C', text:"Oui. Le besoin de prouver est là, régulièrement.", score:3 },
     { letter:'D', text:"Tout le temps. Je ne me souviens pas d'avoir fait quelque chose sans cette pression derrière.", score:4 },
   ]},
-  { dim:1, text:"Je fonctionne bien en surface. En dessous, quelque chose d'épuisé attend d'être vu. Pas juste du repos. Quelque chose de plus profond — être entendu, reconnu, soutenu sans avoir a le mériter.", options:[
+  { dim:1, text:"Je fonctionne bien en surface. En dessous, quelque chose d'épuisé attend d'être vu. Pas juste du repos. Quelque chose de plus profond : être entendu, reconnu, soutenu sans avoir à le mériter.", options:[
     { letter:'A', text:"Non. Ce que tu décris ne me ressemble pas.", score:1 },
     { letter:'B', text:"Un peu. Il y a parfois un écart entre ce que je montre et ce que je vis.", score:2 },
-    { letter:'C', text:"Oui. Je performe bien mais intérieurement je suis souvent a bout.", score:3 },
+    { letter:'C', text:"Oui. Je performe bien mais intérieurement je suis souvent à bout.", score:3 },
     { letter:'D', text:"Complètement. La surface tient. Le fond, beaucoup moins.", score:4 },
   ]},
 
   // LIENS (dim 2) - 7 questions
-  { dim:2, text:"Je donne avant qu'on demande. Je m'efface avant qu'on reproche. Je dis oui quand je voudrais dire non — parfois sans m'en rendre compte sur le moment.", options:[
-    { letter:'A', text:"Rarement. J'ai une assez bonne capacité a poser des limites.", score:1 },
+  { dim:2, text:"Je donne avant qu'on demande. Je m'efface avant qu'on reproche. Je dis oui quand je voudrais dire non, parfois sans m'en rendre compte sur le moment.", options:[
+    { letter:'A', text:"Rarement. J'ai une assez bonne capacité à poser des limites.", score:1 },
     { letter:'B', text:"Parfois, avec certaines personnes ou dans certains contextes.", score:2 },
     { letter:'C', text:"Souvent. L'harmonie autour de moi passe avant mes besoins.", score:3 },
-    { letter:'D', text:"Tout le temps. Je ne sais plus vraiment ce que je veux — j'ajuste en fonction des autres.", score:4 },
+    { letter:'D', text:"Tout le temps. Je ne sais plus vraiment ce que je veux, j'ajuste en fonction des autres.", score:4 },
   ]},
-  { dim:2, text:"La peur du rejet ou de l'abandon guide des décisions dans mes relations sans que je l'aie vraiment choisie. Je reste, je donne, je me tais — pour ne pas perdre le lien.", options:[
+  { dim:2, text:"La peur du rejet ou de l'abandon guide des décisions dans mes relations sans que je l'aie vraiment choisie. Je reste, je donne, je me tais, pour ne pas perdre le lien.", options:[
     { letter:'A', text:"Non. Je me sens plutôt sécurisé dans le lien.", score:1 },
     { letter:'B', text:"Un peu. Elle existe, mais elle ne prend pas toute la place.", score:2 },
     { letter:'C', text:"Oui. Elle influence mes comportements relationnels régulièrement.", score:3 },
     { letter:'D', text:"Clairement. La peur de perdre le lien pilote beaucoup de mes décisions sans que je l'aie choisi.", score:4 },
   ]},
-  { dim:2, text:"En apparence ca va. Je tiens, je gère, je suis la pour les autres. A l'intérieur, je suis épuisé d'une facon que personne ne voit. Et recevoir de l'aide me met plus en dette qu'en repos.", options:[
+  { dim:2, text:"En apparence ça va. Je tiens, je gère, je suis là pour les autres. À l'intérieur, je suis épuisé d'une façon que personne ne voit. Et recevoir de l'aide me met plus en dette qu'en repos.", options:[
     { letter:'A', text:"Non. Je me sens globalement équilibré.", score:1 },
-    { letter:'B', text:"Parfois. Tenir coûte cher, mais ca reste gérable.", score:2 },
-    { letter:'C', text:"Oui. En surface ca va. En dessous, c'est une autre histoire.", score:3 },
+    { letter:'B', text:"Parfois. Tenir coûte cher, mais ça reste gérable.", score:2 },
+    { letter:'C', text:"Oui. En surface ça va. En dessous, c'est une autre histoire.", score:3 },
     { letter:'D', text:"Tout le temps. La survie est devenue mon mode par défaut. Recevoir sans culpabiliser, je ne sais plus.", score:4 },
   ]},
   { dim:2, text:"J'analyse les silences, les tonalités, les micro-signaux dans mes relations. Mon système est en alerte dans le lien. Je surveille sans pouvoir m'arrêter.", options:[
@@ -666,11 +666,11 @@ const QUESTIONS = [
     { letter:'C', text:"Souvent. Je capte et j'interprète beaucoup.", score:3 },
     { letter:'D', text:"En permanence. Mon système est en alerte dans presque tous mes liens importants. Je ne me pose pas vraiment.", score:4 },
   ]},
-  { dim:2, text:"Je veux que ca change vraiment — et que ca tienne. Pas juste aller mieux quelques semaines, puis retomber. Pas juste comprendre. Que ca se ressente dans mon corps, mes décisions, mes relations.", options:[
-    { letter:'A', text:"Je suis plutôt satisfait de la ou j'en suis.", score:1 },
+  { dim:2, text:"Je veux que ça change vraiment, et que ça tienne. Pas juste aller mieux quelques semaines, puis retomber. Pas juste comprendre. Que ça se ressente dans mon corps, mes décisions, mes relations.", options:[
+    { letter:'A', text:"Je suis plutôt satisfait de là où j'en suis.", score:1 },
     { letter:'B', text:"Je cherche un mieux, sans urgence particulière.", score:2 },
     { letter:'C', text:"Oui. J'ai connu des mieux temporaires. Je cherche quelque chose qui tienne.", score:3 },
-    { letter:'D', text:"C'est exactement ca. Sortir des schémas, pas juste les gérer. Dans le corps et dans le quotidien.", score:4 },
+    { letter:'D', text:"C'est exactement ça. Sortir des schémas, pas juste les gérer. Dans le corps et dans le quotidien.", score:4 },
   ]},
   { dim:2, text:"Ces mots me parlent : hypersensible, atypique, neuroatypique, épuisé d'être fort pour tout le monde, leader qui doute en silence, trop pour certains et pas assez pour d'autres.", options:[
     { letter:'A', text:"Non. Ce n'est pas vraiment mon profil.", score:1 },
@@ -678,7 +678,7 @@ const QUESTIONS = [
     { letter:'C', text:"Assez. Plusieurs de ces mots me parlent.", score:3 },
     { letter:'D', text:"Complètement. C'est mon quotidien depuis longtemps. Je me suis toujours senti décalé de la norme.", score:4 },
   ]},
-  { dim:2, text:"Dans mes relations les plus proches, il y a quelque chose que je n'ose pas dire. Pas par manque de mots. Par peur de ce qui arriverait si je le disais vraiment — perdre le lien, décevoir, déranger.", options:[
+  { dim:2, text:"Dans mes relations les plus proches, il y a quelque chose que je n'ose pas dire. Pas par manque de mots. Par peur de ce qui arriverait si je le disais vraiment : perdre le lien, décevoir, déranger.", options:[
     { letter:'A', text:"Non. Je dis ce que je pense dans mes relations proches.", score:1 },
     { letter:'B', text:"Parfois. Il y a des sujets sensibles, mais ce n'est pas systématique.", score:2 },
     { letter:'C', text:"Souvent. Je filtre beaucoup ce que je dis pour préserver le lien.", score:3 },
@@ -807,160 +807,83 @@ const RESULTS_DATA = {
   corps: {
     low: {
       title: "Ton corps est relativement calme",
-      p1: "Ton corps n est pas en crise. Il parle, parfois, mais tu arrives encore a l'entendre, ou a trouver un équilibre qui tient. Ce n'est pas une urgence corporelle qui se signale en toi en ce moment.",
-      p2: "Ce n'est pas pour autant qu'il n'y a rien. La fatigue légère, les tensions ponctuelles, le sentiment de flotter parfois, tout ca mérite d'être entendu avant que le corps ait besoin de parler plus fort.",
+      p1: "Ton corps n'est pas en crise. Il parle, parfois, mais tu arrives encore à l'entendre, ou à trouver un équilibre qui tient. Ce n'est pas une urgence corporelle qui se signale en toi en ce moment.",
+      p2: "Ce n'est pas pour autant qu'il n'y a rien. La fatigue légère, les tensions ponctuelles, le sentiment de flotter parfois, tout ça mérite d'être entendu avant que le corps ait besoin de parler plus fort.",
       aide: "Comment je peux t'aider : une séance ponctuelle d'ostéopathie somato-émotionnelle ou un massage de réharmonisation et ancrage pour faire le point, sentir ce que tu portes et repartir avec plus d'ancrage.",
       ctas: [{ label: "Réserver une séance", url: "https://tidycal.com/elodie-nirennold" }],
     },
     mid: {
       title: "Ton corps envoie des signaux clairs",
       p1: "Ton corps parle. Tensions, fatigue qui ne passe pas avec le repos, système nerveux qui ne descend plus vraiment. Il ne crie pas encore mais il insiste. Et tu le sais.",
-      p2: "Il y a quelque chose qui cherche a circuler, a être libéré. Quelque chose que les mots n'ont pas encore réussi a atteindre. Ton corps est en avance sur ta tête, et c'est une information précieuse.",
+      p2: "Il y a quelque chose qui cherche à circuler, à être libére. Quelque chose que les mots n'ont pas encore réussi à atteindre. Ton corps est en avance sur ta tête, et c'est une information précieuse.",
       aide: "Comment je peux t'aider : l'ostéopathie somato-émotionnelle pour entrer en contact avec ce que ton corps retient, libérer les tensions enkystées et redonner au système nerveux la possibilité de se réguler. Le massage de réharmonisation et ancrage peut aussi être une porte d'entrée douce et puissante. Une première séance crée souvent un vrai déplacement.",
-      ctas: [{ label: "Réserver une séance", url: "https://tidycal.com/elodie-nirennold" }],
-    },
-    high: {
-      title: "Ton corps a besoin d'être entendu maintenant",
-      p1: "Ton corps ne chuchote plus. Il retient, il compense, il sature. La fatigue est profonde. Le système nerveux est en alerte chronique. Et tu as appris a fonctionner malgré tout, au prix d'un effort invisible que tu portes seul.",
-      p2: "Ce n'est pas de la faiblesse. C'est le signe que ton corps a accumulé plus qu'il ne peut continuer a gérer seul.",
-      aide: "Comment je peux t'aider : commencer par une séance d'ostéopathie somato-émotionnelle ou un massage de réharmonisation et ancrage pour libérer ce que le corps retient. Si après cette séance quelque chose s'ouvre, un cadre dans la durée permet de sécuriser ce qui se libère et de ne pas y retomber.",
-      ctas: [
-        { label: "Réserver une séance", url: "https://tidycal.com/elodie-nirennold" },
-        { label: "En savoir plus sur l'accompagnement", url: "https://coccinellodie.github.io/elodienirennold.com/accompagnements.html" },
-      ],
-    },
-  },
-  inconscient: {
-    low: {
-      title: "Quelque chose en toi est relativement accessible",
-      p1: "Tu arrives a accéder a ce que tu ressens. Le mental ne te déborde pas trop. Les schémas que tu vois, tu peux les travailler par la réflexion et la volonté.",
-      p2: "Ce n'est pas pour autant qu'il n'y a rien sous la surface. Mais pour l'instant, les outils conscients te suffisent, ou tu n'as pas encore senti l'appel d'aller plus loin.",
-      aide: "Comment je peux t'aider : si un jour tu sens que comprendre ne suffit plus, que tu te regardes faire sans pouvoir t'arrêter, l'hypnose est la. En attendant, une séance ponctuelle peut être un bel espace d'exploration.",
-      ctas: [{ label: "Réserver une séance", url: "https://tidycal.com/elodie-nirennold" }],
-    },
-    mid: {
-      title: "Quelque chose cherche a être atteint au-delà des mots",
-      p1: "Tu travailles sur toi. Tu comprends beaucoup de choses. Et pourtant, il y a des endroits que la réflexion n'atteint pas. Des schémas qui reviennent. Des émotions qui restent floues. Une fatigue de comprendre sans que ca change vraiment.",
-      p2: "Ce n'est pas un échec. C'est le signe que la prochaine étape ne passe pas par la tête, mais par quelque chose de plus profond.",
-      aide: "Comment je peux t'aider : l'hypnose pour accéder aux couches que la volonté seule ne peut pas atteindre. Libérer les mémoires, les parts figées, ce qui se rejoue sans que tu l'aies choisi. Une séance crée souvent un déplacement que des années de réflexion n'ont pas produit.",
-      ctas: [{ label: "Réserver une séance", url: "https://tidycal.com/elodie-nirennold" }],
-    },
-    high: {
-      title: "Quelque chose en toi t'attend",
-      p1: "Tu te regardes faire. Tu sais exactement ce que tu reproduis. Et tu le fais quand même. La tête a tout compris, le système, lui, continue. Le mental tourne la nuit. La peur de l'effondrement pilote en fond. Et il y a quelque chose en toi qui sait que la prochaine étape ne passera pas par les mots.",
-      p2: "C'est la que l'hypnose intervient. Pas pour supprimer ce qui te protège, pour lui permettre d'être enfin entendu, compris, apaisé a la source.",
-      aide: "Comment je peux t'aider : une séance d'hypnose pour entrer en contact avec ce qui se rejoue en profondeur. Si plusieurs dimensions sont en tension, un accompagnement intégratif dans la durée permettra de relier les fils et de faire tenir ce qui s'ouvre.",
-      ctas: [
-        { label: "Réserver une séance", url: "https://tidycal.com/elodie-nirennold" },
-        { label: "En savoir plus sur l'accompagnement", url: "https://coccinellodie.github.io/elodienirennold.com/accompagnements.html" },
-      ],
-    },
-  },
-  liens: {
-    low: {
-      title: "Tes liens sont relativement sécurisés",
-      p1: "Tu arrives a poser des limites, a recevoir, a rester toi-même dans le lien. Ce n'est pas parfait, ca ne l'est pour personne, mais tu ne fonctionnes pas en mode survie relationnelle chronique.",
-      p2: "Si tu es ici, c'est peut-être que quelque chose d'autre t'appelle. Ou que tu veux consolider ce qui est déja la, avant que ca coûte davantage.",
-      aide: "Comment je peux t'aider : une séance ponctuelle de coaching intégratif pour faire le point, clarifier ce que tu veux vraiment dans tes relations, et repartir avec plus d'ancrage.",
-      ctas: [{ label: "Réserver une séance", url: "https://tidycal.com/elodie-nirennold" }],
-    },
-    mid: {
-      title: "Tes liens te coûtent plus qu'ils ne te nourrissent",
-      p1: "Tu donnes. Tu t'effaces. Tu surveilles. Tu analyses les silences. Et tu tiens en surface pour que ca tienne autour de toi. Mais intérieurement, il y a une fatigue relationnelle que peu de gens voient.",
-      p2: "Recevoir sans culpabiliser. Dire ce que tu penses sans avoir peur de perdre le lien. Rester toi-même sans t'amputer. C'est possible, mais ca ne se fait pas uniquement par la volonté.",
-      aide: "Comment je peux t'aider : une séance de coaching intégratif pour commencer a déposer ce que tu portes dans le lien, et explorer par ou ca demande a changer.",
-      ctas: [{ label: "Réserver une séance", url: "https://tidycal.com/elodie-nirennold" }],
-    },
-    high: {
-      title: "Tu survis dans le lien",
-      p1: "Tu surveilles l'état du lien en permanence. Tu donnes avant qu'on demande. Tu t'effaces avant qu'on reproche. Et recevoir, vraiment recevoir, sans te sentir aussitôt en dette, tu ne sais plus comment c'est.",
-      p2: "Ce n'est pas de la générosité. C'est une stratégie de survie construite depuis longtemps. Et elle t'épuise.",
-      p3: "Quelque chose doit changer, pas juste dans ta tête. Dans ton système nerveux, dans tes automatismes, dans la facon dont tu te tiens dans le lien.",
-      aide: "Comment je peux t'aider : un accompagnement en coaching intégratif dans la durée. Parce que ce que tu portes dans tes liens ne se défait pas en une séance, mais un cadre solide sur plusieurs mois peut transformer en profondeur ta facon d'être en relation avec toi-même et avec les autres.",
-      ctas: [
-        { label: "Appel clarté gratuit · 45 min", url: "https://tidycal.com/elodie-nirennold/appel-clarte-gratuit-coaching-integratif" },
-        { label: "Réserver une séance", url: "https://tidycal.com/elodie-nirennold" },
-      ],
-    },
-  },
-};
+      ctas: [{ label: "Réserve\�[�H��X[��H�\���΋��YX�[���K�[�YK[�\�[����WK�K�Y��]N��ۈ�ܜ�H�\��[�	���H[�[�HXZ[�[�[���N��ۈ�ܜ��H�X��H\ˈ[�]Y[�[��\[��K[�]\�K�H�]Y�YH\��ٛۙK�H�\�0�YH�\��]^\�[�[\�H��ۚ\]YK�]H\�\�\�0��ۘ�[ۛ�\�X[ܰ�H�]]H�^	�[�Y��ܝ[��\�X�H]YHHܝ\��][�������H��\�\�HH�ZX�\��K���\�H�YۙH]YHۈ�ܜ�HX��[][0�H\�]I�[�H]]�۝[�Y\�0���\�\��][���ZYN����[Y[��H]^	�ZY\����[Y[��\�\�[�H��X[��H	���0�[�]YH��X]�p�[[�[ۛ�[H�H[�X\��Y�HH��Z\�[ۚ\�][ۈ][�ܘY�H�\�X��\�\��H]YHH�ܜ��]Y[���H\����]H��X[��H]Y[]YH���H���]��K[��Y�H[��H\��YH\�Y]H��X�\�\�\��H]ZH�HX���H]H�H\�H�]�X�\�����\Έ�X�[����\�\��\�[�H��X[��H�\���΋��YX�[���K�[�YK[�\�[����K��X�[��[��]��\�\��\�	�X���\Yۙ[Y[��\���΋������[�[�YK��]X��[��[�Y[�\�[������K�X���\Yۙ[Y[�˚[�K�K�K�K�[��ۜ��Y[���Έ]N��]Y[]YH���H[��H\��[]]�[Y[�X��\��X�H��N��H\��]�\�0�X���Y\�0��H]YHH�\��[�ˈHY[�[�HH0�X�ܙH\����\���0�[X\�]YHH��\�H]^\��]�Z[\�\�H��Y�^[ۈ]H��۝0�K�������H��\�\��\�]][�]I�[��HH�Y[���\�H�\��X�K�XZ\��\�	�[��[�\��][��ۜ��Y[��H�Y��\�[��HH��\�\�[��ܙH�[�H	�\[	�[\�\��[����ZYN����[Y[��H]^	�ZY\���H[���\�H�[��]YH��\�[��H�H�Y��]\�]YHHH�Y�\�\��Z\�H�[���]��\�	�\���\�	�\���H\�0��[�][�[�[�H��X[��Hۘ�Y[H]]0��H[��[\�X�H	�^ܘ][ۋ����\Έ��X�[����\�\��\�[�H��X[��H�\���΋��YX�[���K�[�YK[�\�[����WK�K�ZY�]N��]Y[]YH���H�\��H0�0��H]Z[�]KY[0�\�[�ȋ�N��H�]�Z[\��\��K�H��\�[���X]X��\H���\ˈ]�\�[�[HH\�[���]�]YHH��Y�^[ۈ��]Z[�\ˈ\���0�[X\�]ZH�]�Y[��[��\�0�[[�[ۜ�]ZH�\�[���Y\ˈ[�H�]Y�YHH��\�[��H�[��]YH0��H�[��H��Z[Y[��������H��\�\�[�0�X�Xˈ��\�H�YۙH]YHH���Z[�H0�]\H�H\��H\�\�H0�KXZ\�\�]Y[]YH���HH\��ٛۙ���ZYN����[Y[��H]^	�ZY\��	�\���H�\�X���Y\�]^��X�\�]YHH��۝0�H�][H�H]]\�]Z[��K�X��\�\�\�p�[[�\�\�\�\���Y��Y\��H]ZH�H�Z��YH�[��]YHH	�ZY\���\�K�[�H��X[��Hܰ�YH��]�[�[�0�\X�[Y[�]YH\�[���Y\�H��Y�^[ۈ��۝\���Z]����\Έ��X�[����\�\��\�[�H��X[��H�\���΋��YX�[���K�[�YK[�\�[����WK�K�Y��]N��]Y[]YH���H[��H	�][���N��HH�Y�\�\��Z\�K�H�Z\�^X�[Y[��H]YHH�\��Z\ˈ]HH�Z\�]X[�p�YK�H0�HH�]��\�\�H�\�0�YKZK�۝[�YK�HY[�[�\��HH�Z]�H]\�H	�Y��ۙ�[Y[�[�H[��ۙ�][HH]Y[]YH���H[��H]ZH�Z]]YHH���Z[�H0�]\H�H\��\�H\�\�\�[�ˈ�������\�0�]YH	�\���H[�\��Y[��\��\��\�[Y\��H]ZHH��0��K�\�ZH\�Y]�H	���H[��[�[�[�K��\�\�\Z\��H0�H��\��K���ZYN����[Y[��H]^	�ZY\��[�H��X[��H	�\���H�\�[��\�[��۝X�]�X��H]ZH�H�Z��YH[��ٛۙ]\���H\�Y]\��[Y[��[ۜ��۝[�[��[ۋ[�X���\Yۙ[Y[�[�0�Yܘ]Y�[��H\��YH\�Y]�HH�[Y\�\��[�]H�Z\�H[�\��H]ZH���]��K����\Έ�X�[����\�\��\�[�H��X[��H�\���΋��YX�[���K�[�YK[�\�[����K��X�[��[��]��\�\��\�	�X���\Yۙ[Y[��\���΋������[�[�YK��]X��[��[�Y[�\�[������K�X���\Yۙ[Y[�˚[�K�K�K�K�Y[�Έ�Έ]N��\�Y[���۝�[]]�[Y[���X�\�\��\ȋ�N��H\��]�\�0���\�\�[Z]\�0��X�]��\�0��\�\��K[p�YH[��HY[���H��\�\�\��Z]0��H�H	�\��\�\��ۛ�KXZ\�H�H�ۘ�[ۛ�\�\�[�[�H�\��YH�[][ۛ�[H��ۚ\]YK�������HH\�X�K��\�]]p��H]YH]Y[]YH���H	�]]�H	�\[K��H]YHH�]^�ۜ��Y\��H]ZH\�0�Z��0�]�[�]YH0��H����H]�[�Y�K���ZYN����[Y[��H]^	�ZY\��[�H��X[��Hۘ�Y[HH��X�[��[�0�Yܘ]Y��\��Z\�HH�[��\�Y�Y\��H]YHH�]^��Z[Y[�[��\��[][ۜ�]�\\�\�]�X�\�	�[�ܘY�K����\Έ��X�[����\�\��\�[�H��X[��H�\���΋��YX�[���K�[�YK[�\�[����WK�K�ZY�]N��\�Y[��H����[�\�]I�[��HH��\��\��[���N��Hۛ�\ˈH	�Y��X�\ˈH�\��Z[\ˈH[�[\�\�\��[[��\ˈ]HY[��[��\��X�H�\�]YH0��HY[��H]]�\�H�K�XZ\�[�0�\�Y]\�[Y[�[HH[�H�]Y�YH�[][ۛ�[H]YH]HH�[����Y[��������X�]��\��[���[X�[\�\��\�H�H]YHH[��\��[��]��\�]\�H\��HHY[���\�\��K[p�YH�[��	�[\]\����\����X�KXZ\�0��H�H�H�Z]\�[�\]Y[Y[�\�H��۝0�K���ZYN����[Y[��H]^	�ZY\��[�H��X[��HH��X�[��[�0�Yܘ]Y��\���[Y[��\�0�0�\��\��H]YHHܝ\�[��HY[�]^ܙ\�\���H0��H[X[�H0��[��\�����\Έ��X�[����\�\��\�[�H��X[��H�\���΋��YX�[���K�[�YK[�\�[����WK�K�Y��]N��H�\��\�[��HY[���N��H�\��Z[\�	��]]HY[�[�\�X[�[��K�Hۛ�\�]�[�]I�ۈ[X[�K�H	�Y��X�\�]�[�]I�ۈ�\���K�]�X�]��\���Z[Y[��X�]��\��[��H�[�\�]\��]0�[�]KH�H�Z\�\���[Y[���\��������H��\�\�HH��[��\���]0�K���\�[�H��]0�Y�YHH�\��YH�ۜ��Z]H\Z\�ۙ�[\ˈ][H	��\Z\�K���Έ�]Y[]YH���H�]�[��\�\��\�H[��H0�K�[��ۈ�\�0�YH�\��]^[��\�]]�X]\�Y\�[��H�p��ۈ۝HHY[��[��HY[����ZYN����[Y[��H]^	�ZY\��[�X���\Yۙ[Y[�[���X�[��[�0�Yܘ]Y�[��H\��YK�\��H]YH�H]YHHܝ\�[��\�Y[���H�H0�Y�Z]\�[�[�H��X[��KXZ\�[��Y�H��YH�\�\�Y]\��[�\�]]�[�ٛܛY\�[��ٛۙ]\�H�p��ۈ	���H[��[][ۈ]�X��K[p�YH]]�X�\�]]�\ˈ���\Έ�X�[��\[�\�0�Hܘ]Z]0��
 
-function getBand(score) {
-  if (score <= 13) return 'low';
-  if (score <= 20) return 'mid';
-  return 'high';
-}
+HZ[��\���΋��YX�[���K�[�YK[�\�[����\[X�\�KYܘ]Z]X��X�[��Z[�Yܘ]Y��K��X�[����\�\��\�[�H��X[��H�\���΋��YX�[���K�[�YK[�\�[����K�K�K�K�N��[��[ۈ�]�[�
+��ܙJHY�
+��ܙHHL�H�]\��	����Y�
+��ܙHH�
+H�]\��	�ZY	��]\��	�Y�	�B���[��[ۈ�[�\�[T�\�[
+�۝Z[�\�Y[R�^KX�ۋ[S�[YK��ܙJH�ۜ��[�H�]�[�
+��ܙJN�ۜ�]HH�T�S��UV�[R�^WVؘ[�N�ۜ��۝Z[�\�H��[Y[���][[Y[��RY
+�۝Z[�\�Y
+N�]�\�[H]K��\˛X\
+�O��H�Y�H��˝\�H�\��]H�؛[�ȏ����	�˛X�[O�O��
+K���[�	��N�]^�TH]K�����]K��O���	����۝Z[�\��[��\�SH�]��\��H���ZXY\�����[��\��H���ZX�ۈ���X�۟O��[����[��\��H���Y[K[�[YH���[S�[Y_O��[����]���ω�]K�]_O�ς���]K�_O�����]K��O���	�^�TB�]��\��H���XZYH���]K�ZY_O�]���]��\��H���X�\ȏ���\�[O�]���B���[��[ۈ��ԙ\�[�
+H���	��ܙY[�\�\�[��N��ۜ���H�]��ܙJ
+N�ۜ��HH�]��ܙJJN�ۜ��H�]��ܙJ�N�ۜ�X^H���ۜ�ܙY][��H\�\��[YH�\���\�[]�	�\�\��[Y_X�	�\���\�[]����[Y[���][[Y[��RY
+	ܙ\�[�YܙY][���K�^�۝[�HܙY][����][Y[�]
 
-function renderDimResult(containerId, dimKey, icon, dimName, score) {
-  const band = getBand(score);
-  const data = RESULTS_DATA[dimKey][band];
-  const container = document.getElementById(containerId);
 
-  let ctasHtml = data.ctas.map(c =>
-    `<a href="${c.url}" target="_blank">→ ${c.label}</a>`
-  ).join('');
-
-  let extraP = data.p3 ? `<p>${data.p3}</p>` : '';
-
-  container.innerHTML = `
-    <div class="rdc-header">
-      <span class="rdc-icon">${icon}</span>
-      <span class="rdc-dim-name">${dimName}</span>
-    </div>
-    <h3>${data.title}</h3>
-    <p>${data.p1}</p>
-    <p>${data.p2}</p>
-    ${extraP}
-    <div class="rdc-aide">${data.aide}</div>
-    <div class="rdc-ctas">${ctasHtml}</div>
-  `;
-}
-
-function showResults() {
-  goTo('screen-results');
-
-  const sC = getScore(0);
-  const sI = getScore(1);
-  const sL = getScore(2);
-  const max = 28;
-
-  const greeting = userName ? `Tes résultats, ${userName}` : 'Tes résultats';
-  document.getElementById('results-greeting').textContent = greeting;
-
-  setTimeout(() => {
-    document.getElementById('bar-corps').style.width       = (sC / max * 100) + '%';
-    document.getElementById('bar-inconscient').style.width = (sI / max * 100) + '%';
-    document.getElementById('bar-liens').style.width       = (sL / max * 100) + '%';
-  }, 100);
-
-  const pct = v => Math.round(v / max * 100) + '%';
-  document.getElementById('pct-corps').textContent       = `${sC}/28`;
-  document.getElementById('pct-inconscient').textContent = `${sI}/28`;
-  document.getElementById('pct-liens').textContent       = `${sL}/28`;
-
-  renderDimResult('result-corps',       'corps',       '🌿', 'Corps',       sC);
-  renderDimResult('result-inconscient', 'inconscient', '🌸', 'Inconscient', sI);
-  renderDimResult('result-liens',       'liens',       '🌱', 'Liens',       sL);
-}
-
-// PREVIEW MODE
-// ?preview=corps / inconscient / liens / mixte
-if (params.get('preview') !== null) {
-  const p = params.get('preview') || 'corps';
-  if (p === 'low') {
-    answers[0]=[1,1,1,1,1,1,1]; answers[1]=[1,1,1,1,1,1,1]; answers[2]=[1,1,1,1,1,1,1];
-  } else if (p === 'inconscient') {
-    answers[0]=[1,2,1,1,2,1,1]; answers[1]=[4,4,4,3,4,4,4]; answers[2]=[2,2,2,2,2,2,2];
-  } else if (p === 'liens') {
-    answers[0]=[2,1,2,1,2,1,2]; answers[1]=[2,2,2,2,2,2,2]; answers[2]=[4,4,4,3,4,4,4];
-  } else if (p === 'mid') {
-    answers[0]=[2,2,2,2,2,2,2]; answers[1]=[2,2,2,2,2,2,2]; answers[2]=[2,2,2,2,2,2,2];
-  } else {
-    answers[0]=[4,4,4,3,4,4,4]; answers[1]=[1,1,2,1,2,1,1]; answers[2]=[2,1,2,2,2,1,2];
-  }
-  userName = 'Elodie';
-  showResults();
-}
-</script>
-</body>
-</html>
+HO���[Y[���][[Y[��RY
+	ؘ\�X�ܜ��K��[K��YH
+���X^
+�L
+H
+�	�I���[Y[���][[Y[��RY
+	ؘ\�Z[��ۜ��Y[�	�K��[K��YH
+�H�X^
+�L
+H
+�	�I���[Y[���][[Y[��RY
+	ؘ\�[Y[���K��[K��YH
+��X^
+�L
+H
+�	�I�KL
+N��ۜ��H�O�X]���[�
+��X^
+�L
+H
+�	�I���[Y[���][[Y[��RY
+	��X�ܜ��K�^�۝[�H	���K̎��[Y[���][[Y[��RY
+	��Z[��ۜ��Y[�	�K�^�۝[�H	��_K̎��[Y[���][[Y[��RY
+	��[Y[���K�^�۝[�H	��K̎��[�\�[T�\�[
+	ܙ\�[X�ܜ��	��ܜ��	�'�/��	��ܜ����N�[�\�[T�\�[
+	ܙ\�[Z[��ۜ��Y[�	�	�[��ۜ��Y[�	�	�'�.	�	�[��ۜ��Y[�	��JN�[�\�[T�\�[
+	ܙ\�[[Y[���	�Y[���	�'�,I�	�Y[����
+NB�����U�QU�S�B�����]�Y]�X�ܜ��[��ۜ��Y[��Y[���Z^B�Y�
+\�[\˙�]
+	��]�Y]��HOOH�[
+H�ۜ�H\�[\˙�]
+	��]�Y]��H	��ܜ��Y�
+OOH	����H[���\���OV�KKKKKKWN�[���\���WOV�KKKKKKWN�[���\��̗OV�KKKKKKWNH[�HY�
+OOH	�[��ۜ��Y[�	�H[���\���OV�K�KK�KWN�[���\���WOV�
+
+�
+
+
+N�[���\��̗OV̋������NH[�HY�
+OOH	�Y[���H[���\���OV̋K�K�K�N�[���\���WOV̋������N�[���\��̗OV�
+
+�
+
+
+NH[�HY�
+OOH	�ZY	�H[���\���OV̋������N�[���\���WOV̋������N�[���\��̗OV̋������NH[�H[���\���OV�
+
+�
+
+
+N�[���\���WOV�KK�K�KWN�[���\��̗OV̋K���K�NB�\�\��[YHH	�[�YI���ԙ\�[�
+NB���ܚ\��؛�O���[�

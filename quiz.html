@@ -296,23 +296,41 @@
     border-radius: 8px;
     padding: 14px 18px;
   }
-  .result-dim-card .rdc-ctas {
+  .gauge-legend {
+    text-align: center;
+    font-size: 0.78rem;
+    color: var(--muted);
+    font-style: italic;
+    letter-spacing: 0.01em;
+    margin-top: -8px;
+  }
+
+  .single-cta-wrap {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0 8px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    align-items: flex-start;
-  }
-  .result-dim-card .rdc-ctas a {
-    color: var(--vert);
-    text-decoration: none;
-    font-size: 0.93rem;
-    font-weight: 700;
-    display: flex;
     align-items: center;
-    gap: 6px;
-    transition: color 0.2s;
+    gap: 14px;
   }
-  .result-dim-card .rdc-ctas a:hover { color: var(--vert-light); text-decoration: underline; }
+  .single-cta-wrap .single-cta-intro {
+    font-size: 0.92rem;
+    color: var(--muted);
+    font-style: italic;
+    margin: 0;
+  }
+  .single-cta-wrap .single-cta-link {
+    display: inline-block;
+    color: #5C3317;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.12rem;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    transition: opacity 0.2s;
+  }
+  .single-cta-wrap .single-cta-link:hover { opacity: 0.75; text-decoration: underline; }
 
   .now-card {
     background: linear-gradient(135deg, var(--vert), #3A5C30);
@@ -467,7 +485,7 @@
 
 <!-- SCREEN 5 - DIM 2 INTRO (SUBCONSCIENT) -->
 <div id="screen-dim2-intro" class="screen">
-  <div class="dim-icon center">🌷</div>
+  <div class="dim-icon center">🦋</div>
   <span class="dim-badge" style="align-self:center; background:var(--mauve);">Dimension 2 / 3</span>
   <div class="center">
     <h2>Le Subconscient</h2>
@@ -522,7 +540,7 @@
       <div class="dsb-pct" id="pct-corps"></div>
     </div>
     <div class="dim-score-box dsb-subconscient">
-      <div class="dsb-icon">🌷</div>
+      <div class="dsb-icon">🦋</div>
       <div class="dsb-name">Subconscient</div>
       <div class="dsb-bar-bg"><div class="dsb-bar-fill" id="bar-subconscient"></div></div>
       <div class="dsb-pct" id="pct-subconscient"></div>
@@ -535,10 +553,18 @@
     </div>
   </div>
 
+  <p class="gauge-legend">Score sur 28 · plus il est élevé, plus le domaine est en tension et demande régulation</p>
+
   <!-- Résultats par dimension -->
   <div id="result-corps" class="result-dim-card"></div>
   <div id="result-subconscient" class="result-dim-card"></div>
   <div id="result-liens" class="result-dim-card"></div>
+
+  <!-- CTA unique -->
+  <div class="single-cta-wrap">
+    <p class="single-cta-intro">Tu sens qu'il y a quelque chose à explorer&nbsp;? La prochaine étape, c'est simple&nbsp;:</p>
+    <a href="https://tidycal.com/elodie-nirennold/appel-clarte-gratuit-coaching-integratif" target="_blank" class="single-cta-link">👉🏽 Réserver un appel clarté gratuit · 45 min</a>
+  </div>
 
   <!-- Et maintenant -->
   <div class="now-card">
@@ -560,7 +586,7 @@
 <script>
 const DIMENSIONS = [
   { id: 'corps',        name: 'Corps',        icon: '🌿', introScreen: 'screen-dim1-intro' },
-  { id: 'subconscient', name: 'Subconscient', icon: '🌷', introScreen: 'screen-dim2-intro' },
+  { id: 'subconscient', name: 'Subconscient', icon: '🦋', introScreen: 'screen-dim2-intro' },
   { id: 'liens',        name: 'Liens',        icon: '♥️', introScreen: 'screen-dim3-intro' },
 ];
 
@@ -821,21 +847,21 @@ const RESULTS_DATA = {
       title: "Ton corps est relativement calme",
       p1: "Ton corps n'est pas en crise. Il parle, parfois, mais tu arrives encore à l'entendre, ou à trouver un équilibre qui tient. Ce n'est pas une urgence corporelle qui se signale en toi en ce moment.",
       p2: "Ce n'est pas pour autant qu'il n'y a rien. La fatigue légère, les tensions ponctuelles, le sentiment de flotter parfois, tout ça mérite d'être entendu avant que le corps ait besoin de parler plus fort.",
-      aide: "comment je peux t'aider : une séance ponctuelle d'ostéopathie somato-émotionnelle ou un massage de réharmonisation et ancrage pour faire le point, sentir ce que tu portes et repartir avec plus d'ancrage.",
+      aide: "Comment je peux t'aider : une séance ponctuelle d'ostéopathie somato-émotionnelle ou un massage de réharmonisation et ancrage pour faire le point, sentir ce que tu portes et repartir avec plus d'ancrage.",
       ctas: [{ label: "Réserver une séance", url: "https://tidycal.com/elodie-nirennold" }],
     },
     mid: {
       title: "Ton corps envoie des signaux clairs",
       p1: "Ton corps parle. Tensions, fatigue qui ne passe pas avec le repos, système nerveux qui ne descend plus vraiment. Il ne crie pas encore mais il insiste. Et tu le sais.",
       p2: "Il y a quelque chose qui cherche à circuler, à être libéré. Quelque chose que les mots n'ont pas encore réussi à atteindre. Ton corps est en avance sur ta tête, et c'est une information précieuse.",
-      aide: "comment je peux t'aider : l'ostéopathie somato-émotionnelle pour entrer en contact avec ce que ton corps retient, libérer les tensions enkystées et redonner au système nerveux la possibilité de se réguler. Le massage de réharmonisation et ancrage peut aussi être une porte d'entrée douce et puissante. Une première séance crée souvent un vrai déplacement.",
+      aide: "Comment je peux t'aider : l'ostéopathie somato-émotionnelle pour entrer en contact avec ce que ton corps retient, libérer les tensions enkystées et redonner au système nerveux la possibilité de se réguler. Le massage de réharmonisation et ancrage peut aussi être une porte d'entrée douce et puissante. Une première séance crée souvent un vrai déplacement.",
       ctas: [{ label: "Réserver une séance", url: "https://tidycal.com/elodie-nirennold" }],
     },
     high: {
       title: "Ton corps a besoin d'être entendu maintenant",
       p1: "Ton corps ne chuchote plus. Il retient, il compense, il sature. La fatigue est profonde. Le système nerveux est en alerte chronique. Et tu as appris à fonctionner malgré tout, au prix d'un effort invisible que tu portes seul.",
       p2: "Ce n'est pas de la faiblesse. C'est le signe que ton corps a accumulé plus qu'il ne peut continuer à gérer seul.",
-      aide: "comment je peux t'aider : commencer par une séance d'ostéopathie somato-émotionnelle ou un massage de réharmonisation et ancrage pour libérer ce que le corps retient. Si après cette séance quelque chose s'ouvre, un cadre dans la durée permet de sécuriser ce qui se libère et de ne pas y retomber.",
+      aide: "Comment je peux t'aider : commencer par une séance d'ostéopathie somato-émotionnelle ou un massage de réharmonisation et ancrage pour libérer ce que le corps retient. Si après cette séance quelque chose s'ouvre, un cadre dans la durée permet de sécuriser ce qui se libère et de ne pas y retomber.",
       ctas: [
         { label: "Réserver une séance", url: "https://tidycal.com/elodie-nirennold" },
         { label: "En savoir plus sur l'accompagnement", url: "https://coccinellodie.github.io/elodienirennold.com/accompagnements.html" },
@@ -847,21 +873,21 @@ const RESULTS_DATA = {
       title: "Quelque chose en toi est relativement accessible",
       p1: "Tu arrives à accéder à ce que tu ressens. Le mental ne te déborde pas trop. Les schémas que tu vois, tu peux les travailler par la réflexion et la volonté.",
       p2: "Ce n'est pas pour autant qu'il n'y a rien sous la surface. Mais pour l'instant, les outils conscients te suffisent, ou tu n'as pas encore senti l'appel d'aller plus loin.",
-      aide: "comment je peux t'aider : si un jour tu sens que comprendre ne suffit plus, que tu te regardes faire sans pouvoir t'arrêter, l'hypnose est là. En attendant, une séance ponctuelle peut être un bel espace d'exploration.",
+      aide: "Comment je peux t'aider : si un jour tu sens que comprendre ne suffit plus, que tu te regardes faire sans pouvoir t'arrêter, l'hypnose est là. En attendant, une séance ponctuelle peut être un bel espace d'exploration.",
       ctas: [{ label: "Réserver une séance", url: "https://tidycal.com/elodie-nirennold" }],
     },
     mid: {
       title: "Quelque chose cherche à être atteint au-delà des mots",
       p1: "Tu travailles sur toi. Tu comprends beaucoup de choses. Et pourtant, il y a des endroits que la réflexion n'atteint pas. Des schémas qui reviennent. Des émotions qui restent floues. Une fatigue de comprendre sans que ça change vraiment.",
       p2: "Ce n'est pas un échec. C'est le signe que la prochaine étape ne passe pas par la tête, mais par quelque chose de plus profond.",
-      aide: "comment je peux t'aider : l'hypnose pour accéder aux couches que la volonté seule ne peut pas atteindre. Libérer les mémoires, les parts figées, ce qui se rejoue sans que tu l'aies choisi. Une séance crée souvent un déplacement que des années de réflexion n'ont pas produit.",
+      aide: "Comment je peux t'aider : l'hypnose pour accéder aux couches que la volonté seule ne peut pas atteindre. Libérer les mémoires, les parts figées, ce qui se rejoue sans que tu l'aies choisi. Une séance crée souvent un déplacement que des années de réflexion n'ont pas produit.",
       ctas: [{ label: "Réserver une séance", url: "https://tidycal.com/elodie-nirennold" }],
     },
     high: {
       title: "Quelque chose en toi t'attend",
       p1: "Tu te regardes faire. Tu sais exactement ce que tu reproduis. Et tu le fais quand même. La tête a tout compris, le système, lui, continue. Le mental tourne la nuit. La peur de l'effondrement pilote en fond. Et il y a quelque chose en toi qui sait que la prochaine étape ne passera pas par les mots.",
       p2: "C'est là que l'hypnose intervient. Pas pour supprimer ce qui te protège, pour lui permettre d'être enfin entendu, compris, apaisé à la source.",
-      aide: "comment je peux t'aider : une séance d'hypnose pour entrer en contact avec ce qui se rejoue en profondeur. Si plusieurs dimensions sont en tension, un accompagnement intégratif dans la durée permettra de relier les fils et de faire tenir ce qui s'ouvre.",
+      aide: "Comment je peux t'aider : une séance d'hypnose pour entrer en contact avec ce qui se rejoue en profondeur. Si plusieurs dimensions sont en tension, un accompagnement intégratif dans la durée permettra de relier les fils et de faire tenir ce qui s'ouvre.",
       ctas: [
         { label: "Réserver une séance", url: "https://tidycal.com/elodie-nirennold" },
         { label: "En savoir plus sur l'accompagnement", url: "https://coccinellodie.github.io/elodienirennold.com/accompagnements.html" },
@@ -873,14 +899,14 @@ const RESULTS_DATA = {
       title: "Tes liens sont relativement sécurisés",
       p1: "Tu arrives à poser des limites, à recevoir, à rester toi-même dans le lien. Ce n'est pas parfait, ça ne l'est pour personne, mais tu ne fonctionnes pas en mode survie relationnelle chronique.",
       p2: "Si tu es ici, c'est peut-être que quelque chose d'autre t'appelle. Ou que tu veux consolider ce qui est déjà là, avant que ça coûte davantage.",
-      aide: "comment je peux t'aider : une séance ponctuelle de coaching intégratif pour faire le point, clarifier ce que tu veux vraiment dans tes relations, et repartir avec plus d'ancrage.",
+      aide: "Comment je peux t'aider : une séance ponctuelle de coaching intégratif pour faire le point, clarifier ce que tu veux vraiment dans tes relations, et repartir avec plus d'ancrage.",
       ctas: [{ label: "Réserver une séance", url: "https://tidycal.com/elodie-nirennold" }],
     },
     mid: {
       title: "Tes liens te coûtent plus qu'ils ne te nourrissent",
       p1: "Tu donnes. Tu t'effaces. Tu surveilles. Tu analyses les silences. Et tu tiens en surface pour que ça tienne autour de toi. Mais intérieurement, il y a une fatigue relationnelle que peu de gens voient.",
       p2: "Recevoir sans culpabiliser. Dire ce que tu penses sans avoir peur de perdre le lien. Rester toi-même sans t'amputer. C'est possible, mais ça ne se fait pas uniquement par la volonté.",
-      aide: "comment je peux t'aider : une séance de coaching intégratif pour commencer à déposer ce que tu portes dans le lien, et explorer par où ça demande à changer.",
+      aide: "Comment je peux t'aider : une séance de coaching intégratif pour commencer à déposer ce que tu portes dans le lien, et explorer par où ça demande à changer.",
       ctas: [{ label: "Réserver une séance", url: "https://tidycal.com/elodie-nirennold" }],
     },
     high: {
@@ -888,7 +914,7 @@ const RESULTS_DATA = {
       p1: "Tu surveilles l'état du lien en permanence. Tu donnes avant qu'on demande. Tu t'effaces avant qu'on reproche. Et recevoir, vraiment recevoir, sans te sentir aussitôt en dette, tu ne sais plus comment c'est.",
       p2: "Ce n'est pas de la générosité. C'est une stratégie de survie construite depuis longtemps. Et elle t'épuise.",
       p3: "Quelque chose doit changer, pas juste dans ta tête. Dans ton système nerveux, dans tes automatismes, dans la façon dont tu te tiens dans le lien.",
-      aide: "comment je peux t'aider : un accompagnement en coaching intégratif dans la durée. Parce que ce que tu portes dans tes liens ne se défait pas en une séance, mais un cadre solide sur plusieurs mois peut transformer en profondeur ta façon d'être en relation avec toi-même et avec les autres.",
+      aide: "Comment je peux t'aider : un accompagnement en coaching intégratif dans la durée. Parce que ce que tu portes dans tes liens ne se défait pas en une séance, mais un cadre solide sur plusieurs mois peut transformer en profondeur ta façon d'être en relation avec toi-même et avec les autres.",
       ctas: [
         { label: "Appel clarté gratuit · 45 min", url: "https://tidycal.com/elodie-nirennold/appel-clarte-gratuit-coaching-integratif" },
         { label: "Réserver une séance", url: "https://tidycal.com/elodie-nirennold" },
@@ -908,10 +934,6 @@ function renderDimResult(containerId, dimKey, icon, dimName, score) {
   const data = RESULTS_DATA[dimKey][band];
   const container = document.getElementById(containerId);
 
-  let ctasHtml = data.ctas.map(c =>
-    `<a href="${c.url}" target="_blank">→ ${c.label}</a>`
-  ).join('');
-
   let extraP = data.p3 ? `<p>${data.p3}</p>` : '';
 
   container.innerHTML = `
@@ -924,7 +946,6 @@ function renderDimResult(containerId, dimKey, icon, dimName, score) {
     <p>${data.p2}</p>
     ${extraP}
     <div class="rdc-aide">${data.aide}</div>
-    <div class="rdc-ctas">${ctasHtml}</div>
   `;
 }
 
@@ -951,7 +972,7 @@ function showResults() {
   document.getElementById('pct-liens').textContent        = `${sL}/28`;
 
   renderDimResult('result-corps',        'corps',        '🌿', 'Corps',        sC);
-  renderDimResult('result-subconscient', 'subconscient', '🌷', 'Subconscient', sI);
+  renderDimResult('result-subconscient', 'subconscient', '🦋', 'Subconscient', sI);
   renderDimResult('result-liens',        'liens',        '♥️', 'Liens',        sL);
 }
 
@@ -961,7 +982,7 @@ if (params.get('preview') !== null) {
   const p = params.get('preview') || 'corps';
   if (p === 'low') {
     answers[0]=[1,1,1,1,1,1,1]; answers[1]=[1,1,1,1,1,1,1]; answers[2]=[1,1,1,1,1,1,1];
-  } else if (p === 'subconscient' || p === 'inconscient') {
+  } else if (p === 'subconscient') {
     answers[0]=[1,2,1,1,2,1,1]; answers[1]=[4,4,4,3,4,4,4]; answers[2]=[2,2,2,1,2,2,2];
   } else if (p === 'liens') {
     answers[0]=[2,1,2,1,2,1,2]; answers[1]=[2,2,2,2,2,2,2]; answers[2]=[4,4,4,3,4,4,4];

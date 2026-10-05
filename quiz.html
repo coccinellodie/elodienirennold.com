@@ -196,6 +196,17 @@
   .option-letter { font-weight: 700; color: var(--vert-mid); min-width: 20px; font-size: 0.9rem; margin-top: 1px; }
   .option-btn.selected .option-letter { color: var(--vert); }
 
+  /* Couleurs par dimension */
+  .dim-subconscient .option-btn:hover { border-color: var(--mauve); background: #F5F0FA; }
+  .dim-subconscient .option-btn.selected { border-color: var(--mauve); background: #F5F0FA; }
+  .dim-subconscient .option-letter { color: var(--mauve); }
+  .dim-subconscient .option-btn.selected .option-letter { color: var(--mauve); }
+
+  .dim-liens .option-btn:hover { border-color: var(--bordeaux); background: #F7EEF1; }
+  .dim-liens .option-btn.selected { border-color: var(--bordeaux); background: #F7EEF1; }
+  .dim-liens .option-letter { color: var(--bordeaux); }
+  .dim-liens .option-btn.selected .option-letter { color: var(--bordeaux); }
+
   textarea {
     width: 100%;
     background: var(--beige2);
@@ -305,32 +316,6 @@
     margin-top: -8px;
   }
 
-  .single-cta-wrap {
-    width: 100%;
-    text-align: center;
-    padding: 20px 0 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
-  }
-  .single-cta-wrap .single-cta-intro {
-    font-size: 0.92rem;
-    color: var(--muted);
-    font-style: italic;
-    margin: 0;
-  }
-  .single-cta-wrap .single-cta-link {
-    display: inline-block;
-    color: #5C3317;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.12rem;
-    font-weight: 600;
-    text-decoration: none;
-    letter-spacing: 0.01em;
-    transition: opacity 0.2s;
-  }
-  .single-cta-wrap .single-cta-link:hover { opacity: 0.75; text-decoration: underline; }
 
   .now-card {
     background: linear-gradient(135deg, var(--vert), #3A5C30);
@@ -351,12 +336,52 @@
     line-height: 1.8;
     margin-bottom: 20px;
   }
-  .now-card .now-ctas {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    align-items: center;
-    margin-top: 8px;
+  .now-primary-cta {
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 20px 0;
+  }
+  .now-primary-cta .now-dim-label {
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 10px;
+  }
+  .now-primary-cta p {
+    font-size: 0.97rem;
+    color: var(--white);
+    margin-bottom: 14px;
+  }
+  .now-cta-link {
+    display: inline-block;
+    color: var(--white);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    word-break: break-all;
+    line-height: 1.5;
+  }
+  .now-cta-link:hover { opacity: 0.8; }
+  .now-secondary {
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 20px;
+    margin-top: 4px;
+  }
+  .now-secondary p { margin-bottom: 10px; }
+  .now-contact {
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 20px;
+    margin-top: 16px;
+  }
+  .now-contact p { margin-bottom: 8px; }
+  .now-email-link {
+    color: rgba(255,255,255,0.85);
+    font-size: 0.9rem;
+    text-decoration: underline;
   }
   .now-card .now-note {
     font-size: 0.82rem;
@@ -489,12 +514,12 @@
   <span class="dim-badge" style="align-self:center; background:var(--mauve);">Dimension 2 / 3</span>
   <div class="center">
     <h2>Le Subconscient</h2>
-    <p class="italic muted" style="margin-top:4px;">Ce que ta tête ne peut pas regler seule</p>
+    <p class="italic muted" style="margin-top:4px;">Ce que ta tête ne peut pas régler seule</p>
   </div>
   <div class="card">
-    <p>Tu comprends. Tu analyses. Tu as peut-etre deja fait un travail sur toi.</p>
-    <p style="margin-top:16px;">Et pourtant les memes schemas reviennent. Les memes peurs pilotent. Les memes blocages que la volonte ne peut pas deverrouiller seule.</p>
-    <p style="margin-top:16px;">La transformation durable ne passe pas par la tete. Elle passe par le corps.</p>
+    <p>Tu comprends. Tu analyses. Tu as peut-être déjà fait un travail sur toi.</p>
+    <p style="margin-top:16px;">Et pourtant les mêmes schémas reviennent. Les mêmes peurs pilotent. Les mêmes blocages que la volonté ne peut pas déverrouiller seule.</p>
+    <p style="margin-top:16px;">La transformation durable ne passe pas par la tête. Elle passe par le corps.</p>
     <p style="margin-top:16px;">Ces 7 questions explorent ce qui se joue en dessous du mental.</p>
   </div>
   <div class="nav-row">
@@ -513,9 +538,9 @@
   </div>
   <div class="card">
     <p>Tu donnes avant qu'on demande. Tu t'effaces avant qu'on reproche.</p>
-    <p style="margin-top:16px;">Tu t'adaptes, tu tiens, tu geres. Depuis si longtemps que tu ne sais plus comment c'est autrement.</p>
+    <p style="margin-top:16px;">Tu t'adaptes, tu tiens, tu gères. Depuis si longtemps que tu ne sais plus comment c'est autrement.</p>
     <p style="margin-top:16px;">Tu survis dans le lien.</p>
-    <p style="margin-top:16px;">Ces 7 dernières questions explorent ta facon d'habiter le lien.</p>
+    <p style="margin-top:16px;">Ces 7 dernières questions explorent ta façon d'habiter le lien.</p>
   </div>
   <div class="nav-row">
     <button class="btn-secondary" onclick="goBackToDim3()">← Retour</button>
@@ -560,27 +585,23 @@
   <div id="result-subconscient" class="result-dim-card"></div>
   <div id="result-liens" class="result-dim-card"></div>
 
-  <!-- CTA unique -->
-  <div class="single-cta-wrap">
-    <p class="single-cta-intro">Tu sens qu'il y a quelque chose à explorer&nbsp;? La prochaine étape, c'est simple&nbsp;:</p>
-    <a href="https://tidycal.com/elodie-nirennold/appel-clarte-gratuit-coaching-integratif" target="_blank" class="single-cta-link">👉🏽 Réserver un appel clarté gratuit · 45 min</a>
-  </div>
-
-  <!-- Et maintenant -->
+  <!-- Par où commencer -->
   <div class="now-card">
-    <h2>Et maintenant ?</h2>
-    <p>Tu as un éclairage sur là où tu en es, dans ton corps, dans ce qui résiste encore, et dans tes liens. Certaines zones parlent plus fort que d'autres. C'est une information précieuse.</p>
-    <p>La prochaine étape, c'est de choisir par où commencer. Pas par où tu devrais. Par où quelque chose en toi dit oui.</p>
-    <p>Si tu as des questions, si tu veux savoir quel cadre serait le plus juste pour toi, ou si quelque chose a résonné sans que tu saches encore quoi en faire :</p>
-    <div class="now-ctas">
-      <a href="https://tidycal.com/elodie-nirennold/appel-clarte-gratuit-coaching-integratif" target="_blank" class="btn-cta">Appel clarté gratuit · 45 min →</a>
-      <a href="mailto:contact@elodienirennold.com" style="color:rgba(255,255,255,0.75); font-size:0.9rem; text-decoration:underline;">Ecrire directement : contact@elodienirennold.com</a>
+    <h2>Par où commencer&nbsp;?</h2>
+    <p>Ton score le plus élevé te montre le domaine qui demande le plus d'attention en ce moment. C'est par là que je te suggère de commencer.</p>
+    <div id="now-primary-cta" class="now-primary-cta"></div>
+    <div class="now-secondary">
+      <p>Si tu sens que tu veux un cadre dans la durée, commence par un appel clarté gratuit de 45 min pour qu'on voit ensemble ce qui est le plus juste pour toi.</p>
+      <a href="https://tidycal.com/elodie-nirennold/appel-clarte-gratuit-coaching-integratif" target="_blank" class="now-cta-link">👉🏽 tidycal.com/elodie-nirennold/appel-clarte-gratuit-coaching-integratif</a>
     </div>
-    <p class="now-note">Je réponds à chaque message personnellement.</p>
+    <div class="now-contact">
+      <p>Tu n'es pas sûr par où commencer&nbsp;? Écris-moi directement, je t'oriente personnellement.</p>
+      <a href="mailto:contact@elodienirennold.com" class="now-email-link">contact@elodienirennold.com</a>
+    </div>
   </div>
 
   <div class="divider"></div>
-  <p class="footer-note">Elodie Nirennold · Ostéopathe somato-émotionnelle · Hypnothérapeute · Coach intégratif<br>Levallois-Perret · En cabinet et à distance</p>
+  <p class="footer-note">Elodie Nirennold · Ostéopathe somato-émotionnelle · Hypnothérapeute · Coach intégratif</p>
 </div>
 
 <script>
@@ -775,6 +796,10 @@ function renderQuestion() {
   const dim = DIMENSIONS[currentDimIndex];
   const totalDone = QUESTIONS.filter(q2 => q2.dim < currentDimIndex).length + currentQIndex;
   const total = QUESTIONS.length;
+
+  const screenQ = document.getElementById('screen-question');
+  screenQ.classList.remove('dim-corps', 'dim-subconscient', 'dim-liens');
+  screenQ.classList.add('dim-' + dim.id);
 
   document.getElementById('q-dim-label').textContent = dim.icon + ' ' + dim.name;
   document.getElementById('q-count-label').textContent = `Question ${totalDone + 1} / ${total}`;
@@ -974,6 +999,22 @@ function showResults() {
   renderDimResult('result-corps',        'corps',        '🌿', 'Corps',        sC);
   renderDimResult('result-subconscient', 'subconscient', '🦋', 'Subconscient', sI);
   renderDimResult('result-liens',        'liens',        '♥️', 'Liens',        sL);
+
+  // CTA dynamique selon le score le plus élevé
+  const scores = [sC, sI, sL];
+  const maxScore = Math.max(...scores);
+  const maxIdx = scores.indexOf(maxScore);
+  const primaryCtaData = [
+    { dim: 'Corps',        text: "Commence par une séance d'ostéopathie somato-émotionnelle ou un massage de réharmonisation et ancrage." },
+    { dim: 'Subconscient', text: "Commence par une séance d'hypnose." },
+    { dim: 'Liens',        text: "Tu peux commencer par une séance ponctuelle de coaching intégratif." },
+  ];
+  const c = primaryCtaData[maxIdx];
+  document.getElementById('now-primary-cta').innerHTML = `
+    <p class="now-dim-label">Ton score &laquo;&nbsp;${c.dim}&nbsp;&raquo; est le plus élevé</p>
+    <p>${c.text}</p>
+    <a href="https://tidycal.com/elodie-nirennold" target="_blank" class="now-cta-link">👉🏽 Réserver : tidycal.com/elodie-nirennold</a>
+  `;
 }
 
 // PREVIEW MODE

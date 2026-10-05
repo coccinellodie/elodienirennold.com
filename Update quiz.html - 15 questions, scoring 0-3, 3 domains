@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Questionnaire de bilan Â· Elodie Nirennold</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --beige: #FAF7F2;
+    --beige2: #F2EDE4;
+    --vert: #243D1F;
+    --vert-light: #3A5C30;
+    --vert-mid: #6A8A60;
+    --rose: #B8928B;
+    --vieux-rose: #B8928B;
+    --mauve: #9B7FAF;
+    --bordeaux: #8B3A52;
+    --bois: #8B6F5E;
+    --dark: #2C2420;
+    --muted: #9A8880;
+    --white: #FFFFFF;
+    --radius: 14px;
+    --shadow: 0 4px 24px rgba(44,36,32,0.08);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Lato', sans-serif;
+    background: var(--beige);
+    color: var(--dark);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .site-name {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    padding: 20px 28px;
+    z-index: 100;
+    pointer-events: none;
+  }
+  .site-name span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .screen {
+    display: none;
+    width: 100%;
+    max-width: 680px;
+    min-height: 100vh;
+    padding: 40px 24px 60px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    animation: fadeIn 0.4s ease;
+  }
+  .screen.active { display: flex; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+  h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 2.8rem); font-weight: 400; line-height: 1.2; text-align: center; color: var(--dark); }
+  h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 400; line-height: 1.3; color: var(--dark); }
+  h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 500; color: var(--dark); }
+  p { font-size: 1rem; line-height: 1.75; color: var(--dark); }
+  .muted { color: var(--muted); font-size: 0.9rem; }
+  .italic { font-style: italic; }
+  .center { text-align: center; }
+
+  .card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 32px;
+    box-shadow: var(--shadow);
+    width: 100%;
+  }
+  .card-soft {
+    background: var(--beige2);
+    border-radius: var(--radius);
+    padding: 28px;
+    width: 100%;
+  }
+
+  .btn-primary {
+    background: var(--vert);
+    color: var(--white);
+    border: none;
+    border-radius: 50px;
+    padding: 16px 36px;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+  }
+  .btn-primary:hover { background: var(--vert-light); transform: translateY(-1px); }
+  .btn-secondary {
+    background: transparent;
+    color: var(--bois);
+    border: 1.5px solid var(--bois);
+    border-radius: 50px;
+    padding: 12px 28px;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn-secondary:hover { background: var(--bois); color: var(--white); }
+  .btn-cta {
+    background: linear-gradient(135deg, var(--rose), #B87060);
+    color: var(--white);
+    border: none;
+    border-radius: 50px;
+    padding: 16px 36px;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(196,137,122,0.35);
+  }
+  .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 28px rgba(196,137,122,0.45); }
+  .btn-cta-vert {
+    background: linear-gradient(135deg, var(--vert), var(--vert-light));
+    color: var(--white);
+    border: none;
+    border-radius: 50px;
+    padding: 16px 36px;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(36,61,31,0.3);
+  }
+  .btn-cta-vert:hover { transform: translateY(-2px); box-shadow: 0 6px 28px rgba(36,61,31,0.4); }
+  .btn-link {
+    color: var(--vert-mid);
+    text-decoration: underline;
+    font-size: 0.9rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+    padding: 0;
+  }
+
+  .nav-row { display: flex; justify-content: space-between; align-items: center; width: 100%; gap: 12px; }
+
+  .progress-wrap { width: 100%; }
+  .progress-label { display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--muted); margin-bottom: 8px; }
+  .progress-bar-bg { background: var(--beige2); border-radius: 8px; height: 6px; width: 100%; overflow: hidden; }
+  .progress-bar-fill { background: linear-gradient(90deg, var(--vert), var(--vert-light)); height: 100%; border-radius: 8px; transition: width 0.4s ease; }
+
+  .question-num { font-size: 0.8rem; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; }
+  .question-text { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 400; line-height: 1.45; margin-bottom: 24px; }
+  .options { display: flex; flex-direction: column; gap: 12px; }
+  .option-btn {
+    background: var(--beige2);
+    border: 2px solid transparent;
+    border-radius: 12px;
+    padding: 16px 20px;
+    text-align: left;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--dark);
+    cursor: pointer;
+    transition: all 0.18s;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .option-btn:hover { border-color: var(--vert-mid); background: #EDF3EC; }
+  .option-btn.selected { border-color: var(--vert); background: #EDF3EC; }
+  .option-letter { font-weight: 700; color: var(--vert-mid); min-width: 20px; font-size: 0.9rem; margin-top: 1px; }
+  .option-btn.selected .option-letter { color: var(--vert); }
+
+  /* Couleurs par dimension */
+  .dim-subconscient .option-btn:hover { border-color: var(--mauve); background: #F5F0FA; }
+  .dim-subconscient .option-btn.selected { border-color: var(--mauve); background: #F5F0FA; }
+  .dim-subconscient .option-letter { color: var(--mauve); }
+  .dim-subconscient .option-btn.selected .option-letter { color: var(--mauve); }
+
+  .dim-liens .option-btn:hover { border-color: var(--bordeaux); background: #F7EEF1; }
+  .dim-liens .option-btn.selected { border-color: var(--bordeaux); background: #F7EEF1; }
+  .dim-liens .option-letter { color: var(--bordeaux); }
+  .dim-liens .option-btn.selected .option-letter { color: var(--bordeaux); }
+
+  textarea {
+    width: 100%;
+    background: var(--beige2);
+    border: 2px solid transparent;
+    border-radius: 12px;
+    padding: 18px;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--dark);
+    resize: vertical;
+    min-height: 120px;
+    transition: border-color 0.2s;
+  }
+  textarea:focus { outline: none; border-color: var(--vert-mid); }
+
+  .dim-icon { font-size: 3rem; margin-bottom: 8px; }
+  .dim-badge {
+    display: inline-block;
+    background: var(--vert);
+    color: var(--white);
+    border-radius: 50px;
+    padding: 6px 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  /* RESULTS */
+  .dim-scores-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    width: 100%;
+  }
+  .dim-score-box {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 18px 12px;
+    text-align: center;
+    box-shadow: var(--shadow);
+  }
+  .dim-score-box .dsb-icon { font-size: 1.6rem; margin-bottom: 6px; }
+  .dim-score-box .dsb-name { font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; color: var(--dark); margin-bottom: 8px; }
+  .dim-score-box .dsb-bar-bg { background: var(--beige2); border-radius: 6px; height: 8px; overflow: hidden; margin-bottom: 6px; }
+  .dim-score-box .dsb-bar-fill { height: 100%; border-radius: 6px; transition: width 1.2s cubic-bezier(0.25,0.46,0.45,0.94); width: 0; }
+  .dsb-corps .dsb-bar-fill { background: linear-gradient(90deg, var(--vert), #4A6741); }
+  .dsb-subconscient .dsb-bar-fill { background: linear-gradient(90deg, var(--mauve), #B49FC0); }
+  .dsb-liens .dsb-bar-fill { background: linear-gradient(90deg, var(--bordeaux), #A85070); }
+  .dim-score-box .dsb-pct { font-size: 0.78rem; color: var(--muted); }
+
+  .result-dim-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 32px;
+    box-shadow: var(--shadow);
+    width: 100%;
+  }
+  .result-dim-card .rdc-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  .result-dim-card .rdc-icon { font-size: 1.4rem; }
+  .result-dim-card .rdc-dim-name {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 700;
+  }
+  .result-dim-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.45rem;
+    font-weight: 400;
+    line-height: 1.3;
+    color: var(--dark);
+    margin-bottom: 16px;
+  }
+  .result-dim-card p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--dark);
+    margin-bottom: 12px;
+  }
+  .result-dim-card .rdc-aide {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 0.01em;
+    color: var(--bois);
+    margin: 20px 0 10px;
+    background: var(--beige2);
+    border-radius: 8px;
+    padding: 14px 18px;
+  }
+  .gauge-legend {
+    text-align: center;
+    font-size: 0.78rem;
+    color: var(--muted);
+    font-style: italic;
+    letter-spacing: 0.01em;
+    margin-top: -8px;
+  }
+  .mirror-phrase {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.18rem;
+    font-style: italic;
+    line-height: 1.75;
+    color: var(--vert);
+    text-align: center;
+    padding: 8px 4px;
+  }
+  .transition-phrase {
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: var(--muted);
+    text-align: center;
+    font-style: italic;
+    padding: 4px 0 8px;
+  }
+  .rdc-cta-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 1px solid var(--beige2);
+  }
+  .rdc-cta-link {
+    display: inline-block;
+    color: var(--vieux-rose);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+
+  .now-card {
+    background: linear-gradient(135deg, var(--vert), #3A5C30);
+    border-radius: var(--radius);
+    padding: 36px;
+    color: var(--white);
+    width: 100%;
+    text-align: center;
+  }
+  .now-card h2 {
+    color: var(--white);
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: 16px;
+  }
+  .now-card p {
+    color: rgba(255,255,255,0.88);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+  .now-primary-cta {
+    background: var(--vieux-rose);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 20px 0;
+  }
+  .now-primary-cta .now-dim-label {
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 10px;
+  }
+  .now-primary-cta p {
+    font-size: 0.97rem;
+    color: var(--white);
+    margin-bottom: 14px;
+  }
+  .now-cta-link {
+    display: inline-block;
+    color: var(--white);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    word-break: break-all;
+    line-height: 1.5;
+  }
+  .now-cta-link:hover { opacity: 0.8; }
+  .now-secondary {
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 20px;
+    margin-top: 4px;
+  }
+  .now-secondary p { margin-bottom: 10px; }
+  .now-contact {
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 20px;
+    margin-top: 16px;
+  }
+  .now-contact p { margin-bottom: 8px; }
+  .now-email-link {
+    color: rgba(255,255,255,0.85);
+    font-size: 0.9rem;
+    text-decoration: underline;
+  }
+  .now-card .now-note {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.6);
+    margin-top: 16px;
+  }
+
+  .divider { width: 60px; height: 1.5px; background: linear-gradient(90deg, var(--vert-mid), var(--rose)); border-radius: 2px; margin: 0 auto; }
+
+  .save-note {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--vieux-rose);
+    width: 100%;
+  }
+  .footer-note {
+    text-align: center;
+    font-size: 0.82rem;
+    color: var(--muted);
+    font-style: italic;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 500px) {
+    .card { padding: 24px 18px; }
+    .result-dim-card { padding: 24px 18px; }
+    .now-card { padding: 28px 20px; }
+    .dim-scores-grid { grid-template-columns: 1fr; }
+    .dim-score-box { display: flex; align-items: center; gap: 14px; padding: 14px 18px; text-align: left; }
+    .dim-score-box .dsb-bar-bg { flex: 1; margin-bottom: 0; }
+    .dim-score-box .dsb-icon { margin-bottom: 0; font-size: 1.4rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="site-name">
+  <span>Elodie Nirennold</span>
+</div>
+
+<!-- SCREEN 0 - WELCOME -->
+<div id="screen-welcome" class="screen active" style="gap:20px; padding-top:80px; position:relative; overflow:hidden;">
+
+  <!-- DÃ©cors vieux rose -->
+  <div aria-hidden="true" style="position:absolute; top:40px; right:-30px; width:200px; height:200px; border-radius:50%; background:radial-gradient(circle, rgba(196,137,122,0.14) 0%, rgba(196,137,122,0.05) 55%, transparent 75%); pointer-events:none;"></div>
+  <div aria-hidden="true" style="position:absolute; bottom:80px; left:-40px; width:160px; height:160px; border-radius:50%; background:radial-gradient(circle, rgba(196,137,122,0.10) 0%, transparent 70%); pointer-events:none;"></div>
+
+  <div style="text-align:center; position:relative; z-index:1;">
+    <span style="display:inline-block; background:rgba(196,137,122,0.12); border-radius:50px; padding:6px 20px; font-size:0.72rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--rose);">Bilan gratuit</span>
+  </div>
+
+  <div style="text-align:center; margin:4px 0; position:relative; z-index:1;">
+    <h1 style="font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,5.5vw,3rem); font-weight:300; line-height:1.2; color:var(--dark);">
+      Ton corps parle.<br>
+      Quelque chose en toi rÃ©siste encore.<br>
+      Tes liens t'Ã©puisent.<br>
+      <span style="color:var(--muted); font-size:0.82em;">Par oÃ¹ commencer ?</span>
+    </h1>
+    <div style="width:56px; height:2px; background:linear-gradient(90deg, transparent, var(--rose), transparent); border-radius:2px; margin:20px auto 16px;"></div>
+    <p style="font-family:'Cormorant Garamond',serif; font-size:1.15rem; color:var(--dark); line-height:1.6;">
+      Tu sais beaucoup sur toi. Les schÃ©mas reviennent quand mÃªme.<br>
+      <span style="color:var(--muted);">Identifie oÃ¹ Ã§a rÃ©siste encore, dans ton corps, ta tÃªte ou tes liens.</span>
+    </p>
+    <p style="margin-top:14px; font-size:0.95rem; color:var(--dark); line-height:1.75; max-width:480px; margin-left:auto; margin-right:auto;">
+      Ces 21 questions t'aident Ã  identifier oÃ¹ Ã§a parle le plus fort en toi en ce moment, et par oÃ¹ commencer.
+    </p>
+  </div>
+
+  <div style="text-align:center; margin-top:8px; position:relative; z-index:1;">
+    <button class="btn-primary" onclick="startQuiz()" style="border-radius:6px; padding:17px 52px; letter-spacing:0.1em; font-size:0.88rem;">FAIRE MON BILAN GRATUIT</button>
+    <p style="margin-top:12px; font-size:0.8rem; color:var(--muted);">21 questions Â· 6 minutes Â· Gratuit et confidentiel</p>
+  </div>
+
+</div>
+
+<!-- SCREEN 2 - OPEN QUESTION -->
+<div id="screen-open1" class="screen">
+  <div class="center">
+    <h2>Avant de commencer...</h2>
+  </div>
+  <div class="card">
+    <div class="question-text">Ce qui est lÃ , en ce moment. Ce qui pÃ¨se, ce qui revient, ce qui t'a amenÃ© ici.</div>
+    <textarea id="open1-answer" placeholder="Ãcris librement, sans filtre..."></textarea>
+  </div>
+  <div class="nav-row">
+    <button class="btn-secondary" onclick="goToOpen1Back()">â Retour</button>
+    <button class="btn-primary" onclick="goTo('screen-dim1-intro')">Continuer â</button>
+  </div>
+</div>
+
+<!-- SCREEN 3 - DIM 1 INTRO (CORPS) -->
+<div id="screen-dim1-intro" class="screen">
+  <div class="dim-icon center">ð¿</div>
+  <span class="dim-badge" style="align-self:center;">Dimension 1 / 3</span>
+  <div class="center">
+    <h2>Le Corps</h2>
+    <p class="italic muted" style="margin-top:4px;">Ce que ton corps porte</p>
+  </div>
+  <div class="card">
+    <p>Le corps garde la mÃ©moire de tout ce que tu n'as pas pu exprimer.</p>
+    <p style="margin-top:16px;">Les tensions, les douleurs chroniques, la fatigue que rien ne soulage, la dÃ©connexion : ce ne sont pas des dÃ©tails. Ce sont des messages en attente d'Ãªtre entendus.</p>
+    <p style="margin-top:16px;">Ces 7 questions explorent ce que ton corps porte, souvent en silence.</p>
+  </div>
+  <div class="nav-row">
+    <button class="btn-secondary" onclick="goTo('screen-open1')">â Retour</button>
+    <button class="btn-primary" onclick="startDimension(0)">Je commence â</button>
+  </div>
+</div>
+
+<!-- SCREEN 4 - QUESTION (dynamic) -->
+<div id="screen-question" class="screen">
+  <div class="progress-wrap">
+    <div class="progress-label">
+      <span id="q-dim-label"></span>
+      <span id="q-count-label"></span>
+    </div>
+    <div class="progress-bar-bg">
+      <div class="progress-bar-fill" id="q-progress-fill"></div>
+    </div>
+  </div>
+  <div class="card" style="width:100%;">
+    <div class="question-num" id="q-num"></div>
+    <div class="question-text" id="q-text"></div>
+    <div class="options" id="q-options"></div>
+  </div>
+  <div class="nav-row" style="margin-top:8px;">
+    <button class="btn-secondary" id="btn-q-back" onclick="prevQuestion()">â Retour</button>
+    <button class="btn-primary" id="btn-q-next" onclick="nextQuestion()" disabled>Suivant â</button>
+  </div>
+</div>
+
+<!-- SCREEN 5 - DIM 2 INTRO (SUBCONSCIENT) -->
+<div id="screen-dim2-intro" class="screen">
+  <div class="dim-icon center">ð¦</div>
+  <span class="dim-badge" style="align-self:center; background:var(--mauve);">Dimension 2 / 3</span>
+  <div class="center">
+    <h2>Le Subconscient</h2>
+    <p class="italic muted" style="margin-top:4px;">Ce que ta tÃªte ne peut pas rÃ©gler seule</p>
+  </div>
+  <div class="card">
+    <p>Tu comprends. Tu analyses. Tu as peut-Ãªtre dÃ©jÃ  fait un travail sur toi.</p>
+    <p style="margin-top:16px;">Et pourtant les mÃªmes schÃ©mas reviennent. Les mÃªmes peurs pilotent. Les mÃªmes blocages que la volontÃ© ne peut pas dÃ©verrouiller seule.</p>
+    <p style="margin-top:16px;">La transformation durable ne passe pas par la tÃªte. Elle passe par le corps.</p>
+    <p style="margin-top:16px;">Ces 7 questions explorent ce qui se joue en dessous du mental.</p>
+  </div>
+  <div class="nav-row">
+    <button class="btn-secondary" onclick="goBackToDim2()">â Retour</button>
+    <button class="btn-primary" onclick="startDimension(1)">Continuer â</button>
+  </div>
+</div>
+
+<!-- SCREEN 6 - DIM 3 INTRO (LIENS) -->
+<div id="screen-dim3-intro" class="screen">
+  <div class="dim-icon center">â¥ï¸</div>
+  <span class="dim-badge" style="align-self:center; background:var(--bordeaux);">Dimension 3 / 3</span>
+  <div class="center">
+    <h2>Les Liens</h2>
+    <p class="italic muted" style="margin-top:4px;">Ce que tes relations te coÃ»tent</p>
+  </div>
+  <div class="card">
+    <p>Tu donnes avant qu'on demande. Tu t'effaces avant qu'on reproche.</p>
+    <p style="margin-top:16px;">Tu t'adaptes, tu tiens, tu gÃ¨res. Depuis si longtemps que tu ne sais plus comment c'est autrement.</p>
+    <p style="margin-top:16px;">Tu survis dans le lien.</p>
+    <p style="margin-top:16px;">Ces 7 derniÃ¨res questions explorent ta faÃ§on d'habiter le lien.</p>
+  </div>
+  <div class="nav-row">
+    <button class="btn-secondary" onclick="goBackToDim3()">â Retour</button>
+    <button class="btn-primary" onclick="startDimension(2)">Continuer â</button>
+  </div>
+</div>
+
+<!-- SCREEN 7 - RESULTS -->
+<div id="screen-results" class="screen" style="gap:28px; justify-content:flex-start; padding-top:80px;">
+
+  <div style="text-align:center; width:100%;">
+    <h1 id="results-greeting">Tes rÃ©sultats</h1>
+    <p class="muted italic" style="margin-top:8px;">Voici ce que ton questionnaire rÃ©vÃ¨le, et par oÃ¹ commencer.</p>
+    <p class="save-note">Pense Ã  faire une capture d'Ã©cran de tes rÃ©sultats pour ne pas les perdre.</p>
+  </div>
+
+  <!-- Scores visuels -->
+  <div class="dim-scores-grid">
+    <div class="dim-score-box dsb-corps">
+      <div class="dsb-icon">ð¿</div>
+      <div class="dsb-name">Corps</div>
+      <div class="dsb-bar-bg"><div class="dsb-bar-fill" id="bar-corps"></div></div>
+      <div class="dsb-pct" id="pct-corps"></div>
+    </div>
+    <div class="dim-score-box dsb-subconscient">
+      <div class="dsb-icon">ð¦</div>
+      <div class="dsb-name">Subconscient</div>
+      <div class="dsb-bar-bg"><div class="dsb-bar-fill" id="bar-subconscient"></div></div>
+      <div class="dsb-pct" id="pct-subconscient"></div>
+    </div>
+    <div class="dim-score-box dsb-liens">
+      <div class="dsb-icon">â¥ï¸</div>
+      <div class="dsb-name">Liens</div>
+      <div class="dsb-bar-bg"><div class="dsb-bar-fill" id="bar-liens"></div></div>
+      <div class="dsb-pct" id="pct-liens"></div>
+    </div>
+  </div>
+
+  <p class="gauge-legend">Score sur 15 Â· plus il est Ã©levÃ©, plus le domaine est en tension et demande de l'attention.</p>
+
+  <div id="result-mirror" style="width:100%; padding:4px 0;"></div>
+  <div id="result-transition" style="width:100%;"></div>
+
+  <!-- RÃ©sultats par dimension -->
+  <div id="result-corps" class="result-dim-card"></div>
+  <div id="result-subconscient" class="result-dim-card"></div>
+  <div id="result-liens" class="result-dim-card"></div>
+
+  <!-- ClÃ´ture -->
+  <div id="now-card" class="now-card"></div>
+
+  <div class="divider"></div>
+  <p class="footer-note">Elodie Nirennold Â· OstÃ©opathe somato-Ã©motionnelle Â· HypnothÃ©rapeute Â· Coach intÃ©gratif</p>
+</div>
+
+<script>
+const DIMENSIONS = [
+  { id: 'corps',        name: 'Corps',        icon: 'ð¿', introScreen: 'screen-dim1-intro' },
+  { id: 'subconscient', name: 'Subconscient', icon: 'ð¦', introScreen: 'screen-dim2-intro' },
+  { id: 'liens',        name: 'Liens',        icon: 'â¥ï¸', introScreen: 'screen-dim3-intro' },
+];
+
+const QUESTIONS = [
+  // CORPS (dim 0) - 5 questions
+  { dim:0, text:"Quand je repense Ã  ces derniers mois, mon corps est surtout :", options:[
+    { letter:'A', text:"Souvent en train de me signaler quelque chose que je n'ai pas le temps d'Ã©couter.", score:2 },
+    { letter:'B', text:"PlutÃ´t tranquille, il me lÃ¢che rarement.", score:0 },
+    { letter:'C', text:"En alerte presque permanente, il parle fort et je ne sais plus comment le faire taire.", score:3 },
+    { letter:'D', text:"RÃ©actif par moments, quand la pression monte, puis Ã§a se calme.", score:1 },
+  ]},
+  { dim:0, text:"La fatigue que je connais le mieux, c'est :", options:[
+    { letter:'A', text:"Un Ã©puisement de fond, d'un autre ordre, lÃ  mÃªme au rÃ©veil.", score:3 },
+    { letter:'B', text:"Une fatigue de fin de semaine chargÃ©e, qui se rÃ©pare au repos.", score:1 },
+    { letter:'C', text:"Une fatigue normale, qui passe quand je dors.", score:0 },
+    { letter:'D', text:"Une fatigue qui traÃ®ne, que le sommeil ne suffit plus vraiment Ã  effacer.", score:2 },
+  ]},
+  { dim:0, text:"Entre ma tÃªte et mon corps, en ce moment :", options:[
+    { letter:'A', text:"Je vis beaucoup dans ma tÃªte, mon corps je l'oublie pour tenir.", score:2 },
+    { letter:'B', text:"Je suis coupÃ© de lui des journÃ©es entiÃ¨res, en pilote automatique.", score:3 },
+    { letter:'C', text:"Je suis bien dans mes sensations, je sens mon corps.", score:0 },
+    { letter:'D', text:"Je perds le fil parfois, surtout sous stress.", score:1 },
+  ]},
+  { dim:0, text:"Mon corps et moi, c'est surtout cette histoire-lÃ  :", options:[
+    { letter:'A', text:"Je le remarque quand il hausse le ton, sinon je l'oublie.", score:1 },
+    { letter:'B', text:"Il me fait un peu peur, je prÃ©fÃ¨re ne pas trop aller voir ce qu'il garde.", score:2 },
+    { letter:'C', text:"On fait Ã©quipe, je l'Ã©coute et il me guide.", score:0 },
+    { letter:'D', text:"Il a encaissÃ© des choses (chocs, tensions, annÃ©es de \"tenir\") que je n'ai jamais vraiment digÃ©rÃ©es.", score:3 },
+  ]},
+  { dim:0, text:"Me dÃ©tendre vraiment, poser mon systÃ¨me nerveux :", options:[
+    { letter:'A', text:"C'est accessible, je sais revenir au calme.", score:0 },
+    { letter:'B', text:"Je ne sais plus trop comment c'est, l'alerte est presque toujours lÃ  en fond.", score:3 },
+    { letter:'C', text:"Ãa dÃ©pend des pÃ©riodes, sous forte pression c'est plus dur.", score:1 },
+    { letter:'D', text:"C'est devenu rare, mon corps redescend difficilement mÃªme au repos.", score:2 },
+  ]},
+
+  // SUBCONSCIENT (dim 1) - 5 questions
+  { dim:1, text:"Le travail que j'ai dÃ©jÃ  fait sur moi (thÃ©rapie, lectures, dÃ©veloppement perso) :", options:[
+    { letter:'A', text:"M'a beaucoup Ã©clairÃ©, mais les mÃªmes schÃ©mas reviennent quand mÃªme.", score:2 },
+    { letter:'B', text:"A tout compris dans ma tÃªte, pendant que mon systÃ¨me, lui, continue exactement pareil.", score:3 },
+    { letter:'C', text:"Je n'en ai pas vraiment fait, ou peu.", score:0 },
+    { letter:'D', text:"M'a apportÃ© des prises de conscience qui ont changÃ© des choses.", score:1 },
+  ]},
+  { dim:1, text:"La nuit, ou dans les moments de calme, mon mental :", options:[
+    { letter:'A', text:"S'emballe avant un Ã©vÃ©nement stressant, puis redescend.", score:1 },
+    { letter:'B', text:"Se pose, je m'endors tranquille.", score:0 },
+    { letter:'C', text:"Ne descend presque jamais, le silence intÃ©rieur m'est devenu Ã©tranger.", score:3 },
+    { letter:'D', text:"Tourne rÃ©guliÃ¨rement le soir, ruminations et scÃ©narios.", score:2 },
+  ]},
+  { dim:1, text:"En fond, il y a une peur :", options:[
+    { letter:'A', text:"Qui influence mes choix plus que je ne le voudrais.", score:2 },
+    { letter:'B', text:"Silencieuse qui pilote en permanence : craquer, dÃ©cevoir, prendre trop ou pas assez de place.", score:3 },
+    { letter:'C', text:"PrÃ©sente, mais qui ne prend pas toute la place.", score:1 },
+    { letter:'D', text:"Non, mes peurs sont conscientes et gÃ©rables.", score:0 },
+  ]},
+  { dim:1, text:"Quand je me regarde reproduire quelque chose que je ne veux plus :", options:[
+    { letter:'A', text:"Je le vois venir et parfois j'arrive Ã  l'arrÃªter.", score:1 },
+    { letter:'B', text:"Je me regarde faire sans pouvoir m'arrÃªter, comme si une autre partie prenait le relais.", score:3 },
+    { letter:'C', text:"Ãa m'arrive rarement, quand je comprends, Ã§a change.", score:0 },
+    { letter:'D', text:"Je sens bien qu'il y a des couches en moi que la rÃ©flexion n'atteindra jamais.", score:2 },
+  ]},
+  { dim:1, text:"Quand tout le monde me voit gÃ©rer, Ã  l'intÃ©rieur il y a :", options:[
+    { letter:'A', text:"Rien de particulier, ce que je montre correspond Ã  ce que je vis.", score:0 },
+    { letter:'B', text:"Quelque chose d'Ã©puisÃ© qui attend juste d'Ãªtre vu, sans avoir Ã  le mÃ©riter.", score:3 },
+    { letter:'C', text:"Un lÃ©ger Ã©cart parfois entre ce que je montre et ce que je ressens.", score:1 },
+    { letter:'D', text:"Une part de moi souvent Ã  bout, mÃªme quand je performe bien.", score:2 },
+  ]},
+
+  // LIENS (dim 2) - 5 questions
+  { dim:2, text:"Dans mes relations, dire non, poser une limite, prendre ma place :", options:[
+    { letter:'A', text:"C'est difficile, l'harmonie autour de moi passe souvent avant mes besoins.", score:2 },
+    { letter:'B', text:"Je le fais assez naturellement.", score:0 },
+    { letter:'C', text:"Je ne sais plus vraiment ce que je veux, j'ajuste en permanence en fonction des autres.", score:3 },
+    { letter:'D', text:"Ãa dÃ©pend des personnes et des contextes.", score:1 },
+  ]},
+  { dim:2, text:"Recevoir de l'aide, de l'attention, du soutien :", options:[
+    { letter:'A', text:"Un peu inconfortable parfois, mais Ã§a va.", score:1 },
+    { letter:'B', text:"Me met souvent plus en dette qu'en repos.", score:2 },
+    { letter:'C', text:"Ãa me fait du bien et je l'accueille simplement.", score:0 },
+    { letter:'D', text:"M'est presque impossible sans culpabiliser, je ne sais plus recevoir sans me sentir redevable.", score:3 },
+  ]},
+  { dim:2, text:"La peur de perdre le lien (rejet, abandon, dÃ©cevoir) :", options:[
+    { letter:'A', text:"Pilote beaucoup de mes dÃ©cisions sans que je l'aie choisi : je reste, je donne, je me tais.", score:3 },
+    { letter:'B', text:"Existe, sans prendre toute la place.", score:1 },
+    { letter:'C', text:"Guide mes comportements relationnels assez rÃ©guliÃ¨rement.", score:2 },
+    { letter:'D', text:"N'est pas vraiment lÃ , je me sens sÃ©curisÃ© dans mes relations.", score:0 },
+  ]},
+  { dim:2, text:"Dans mes relations proches, je me surprends Ã  :", options:[
+    { letter:'A', text:"Ãtre plutÃ´t posÃ© et faire confiance.", score:0 },
+    { letter:'B', text:"Scruter en permanence les silences, les tons, les micro-signaux, sans pouvoir m'arrÃªter.", score:3 },
+    { letter:'C', text:"Rester vigilant par moments, dans certaines relations.", score:1 },
+    { letter:'D', text:"Analyser souvent ce qui se passe chez l'autre pour ajuster ma rÃ©action.", score:2 },
+  ]},
+  { dim:2, text:"Dans mes relations les plus proches, il y a quelque chose que je ne dis pas :", options:[
+    { letter:'A', text:"Quelques sujets sensibles, mais rien de systÃ©matique.", score:1 },
+    { letter:'B', text:"Je garde l'essentiel pour moi, c'est plus sÃ»r que de risquer de tout perdre.", score:3 },
+    { letter:'C', text:"Non, je dis assez librement ce que je pense.", score:0 },
+    { letter:'D', text:"Je filtre beaucoup, mais au fond je ne sais mÃªme plus toujours ce que je tais.", score:2 },
+  ]},
+];
+
+// ETAT
+const params = new URLSearchParams(window.location.search);
+let userName = '';
+let currentDimIndex = 0;
+let currentQIndex = 0;
+let answers = [[], [], []];
+
+// NAVIGATION
+function goTo(screenId) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(screenId).classList.add('active');
+  window.scrollTo(0,0);
+}
+
+function startQuiz() { goTo('screen-open1'); }
+function goToOpen1Back() { goTo('screen-welcome'); }
+
+function goBackToDim2() {
+  const dimQs = QUESTIONS.filter(q => q.dim === 0);
+  currentDimIndex = 0;
+  currentQIndex = dimQs.length - 1;
+  renderQuestion();
+  goTo('screen-question');
+}
+
+function goBackToDim3() {
+  const dimQs = QUESTIONS.filter(q => q.dim === 1);
+  currentDimIndex = 1;
+  currentQIndex = dimQs.length - 1;
+  renderQuestion();
+  goTo('screen-question');
+}
+
+// QUESTIONS
+function startDimension(dimIdx) {
+  currentDimIndex = dimIdx;
+  currentQIndex = 0;
+  renderQuestion();
+  goTo('screen-question');
+}
+
+function getQuestionsForDim(dimIdx) {
+  return QUESTIONS.filter(q => q.dim === dimIdx);
+}
+
+function renderQuestion() {
+  const dimQs = getQuestionsForDim(currentDimIndex);
+  const q = dimQs[currentQIndex];
+  const dim = DIMENSIONS[currentDimIndex];
+  const totalDone = QUESTIONS.filter(q2 => q2.dim < currentDimIndex).length + currentQIndex;
+  const total = QUESTIONS.length;
+
+  const screenQ = document.getElementById('screen-question');
+  screenQ.classList.remove('dim-corps', 'dim-subconscient', 'dim-liens');
+  screenQ.classList.add('dim-' + dim.id);
+
+  document.getElementById('q-dim-label').textContent = dim.icon + ' ' + dim.name;
+  document.getElementById('q-count-label').textContent = `Question ${totalDone + 1} / ${total}`;
+  document.getElementById('q-progress-fill').style.width = ((totalDone + 1) / total * 100) + '%';
+  document.getElementById('q-num').textContent = `${dim.name} Â· ${currentQIndex + 1} / ${dimQs.length}`;
+  document.getElementById('q-text').textContent = q.text;
+
+  const savedAnswer = answers[currentDimIndex][currentQIndex];
+  const optionsEl = document.getElementById('q-options');
+  optionsEl.innerHTML = '';
+  q.options.forEach((opt, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'option-btn' + (savedAnswer === opt.score ? ' selected' : '');
+    btn.innerHTML = `<span class="option-letter">${opt.letter}</span><span>${opt.text}</span>`;
+    btn.addEventListener('click', () => selectOption(opt.score, i, dimQs));
+    optionsEl.appendChild(btn);
+  });
+
+  const nextBtn = document.getElementById('btn-q-next');
+  nextBtn.disabled = (savedAnswer === undefined);
+  updateNextLabel(dimQs);
+}
+
+function updateNextLabel(dimQs) {
+  const nextBtn = document.getElementById('btn-q-next');
+  const isLastQ = currentQIndex === dimQs.length - 1;
+  const isLastDim = currentDimIndex === DIMENSIONS.length - 1;
+  if (isLastQ && isLastDim) nextBtn.textContent = 'Voir mes rÃ©sultats â';
+  else if (isLastQ) nextBtn.textContent = 'Dimension suivante â';
+  else nextBtn.textContent = 'Suivant â';
+}
+
+function selectOption(score, idx, dimQs) {
+  answers[currentDimIndex][currentQIndex] = score;
+  document.querySelectorAll('.option-btn').forEach((btn, i) => {
+    btn.classList.toggle('selected', i === idx);
+  });
+  document.getElementById('btn-q-next').disabled = false;
+  updateNextLabel(dimQs);
+}
+
+function nextQuestion() {
+  const dimQs = getQuestionsForDim(currentDimIndex);
+  const isLastQ = currentQIndex === dimQs.length - 1;
+  const isLastDim = currentDimIndex === DIMENSIONS.length - 1;
+
+  if (isLastQ && isLastDim) { showResults(); return; }
+  if (isLastQ && currentDimIndex === 0) { goTo('screen-dim2-intro'); return; }
+  if (isLastQ && currentDimIndex === 1) { goTo('screen-dim3-intro'); return; }
+  currentQIndex++;
+  renderQuestion();
+}
+
+function prevQuestion() {
+  if (currentQIndex > 0) { currentQIndex--; renderQuestion(); }
+  else if (currentDimIndex === 0) goTo('screen-dim1-intro');
+  else if (currentDimIndex === 1) goTo('screen-dim2-intro');
+  else if (currentDimIndex === 2) goTo('screen-dim3-intro');
+}
+
+// RÃSULTATS
+function getScore(dimIdx) {
+  return answers[dimIdx].reduce((a, b) => a + b, 0);
+}
+
+// DonnÃ©es par dimension et par bande
+const RESULTS_DATA = {
+  corps: {
+    low: {
+      title: "Ton corps est relativement calme",
+      p1: "Ton corps n'est pas en crise. Il parle, parfois, mais tu arrives encore Ã  l'entendre, ou Ã  trouver un Ã©quilibre qui tient. Ce n'est pas une urgence corporelle qui se signale en toi en ce moment.",
+      p2: "Ce n'est pas pour autant qu'il n'y a rien. La fatigue lÃ©gÃ¨re, les tensions ponctuelles, le sentiment de flotter parfois, tout Ã§a mÃ©rite d'Ãªtre entendu avant que le corps ait besoin de parler plus fort.",
+      aide: "Comment je peux t'aider : l'ostÃ©opathie somato-Ã©motionnelle pour Ã©couter ce que ton corps garde en mÃ©moire et comprendre quelles Ã©motions se cachent derriÃ¨re tes tensions. En les relÃ¢chant, ton systÃ¨me nerveux retrouve sa capacitÃ© Ã  se rÃ©guler. Le massage de rÃ©harmonisation et d'ancrage agit aussi sur ce lien entre corps et Ã©motions : en dÃ©tendant le corps, il laisse circuler ce qui y Ã©tait logÃ©. C'est une porte d'entrÃ©e douce et puissante si tu as du mal Ã  te poser et Ã  recevoir. Une premiÃ¨re sÃ©ance crÃ©e souvent un vrai dÃ©placement.",
+      ctas: [{ label: "RÃ©server une sÃ©ance", url: "https://tidycal.com/elodie-nirennold" }],
+    },
+    mid: {
+      title: "Ton corps envoie des signaux clairs",
+      p1: "Ton corps parle. Tensions, fatigue qui ne passe pas avec le repos, systÃ¨me nerveux qui ne descend plus vraiment. Il ne crie pas encore mais il insiste. Et tu le sais.",
+      p2: "Il y a quelque chose qui cherche Ã  circuler, Ã  Ãªtre libÃ©rÃ©. Quelque chose que les mots n'ont pas encore rÃ©ussi Ã  atteindre. Ton corps est en avance sur ta tÃªte, et c'est une information prÃ©cieuse.",
+      aide: "Comment je peux t'aider : l'ostÃ©opathie somato-Ã©motionnelle pour Ã©couter ce que ton corps garde en mÃ©moire et comprendre quelles Ã©motions se cachent derriÃ¨re tes tensions. En les relÃ¢chant, ton systÃ¨me nerveux retrouve sa capacitÃ© Ã  se rÃ©guler. Le massage de rÃ©harmonisation et d'ancrage agit aussi sur ce lien entre corps et Ã©motions : en dÃ©tendant le corps, il laisse circuler ce qui y Ã©tait logÃ©. C'est une porte d'entrÃ©e douce et puissante si tu as du mal Ã  te poser et Ã  recevoir. Une premiÃ¨re sÃ©ance crÃ©e souvent un vrai dÃ©placement.",
+      ctas: [{ label: "RÃ©server une sÃ©ance", url: "https://tidycal.com/elodie-nirennold" }],
+    },
+    high: {
+      title: "Ton corps a besoin d'Ãªtre entendu maintenant",
+      p1: "Ton corps ne chuchote plus. Il retient, il compense, il sature. La fatigue est profonde. Le systÃ¨me nerveux est en alerte chronique. Et tu as appris Ã  fonctionner malgrÃ© tout, au prix d'un effort invisible que tu portes seul.",
+      p2: "Ce n'est pas de la faiblesse. C'est le signe que ton corps a accumulÃ© plus qu'il ne peut continuer Ã  gÃ©rer seul.",
+      aide: "Comment je peux t'aider : l'ostÃ©opathie somato-Ã©motionnelle pour Ã©couter ce que ton corps garde en mÃ©moire et comprendre quelles Ã©motions se cachent derriÃ¨re tes tensions. En les relÃ¢chant, ton systÃ¨me nerveux retrouve sa capacitÃ© Ã  se rÃ©guler. Le massage de rÃ©harmonisation et d'ancrage agit aussi sur ce lien entre corps et Ã©motions : en dÃ©tendant le corps, il laisse circuler ce qui y Ã©tait logÃ©. C'est une porte d'entrÃ©e douce et puissante si tu as du mal Ã  te poser et Ã  recevoir. Une premiÃ¨re sÃ©ance crÃ©e souvent un vrai dÃ©placement.",
+      ctas: [
+        { label: "RÃ©server une sÃ©ance", url: "https://tidycal.com/elodie-nirennold" },
+        { label: "En savoir plus sur l'accompagnement", url: "https://coccinellodie.github.io/elodienirennold.com/accompagnements.html" },
+      ],
+    },
+  },
+  subconscient: {
+    low: {
+      title: "Quelque chose en toi est relativement accessible",
+      p1: "Tu arrives Ã  accÃ©der Ã  ce que tu ressens. Le mental ne te dÃ©borde pas trop. Les schÃ©mas que tu vois, tu peux les travailler par la rÃ©flexion et la volontÃ©.",
+      p2: "Ce n'est pas pour autant qu'il n'y a rien sous la surface. Mais pour l'instant, les outils conscients te suffisent, ou tu n'as pas encore senti l'appel d'aller plus loin.",
+      aide: "Comment je peux t'aider : l'hypnose pour aller lÃ  oÃ¹ la volontÃ© et l'analyse ne passent pas. Elle permet de rencontrer les parts de toi qui se sont figÃ©es pour te protÃ©ger, et de relÃ¢cher ce qui se rejoue sans que tu l'aies choisi. Une sÃ©ance crÃ©e souvent un vrai dÃ©placement, et c'est un excellent point de dÃ©part pour stabiliser ensuite dans la durÃ©e.",
+      ctas: [{ label: "RÃ©server une sÃ©ance", url: "https://tidycal.com/elodie-nirennold" }],
+    },
+    mid: {
+      title: "Quelque chose cherche Ã  Ãªtre atteint au-delÃ  des mots",
+      p1: "Tu travailles sur toi. Tu comprends beaucoup de choses. Et pourtant, il y a des endroits que la rÃ©flexion n'atteint pas. Des schÃ©mas qui reviennent. Des Ã©motions qui restent floues. Une fatigue de comprendre sans que Ã§a change vraiment.",
+      p2: "Ce n'est pas un Ã©chec. C'est le signe que la prochaine Ã©tape ne passe pas par la tÃªte, mais par quelque chose de plus profond.",
+      aide: "Comment je peux t'aider : l'hypnose pour aller lÃ  oÃ¹ la volontÃ© et l'analyse ne passent pas. Elle permet de rencontrer les parts de toi qui se sont figÃ©es pour te protÃ©ger, et de relÃ¢cher ce qui se rejoue sans que tu l'aies choisi. Une sÃ©ance crÃ©e souvent un vrai dÃ©placement, et c'est un excellent point de dÃ©part pour stabiliser ensuite dans la durÃ©e.",
+      ctas: [{ label: "RÃ©server une sÃ©ance", url: "https://tidycal.com/elodie-nirennold" }],
+    },
+    high: {
+      title: "Quelque chose en toi t'attend",
+      p1: "Tu te regardes faire. Tu sais exactement ce que tu reproduis. Et tu le fais quand mÃªme. La tÃªte a tout compris, le systÃ¨me, lui, continue. Le mental tourne la nuit. La peur de l'effondrement pilote en fond. Et il y a quelque chose en toi qui sait que la prochaine Ã©tape ne passera pas par les mots.",
+      p2: "C'est lÃ  que l'hypnose intervient. Pas pour supprimer ce qui te protÃ¨ge, pour lui permettre d'Ãªtre enfin entendu, compris, apaisÃ© Ã  la source.",
+      aide: "Comment je peux t'aider : l'hypnose pour aller lÃ  oÃ¹ la volontÃ© et l'analyse ne passent pas. Elle permet de rencontrer les parts de toi qui se sont figÃ©es pour te protÃ©ger, et de relÃ¢cher ce qui se rejoue sans que tu l'aies choisi. Une sÃ©ance crÃ©e souvent un vrai dÃ©placement, et c'est un excellent point de dÃ©part pour stabiliser ensuite dans la durÃ©e.",
+      ctas: [
+        { label: "RÃ©server une sÃ©ance", url: "https://tidycal.com/elodie-nirennold" },
+        { label: "En savoir plus sur l'accompagnement", url: "https://coccinellodie.github.io/elodienirennold.com/accompagnements.html" },
+      ],
+    },
+  },
+  liens: {
+    low: {
+      title: "Tes liens sont relativement sÃ©curisÃ©s",
+      p1: "Tu arrives Ã  poser des limites, Ã  recevoir, Ã  rester toi-mÃªme dans le lien. Ce n'est pas parfait, Ã§a ne l'est pour personne, mais tu ne fonctionnes pas en mode survie relationnelle chronique.",
+      p2: "Si tu es ici, c'est peut-Ãªtre que quelque chose d'autre t'appelle. Ou que tu veux consolider ce qui est dÃ©jÃ  lÃ , avant que Ã§a coÃ»te davantage.",
+      aide: "Comment je peux t'aider : une sÃ©ance de coaching intÃ©gratif de 1h30, au cabinet Ã  Levallois-Perret ou en visio, pour comprendre ce qui se joue en toi quand le lien vacille. On repÃ¨re ensemble oÃ¹ tu t'adaptes jusqu'Ã  t'oublier et ce que tu veux vraiment dans tes relations. Tu repars avec plus d'ancrage et des appuis concrets pour rester en lien sans te trahir, ni t'Ã©puiser.",
+      ctas: [{ label: "RÃ©server une sÃ©ance", url: "https://tidycal.com/elodie-nirennold" }],
+    },
+    mid: {
+      title: "Tes liens te coÃ»tent plus qu'ils ne te nourrissent",
+      p1: "Tu donnes. Tu t'effaces. Tu surveilles. Tu analyses les silences. Et tu tiens en surface pour que Ã§a tienne autour de toi. Mais intÃ©rieurement, il y a une fatigue relationnelle que peu de gens voient.",
+      p2: "Recevoir sans culpabiliser. Dire ce que tu penses sans avoir peur de perdre le lien. Rester toi-mÃªme sans t'amputer. C'est possible, mais Ã§a ne se fait pas uniquement par la volontÃ©.",
+      aide: "Comment je peux t'aider : une sÃ©ance de coaching intÃ©gratif de 1h30, au cabinet Ã  Levallois-Perret ou en visio, pour comprendre ce qui se joue en toi quand le lien vacille. On repÃ¨re ensemble oÃ¹ tu t'adaptes jusqu'Ã  t'oublier et ce que tu veux vraiment dans tes relations. Tu repars avec plus d'ancrage et des appuis concrets pour rester en lien sans te trahir, ni t'Ã©puiser.",
+      ctas: [{ label: "RÃ©server une sÃ©ance", url: "https://tidycal.com/elodie-nirennold" }],
+    },
+    high: {
+      title: "Tu survis dans le lien",
+      p1: "Tu surveilles l'Ã©tat du lien en permanence. Tu donnes avant qu'on demande. Tu t'effaces avant qu'on reproche. Et recevoir, vraiment recevoir, sans te sentir aussitÃ´t en dette, tu ne sais plus comment c'est.",
+      p2: "Ce n'est pas de la gÃ©nÃ©rositÃ©. C'est une stratÃ©gie de survie construite depuis longtemps. Et elle t'Ã©puise.",
+      p3: "Quelque chose doit changer, pas juste dans ta tÃªte. Dans ton systÃ¨me nerveux, dans tes automatismes, dans la faÃ§on dont tu te tiens dans le lien.",
+      aide: "Comment je peux t'aider : une sÃ©ance de coaching intÃ©gratif de 1h30, au cabinet Ã  Levallois-Perret ou en visio, pour comprendre ce qui se joue en toi quand le lien vacille. On repÃ¨re ensemble oÃ¹ tu t'adaptes jusqu'Ã  t'oublier et ce que tu veux vraiment dans tes relations. Tu repars avec plus d'ancrage et des appuis concrets pour rester en lien sans te trahir, ni t'Ã©puiser.",
+      ctas: [
+        { label: "Appel clartÃ© gratuit Â· 45 min", url: "https://tidycal.com/elodie-nirennold/appel-clarte-gratuit-coaching-integratif" },
+        { label: "RÃ©server une sÃ©ance", url: "https://tidycal.com/elodie-nirennold" },
+      ],
+    },
+  },
+};
+
+function getPalier(score) {
+  if (score <= 5)  return 'low';
+  if (score <= 11) return 'moderate';
+  return 'elevated';
+}
+
+function getBand(score) {
+  if (score <= 5)  return 'low';
+  if (score <= 11) return 'mid';
+  return 'high';
+}
+
+function renderDimResult(containerId, dimKey, icon, dimName, score, palier) {
+  const bandKey = palier === 'elevated' ? 'high' : palier === 'moderate' ? 'mid' : 'low';
+  const data = RESULTS_DATA[dimKey][bandKey];
+  const container = document.getElementById(containerId);
+  const extraP = data.p3 ? '<p>' + data.p3 + '</p>' : '';
+  let ctaHtml;
+  if (palier === 'elevated') {
+    ctaHtml = '<div class="rdc-cta-wrap"><a href="https://tidycal.com/elodie-nirennold" target="_blank" class="rdc-cta-link">ðð½ RÃ©server une sÃ©ance</a><a href="https://tidycal.com/elodie-nirennold/appel-clarte-gratuit-coaching-integratif" target="_blank" class="rdc-cta-link">ðð½ Appel clartÃ© gratuit Â· 45 min</a></div>';
+  } else {
+    ctaHtml = '<div class="rdc-cta-wrap"><a href="https://tidycal.com/elodie-nirennold" target="_blank" class="rdc-cta-link">ðð½ RÃ©server une sÃ©ance</a></div>';
+  }
+  container.innerHTML = '<div class="rdc-header"><span class="rdc-icon">' + icon + '</span><span class="rdc-dim-name">' + dimName + '</span></div><h3>' + data.title + '</h3><p>' + data.p1 + '</p><p>' + data.p2 + '</p>' + extraP + '<div class="rdc-aide">' + data.aide + '</div>' + ctaHtml;
+}
+
+function showResults() {
+  goTo('screen-results');
+
+  const sC = getScore(0);
+  const sI = getScore(1);
+  const sL = getScore(2);
+  const max = 15;
+  const scores = [sC, sI, sL];
+  const maxScore = Math.max(...scores);
+
+  const greeting = userName ? 'Tes rÃ©sultats, ' + userName : 'Tes rÃ©sultats';
+  document.getElementById('results-greeting').textContent = greeting;
+
+  setTimeout(function() {
+    document.getElementById('bar-corps').style.width        = (sC / max * 100) + '%';
+    document.getElementById('bar-subconscient').style.width = (sI / max * 100) + '%';
+    document.getElementById('bar-liens').style.width        = (sL / max * 100) + '%';
+  }, 100);
+
+  document.getElementById('pct-corps').textContent        = sC + '/15';
+  document.getElementById('pct-subconscient').textContent = sI + '/15';
+  document.getElementById('pct-liens').textContent        = sL + '/15';
+
+  const allZero = maxScore === 0;
+  const allLow  = !allZero && scores.every(function(s) { return s <= 5; });
+  const dominants = scores.reduce(function(acc, s, i) { if (s === maxScore) acc.push(i); return acc; }, []);
+  const highCount = scores.filter(function(s) { return s >= 12; }).length;
+
+  // Phrase miroir
+  var mirrorText;
+  if (allZero) {
+    mirrorText = "Ton bilan est lumineux aujourd'hui. Rien ne ressort en tension particuliÃ¨re. Si tu as fait ce bilan, c'est souvent qu'une petite voix cherche quand mÃªme quelque chose. Si tu veux, Ã©cris-moi, on peut regarder ensemble ce qui t'a amenÃ© ici.";
+  } else if (allLow) {
+    mirrorText = "Rien n'est en zone de forte tension aujourd'hui, et c'est prÃ©cieux. Si un domaine ressort un peu plus que les autres, c'est lÃ  que tu peux agir en douceur, avant que Ã§a s'installe.";
+  } else if (highCount >= 3) {
+    mirrorText = "Trois domaines ressortent haut. Corps, subconscient, liens : tout est en mouvement en mÃªme temps. Ce n'est pas un problÃ¨me. C'est souvent le signe que quelque chose cherche Ã  se rÃ©organiser en profondeur.";
+  } else if (highCount === 2) {
+    mirrorText = "Deux domaines ressortent haut. Corps, subconscient et liens sont reliÃ©s : quand l'un est en tension, les autres suivent souvent. Ce bilan te donne deux portes d'entrÃ©e.";
+  } else if (highCount === 1) {
+    mirrorText = "Un domaine ressort clairement. C'est lÃ  que ton Ã©nergie est la plus sollicitÃ©e en ce moment, et c'est par lÃ  que commence le vrai mouvement.";
+  } else {
+    mirrorText = "Ton bilan dessine quelque chose. Un domaine parle un peu plus fort que les autres en ce moment. C'est une invitation Ã  l'Ã©couter.";
+  }
+  document.getElementById('result-mirror').innerHTML = '<p class="mirror-phrase">' + mirrorText + '</p>';
+
+  // Phrase de transition (Ã©galitÃ© au sommet)
+  if (!allZero && dominants.length > 1) {
+    var count = dominants.length === 2 ? 'Deux' : 'Trois';
+    var dimParts = dominants.map(function(i) { return DIMENSIONS[i].name + 'Â ' + DIMENSIONS[i].icon; }).join(' et ');
+    document.getElementById('result-transition').innerHTML = '<p class="transition-phrase">' + count + ' domaines ressortent au mÃªme niveauÂ : ' + dimParts + '. Lis les deux. Puis pose une main sur ton ventre et sens lequel rÃ©sonne le plus fort dans ton corps en ce moment. Pas dans ta tÃªte. Ton corps sait.</p>';
+  } else {
+    document.getElementById('result-transition').innerHTML = '';
+  }
+
+  // Blocs de domaine
+  var dimKeys  = ['corps', 'subconscient', 'liens'];
+  var dimIcons = ['ð¿', 'ð¦', 'â¥ï¸'];
+  var dimNames = ['Corps', 'Subconscient', 'Liens']7
+
+  dimKeys.forEach(function(key, i) {
+    var el = document.getElementById('result-' + key);
+    if (allZero) {
+      el.style.display = 'none';
+    } else if (dominants.includes(i)) {
+      el.style.display = '';
+      var palier = getPalier(scores[i]);
+      if (allLow) palier = 'moderate';
+      renderDimResult('result-' + key, key, dimIcons[i], dimNames[i], scores[i], palier);
+    } else {
+      el.style.display = 'none';
+    }
+  });
+
+  // Bloc de clÃ´ture
+  var nowCard = document.getElementById('now-card');
+  if (allZero) {
+    nowCard.innerHTML = '<h2>Un bilan lumineux</h2><p>Si une petite voix t\'a quand mÃªme amenÃ© ici, Ã©cris-moi. On peut regarder ensemble ce qui cherche.</p><a href="mailto:contact@elodienirennold.com" class="now-email-link">contact@elodienirennold.com</a>';
+  } else {
+    nowCard.innerHTML = '<h2>Tu hÃ©sitesÂ ?</h2><p>Si tu n\'es pas sÃ»r par oÃ¹ commencer, ou si tu veux qu\'on regarde ensemble ce qui est le plus juste pour toi, Ã©cris-moi directement.</p><a href="mailto:contact@elodienirennold.com" class="now-email-link">contact@elodienirennold.com</a>';
+  }
+}
+
+// PREVIEW MODE
+// ?preview=corps / subconscient / liens / low / mid
+if (params.get('preview') !== null) {
+  const p = params.get('preview') || 'corps';
+  if (p === 'low') {
+    answers[0]=[0,1,0,0,0]; answers[1]=[0,0,1,0,0]; answers[2]=[0,0,0,1,0];
+  } else if (p === 'subconscient') {
+    answers[0]=[1,1,1,1,1]; answers[1]=[3,3,3,3,3]; answers[2]=[1,1,1,1,1];
+  } else if (p === 'liens') {
+    answers[0]=[1,1,1,1,1]; answers[1]=[1,1,1,1,1]; answers[2]=[3,3,3,3,3];
+  } else if (p === 'mid') {
+    answers[0]=[2,2,2,2,2]; answers[1]=[2,2,2,2,2]; answers[2]=[2,2,2,2,2];
+  } else {
+    answers[0]=[3,3,3,3,3]; answers[1]=[1,1,1,1,1]; answers[2]=[2,2,2,2,2];
+  }
+  userName = 'Elodie';
+  showResults();
+}
+</script>
+</body>
+</html>

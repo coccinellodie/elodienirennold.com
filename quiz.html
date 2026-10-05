@@ -13,6 +13,9 @@
     --vert-light: #3A5C30;
     --vert-mid: #6A8A60;
     --rose: #C4897A;
+    --vieux-rose: #C4897A;
+    --mauve: #9B7FAF;
+    --bordeaux: #8B3A52;
     --bois: #8B6F5E;
     --dark: #2C2420;
     --muted: #9A8880;
@@ -242,8 +245,8 @@
   .dim-score-box .dsb-bar-bg { background: var(--beige2); border-radius: 6px; height: 8px; overflow: hidden; margin-bottom: 6px; }
   .dim-score-box .dsb-bar-fill { height: 100%; border-radius: 6px; transition: width 1.2s cubic-bezier(0.25,0.46,0.45,0.94); width: 0; }
   .dsb-corps .dsb-bar-fill { background: linear-gradient(90deg, var(--vert), #4A6741); }
-  .dsb-inconscient .dsb-bar-fill { background: linear-gradient(90deg, var(--rose), #D4A090); }
-  .dsb-liens .dsb-bar-fill { background: linear-gradient(90deg, var(--bois), #A88A7A); }
+  .dsb-subconscient .dsb-bar-fill { background: linear-gradient(90deg, var(--mauve), #B49FC0); }
+  .dsb-liens .dsb-bar-fill { background: linear-gradient(90deg, var(--bordeaux), #A85070); }
   .dim-score-box .dsb-pct { font-size: 0.78rem; color: var(--muted); }
 
   .result-dim-card {
@@ -282,12 +285,16 @@
     margin-bottom: 12px;
   }
   .result-dim-card .rdc-aide {
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 0.01em;
     color: var(--bois);
     margin: 20px 0 10px;
+    background: var(--beige2);
+    border-radius: 8px;
+    padding: 14px 18px;
   }
   .result-dim-card .rdc-ctas {
     display: flex;
@@ -367,20 +374,25 @@
 </div>
 
 <!-- SCREEN 0 - WELCOME -->
-<div id="screen-welcome" class="screen active" style="gap:20px; padding-top:80px;">
+<div id="screen-welcome" class="screen active" style="gap:20px; padding-top:80px; position:relative; overflow:hidden;">
 
-  <div style="text-align:center;">
-    <span style="display:inline-block; background:rgba(106,138,96,0.12); border-radius:50px; padding:6px 20px; font-size:0.72rem; letter-spacing:0.16em; text-transform:uppercase; color:#6A8A60;">Bilan gratuit</span>
+  <!-- Décors vieux rose -->
+  <div aria-hidden="true" style="position:absolute; top:40px; right:-30px; width:200px; height:200px; border-radius:50%; background:radial-gradient(circle, rgba(196,137,122,0.14) 0%, rgba(196,137,122,0.05) 55%, transparent 75%); pointer-events:none;"></div>
+  <div aria-hidden="true" style="position:absolute; bottom:80px; left:-40px; width:160px; height:160px; border-radius:50%; background:radial-gradient(circle, rgba(196,137,122,0.10) 0%, transparent 70%); pointer-events:none;"></div>
+
+  <div style="text-align:center; position:relative; z-index:1;">
+    <span style="display:inline-block; background:rgba(196,137,122,0.12); border-radius:50px; padding:6px 20px; font-size:0.72rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--rose);">Bilan gratuit</span>
   </div>
 
-  <div style="text-align:center; margin:4px 0;">
+  <div style="text-align:center; margin:4px 0; position:relative; z-index:1;">
     <h1 style="font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,5.5vw,3rem); font-weight:300; line-height:1.2; color:var(--dark);">
       Ton corps parle.<br>
       Quelque chose en toi résiste encore.<br>
       Tes liens t'épuisent.<br>
       <span style="color:var(--muted); font-size:0.82em;">Par où commencer ?</span>
     </h1>
-    <p style="margin-top:20px; font-family:'Cormorant Garamond',serif; font-size:1.15rem; color:var(--dark); line-height:1.6;">
+    <div style="width:56px; height:2px; background:linear-gradient(90deg, transparent, var(--rose), transparent); border-radius:2px; margin:20px auto 16px;"></div>
+    <p style="font-family:'Cormorant Garamond',serif; font-size:1.15rem; color:var(--dark); line-height:1.6;">
       Tu sais beaucoup sur toi. Les schémas reviennent quand même.<br>
       <span style="color:var(--muted);">Identifie où ça résiste encore, dans ton corps, ta tête ou tes liens.</span>
     </p>
@@ -389,7 +401,7 @@
     </p>
   </div>
 
-  <div style="text-align:center; margin-top:8px;">
+  <div style="text-align:center; margin-top:8px; position:relative; z-index:1;">
     <button class="btn-primary" onclick="startQuiz()" style="border-radius:6px; padding:17px 52px; letter-spacing:0.1em; font-size:0.88rem;">FAIRE MON BILAN GRATUIT</button>
     <p style="margin-top:12px; font-size:0.8rem; color:var(--muted);">21 questions · 6 minutes · Gratuit et confidentiel</p>
   </div>
@@ -453,12 +465,12 @@
   </div>
 </div>
 
-<!-- SCREEN 5 - DIM 2 INTRO (INCONSCIENT) -->
+<!-- SCREEN 5 - DIM 2 INTRO (SUBCONSCIENT) -->
 <div id="screen-dim2-intro" class="screen">
-  <div class="dim-icon center">🌸</div>
-  <span class="dim-badge" style="align-self:center; background:var(--rose);">Dimension 2 / 3</span>
+  <div class="dim-icon center">🌷</div>
+  <span class="dim-badge" style="align-self:center; background:var(--mauve);">Dimension 2 / 3</span>
   <div class="center">
-    <h2>L'Inconscient</h2>
+    <h2>Le Subconscient</h2>
     <p class="italic muted" style="margin-top:4px;">Ce que ta tête ne peut pas regler seule</p>
   </div>
   <div class="card">
@@ -475,8 +487,8 @@
 
 <!-- SCREEN 6 - DIM 3 INTRO (LIENS) -->
 <div id="screen-dim3-intro" class="screen">
-  <div class="dim-icon center">🌱</div>
-  <span class="dim-badge" style="align-self:center; background:var(--bois);">Dimension 3 / 3</span>
+  <div class="dim-icon center">♥️</div>
+  <span class="dim-badge" style="align-self:center; background:var(--bordeaux);">Dimension 3 / 3</span>
   <div class="center">
     <h2>Les Liens</h2>
     <p class="italic muted" style="margin-top:4px;">Ce que tes relations te coûtent</p>
@@ -509,14 +521,14 @@
       <div class="dsb-bar-bg"><div class="dsb-bar-fill" id="bar-corps"></div></div>
       <div class="dsb-pct" id="pct-corps"></div>
     </div>
-    <div class="dim-score-box dsb-inconscient">
-      <div class="dsb-icon">🌸</div>
-      <div class="dsb-name">Inconscient</div>
-      <div class="dsb-bar-bg"><div class="dsb-bar-fill" id="bar-inconscient"></div></div>
-      <div class="dsb-pct" id="pct-inconscient"></div>
+    <div class="dim-score-box dsb-subconscient">
+      <div class="dsb-icon">🌷</div>
+      <div class="dsb-name">Subconscient</div>
+      <div class="dsb-bar-bg"><div class="dsb-bar-fill" id="bar-subconscient"></div></div>
+      <div class="dsb-pct" id="pct-subconscient"></div>
     </div>
     <div class="dim-score-box dsb-liens">
-      <div class="dsb-icon">🌱</div>
+      <div class="dsb-icon">♥️</div>
       <div class="dsb-name">Liens</div>
       <div class="dsb-bar-bg"><div class="dsb-bar-fill" id="bar-liens"></div></div>
       <div class="dsb-pct" id="pct-liens"></div>
@@ -525,7 +537,7 @@
 
   <!-- Résultats par dimension -->
   <div id="result-corps" class="result-dim-card"></div>
-  <div id="result-inconscient" class="result-dim-card"></div>
+  <div id="result-subconscient" class="result-dim-card"></div>
   <div id="result-liens" class="result-dim-card"></div>
 
   <!-- Et maintenant -->
@@ -547,9 +559,9 @@
 
 <script>
 const DIMENSIONS = [
-  { id: 'corps',       name: 'Corps',       icon: '🌿', introScreen: 'screen-dim1-intro' },
-  { id: 'inconscient', name: 'Inconscient', icon: '🌸', introScreen: 'screen-dim2-intro' },
-  { id: 'liens',       name: 'Liens',       icon: '🌱', introScreen: 'screen-dim3-intro' },
+  { id: 'corps',        name: 'Corps',        icon: '🌿', introScreen: 'screen-dim1-intro' },
+  { id: 'subconscient', name: 'Subconscient', icon: '🌷', introScreen: 'screen-dim2-intro' },
+  { id: 'liens',        name: 'Liens',        icon: '♥️', introScreen: 'screen-dim3-intro' },
 ];
 
 const QUESTIONS = [
@@ -597,7 +609,7 @@ const QUESTIONS = [
     { letter:'D', text:"Souvent. Mon corps capte des choses que ma tête met du temps à formuler.", score:3 },
   ]},
 
-  // INCONSCIENT (dim 1) - 7 questions
+  // SUBCONSCIENT (dim 1) - 7 questions
   { dim:1, text:"J'ai travaillé sur moi. Thérapie, lectures, développement personnel. Je comprends beaucoup de choses. Et pourtant, les mêmes schémas reviennent. Comme si comprendre ne suffisait pas à changer.", options:[
     { letter:'A', text:"Pas encore vraiment. Je n'ai pas fait ce type de travail.", score:1 },
     { letter:'B', text:"Un peu. Des éclairs de compréhension, mais les vieilles habitudes restent.", score:2 },
@@ -809,81 +821,158 @@ const RESULTS_DATA = {
       title: "Ton corps est relativement calme",
       p1: "Ton corps n'est pas en crise. Il parle, parfois, mais tu arrives encore à l'entendre, ou à trouver un équilibre qui tient. Ce n'est pas une urgence corporelle qui se signale en toi en ce moment.",
       p2: "Ce n'est pas pour autant qu'il n'y a rien. La fatigue légère, les tensions ponctuelles, le sentiment de flotter parfois, tout ça mérite d'être entendu avant que le corps ait besoin de parler plus fort.",
-      aide: "Comment je peux t'aider : une séance ponctuelle d'ostéopathie somato-émotionnelle ou un massage de réharmonisation et ancrage pour faire le point, sentir ce que tu portes et repartir avec plus d'ancrage.",
+      aide: "comment je peux t'aider : une séance ponctuelle d'ostéopathie somato-émotionnelle ou un massage de réharmonisation et ancrage pour faire le point, sentir ce que tu portes et repartir avec plus d'ancrage.",
       ctas: [{ label: "Réserver une séance", url: "https://tidycal.com/elodie-nirennold" }],
     },
     mid: {
       title: "Ton corps envoie des signaux clairs",
       p1: "Ton corps parle. Tensions, fatigue qui ne passe pas avec le repos, système nerveux qui ne descend plus vraiment. Il ne crie pas encore mais il insiste. Et tu le sais.",
-      p2: "Il y a quelque chose qui cherche à circuler, à être libére. Quelque chose que les mots n'ont pas encore réussi à atteindre. Ton corps est en avance sur ta tête, et c'est une information précieuse.",
-      aide: "Comment je peux t'aider : l'ostéopathie somato-émotionnelle pour entrer en contact avec ce que ton corps retient, libérer les tensions enkystées et redonner au système nerveux la possibilité de se réguler. Le massage de réharmonisation et ancrage peut aussi être une porte d'entrée douce et puissante. Une première séance crée souvent un vrai déplacement.",
-      ctas: [{ label: "Réserve\�[�H��X[��H�\���΋��YX�[���K�[�YK[�\�[����WK�K�Y��]N��ۈ�ܜ�H�\��[�	���H[�[�HXZ[�[�[���N��ۈ�ܜ��H�X��H\ˈ[�]Y[�[��\[��K[�]\�K�H�]Y�YH\��ٛۙK�H�\�0�YH�\��]^\�[�[\�H��ۚ\]YK�]H\�\�\�0��ۘ�[ۛ�\�X[ܰ�H�]]H�^	�[�Y��ܝ[��\�X�H]YHHܝ\��][�������H��\�\�HH�ZX�\��K���\�H�YۙH]YHۈ�ܜ�HX��[][0�H\�]I�[�H]]�۝[�Y\�0���\�\��][���ZYN����[Y[��H]^	�ZY\����[Y[��\�\�[�H��X[��H	���0�[�]YH��X]�p�[[�[ۛ�[H�H[�X\��Y�HH��Z\�[ۚ\�][ۈ][�ܘY�H�\�X��\�\��H]YHH�ܜ��]Y[���H\����]H��X[��H]Y[]YH���H���]��K[��Y�H[��H\��YH\�Y]H��X�\�\�\��H]ZH�HX���H]H�H\�H�]�X�\�����\Έ�X�[����\�\��\�[�H��X[��H�\���΋��YX�[���K�[�YK[�\�[����K��X�[��[��]��\�\��\�	�X���\Yۙ[Y[��\���΋������[�[�YK��]X��[��[�Y[�\�[������K�X���\Yۙ[Y[�˚[�K�K�K�K�[��ۜ��Y[���Έ]N��]Y[]YH���H[��H\��[]]�[Y[�X��\��X�H��N��H\��]�\�0�X���Y\�0��H]YHH�\��[�ˈHY[�[�HH0�X�ܙH\����\���0�[X\�]YHH��\�H]^\��]�Z[\�\�H��Y�^[ۈ]H��۝0�K�������H��\�\��\�]][�]I�[��HH�Y[���\�H�\��X�K�XZ\��\�	�[��[�\��][��ۜ��Y[��H�Y��\�[��HH��\�\�[��ܙH�[�H	�\[	�[\�\��[����ZYN����[Y[��H]^	�ZY\���H[���\�H�[��]YH��\�[��H�H�Y��]\�]YHHH�Y�\�\��Z\�H�[���]��\�	�\���\�	�\���H\�0��[�][�[�[�H��X[��Hۘ�Y[H]]0��H[��[\�X�H	�^ܘ][ۋ����\Έ��X�[����\�\��\�[�H��X[��H�\���΋��YX�[���K�[�YK[�\�[����WK�K�ZY�]N��]Y[]YH���H�\��H0�0��H]Z[�]KY[0�\�[�ȋ�N��H�]�Z[\��\��K�H��\�[���X]X��\H���\ˈ]�\�[�[HH\�[���]�]YHH��Y�^[ۈ��]Z[�\ˈ\���0�[X\�]ZH�]�Y[��[��\�0�[[�[ۜ�]ZH�\�[���Y\ˈ[�H�]Y�YHH��\�[��H�[��]YH0��H�[��H��Z[Y[��������H��\�\�[�0�X�Xˈ��\�H�YۙH]YHH���Z[�H0�]\H�H\��H\�\�H0�KXZ\�\�]Y[]YH���HH\��ٛۙ���ZYN����[Y[��H]^	�ZY\��	�\���H�\�X���Y\�]^��X�\�]YHH��۝0�H�][H�H]]\�]Z[��K�X��\�\�\�p�[[�\�\�\�\���Y��Y\��H]ZH�H�Z��YH�[��]YHH	�ZY\���\�K�[�H��X[��Hܰ�YH��]�[�[�0�\X�[Y[�]YH\�[���Y\�H��Y�^[ۈ��۝\���Z]����\Έ��X�[����\�\��\�[�H��X[��H�\���΋��YX�[���K�[�YK[�\�[����WK�K�Y��]N��]Y[]YH���H[��H	�][���N��HH�Y�\�\��Z\�K�H�Z\�^X�[Y[��H]YHH�\��Z\ˈ]HH�Z\�]X[�p�YK�H0�HH�]��\�\�H�\�0�YKZK�۝[�YK�HY[�[�\��HH�Z]�H]\�H	�Y��ۙ�[Y[�[�H[��ۙ�][HH]Y[]YH���H[��H]ZH�Z]]YHH���Z[�H0�]\H�H\��\�H\�\�\�[�ˈ�������\�0�]YH	�\���H[�\��Y[��\��\��\�[Y\��H]ZHH��0��K�\�ZH\�Y]�H	���H[��[�[�[�K��\�\�\Z\��H0�H��\��K���ZYN����[Y[��H]^	�ZY\��[�H��X[��H	�\���H�\�[��\�[��۝X�]�X��H]ZH�H�Z��YH[��ٛۙ]\���H\�Y]\��[Y[��[ۜ��۝[�[��[ۋ[�X���\Yۙ[Y[�[�0�Yܘ]Y�[��H\��YH\�Y]�HH�[Y\�\��[�]H�Z\�H[�\��H]ZH���]��K����\Έ�X�[����\�\��\�[�H��X[��H�\���΋��YX�[���K�[�YK[�\�[����K��X�[��[��]��\�\��\�	�X���\Yۙ[Y[��\���΋������[�[�YK��]X��[��[�Y[�\�[������K�X���\Yۙ[Y[�˚[�K�K�K�K�Y[�Έ�Έ]N��\�Y[���۝�[]]�[Y[���X�\�\��\ȋ�N��H\��]�\�0���\�\�[Z]\�0��X�]��\�0��\�\��K[p�YH[��HY[���H��\�\�\��Z]0��H�H	�\��\�\��ۛ�KXZ\�H�H�ۘ�[ۛ�\�\�[�[�H�\��YH�[][ۛ�[H��ۚ\]YK�������HH\�X�K��\�]]p��H]YH]Y[]YH���H	�]]�H	�\[K��H]YHH�]^�ۜ��Y\��H]ZH\�0�Z��0�]�[�]YH0��H����H]�[�Y�K���ZYN����[Y[��H]^	�ZY\��[�H��X[��Hۘ�Y[HH��X�[��[�0�Yܘ]Y��\��Z\�HH�[��\�Y�Y\��H]YHH�]^��Z[Y[�[��\��[][ۜ�]�\\�\�]�X�\�	�[�ܘY�K����\Έ��X�[����\�\��\�[�H��X[��H�\���΋��YX�[���K�[�YK[�\�[����WK�K�ZY�]N��\�Y[��H����[�\�]I�[��HH��\��\��[���N��Hۛ�\ˈH	�Y��X�\ˈH�\��Z[\ˈH[�[\�\�\��[[��\ˈ]HY[��[��\��X�H�\�]YH0��HY[��H]]�\�H�K�XZ\�[�0�\�Y]\�[Y[�[HH[�H�]Y�YH�[][ۛ�[H]YH]HH�[����Y[��������X�]��\��[���[X�[\�\��\�H�H]YHH[��\��[��]��\�]\�H\��HHY[���\�\��K[p�YH�[��	�[\]\����\����X�KXZ\�0��H�H�H�Z]\�[�\]Y[Y[�\�H��۝0�K���ZYN����[Y[��H]^	�ZY\��[�H��X[��HH��X�[��[�0�Yܘ]Y��\���[Y[��\�0�0�\��\��H]YHHܝ\�[��HY[�]^ܙ\�\���H0��H[X[�H0��[��\�����\Έ��X�[����\�\��\�[�H��X[��H�\���΋��YX�[���K�[�YK[�\�[����WK�K�Y��]N��H�\��\�[��HY[���N��H�\��Z[\�	��]]HY[�[�\�X[�[��K�Hۛ�\�]�[�]I�ۈ[X[�K�H	�Y��X�\�]�[�]I�ۈ�\���K�]�X�]��\���Z[Y[��X�]��\��[��H�[�\�]\��]0�[�]KH�H�Z\�\���[Y[���\��������H��\�\�HH��[��\���]0�K���\�[�H��]0�Y�YHH�\��YH�ۜ��Z]H\Z\�ۙ�[\ˈ][H	��\Z\�K���Έ�]Y[]YH���H�]�[��\�\��\�H[��H0�K�[��ۈ�\�0�YH�\��]^[��\�]]�X]\�Y\�[��H�p��ۈ۝HHY[��[��HY[����ZYN����[Y[��H]^	�ZY\��[�X���\Yۙ[Y[�[���X�[��[�0�Yܘ]Y�[��H\��YK�\��H]YH�H]YHHܝ\�[��\�Y[���H�H0�Y�Z]\�[�[�H��X[��KXZ\�[��Y�H��YH�\�\�Y]\��[�\�]]�[�ٛܛY\�[��ٛۙ]\�H�p��ۈ	���H[��[][ۈ]�X��K[p�YH]]�X�\�]]�\ˈ���\Έ�X�[��\[�\�0�Hܘ]Z]0��
+      p2: "Il y a quelque chose qui cherche à circuler, à être libéré. Quelque chose que les mots n'ont pas encore réussi à atteindre. Ton corps est en avance sur ta tête, et c'est une information précieuse.",
+      aide: "comment je peux t'aider : l'ostéopathie somato-émotionnelle pour entrer en contact avec ce que ton corps retient, libérer les tensions enkystées et redonner au système nerveux la possibilité de se réguler. Le massage de réharmonisation et ancrage peut aussi être une porte d'entrée douce et puissante. Une première séance crée souvent un vrai déplacement.",
+      ctas: [{ label: "Réserver une séance", url: "https://tidycal.com/elodie-nirennold" }],
+    },
+    high: {
+      title: "Ton corps a besoin d'être entendu maintenant",
+      p1: "Ton corps ne chuchote plus. Il retient, il compense, il sature. La fatigue est profonde. Le système nerveux est en alerte chronique. Et tu as appris à fonctionner malgré tout, au prix d'un effort invisible que tu portes seul.",
+      p2: "Ce n'est pas de la faiblesse. C'est le signe que ton corps a accumulé plus qu'il ne peut continuer à gérer seul.",
+      aide: "comment je peux t'aider : commencer par une séance d'ostéopathie somato-émotionnelle ou un massage de réharmonisation et ancrage pour libérer ce que le corps retient. Si après cette séance quelque chose s'ouvre, un cadre dans la durée permet de sécuriser ce qui se libère et de ne pas y retomber.",
+      ctas: [
+        { label: "Réserver une séance", url: "https://tidycal.com/elodie-nirennold" },
+        { label: "En savoir plus sur l'accompagnement", url: "https://coccinellodie.github.io/elodienirennold.com/accompagnements.html" },
+      ],
+    },
+  },
+  subconscient: {
+    low: {
+      title: "Quelque chose en toi est relativement accessible",
+      p1: "Tu arrives à accéder à ce que tu ressens. Le mental ne te déborde pas trop. Les schémas que tu vois, tu peux les travailler par la réflexion et la volonté.",
+      p2: "Ce n'est pas pour autant qu'il n'y a rien sous la surface. Mais pour l'instant, les outils conscients te suffisent, ou tu n'as pas encore senti l'appel d'aller plus loin.",
+      aide: "comment je peux t'aider : si un jour tu sens que comprendre ne suffit plus, que tu te regardes faire sans pouvoir t'arrêter, l'hypnose est là. En attendant, une séance ponctuelle peut être un bel espace d'exploration.",
+      ctas: [{ label: "Réserver une séance", url: "https://tidycal.com/elodie-nirennold" }],
+    },
+    mid: {
+      title: "Quelque chose cherche à être atteint au-delà des mots",
+      p1: "Tu travailles sur toi. Tu comprends beaucoup de choses. Et pourtant, il y a des endroits que la réflexion n'atteint pas. Des schémas qui reviennent. Des émotions qui restent floues. Une fatigue de comprendre sans que ça change vraiment.",
+      p2: "Ce n'est pas un échec. C'est le signe que la prochaine étape ne passe pas par la tête, mais par quelque chose de plus profond.",
+      aide: "comment je peux t'aider : l'hypnose pour accéder aux couches que la volonté seule ne peut pas atteindre. Libérer les mémoires, les parts figées, ce qui se rejoue sans que tu l'aies choisi. Une séance crée souvent un déplacement que des années de réflexion n'ont pas produit.",
+      ctas: [{ label: "Réserver une séance", url: "https://tidycal.com/elodie-nirennold" }],
+    },
+    high: {
+      title: "Quelque chose en toi t'attend",
+      p1: "Tu te regardes faire. Tu sais exactement ce que tu reproduis. Et tu le fais quand même. La tête a tout compris, le système, lui, continue. Le mental tourne la nuit. La peur de l'effondrement pilote en fond. Et il y a quelque chose en toi qui sait que la prochaine étape ne passera pas par les mots.",
+      p2: "C'est là que l'hypnose intervient. Pas pour supprimer ce qui te protège, pour lui permettre d'être enfin entendu, compris, apaisé à la source.",
+      aide: "comment je peux t'aider : une séance d'hypnose pour entrer en contact avec ce qui se rejoue en profondeur. Si plusieurs dimensions sont en tension, un accompagnement intégratif dans la durée permettra de relier les fils et de faire tenir ce qui s'ouvre.",
+      ctas: [
+        { label: "Réserver une séance", url: "https://tidycal.com/elodie-nirennold" },
+        { label: "En savoir plus sur l'accompagnement", url: "https://coccinellodie.github.io/elodienirennold.com/accompagnements.html" },
+      ],
+    },
+  },
+  liens: {
+    low: {
+      title: "Tes liens sont relativement sécurisés",
+      p1: "Tu arrives à poser des limites, à recevoir, à rester toi-même dans le lien. Ce n'est pas parfait, ça ne l'est pour personne, mais tu ne fonctionnes pas en mode survie relationnelle chronique.",
+      p2: "Si tu es ici, c'est peut-être que quelque chose d'autre t'appelle. Ou que tu veux consolider ce qui est déjà là, avant que ça coûte davantage.",
+      aide: "comment je peux t'aider : une séance ponctuelle de coaching intégratif pour faire le point, clarifier ce que tu veux vraiment dans tes relations, et repartir avec plus d'ancrage.",
+      ctas: [{ label: "Réserver une séance", url: "https://tidycal.com/elodie-nirennold" }],
+    },
+    mid: {
+      title: "Tes liens te coûtent plus qu'ils ne te nourrissent",
+      p1: "Tu donnes. Tu t'effaces. Tu surveilles. Tu analyses les silences. Et tu tiens en surface pour que ça tienne autour de toi. Mais intérieurement, il y a une fatigue relationnelle que peu de gens voient.",
+      p2: "Recevoir sans culpabiliser. Dire ce que tu penses sans avoir peur de perdre le lien. Rester toi-même sans t'amputer. C'est possible, mais ça ne se fait pas uniquement par la volonté.",
+      aide: "comment je peux t'aider : une séance de coaching intégratif pour commencer à déposer ce que tu portes dans le lien, et explorer par où ça demande à changer.",
+      ctas: [{ label: "Réserver une séance", url: "https://tidycal.com/elodie-nirennold" }],
+    },
+    high: {
+      title: "Tu survis dans le lien",
+      p1: "Tu surveilles l'état du lien en permanence. Tu donnes avant qu'on demande. Tu t'effaces avant qu'on reproche. Et recevoir, vraiment recevoir, sans te sentir aussitôt en dette, tu ne sais plus comment c'est.",
+      p2: "Ce n'est pas de la générosité. C'est une stratégie de survie construite depuis longtemps. Et elle t'épuise.",
+      p3: "Quelque chose doit changer, pas juste dans ta tête. Dans ton système nerveux, dans tes automatismes, dans la façon dont tu te tiens dans le lien.",
+      aide: "comment je peux t'aider : un accompagnement en coaching intégratif dans la durée. Parce que ce que tu portes dans tes liens ne se défait pas en une séance, mais un cadre solide sur plusieurs mois peut transformer en profondeur ta façon d'être en relation avec toi-même et avec les autres.",
+      ctas: [
+        { label: "Appel clarté gratuit · 45 min", url: "https://tidycal.com/elodie-nirennold/appel-clarte-gratuit-coaching-integratif" },
+        { label: "Réserver une séance", url: "https://tidycal.com/elodie-nirennold" },
+      ],
+    },
+  },
+};
 
-HZ[��\���΋��YX�[���K�[�YK[�\�[����\[X�\�KYܘ]Z]X��X�[��Z[�Yܘ]Y��K��X�[����\�\��\�[�H��X[��H�\���΋��YX�[���K�[�YK[�\�[����K�K�K�K�N��[��[ۈ�]�[�
-��ܙJHY�
-��ܙHHL�H�]\��	����Y�
-��ܙHH�
-H�]\��	�ZY	��]\��	�Y�	�B���[��[ۈ�[�\�[T�\�[
-�۝Z[�\�Y[R�^KX�ۋ[S�[YK��ܙJH�ۜ��[�H�]�[�
-��ܙJN�ۜ�]HH�T�S��UV�[R�^WVؘ[�N�ۜ��۝Z[�\�H��[Y[���][[Y[��RY
-�۝Z[�\�Y
-N�]�\�[H]K��\˛X\
-�O��H�Y�H��˝\�H�\��]H�؛[�ȏ����	�˛X�[O�O��
-K���[�	��N�]^�TH]K�����]K��O���	����۝Z[�\��[��\�SH�]��\��H���ZXY\�����[��\��H���ZX�ۈ���X�۟O��[����[��\��H���Y[K[�[YH���[S�[Y_O��[����]���ω�]K�]_O�ς���]K�_O�����]K��O���	�^�TB�]��\��H���XZYH���]K�ZY_O�]���]��\��H���X�\ȏ���\�[O�]���B���[��[ۈ��ԙ\�[�
-H���	��ܙY[�\�\�[��N��ۜ���H�]��ܙJ
-N�ۜ��HH�]��ܙJJN�ۜ��H�]��ܙJ�N�ۜ�X^H���ۜ�ܙY][��H\�\��[YH�\���\�[]�	�\�\��[Y_X�	�\���\�[]����[Y[���][[Y[��RY
-	ܙ\�[�YܙY][���K�^�۝[�HܙY][����][Y[�]
+function getBand(score) {
+  if (score <= 13) return 'low';
+  if (score <= 20) return 'mid';
+  return 'high';
+}
 
+function renderDimResult(containerId, dimKey, icon, dimName, score) {
+  const band = getBand(score);
+  const data = RESULTS_DATA[dimKey][band];
+  const container = document.getElementById(containerId);
 
-HO���[Y[���][[Y[��RY
-	ؘ\�X�ܜ��K��[K��YH
-���X^
-�L
-H
-�	�I���[Y[���][[Y[��RY
-	ؘ\�Z[��ۜ��Y[�	�K��[K��YH
-�H�X^
-�L
-H
-�	�I���[Y[���][[Y[��RY
-	ؘ\�[Y[���K��[K��YH
-��X^
-�L
-H
-�	�I�KL
-N��ۜ��H�O�X]���[�
-��X^
-�L
-H
-�	�I���[Y[���][[Y[��RY
-	��X�ܜ��K�^�۝[�H	���K̎��[Y[���][[Y[��RY
-	��Z[��ۜ��Y[�	�K�^�۝[�H	��_K̎��[Y[���][[Y[��RY
-	��[Y[���K�^�۝[�H	��K̎��[�\�[T�\�[
-	ܙ\�[X�ܜ��	��ܜ��	�'�/��	��ܜ����N�[�\�[T�\�[
-	ܙ\�[Z[��ۜ��Y[�	�	�[��ۜ��Y[�	�	�'�.	�	�[��ۜ��Y[�	��JN�[�\�[T�\�[
-	ܙ\�[[Y[���	�Y[���	�'�,I�	�Y[����
-NB�����U�QU�S�B�����]�Y]�X�ܜ��[��ۜ��Y[��Y[���Z^B�Y�
-\�[\˙�]
-	��]�Y]��HOOH�[
-H�ۜ�H\�[\˙�]
-	��]�Y]��H	��ܜ��Y�
-OOH	����H[���\���OV�KKKKKKWN�[���\���WOV�KKKKKKWN�[���\��̗OV�KKKKKKWNH[�HY�
-OOH	�[��ۜ��Y[�	�H[���\���OV�K�KK�KWN�[���\���WOV�
-
-�
-
-
-N�[���\��̗OV̋������NH[�HY�
-OOH	�Y[���H[���\���OV̋K�K�K�N�[���\���WOV̋������N�[���\��̗OV�
-
-�
-
-
-NH[�HY�
-OOH	�ZY	�H[���\���OV̋������N�[���\���WOV̋������N�[���\��̗OV̋������NH[�H[���\���OV�
-
-�
-
-
-N�[���\���WOV�KK�K�KWN�[���\��̗OV̋K���K�NB�\�\��[YHH	�[�YI���ԙ\�[�
-NB���ܚ\��؛�O���[�
+  let ctasHtml = data.ctas.map(c =>
+    `<a href="${c.url}" target="_blank">→ ${c.label}</a>`
+  ).join('');
+
+  let extraP = data.p3 ? `<p>${data.p3}</p>` : '';
+
+  container.innerHTML = `
+    <div class="rdc-header">
+      <span class="rdc-icon">${icon}</span>
+      <span class="rdc-dim-name">${dimName}</span>
+    </div>
+    <h3>${data.title}</h3>
+    <p>${data.p1}</p>
+    <p>${data.p2}</p>
+    ${extraP}
+    <div class="rdc-aide">${data.aide}</div>
+    <div class="rdc-ctas">${ctasHtml}</div>
+  `;
+}
+
+function showResults() {
+  goTo('screen-results');
+
+  const sC = getScore(0);
+  const sI = getScore(1);
+  const sL = getScore(2);
+  const max = 28;
+
+  const greeting = userName ? `Tes résultats, ${userName}` : 'Tes résultats';
+  document.getElementById('results-greeting').textContent = greeting;
+
+  setTimeout(() => {
+    document.getElementById('bar-corps').style.width        = (sC / max * 100) + '%';
+    document.getElementById('bar-subconscient').style.width = (sI / max * 100) + '%';
+    document.getElementById('bar-liens').style.width        = (sL / max * 100) + '%';
+  }, 100);
+
+  const pct = v => Math.round(v / max * 100) + '%';
+  document.getElementById('pct-corps').textContent        = `${sC}/28`;
+  document.getElementById('pct-subconscient').textContent = `${sI}/28`;
+  document.getElementById('pct-liens').textContent        = `${sL}/28`;
+
+  renderDimResult('result-corps',        'corps',        '🌿', 'Corps',        sC);
+  renderDimResult('result-subconscient', 'subconscient', '🌷', 'Subconscient', sI);
+  renderDimResult('result-liens',        'liens',        '♥️', 'Liens',        sL);
+}
+
+// PREVIEW MODE
+// ?preview=corps / subconscient / liens / mixte
+if (params.get('preview') !== null) {
+  const p = params.get('preview') || 'corps';
+  if (p === 'low') {
+    answers[0]=[1,1,1,1,1,1,1]; answers[1]=[1,1,1,1,1,1,1]; answers[2]=[1,1,1,1,1,1,1];
+  } else if (p === 'subconscient' || p === 'inconscient') {
+    answers[0]=[1,2,1,1,2,1,1]; answers[1]=[4,4,4,3,4,4,4]; answers[2]=[2,2,2,1,2,2,2];
+  } else if (p === 'liens') {
+    answers[0]=[2,1,2,1,2,1,2]; answers[1]=[2,2,2,2,2,2,2]; answers[2]=[4,4,4,3,4,4,4];
+  } else if (p === 'mid') {
+    answers[0]=[2,2,2,2,2,2,2]; answers[1]=[2,2,2,2,2,2,2]; answers[2]=[2,2,2,2,2,2,2];
+  } else {
+    answers[0]=[4,4,4,3,4,4,4]; answers[1]=[1,1,2,1,2,1,1]; answers[2]=[2,1,2,2,2,1,2];
+  }
+  userName = 'Elodie';
+  showResults();
+}
+</script>
+</body>
+</html>

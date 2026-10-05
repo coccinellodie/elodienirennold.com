@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Questionnaire de bilan · Elodie Nirennold</title>
+<title>Questionnaire de bilan � Elodie Nirennold</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
 <style>
   :root {
@@ -56,51 +56,7 @@
     display: none;
     width: 100%;
     max-width: 680px;
-    min-height: 100vh;
-    padding: 40px 24px 60px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 24px;
-    animation: fadeIn 0.4s ease;
-  }
-  .screen.active { display: flex; }
-  @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-
-  h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 5vw, 2.8rem); font-weight: 400; line-height: 1.2; text-align: center; color: var(--dark); }
-  h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 400; line-height: 1.3; color: var(--dark); }
-  h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 500; color: var(--dark); }
-  p { font-size: 1rem; line-height: 1.75; color: var(--dark); }
-  .muted { color: var(--muted); font-size: 0.9rem; }
-  .italic { font-style: italic; }
-  .center { text-align: center; }
-
-  .card {
-    background: var(--white);
-    border-radius: var(--radius);
-    padding: 32px;
-    box-shadow: var(--shadow);
-    width: 100%;
-  }
-  .card-soft {
-    background: var(--beige2);
-    border-radius: var(--radius);
-    padding: 28px;
-    width: 100%;
-  }
-
-  .btn-primary {
-    background: var(--vert);
-    color: var(--white);
-    border: none;
-    border-radius: 50px;
-    padding: 16px 36px;
-    font-family: 'Lato', sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.1s;
+    mrm 0.1s;
     text-decoration: none;
     display: inline-block;
     text-align: center;
@@ -459,34 +415,34 @@
 <!-- SCREEN 0 - WELCOME -->
 <div id="screen-welcome" class="screen active" style="gap:20px; padding-top:80px; position:relative; overflow:hidden;">
 
-  <!-- Décors vieux rose -->
+  <!-- D�cors vieux rose -->
   <div aria-hidden="true" style="position:absolute; top:40px; right:-30px; width:200px; height:200px; border-radius:50%; background:radial-gradient(circle, rgba(196,137,122,0.14) 0%, rgba(196,137,122,0.05) 55%, transparent 75%); pointer-events:none;"></div>
   <div aria-hidden="true" style="position:absolute; bottom:80px; left:-40px; width:160px; height:160px; border-radius:50%; background:radial-gradient(circle, rgba(196,137,122,0.10) 0%, transparent 70%); pointer-events:none;"></div>
 
-  <div style="text-align:center; position:relative; zY-index:1;">
+  <div style="text-align:center; position:relative; z-index:1;">
     <span style="display:inline-block; background:rgba(196,137,122,0.12); border-radius:50px; padding:6px 20px; font-size:0.72rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--rose);">Bilan gratuit</span>
   </div>
 
   <div style="text-align:center; margin:4px 0; position:relative; z-index:1;">
     <h1 style="font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,5.5vw,3rem); font-weight:300; line-height:1.2; color:var(--dark);">
       Ton corps parle.<br>
-      Quelque chose en toi résiste encore.<br>
-      Tes liens t'épuisent.<br>
-      <span style="color:var(--muted); font-size:0.82em;">Par où commencer ?</span>
+      Quelque chose en toi r�siste encore.<br>
+      Tes liens t'�puisent.<br>
+      <span style="color:var(--muted); font-size:0.82em;">Par o� commencer ?</span>
     </h1>
     <div style="width:56px; height:2px; background:linear-gradient(90deg, transparent, var(--rose), transparent); border-radius:2px; margin:20px auto 16px;"></div>
     <p style="font-family:'Cormorant Garamond',serif; font-size:1.15rem; color:var(--dark); line-height:1.6;">
-      Tu sais beaucoup sur toi. Les schémas reviennent quand même.<br>
-      <span style="color:var(--muted);">Identifie où ça résiste encore, dans ton corps, ta tête ou tes liens.</span>
+      Tu sais beaucoup sur toi. Les sch�mas reviennent quand m�me.<br>
+      <span style="color:var(--muted);">Identifie o� �a r�siste encore, dans ton corps, ta t�te ou tes liens.</span>
     </p>
     <p style="margin-top:14px; font-size:0.95rem; color:var(--dark); line-height:1.75; max-width:480px; margin-left:auto; margin-right:auto;">
-      Ces 21 questions t'aident à identifier où ça parle le plus fort en toi en ce moment, et par où commencer.
+      Ces 15 questions t'aident � identifier o� �a parle le plus fort en toi en ce moment, et par o� commencer.
     </p>
   </div>
 
   <div style="text-align:center; margin-top:8px; position:relative; z-index:1;">
     <button class="btn-primary" onclick="startQuiz()" style="border-radius:6px; padding:17px 52px; letter-spacing:0.1em; font-size:0.88rem;">FAIRE MON BILAN GRATUIT</button>
-    <p style="margin-top:12px; font-size:0.8rem; color:var(--muted);">21 questions · 6 minutes · Gratuit et confidentiel</p>
+    <p style="margin-top:12px; font-size:0.8rem; color:var(--muted);">15 questions � 5 minutes � Gratuit et confidentiel</p>
   </div>
 
 </div>
@@ -497,31 +453,31 @@
     <h2>Avant de commencer...</h2>
   </div>
   <div class="card">
-    <div class="question-text">Ce qui est là, en ce moment. Ce qui pèse, ce qui revient, ce qui t'a amené ici.</div>
-    <textarea id="open1-answer" placeholder="Écris librement, sans filtre..."></textarea>
+    <div class="question-text">Ce qui est l�, en ce moment. Ce qui p�se, ce qui revient, ce qui t'a men� ici.</div>
+    <textarea id="open1-answer" placeholder="�cris librement, sans filtre..."></textarea>
   </div>
   <div class="nav-row">
-    <button class="btn-secondary" onclick="goToOpen1Back()">← Retour</button>
-    <button class="btn-primary" onclick="goTo('screen-dim1-intro')">Continuer →</button>
+    <button class="btn-secondary" onclick="goToOpen1Back()">� Retour</button>
+    <button class="btn-primary" onclick="goTo('screen-dim1-intro')">Continuer �</button>
   </div>
 </div>
 
 <!-- SCREEN 3 - DIM 1 INTRO (CORPS) -->
 <div id="screen-dim1-intro" class="screen">
-  <div class="dim-icon center">🌿</div>
+  <div class="dim-icon center"><?</div>
   <span class="dim-badge" style="align-self:center;">Dimension 1 / 3</span>
   <div class="center">
     <h2>Le Corps</h2>
     <p class="italic muted" style="margin-top:4px;">Ce que ton corps porte</p>
   </div>
   <div class="card">
-    <p>Le corps garde la mémoire de tout ce que tu n'as pas pu exprimer.</p>
-    <p style="margin-top:16px;">Les tensions, les douleurs chroniques, la fatigue que rien ne soulage, la déconnexion : ce ne sont pas des détails. Ce sont des messages en attente d'être entendus.</p>
+    <p>Le corps garde la m�moire de tout ce que tu n'fs pas pu exprimer.</p>
+    <p style="margin-top:16px;">Les tensions, les douleurs chroniques, la fatigue que rien ne soulage, la d�connexion : ce ne sont pas des d�tails. Ce sont des messages en attente d'�tre entendus.</p>
     <p style="margin-top:16px;">Ces 5 questions explorent ce que ton corps porte, souvent en silence.</p>
   </div>
   <div class="nav-row">
-    <button class="btn-secondary" onclick="goTo('screen-open1')">← Retour</button>
-    <button class="btn-primary" onclick="startDimension(0)">Je commence →</button>
+    <button class="btn-secondary" onclick="goTo('screen-open1')">� Retour</button>
+    <button class="btn-primary" onclick="startDimension(0)">Je commence �</button>
   </div>
 </div>
 
@@ -542,48 +498,48 @@
     <div class="options" id="q-options"></div>
   </div>
   <div class="nav-row" style="margin-top:8px;">
-    <button class="btn-secondary" id="btn-q-back" onclick="prevQuestion()">← Retour</button>
-    <button class="btn-primary" id="btn-q-next" onclick="nextQuestion()" disabled>Suivant →</button>
+    <button class="btn-secondary" id="btn-q-back" onclick="prevQuestion()">� Retour</button>
+    <button class="btn-primary" id="btn-q-next" onclick="nextQuestion()" disabled>Suivant �</button>
   </div>
 </div>
 
 <!-- SCREEN 5 - DIM 2 INTRO (SUBCONSCIENT) -->
 <div id="screen-dim2-intro" class="screen">
-  <div class="dim-icon center">🦋</div>
+  <div class="dim-icon center">>�</div>
   <span class="dim-badge" style="align-self:center; background:var(--mauve);">Dimension 2 / 3</span>
   <div class="center">
     <h2>Le Subconscient</h2>
-    <p class="italic muted" style="margin-top:4px;">Ce que ta tête ne peut pas régler seule</p>
+    <p class="italic muted" style="margin-top:4px;">Ce que ta t�te ne peut pas r�gler seule</p>
   </div>
   <div class="card">
-    <p>Tu comprends. Tu analyses. Tu as peut-être déjà fait un travail sur toi.</p>
-    <p style="margin-top:16px;">Et pourtant les mêmes schémas reviennent. Les mêmes peurs pilotent. Les mêmes blocages que la volonté ne peut pas déverrouiller seule.</p>
-    <p style="margin-top:16px;">La transformation durable ne passe pas par la tête. Elle passe par le corps.</p>
+    <p>Tu comprends. Tu analyses. Tu as peut-�tre d�j� fait un travail sur toi.</p>
+    <p style="margin-top:16px;">Et pourtant les m�mes sch�mas reviennent. Les m�mes peurs pilotent. Les m�mes blocages que la volont� ne peut pas d�verrouiller seule.</p>
+    <p style="margin-top:16px;">La transformation durable ne passe pas par la t�te. Elle passe par le corps.</p>
     <p style="margin-top:16px;">Ces 5 questions explorent ce qui se joue en dessous du mental.</p>
   </div>
   <div class="nav-row">
-    <button class="btn-secondary" onclick="goBackToDim2()">← Retour</button>
-    <button class="btn-primary" onclick="startDimension(1)">Continuer →</button>
+    <button class="btn-secondary" onclick="goBackToDim2()">� Retour</button>
+    <button class="btn-primary" onclick="startDimension(1)">Continuer �</button>
   </div>
 </div>
 
 <!-- SCREEN 6 - DIM 3 INTRO (LIENS) -->
 <div id="screen-dim3-intro" class="screen">
-  <div class="dim-icon center">♥️</div>
+  <div class="dim-icon center">e</div>
   <span class="dim-badge" style="align-self:center; background:var(--bordeaux);">Dimension 3 / 3</span>
   <div class="center">
     <h2>Les Liens</h2>
-    <p class="italic muted" style="margin-top:4px;">Ce que tes relations te coûtent</p>
+    <p class="italic muted" style="margin-top:4px;">Ce que tes relations te co�tent</p>
   </div>
   <div class="card">
     <p>Tu donnes avant qu'on demande. Tu t'effaces avant qu'on reproche.</p>
-    <p style="margin-top:16px;">Tu t'adaptes, tu tiens, tu gères. Depuis si longtemps que tu ne sais plus comment c'est autrement.</p>
+    <p style="margin-top:16px;">Tu t'adaptes, tu tiens, tu g�res. Depuis si longtemps que tu ne sais plus comment c'est autrement.</p>
     <p style="margin-top:16px;">Tu survis dans le lien.</p>
-    <p style="margin-top:16px;">Ces 5 dernières questions explorent ta façon d'habiter le lien.</p>
+    <p style="margin-top:16px;">Ces 5 derni�res questions explorent ta fa�on d'habiter le lien.</p>
   </div>
   <div class="nav-row">
-    <button class="btn-secondary" onclick="goBackToDim3()">← Retour</button>
-    <button class="btn-primary" onclick="startDimension(2)">Continuer →</button>
+    <button class="btn-secondary" onclick="goBackToDim3()">� Retour</button>
+    <button class="btn-primary" onclick="startDimension(2)">Continuer �</button>
   </div>
 </div>
 
@@ -591,152 +547,152 @@
 <div id="screen-results" class="screen" style="gap:28px; justify-content:flex-start; padding-top:80px;">
 
   <div style="text-align:center; width:100%;">
-    <h1 id="results-greeting">Tes résultats</h1>
-    <p class="italic" style="margin-top:8px; font-family:'Cormorant Garamond',serif; color:var(--dark); font-size:1.1rem;">Voici ce que ton questionnaire révèle, et par où commencer.</p>
-    <p style="margin-top:6px; font-family:'Cormorant Garamond',serif; color:var(--dark); font-size:0.95rem; text-align:center;">Pense à faire une capture d'écran de tes résultats pour ne pas les perdre.</p>
+    <h1 id="results-greeting">Tes r�sultats</h1>
+    <p class="italic" style="margin-top:8px; font-family:'Cormorant Garamond',serif; color:var(--dark); font-size:1.1rem;">Voici ce que ton questionnaire r�v�le, et par o� commencer.</p>
+    <p style="margin-top:6px; font-family:'Cormorant Garamond',serif; color:var(--dark); font-size:0.95rem; text-align:center;">Pense � faire une capture d'�cran de tes r�sultats pour ne pas les perdre.</p>
   </div>
 
   <!-- Scores visuels -->
   <div class="dim-scores-grid">
     <div class="dim-score-box dsb-corps">
-      <div class="dsb-icon">🌿</div>
+      <div class="dsb-icon"><?</div>
       <div class="dsb-name">Corps</div>
       <div class="dsb-bar-bg"><div class="dsb-bar-fill" id="bar-corps"></div></div>
       <div class="dsb-pct" id="pct-corps"></div>
     </div>
     <div class="dim-score-box dsb-subconscient">
-      <div class="dsb-icon">🦋</div>
+      <div class="dsb-icon">>�</div>
       <div class="dsb-name">Subconscient</div>
       <div class="dsb-bar-bg"><div class="dsb-bar-fill" id="bar-subconscient"></div></div>
       <div class="dsb-pct" id="pct-subconscient"></div>
     </div>
     <div class="dim-score-box dsb-liens">
-      <div class="dsb-icon">♥️</div>
+      <div class="dsb-icon">e</div>
       <div class="dsb-name">Liens</div>
       <div class="dsb-bar-bg"><div class="dsb-bar-fill" id="bar-liens"></div></div>
       <div class="dsb-pct" id="pct-liens"></div>
     </div>
   </div>
 
-  <p class="gauge-legend">Score sur 15 · plus il est élevé, plus le domaine est en tension et demande de l'attention.</p>
+  <p class="gauge-legend">Score sur 15 � plus il est �lev�, plus le domaine est en tension et demande de l'attention.</p>
 
   <div id="result-mirror" style="width:100%; padding:4px 0;"></div>
   <div id="result-transition" style="width:100%;"></div>
 
-  <!-- Résultats par dimension -->
+  <!-- R�sultats par dimension -->
   <div id="result-corps" class="result-dim-card"></div>
   <div id="result-subconscient" class="result-dim-card"></div>
   <div id="result-liens" class="result-dim-card"></div>
 
-  <!-- Clôture -->
+  <!-- Cl�ture -->
   <div id="now-card" class="now-card"></div>
 
   <div class="divider"></div>
-  <p class="footer-note">Elodie Nirennold · Ostéopathe somato-émotionnelle · Hypnothérapeute · Coach intégratif</p>
+  <p class="footer-note">Elodie Nirennold � Ost�opathe somato-�motionnelle � Hypnoth�rapeute � Coach int�gratif</p>
 </div>
 
 <script>
 const DIMENSIONS = [
-  { id: 'corps',        name: 'Corps',        icon: '🌿', introScreen: 'screen-dim1-intro' },
-  { id: 'subconscient', name: 'Subconscient', icon: '🦋', introScreen: 'screen-dim2-intro' },
-  { id: 'liens',        name: 'Liens',        icon: '♥️', introScreen: 'screen-dim3-intro' },
+  { id: 'corps',        name: 'Corps',        icon: '<?', introScreen: 'screen-dim1-intro' },
+  { id: 'subconscient', name: 'Subconscient', icon: '>�', introScreen: 'screen-dim2-intro' },
+  { id: 'liens',        name: 'Liens',        icon: 'e', introScreen: 'screen-dim3-intro' },
 ];
 
 const QUESTIONS = [
   // CORPS (dim 0) - 5 questions
-  { dim:0, text:"Quand je repense à ces derniers mois, mon corps est surtout :", options:[
-    { letter:'A', text:"Souvent en train de me signaler quelque chose que je n'ai pas le temps d'écouter.", score:2 },
-    { letter:'B', text:"Plutôt tranquille, il me lâche rarement.", score:0 },
+  { dim:0, text:"Quand je repense � ces derniers mois, mon corps est surtout :", options:[
+    { letter:'A', text:"Souvent en train de me signaler quelque chose que je n'ai pas le temps d'�couter.", score:2 },
+    { letter:'B', text:"Plut�t tranquille, il me l�che rarement.", score:0 },
     { letter:'C', text:"En alerte presque permanente, il parle fort et je ne sais plus comment le faire taire.", score:3 },
-    { letter:'D', text:"Réactif par moments, quand la pression monte, puis ça se calme.", score:1 },
+    { letter:'D', text:"R�actif par moments, quand la pression monte, puis �a se calme.", score:1 },
   ]},
   { dim:0, text:"La fatigue que je connais le mieux, c'est :", options:[
-    { letter:'A', text:"Un épuisement de fond, d'un autre ordre, là même au réveil.", score:3 },
-    { letter:'B', text:"Une fatigue de fin de semaine chargée, qui se répare au repos.", score:1 },
+    { letter:'A', text:"Un �puisement de fond, d'un autre ordre, l� m�me au r�veil.", score:3 },
+    { letter:'B', text:"Une fatigue de fin de semaine charg�e, qui se r�pare au repos.", score:1 },
     { letter:'C', text:"Une fatigue normale, qui passe quand je dors.", score:0 },
-    { letter:'D', text:"Une fatigue qui traîne, que le sommeil ne suffit plus vraiment à effacer.", score:2 },
+    { letter:'D', text:"Une fatigue qui tra�ne, que le sommeil ne suffit plus vraiment � effacer.", score:2 },
   ]},
-  { dim:0, text:"Entre ma tête et mon corps, en ce moment :", options:[
-    { letter:'A', text:"Je vis beaucoup dans ma tête, mon corps je l'oublie pour tenir.", score:2 },
-    { letter:'B', text:"Je suis coupé de lui des journées entières, en pilote automatique.", score:3 },
+  { dim:0, text:"Entre ma t�te et mon corps, en ce moment :", options:[
+    { letter:'A', text:"Je vis beaucoup dans ma t�te, mon corps je l'oublie pour tenir.", score:2 },
+    { letter:'B', text:"Je suis coup� de lui des journ�es enti�res, en pilote automatique.", score:3 },
     { letter:'C', text:"Je suis bien dans mes sensations, je sens mon corps.", score:0 },
     { letter:'D', text:"Je perds le fil parfois, surtout sous stress.", score:1 },
   ]},
-  { dim:0, text:"Mon corps et moi, c'est surtout cette histoire-là :", options:[
+  { dim:0, text:"Mon corps et moi, c'est surtout cette histoire-l� :", options:[
     { letter:'A', text:"Je le remarque quand il hausse le ton, sinon je l'oublie.", score:1 },
-    { letter:'B', text:"Il me fait un peu peur, je préfère ne pas trop aller voir ce qu'il garde.", score:2 },
-    { letter:'C', text:"On fait équipe, je l'écoute et il me guide.", score:0 },
-    { letter:'D', text:"Il a encaissé des choses (chocs, tensions, années de \"tenir\") que je n'ai jamais vraiment digérées.", score:3 },
+    { letter:'B', text:"Il me fait un peu peur, je pr�f�re ne pas trop aller voir ce qu'il garde.", score:2 },
+    { letter:'C', text:"On fait �quipe, je l'�coute et il me guide.", score:0 },
+    { letter:'D', text:"Il a encaiss� des choses (chocs, tensions, ann�es de \"tenir\") que je n'ai jamais vraiment dig�r�es.", score:3 },
   ]},
-  { dim:0, text:"Me détendre vraiment, poser mon système nerveux :", options:[
+  { dim:0, text:"Me d�tendre vraiment, poser mon syst�me nerveux :", options:[
     { letter:'A', text:"C'est accessible, je sais revenir au calme.", score:0 },
-    { letter:'B', text:"Je ne sais plus trop comment c'est, l'alerte est presque toujours là en fond.", score:3 },
-    { letter:'C', text:"Ça dépend des périodes, sous forte pression c'est plus dur.", score:1 },
-    { letter:'D', text:"C'est devenu rare, mon corps redescend difficilement même au repos.", score:2 },
+    { letter:'B', text:"Je ne sais plus trop comment c'est, l'alerte est presque toujours l� en fond.", score:3 },
+    { letter:'C', text:"�a d�pend des p�riodes, sous forte pression c'est plus dur.", score:1 },
+    { letter:'D', text:"C'est devenu rare, mon corps redescend difficilement m�me au repos.", score:2 },
   ]},
 
   // SUBCONSCIENT (dim 1) - 5 questions
-  { dim:1, text:"Le travail que j'ai déjà fait sur moi (thérapie, lectures, développement perso) :", options:[
-    { letter:'A', text:"M'a beaucoup éclairé, mais les mêmes schémas reviennent quand même.", score:2 },
-    { letter:'B', text:"A tout compris dans ma tête, pendant que mon système, lui, continue exactement pareil.", score:3 },
+  { dim:1, text:"Le travail que j'ai d�j� fait sur moi (th�rapie, lectures, d�veloppement perso) :", options:[
+    { letter:'A', text:"M'a beaucoup �clair�, mais les m�mes sch�mas reviennent quand m�me.", score:2 },
+    { letter:'B', text:"A tout compris dans ma t�te, pendant que mon syst�me, lui, continue exactement pareil.", score:3 },
     { letter:'C', text:"Je n'en ai pas vraiment fait, ou peu.", score:0 },
-    { letter:'D', text:"M'a apporté des prises de conscience qui ont changé des choses.", score:1 },
+    { letter:'D', text:"M'a apport� des prises de conscience qui ont chang� des choses.", score:1 },
   ]},
   { dim:1, text:"La nuit, ou dans les moments de calme, mon mental :", options:[
-    { letter:'A', text:"S'emballe avant un événement stressant, puis redescend.", score:1 },
+    { letter:'A', text:"S'emballe avant un �v�nement stressant, puis redescend.", score:1 },
     { letter:'B', text:"Se pose, je m'endors tranquille.", score:0 },
-    { letter:'C', text:"Ne descend presque jamais, le silence intérieur m'est devenu étranger.", score:3 },
-    { letter:'D', text:"Tourne régulièrement le soir, ruminations et scénarios.", score:2 },
+    { letter:'C', text:"Ne descend presque jamais, le silence int�rieur m'est devenu �tranger.", score:3 },
+    { letter:'D', text:"Tourne r�guli�rement le soir, ruminations et sc�narios.", score:2 },
   ]},
   { dim:1, text:"En fond, il y a une peur :", options:[
     { letter:'A', text:"Qui influence mes choix plus que je ne le voudrais.", score:2 },
-    { letter:'B', text:"Silencieuse qui pilote en permanence : craquer, décevoir, prendre trop ou pas assez de place.", score:3 },
-    { letter:'C', text:"Présente, mais qui ne prend pas toute la place.", score:1 },
-    { letter:'D', text:"Non, mes peurs sont conscientes et gérables.", score:0 },
+    { letter:'B', text:"Silencieuse qui pilote en permanence : craquer, d�cevoir, prendre trop ou pas assez de place.", score:3 },
+    { letter:'C', text:"Pr�sente, mais qui ne prend pas toute la place.", score:1 },
+    { letter:'D', text:"Non, mes peurs sont conscientes et g�rables.", score:0 },
   ]},
   { dim:1, text:"Quand je me regarde reproduire quelque chose que je ne veux plus :", options:[
-    { letter:'A', text:"Je le vois venir et parfois j'arrive à l'arrêter.", score:1 },
-    { letter:'B', text:"Je me regarde faire sans pouvoir m'arrêter, comme si une autre partie prenait le relais.", score:3 },
-    { letter:'C', text:"Ça m'arrive rarement, quand je comprends, ça change.", score:0 },
-    { letter:'D', text:"Je sens bien qu'il y a des couches en moi que la réflexion n'atteindra jamais.", score:2 },
+    { letter:'A', text:"Je le vois venir et parfois j'arrive � l'arr�ter.", score:1 },
+    { letter:'B', text:"Je me regarde faire sans pouvoir m'arr�ter, comme si une autre partie prenait le relais.", score:3 },
+    { letter:'C', text:"�a m'arrive rarement, quand je comprends, �a change.", score:0 },
+    { letter:'D', text:"Je sens bien qu'il y a des couches en moi que la r�flexion n'atteindra jamais.", score:2 },
   ]},
-  { dim:1, text:"Quand tout le monde me voit gérer, à l'intérieur il y a :", options:[
-    { letter:'A', text:"Rien de particulier, ce que je montre correspond à ce que je vis.", score:0 },
-    { letter:'B', text:"Quelque chose d'épuisé qui attend juste d'être vu, sans avoir à le mériter.", score:3 },
-    { letter:'C', text:"Un léger écart parfois entre ce que je montre et ce que je ressens.", score:1 },
-    { letter:'D', text:"Une part de moi souvent à bout, même quand je performe bien.", score:2 },
+  { dim:1, text:"Quand tout le monde me voit g�rer, � l'int�rieur il y a :", options:[
+    { letter:'A', text:"Rien de particulier, ce que je montre correspond � ce que je vis.", score:0 },
+    { letter:'B', text:"Quelque chose d'�puis� qui attend juste d'�tre vu, sans avoir � le m�riter.", score:3 },
+    { letter:'C', text:"Un l�ger �cart parfois entre ce que je montre et ce que je ressens.", score:1 },
+    { letter:'D', text:"Une part de moi souvent � bout, m�me quand je performe bien.", score:2 },
   ]},
 
   // LIENS (dim 2) - 5 questions
   { dim:2, text:"Dans mes relations, dire non, poser une limite, prendre ma place :", options:[
     { letter:'A', text:"C'est difficile, l'harmonie autour de moi passe souvent avant mes besoins.", score:2 },
-    { letter:'B', text:"Je le fais assez naturellement.", score:0 },
+    { letter:'B', text:"Je le fais assez(naturellement.", score:0 },
     { letter:'C', text:"Je ne sais plus vraiment ce que je veux, j'ajuste en permanence en fonction des autres.", score:3 },
-    { letter:'D', text:"Ça dépend des personnes et des contextes.", score:1 },
+    { letter:'D', text:"�a d�pend des personnes et des contextes.", score:1 },
   ]},
   { dim:2, text:"Recevoir de l'aide, de l'attention, du soutien :", options:[
-    { letter:'A', text:"Un peu inconfortable parfois, mais ça va.", score:1 },
+    { letter:'A', text:"Un peu inconfortable parfois, mais �a va.", score:1 },
     { letter:'B', text:"Me met souvent plus en dette qu'en repos.", score:2 },
-    { letter:'C', text:"Ça me fait du bien et je l'accueille simplement.", score:0 },
+    { letter:'C', text:"�a me fait du bien et je l'accueille simplement.", score:0 },
     { letter:'D', text:"M'est presque impossible sans culpabiliser, je ne sais plus recevoir sans me sentir redevable.", score:3 },
   ]},
-  { dim:2, text:"La peur de perdre le lien (rejet, abandon, décevoir) :", options:[
-    { letter:'A', text:"Pilote beaucoup de mes décisions sans que je l'aie choisi : je reste, je donne, je me tais.", score:3 },
+  { dim:2, text:"La peur de perdre le lien (rejet, abandon, d�cevoir) :", options:[
+    { letter:'A', text:"Pilote beaucoup de mes d�cisions sans que je l'aie choisi : je reste, je donne, je me tais.", score:3 },
     { letter:'B', text:"Existe, sans prendre toute la place.", score:1 },
-    { letter:'C', text:"Guide mes comportements relationnels assez régulièrement.", score:2 },
-    { letter:'D', text:"N'est pas vraiment là, je me sens sécurisé dans mes relations.", score:0 },
+    { letter:'C', text:"Guide mes comportements relationnels assez r�guli�rement.", score:2 },
+    { letter:'D', text:"N'est pas vraiment l�, je me sens s�curis� dans mes relations.", score:0 },
   ]},
-  { dim:2, text:"Dans mes relations proches, je me surprends à :", options:[
-    { letter:'A', text:"Être plutôt posé et faire confiance.", score:0 },
-    { letter:'B', text:"Scruter en permanence les silences, les tons, les micro-signaux, sans pouvoir m'arrêter.", score:3 },
+  { dim:2, text:"Dans mes relations proches, je me surprends � :", options:[
+    { letter:'A', text:"�tre plut�t pos� et faire confiance.", score:0 },
+    { letter:'B', text:"Scruter en permanence les silences, les tons, les micro-signaux, sans pouvoir m'arr�ter.", score:3 },
     { letter:'C', text:"Rester vigilant par moments, dans certaines relations.", score:1 },
-    { letter:'D', text:"Analyser souvent ce qui se passe chez l'autre pour ajuster ma réaction.", score:2 },
+    { letter:'D', text:"Analyser souvent ce qui se passe chez l'autre pour ajuster ma r�action.", score:2 },
   ]},
   { dim:2, text:"Dans mes relations les plus proches, il y a quelque chose que je ne dis pas :", options:[
-    { letter:'A', text:"Quelques sujets sensibles, mais rien de systématique.", score:1 },
-    { letter:'B', text:"Je garde l'essentiel pour moi, c'est plus sûr que de risquer de tout perdre.", score:3 },
+    { letter:'A', text:"Quelques sujets sensibles, mais rien de syst�matique.", score:1 },
+    { letter:'B', text:"Je garde l'essentiel pour moi, c'est plus s�r que de risquer de tout perdre.", score:3 },
     { letter:'C', text:"Non, je dis assez librement ce que je pense.", score:0 },
-    { letter:'D', text:"Je filtre beaucoup, mais au fond je ne sais même plus toujours ce que je tais.", score:2 },
+    { letter:'D', text:"Je filtre beaucoup, mais au fond je ne sais m�me plus toujours ce que je tais.", score:2 },
   ]},
 ];
 
@@ -799,7 +755,7 @@ function renderQuestion() {
   document.getElementById('q-dim-label').textContent = dim.icon + ' ' + dim.name;
   document.getElementById('q-count-label').textContent = `Question ${totalDone + 1} / ${total}`;
   document.getElementById('q-progress-fill').style.width = ((totalDone + 1) / total * 100) + '%';
-  document.getElementById('q-num').textContent = `${dim.name} · ${currentQIndex + 1} / ${dimQs.length}`;
+  document.getElementById('q-num').textContent = `${dim.name} � ${currentQIndex + 1} / ${dimQs.length}`;
   document.getElementById('q-text').textContent = q.text;
 
   const savedAnswer = answers[currentDimIndex][currentQIndex];
@@ -822,9 +778,9 @@ function updateNextLabel(dimQs) {
   const nextBtn = document.getElementById('btn-q-next');
   const isLastQ = currentQIndex === dimQs.length - 1;
   const isLastDim = currentDimIndex === DIMENSIONS.length - 1;
-  if (isLastQ && isLastDim) nextBtn.textContent = 'Voir mes résultats →';
-  else if (isLastQ) nextBtn.textContent = 'Dimension suivante →';
-  else nextBtn.textContent = 'Suivant →';
+  if (isLastQ && isLastDim) nextBtn.textContent = 'Voir mes r�sultats �';
+  else if (isLastQ) nextBtn.textContent = 'Dimension suivante �';
+  else nextBtn.textContent = 'Suivant �';
 }
 
 function selectOption(score, idx, dimQs) {
@@ -855,35 +811,35 @@ function prevQuestion() {
   else if (currentDimIndex === 2) goTo('screen-dim3-intro');
 }
 
-// RÉSULTATS
+// R�SULTATS
 function getScore(dimIdx) {
   return answers[dimIdx].reduce((a, b) => a + b, 0);
 }
 
-// Données par dimension et par bande
+// Donn�es par dimension et par bande
 const RESULTS_DATA = {
   corps: {
     low: {
       title: "Ton corps est relativement calme",
-      p1: "Ton corps n'est pas en crise. Il parle, parfois, mais tu arrives encore à l'entendre, ou à trouver un équilibre qui tient. Ce n'est pas une urgence corporelle qui se signale en toi en ce moment.",
-      p2: "Ce n'est pas pour autant qu'il n'y a rien. La fatigue légère, les tensions ponctuelles, le sentiment de flotter parfois, tout ça mérite d'être entendu avant que le corps ait besoin de parler plus fort.",
-      aide: "Comment je peux t'aider : l'ostéopathie somato-émotionnelle pour écouter ce que ton corps garde en mémoire et comprendre quelles émotions se cachent derrière tes tensions. En les relâchant, ton système nerveux retrouve sa capacité à se réguler. Le massage de réharmonisation et d'ancrage agit aussi sur ce lien entre corps et émotions : en détendant le corps, il laisse circuler ce qui y était logé. C'est une porte d'entrée douce et puissante si tu as du mal à te poser et à recevoir. Une première séance crée souvent un vrai déplacement.",
-      ctas: [{ label: "Réserver une séance", url: "https://tidycal.com/elodie-nirennold" }],
+      p1: "Ton corps n'est pas en crise. Il parle, parfois, mais tu arrives encore � l'entendre, ou � trouver un �quilibre qui tient. Ce n'est pas une urgence corporelle qui se signale en toi en ce moment.",
+      p2: "Ce n'est pas pour autant qu'il n'y a rien. La fatigue l�g�re, les tensions ponctuelles, le sentiment de flotter parfois, tout �a m�rite d'�tre entendu avant que le corps ait besoin de parler plus fort.",
+      aide: "Comment je peux t'aider : l'ost�opathie somato-�motionnelle pour �couter ce que ton corps garde en m�moire et comprendre quelles �motions se cachent derri�re tes tensions. En les rel�chant, ton syst�me nerveux retrouve sa capacit� � se r�guler. Le massage de r�harmonisation et d'ancrage agit aussi sur ce lien entre corps et �motions : en d�tendant le corps, il laisse circuler ce qui y �tait log�. C'est une porte d'entr�e douce et puissante si tu as du mal � te poser et � recevoir. Une premi�re s�ance cr�e souvent un vrai d�placement.",
+      ctas: [{ label: "R�server une s�ance", url: "https://tidycal.com/elodie-nirennold" }],
     },
     mid: {
       title: "Ton corps envoie des signaux clairs",
-      p1: "Ton corps parle. Tensions, fatigue qui ne passe pas avec le repos, système nerveux qui ne descend plus vraiment. Il ne crie pas encore mais il insiste. Et tu le sais.",
-      p2: "Il y a quelque chose qui cherche à circuler, à être libéré. Quelque chose que les mots n'ont pas encore réussi à atteindre. Ton corps est en avance sur ta tête, et c'est une information précieuse.",
-      aide: "Comment je peux t'aider : l'ostéopathie somato-émotionnelle pour écouter ce que ton corps garde en mémoire et comprendre quelles émotions se cachent derrière tes tensions. En les relâchant, ton système nerveux retrouve sa capacité à se réguler. Le massage de réharmonisation et d'ancrage agit aussi sur ce lien entre corps et émotions : en détendant le corps, il laisse circuler ce qui y était logé. C'est une porte d'entrée douce et puissante si tu as du mal à te poser et à recevoir. Une première séance crée souvent un vrai déplacement.",
-      ctas: [{ label: "Réserver une séance", url: "https://tidycal.com/elodie-nirennold" }],
+      p1: "Ton corps parle. Tensions, fatigue qui ne passe pas avec le repos, syst�me nerveux qui ne descend plus vraiment. Il ne crie pas encore mais il insiste. Et tu le sais.",
+      p2: "Il y a quelque chose qui cherche � circuler, � �tre lib�r�. Quelque chose que les mots n'ont pas encore r�ussi � atteindre. Ton corps est en avance sur ta t�te, et c'est une information pr�cieuse.",
+      aide: "Comment je peux t'aider : l'ost�opathie somato-�motionnelle pour �couter ce que ton corps garde en m�moire et comprendre quelles �motions se cachent derri�re tes tensions. En les rel�chant, ton syst�me nerveux retrouve sa capacit� � se r�guler. Le massage de r�harmonisation et d'ancrage agit aussi sur ce lien entre corps et �motions : en d�tendant le corps, il laisse circuler ce qui y �tait log�. C'est une porte d'entr�e douce et puissante si tu as du mal � te poser et � recevoir. Une premi�re s�ance cr�e souvent un vrai d�placement.",
+      ctas: [{ label: "R�server une s�ance", url: "https://tidycal.com/elodie-nirennold" }],
     },
     high: {
-      title: "Ton corps a besoin d'être entendu maintenant",
-      p1: "Ton corps ne chuchote plus. Il retient, il compense, il sature. La fatigue est profonde. Le système nerveux est en alerte chronique. Et tu as appris à fonctionner malgré tout, au prix d'un effort invisible que tu portes seul.",
-      p2: "Ce n'est pas de la faiblesse. C'est le signe que ton corps a accumulé plus qu'il ne peut continuer à gérer seul.",
-      aide: "Comment je peux t'aider : l'ostéopathie somato-émotionnelle pour écouter ce que ton corps garde en mémoire et comprendre quelles émotions se cachent derrière tes tensions. En les relâchant, ton système nerveux retrouve sa capacité à se réguler. Le massage de réharmonisation et d'ancrage agit aussi sur ce lien entre corps et émotions : en détendant le corps, il laisse circuler ce qui y était logé. C'est une porte d'entrée douce et puissante si tu as du mal à te poser et à recevoir. Une première séance crée souvent un vrai déplacement.",
+      title: "Ton corps a besoin d'�tre entendu maintenant",
+      p1: "Ton corps ne chuchote plus. Il retient, il compense, il sature. La fatigue est profonde. Le syst�me nerveux est en alerte chronique. Et tu as appris � fonctionner malgr� tout, au prix d'un effort invisible que tu portes seul.",
+      p2: "Ce n'est pas de la faiblesse. C'est le signe que ton corps a accumul� plus qu'il ne peut continuer � g�rer seul.",
+      aide: "Comment je peux t'aider : l'ost�opathie somato-�motionnelle pour �couter ce que ton corps garde en m�moire et comprendre quelles �motions se cachent derri�re tes tensions. En les rel�chant, ton syst�me nerveux retrouve sa capacit� � se r�guler. Le massage de r�harmonisation et d'ancrage agit aussi sur ce lien entre corps et �motions : en d�tendant le corps, il laisse circuler ce qui y �tait log�. C'est une porte d'entr�e douce et puissante si tu as du mal � te poser et � recevoir. Une premi�re s�ance cr�e souvent un vrai d�placement.",
       ctas: [
-        { label: "Réserver une séance", url: "https://tidycal.com/elodie-nirennold" },
+        { label: "R�server une s�ance", url: "https://tidycal.com/elodie-nirennold" },
         { label: "En savoir plus sur l'accompagnement", url: "https://coccinellodie.github.io/elodienirennold.com/accompagnements.html" },
       ],
     },
@@ -891,53 +847,53 @@ const RESULTS_DATA = {
   subconscient: {
     low: {
       title: "Quelque chose en toi est relativement accessible",
-      p1: "Tu arrives à accéder à ce que tu ressens. Le mental ne te déborde pas trop. Les schémas que tu vois, tu peux les travailler par la réflexion et la volonté.",
+      p1: "Tu arrives � acc�der � ce que tu ressens. Le mental ne te d�borde pas trop. Les sch�mas que tu vois, tu peux les travailler par la r�flexion et la volont�.",
       p2: "Ce n'est pas pour autant qu'il n'y a rien sous la surface. Mais pour l'instant, les outils conscients te suffisent, ou tu n'as pas encore senti l'appel d'aller plus loin.",
-      aide: "Comment je peux t'aider : l'hypnose pour aller là où la volonté et l'analyse ne passent pas. Elle permet de rencontrer les parts de toi qui se sont figées pour te protéger, et de relâcher ce qui se rejoue sans que tu l'aies choisi. Une séance crée souvent un vrai déplacement, et c'est un excellent point de départ pour stabiliser ensuite dans la durée.",
-      ctas: [{ label: "Réserver une séance", url: "https://tidycal.com/elodie-nirennold" }],
+      aide: "Comment je peux t'aider : l'hypnose pour aller l� o� la volont� et l'analyse ne passent pas. Elle permet de rencontrer les parts de toi qui se sont fig�es pour te prot�ger, et de rel�cher ce qui se rejoue sans que tu l'aies choisi. Une s�ance cr�e souvent un vrai d�placement, et c'est un excellent point de d�part pour stabiliser ensuite dans la dur�e.",
+      ctas: [{ label: "R�server une s�ance", url: "https://tidycal.com/elodie-nirennold" }],
     },
     mid: {
-      title: "Quelque chose cherche à être atteint au-delà des mots",
-      p1: "Tu travailles sur toi. Tu comprends beaucoup de choses. Et pourtant, il y a des endroits que la réflexion n'atteint pas. Des schémas qui reviennent. Des émotions qui restent floues. Une fatigue de comprendre sans que ça change vraiment.",
-      p2: "Ce n'est pas un échec. C'est le signe que la prochaine étape ne passe pas par la tête, mais par quelque chose de plus profond.",
-      aide: "Comment je peux t'aider : l'hypnose pour aller là où la volonté et l'analyse ne passent pas. Elle permet de rencontrer les parts de toi qui se sont figées pour te protéger, et de relâcher ce qui se rejoue sans que tu l'aies choisi. Une séance crée souvent un vrai déplacement, et c'est un excellent point de départ pour stabiliser ensuite dans la durée.",
-      ctas: [{ label: "Réserver une séance", url: "https://tidycal.com/elodie-nirennold" }],
+      title: "Quelque chose cherche � �tre atteint au-del� des mots",
+      p1: "Tu travailles sur toi. Tu comprends beaucoup de choses. Et pourtant, il y a des endroits que la r�flexion n'atteint pas. Des sch�mas qui reviennent. Des �motions qui restent floues. Une fatigue de comprendre sans que �a change vraiment.",
+      p2: "Ce n'est pas un �chec. C'est le signe que la prochaine �tape ne passe pas par la t�te, mais par quelque chose de plus profond.",
+      aide: "Comment je peux t'aider : l'hypnose pour aller l� o� la volont� et l'analyse ne passent pas. Elle permet de rencontrer les parts de toi qui se sont fig�es pour te prot�ger, et de rel�cher ce qui se rejoue sans que tu l'aies choisi. Une s�ance cr�e souvent un vrai d�placement, et c'est un excellent point de d�part pour stabiliser ensuite dans la dur�e.",
+      ctas: [{ label: "R�server une s�ance", url: "https://tidycal.com/elodie-nirennold" }],
     },
     high: {
       title: "Quelque chose en toi t'attend",
-      p1: "Tu te regardes faire. Tu sais exactement ce que tu reproduis. Et tu le fais quand même. La tête a tout compris, le système, lui, continue. Le mental tourne la nuit. La peur de l'effondrement pilote en fond. Et il y a quelque chose en toi qui sait que la prochaine étape ne passera pas par les mots.",
-      p2: "C'est là que l'hypnose intervient. Pas pour supprimer ce qui te protège, pour lui permettre d'être enfin entendu, compris, apaisé à la source.",
-      aide: "Comment je peux t'aider : l'hypnose pour aller là où la volonté et l'analyse ne passent pas. Elle permet de rencontrer les parts de toi qui se sont figées pour te protéger, et de relâcher ce qui se rejoue sans que tu l'aies choisi. Une séance crée souvent un vrai déplacement, et c'est un excellent point de départ pour stabiliser ensuite dans la durée.",
+      p1: "Tu te regardes faire. Tu sais exactement ce que tu reproduis. Et tu le fais quand m�me. La t�te a tout compris, le syst�me, lui, continue. Le mental tourne la nuit. La peur de l'effondrement pilote en fond. Et il y a quelque chose en toi qui sait que la prochaine �tape ne passera par les mots.",
+      p2: "C'est l� que l'hypnose intervient. Pas pour supprimer ce qui te prot�ge, pour lui permettre d'�tre enfin entendu, compris, apais� � la source.",
+      aide: "Comment je peux t'aider : l'hypnose pour aller l� o� la volont� et l'analyse ne passent pas. Elle permet de rencontrer les parts de toi qui se sont fig�es pour te prot�ger, et de rel�cher ce qui se rejoue sans que tu l'aies choisi. Une s�ance cr�e souvent un vrai d�placement, et c'est un excellent point de d�part pour stabiliser ensuite dans la dur�e.",
       ctas: [
-        { label: "Réserver une séance", url: "https://tidycal.com/elodie-nirennold" },
+        { label: "R�server une s�ance", url: "https://tidycal.com/elodie-nirennold" },
         { label: "En savoir plus sur l'accompagnement", url: "https://coccinellodie.github.io/elodienirennold.com/accompagnements.html" },
       ],
     },
   },
   liens: {
     low: {
-      title: "Tes liens sont relativement sécurisés",
-      p1: "Tu arrives à poser des limites, à recevoir, à rester toi-même dans le lien. Ce n'est pas parfait, ça ne l'est pour personne, mais tu ne fonctionnes pas en mode survie relationnelle chronique.",
-      p2: "Si tu es ici, c'est peut-être que quelque chose d'autre t'appelle. Ou que tu veux consolider ce qui est déjà là, avant que ça coûte davantage.",
-      aide: "Comment je peux t'aider : une séance de coaching intégratif de 1h30, au cabinet à Levallois-Perret ou en visio, pour comprendre ce qui se joue en toi quand le lien vacille. On repère ensemble où tu t'adaptes jusqu'à t'oublier et ce que tu veux vraiment dans tes relations. Tu repars avec plus d'ancrage et des appuis concrets pour rester en lien sans te trahir, ni t'épuiser.",
-      ctas: [{ label: "Réserver une séance", url: "https://tidycal.com/elodie-nirennold" }],
+      title: "Tes liens sont relativement s�curis�s",
+      p1: "Tu arrives � poser des limites, � recevoir, � rester toi-m�me dans le lien. Ce n'est pas parfait, �a ne l'est pour personne, mais tu ne fonctionnes pas en mode survie relationnelle chronique.",
+      p2:  "Si tu es ici, c'est peut-�tre que quelque chose d'autre t'appelle. Ou que tu veux consolider ce qui est d�j� l�, avant que �a co�te davantage.",
+      aide: "Comment je peux t'aider : une s�ance de coaching int�gratif de 1h30, au cabinet � Levallois-Perret ou en visio, pour comprendre ce qui se joue en toi quand le lien vacille. On rep�re ensemble o� tu t'adaptes jusqu'� t'oublier et ce que tu veux vraiment dans tes relations. Tu repars avec plus d'ancrage et des appuis concrets pour rester en lien sans te trahir, ni t'�puiser.",
+      ctas: [{ label: "R�server une s�ance", url: "https://tidycal.com/elodie-nirennold" }],
     },
     mid: {
-      title: "Tes liens te coûtent plus qu'ils ne te nourrissent",
-      p1: "Tu donnes. Tu t'effaces. Tu surveilles. Tu analyses les silences. Et tu tiens en surface pour que ça tienne autour de toi. Mais intérieurement, il y a une fatigue relationnelle que peu de gens voient.",
-      p2: "Recevoir sans culpabiliser. Dire ce que tu penses sans avoir peur de perdre le lien. Rester toi-même sans t'amputer. C'est possible, mais ça ne se fait pas uniquement par la volonté.",
-      aide: "Comment je peux t'aider : une séance de coaching intégratif de 1h30, au cabinet à Levallois-Perret ou en visio, pour comprendre ce qui se joue en toi quand le lien vacille. On repère ensemble où tu t'adaptes jusqu'à t'oublier et ce que tu veux vraiment dans tes relations. Tu repars avec plus d'ancrage et des appuis concrets pour rester en lien sans te trahir, ni t'épuiser.",
-      ctas: [{ label: "Réserver une séance", url: "https://tidycal.com/elodie-nirennold" }],
+      title: "Tes liens te co�tent plus qu'ils ne te nourrissent",
+      p1: "Tu donnes. Tu t'effaces. Tu surveilles. Tu analyses les silences. Et tu tiens en surface pour que �a tienne autour de toi. Mais int�rieurement, il y a une fatigue relationnelle que peu de gens voient.",
+      p2: "Recevoir sans culpabiliser. Dire ce que tu penses sans avoir peur de perdre le lien. Rester toi-m�me sans t'amputer. C'est possible, mais �a ne se fait pas uniquement par la volont�.",
+      aide: "Comment je peux t'aider : une s�ance de coaching int�gratif de 1h30, au cabinet � Levallois-Perret ou en visio, pour comprendre ce qui se joue en toi quand le lien vacille. On rep�re ensemble o� tu t'adaptes jusqu'� t'oublier et ce que tu veux vraiment dans tes relations. Tu repars avec plus d'ancrage et des appuis concrets pour rester en lien sans te trahir, ni t'�puiser.",
+      ctas: [{ label: "R�server une s�ance", url: "https://tidycal.com/elodie-nirennold" }],
     },
     high: {
       title: "Tu survis dans le lien",
-      p1: "Tu surveilles l'état du lien en permanence. Tu donnes avant qu'on demande. Tu t'effaces avant qu'on reproche. Et recevoir, vraiment recevoir, sans te sentir aussitôt en dette, tu ne sais plus comment c'est.",
-      p2: "Ce n'est pas de la générosité. C'est une stratégie de survie construite depuis longtemps. Et elle t'épuise.",
-      p3: "Quelque chose doit changer, pas juste dans ta tête. Dans ton système nerveux, dans tes automatismes, dans la façon dont tu te tiens dans le lien.",
-      aide: "Comment je peux t'aider : une séance de coaching intégratif de 1h30, au cabinet à Levallois-Perret ou en visio, pour comprendre ce qui se joue en toi quand le lien vacille. On repère ensemble où tu t'adaptes jusqu'à t'oublier et ce que tu veux vraiment dans tes relations. Tu repars avec plus d'ancrage et des appuis concrets pour rester en lien sans te trahir, ni t'épuiser.",
+      p1: "Tu surveilles l'�tat du lien en permanence. Tu donnes avant qu'on demande. Tu t'effaces avant qu'on reproche. Et recevoir, vraiment recevoir, sans te sentir aussit�t en dette, tu ne sais plus comment c'est.",
+      p2: "Ce n'est pas de la g�n�rosit�. C'est une strat�gie de survie construite depuis longtemps. Et elle t'�puise.",
+      p3: "Quelque chose doit changer, pas juste dans ta t�te. Dans ton syst�me nerveux, dans tes automatismes, dans la fa�on dont tu te tiens dans le lien.",
+      aide: "Comment je peux t'aider : une s�ance de coaching int�gratif de 1h30, au cabinet � Levallois-Perret ou en visio, pour comprendre ce qui se joue en toi quand le lien vacille. On rep�re ensemble o� tu t'adaptes jusqu'� t'oublier et ce que tu veux vraiment dans tes relations. Tu repars avec plus d'ancrage et des appuis concrets pour rester en lien sans te trahir, ni t'�puiser.",
       ctas: [
-        { label: "Appel clarté gratuit · 45 min", url: "https://tidycal.com/elodie-nirennold/appel-clarte-gratuit-coaching-integratif" },
-        { label: "Réserver une séance", url: "https://tidycal.com/elodie-nirennold" },
+        { label: "Appel clart� gratuit � 45 min", url: "https://tidycal.com/elodie-nirennold/appel-clarte-gratuit-coaching-integratif" },
+        { label: "R�server une s�ance", url: "https://tidycal.com/elodie-nirennold" },
       ],
     },
   },
@@ -962,9 +918,9 @@ function renderDimResult(containerId, dimKey, icon, dimName, score, palier) {
   const extraP = data.p3 ? '<p>' + data.p3 + '</p>' : '';
   let ctaHtml;
   if (palier === 'elevated') {
-    ctaHtml = '<div class="rdc-cta-wrap"><a href="https://tidycal.com/elodie-nirennold" target="_blank" class="rdc-cta-link">👉🏽 Réserver une séance</a><a href="https://tidycal.com/elodie-nirennold/appel-clarte-gratuit-coaching-integratif" target="_blank" class="rdc-cta-link">👉🏽 Appel clarté gratuit · 45 min</a></div>';
+    ctaHtml = '<div class="rdc-cta-wrap"><a href="https://tidycal.com/elodie-nirennold" target="_blank" class="rdc-cta-link">=I<� R�server une s�ance</a><a href="https://tidycal.com/elodie-nirennold/appel-clarte-gratuit-coaching-integratif" target="_blank" class="rdc-cta-link">=I<� Appel clart� gratuit � 45 min</a></div>';
   } else {
-    ctaHtml = '<div class="rdc-cta-wrap"><a href="https://tidycal.com/elodie-nirennold" target="_blank" class="rdc-cta-link">👉🏽 Réserver une séance</a></div>';
+    ctaHtml = '<div class="rdc-cta-wrap"><a href="https://tidycal.com/elodie-nirennold" target="_blank" class="rdc-cta-link">=I<� R�server une s�ance</a></div>';
   }
   container.innerHTML = '<div class="rdc-header"><span class="rdc-icon">' + icon + '</span><span class="rdc-dim-name">' + dimName + '</span></div><h3>' + data.title + '</h3><p>' + data.p1 + '</p><p>' + data.p2 + '</p>' + extraP + '<div class="rdc-aide">' + data.aide + '</div>' + ctaHtml;
 }
@@ -979,7 +935,7 @@ function showResults() {
   const scores = [sC, sI, sL];
   const maxScore = Math.max(...scores);
 
-  const greeting = userName ? 'Tes résultats, ' + userName : 'Tes résultats';
+  const greeting = userName ? 'Tes r�sultats, ' + userName : 'Tes r�sultats';
   document.getElementById('results-greeting').textContent = greeting;
 
   setTimeout(function() {
@@ -1000,32 +956,32 @@ function showResults() {
   // Phrase miroir
   var mirrorText;
   if (allZero) {
-    mirrorText = "Ton bilan est lumineux aujourd'hui. Rien ne ressort en tension particulière. Si tu as fait ce bilan, c'est souvent qu'une petite voix cherche quand même quelque chose. Si tu veux, écris-moi, on peut regarder ensemble ce qui t'a amené ici.";
+    mirrorText = "Ton bilan est lumineux aujourd'hui. Rien ne ressort en tension particuli�re. Si tu as fait ce bilan, c'est souvent qu'une petite voix cherche quand m�me quelque chose. Si tu veux, �cris-moi, on peut regarder ensemble ce qui t'a amen� ici.";
   } else if (allLow) {
-    mirrorText = "Rien n'est en zone de forte tension aujourd'hui, et c'est précieux. Si un domaine ressort un peu plus que les autres, c'est là que tu peux agir en douceur, avant que ça s'installe.";
+    mirrorText = "Rien n'est en zone de forte tension aujourd'hui, et c'est pr�cieux. Si un domaine ressort un peu plus que les autres, c'est l� que tu peux agir en douceur, avant que �a s'installe.";
   } else if (highCount >= 3) {
-    mirrorText = "Trois domaines ressortent haut. Corps, subconscient, liens : tout est en mouvement en même temps. Ce n'est pas un problème. C'est souvent le signe que quelque chose cherche à se réorganiser en profondeur.";
+    mirrorText = "Trois domaines ressortent haut. Corps, subconscient, liens : tout est en mouvement en m�me temps. Ce n'est pas un probl�me. C'est souvent le signe que quelque chose cherche � se r�organiser en profondeur.";
   } else if (highCount === 2) {
-    mirrorText = "Deux domaines ressortent haut. Corps, subconscient et liens sont reliés : quand l'un est en tension, les autres suivent souvent. Ce bilan te donne deux portes d'entrée.";
+    mirrorText = "Deux domaines ressortent haut. Corps, subconscient et liens sont reli�s : quand l'un est en tension, les autres suivent souvent. Ce bilan te donne deux portes d'entr�e.";
   } else if (highCount === 1) {
-    mirrorText = "Un domaine ressort clairement. C'est là que ton énergie est la plus sollicitée en ce moment, et c'est par là que commence le vrai mouvement.";
+    mirrorText = "Un domaine ressort clairement. C'est l� que ton �nergie est la plus sollicit�e en ce moment, et c'est par l� que commence le vrai mouvement.";
   } else {
-    mirrorText = "Ton bilan dessine quelque chose. Un domaine parle un peu plus fort que les autres en ce moment. C'est une invitation à l'écouter.";
+    mirrorText = "Ton bilan dessine quelque chose. Un domaine parle un peu plus fort que les autres en ce moment. C'est une invitation � l'�couter.";
   }
   document.getElementById('result-mirror').innerHTML = '<p class="mirror-phrase">' + mirrorText + '</p>';
 
-  // Phrase de transition (égalité au sommet)
+  // Phrase de transition (�galit� au sommet)
   if (!allZero && dominants.length > 1) {
     var count = dominants.length === 2 ? 'Deux' : 'Trois';
-    var dimParts = dominants.map(function(i) { return DIMENSIONS[i].name + ' ' + DIMENSIONS[i].icon; }).join(' et ');
-    document.getElementById('result-transition').innerHTML = '<p class="transition-phrase">' + count + ' domaines ressortent au même niveau : ' + dimParts + '. Lis les deux. Puis pose une main sur ton ventre et sens lequel résonne le plus fort dans ton corps en ce moment. Pas dans ta tête. Ton corps sait.</p>';
+    var dimParts = dominants.map(function(i) { return DIMENSIONS[i].name + '�' + DIMENSIONS[i].icon; }).join(' et ');
+    document.getElementById('result-transition').innerHTML = '<p class="transition-phrase">' + count + ' domaines ressortent au m�me niveau�: ' + dimParts + '. Lis les deux. Puis pose une main sur ton ventre et sens lequel r�sonne le plus fort dans ton corps en ce moment. Pas dans ta t�te. Ton corps sait.</p>';
   } else {
     document.getElementById('result-transition').innerHTML = '';
   }
 
   // Blocs de domaine
   var dimKeys  = ['corps', 'subconscient', 'liens'];
-  var dimIcons = ['🌿', '🦋', '♥️'];
+  var dimIcons = ['<?', '>�', 'e'];
   var dimNames = ['Corps', 'Subconscient', 'Liens'];
 
   dimKeys.forEach(function(key, i) {
@@ -1042,12 +998,12 @@ function showResults() {
     }
   });
 
-  // Bloc de clôture
+  // Bloc de cl�ture
   var nowCard = document.getElementById('now-card');
   if (allZero) {
-    nowCard.innerHTML = '<h2>Un bilan lumineux</h2><p>Si une petite voix t\'a quand même amené ici, écris-moi. On peut regarder ensemble ce qui cherche.</p><a href="mailto:contact@elodienirennold.com" class="now-email-link">contact@elodienirennold.com</a>';
+    nowCard.innerHTML = '<h2>Un bilan lumineux</h2><p>Si une petite voix t\'a quand m�me amen� ici, �cris-moi. On peut regarder ensemble ce qui cherche.</p><a href="mailto:contact@elodienirennold.com" class="now-email-link">contact@elodienirennold.com</a>';
   } else {
-    nowCard.innerHTML = '<h2>Tu hésites ?</h2><p>Si tu n\'es pas sûr par où commencer, ou si tu veux qu\'on regarde ensemble ce qui est le plus juste pour toi, écris-moi directement.</p><a href="mailto:contact@elodienirennold.com" class="now-email-link">contact@elodienirennold.com</a>';
+    nowCard.innerHTML = '<h2>Tu h�sites�?</h2><p>Si tu n\'es pas s�r par o� commencer, ou si tu veux qu\'on regarde ensemble ce qui est le plus juste pour toi, �cris-moi directement.</p><a href="mailto:contact@elodienirennold.com" class="now-email-link">contact@elodienirennold.com</a>';
   }
 }
 

@@ -682,7 +682,7 @@ const QUESTIONS = [
     { letter:'D', text:"M'a apporté des prises de conscience qui ont changé des choses.", score:1 },
   ]},
   { dim:1, text:"La nuit, ou dans les moments de calme, mon mental :", options:[
-    { letter:'A', text:"S'emballe avant un évìnement stressant, puis redescend.", score:1 },
+    { letter:'A', text:"S'emballe avant un événement stressant, puis redescend.", score:1 },
     { letter:'B', text:"Se pose, je m'endors tranquille.", score:0 },
     { letter:'C', text:"Ne descend presque jamais, le silence intérieur m'est devenu étranger.", score:3 },
     { letter:'D', text:"Tourne régulièrement le soir, ruminations et scénarios.", score:2 },
@@ -967,7 +967,8 @@ function renderDimResult(containerId, dimKey, icon, dimName, score, palier, show
       ctaHtml = '<div class="rdc-cta-wrap"><a href="https://tidycal.com/elodie-nirennold" target="_blank" class="rdc-cta-link">👉🏽 Réserver une séance</a></div>';
     }
   }
-  container.innerHTML = '<div class="rdc-header"><span class="rdc-icon">' + icon + '</span><span class="rdc-dim-name">' + dimName + '</span></div><h3>' + data.title + '</h3><p>' + data.p1 + '</p><p>' + data.p2 + '</p>' + extraP + '<div class="rdc-aide">' + data.aide + '</div>' + ctaHtml;
+  const aideHtml = showCta ? '<div class="rdc-aide">' + data.aide + '</div>' : '';
+  container.innerHTML = '<div class="rdc-header"><span class="rdc-icon">' + icon + '</span><span class="rdc-dim-name">' + dimName + '</span></div><h3>' + data.title + '</h3><p>' + data.p1 + '</p><p>' + data.p2 + '</p>' + extraP + aideHtml + ctaHtml;
 }
 
 function showResults() {

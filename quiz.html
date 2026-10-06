@@ -435,7 +435,6 @@
     text-align: center;
     font-size: 0.82rem;
     color: var(--muted);
-    font-style: italic;
     line-height: 1.7;
   }
 
@@ -562,7 +561,7 @@
     <p style="margin-top:16px;">Ces 5 questions explorent ce qui se joue en dessous du mental.</p>
   </div>
   <div class="nav-row">
-  2 <button class="btn-secondary" onclick="goBackToDim2()">← Retour</button>
+    <button class="btn-secondary" onclick="goBackToDim2()">← Retour</button>
     <button class="btn-primary" onclick="startDimension(1)">Continuer →</button>
   </div>
 </div>
@@ -632,7 +631,7 @@
   <div id="now-card" class="now-card"></div>
 
   <div class="divider"></div>
-  <p class="footer-note">Elodie Nirennold · Ostéopathe somato-émotionnelle · Hypnothérapeute · Coach intégratif</p>
+  <p class="footer-note">Elodie Nirennold · Ostéopathie somato-émotionnelle · Hypnose · Coaching intégratif</p>
 </div>
 
 <script>
@@ -683,7 +682,7 @@ const QUESTIONS = [
     { letter:'D', text:"M'a apporté des prises de conscience qui ont changé des choses.", score:1 },
   ]},
   { dim:1, text:"La nuit, ou dans les moments de calme, mon mental :", options:[
-    { letter:'A', text:"S'emballe avant un événement stressant, puis redescend.", score:1 },
+    { letter:'A', text:"S'emballe avant un évìnement stressant, puis redescend.", score:1 },
     { letter:'B', text:"Se pose, je m'endors tranquille.", score:0 },
     { letter:'C', text:"Ne descend presque jamais, le silence intérieur m'est devenu étranger.", score:3 },
     { letter:'D', text:"Tourne régulièrement le soir, ruminations et scénarios.", score:2 },
@@ -919,14 +918,14 @@ const RESULTS_DATA = {
       title: "Tes liens sont relativement sécurisés",
       p1: "Tu arrives à poser des limites, à recevoir, à rester toi-même dans le lien. Ce n'est pas parfait, ça ne l'est pour personne, mais tu ne fonctionnes pas en mode survie relationnelle chronique.",
       p2: "Si tu es ici, c'est peut-être que quelque chose d'autre t'appelle. Ou que tu veux consolider ce qui est déjà là, avant que ça coûte davantage.",
-      aide: "Comment je peux t'aider : une séance de coaching intégratif de 1h30, au cabinet à Levallois-Perret ou en visio, pour comprendre ce qui se joue en toi quand le lien vacille. On repère ensemble où tu t'adaptes jusqu'à t'oublier et ce que tu veux vraiment dans tes relations. Tu repars avec plus d'ancrage et des appuis concrets pour rester en lien sans te trahir, ni t'épuiser.",
+      aide: "Comment je peux t'aider : une séance de coaching intégratif de 1h30, au cabinet à Levallois-Perret ou en visio, pour comprendre ce qui se joue en toi quand le lien vacille. On repère ensemble où tu t'adaptes jusqu'à t'oublier et ce que tu veux vraiment dans tes relations. Tu repars avec plus d'ancrage et des outils concrets pour rester en lien sans te trahir, ni t'épuiser.",
       ctas: [{ label: "Réserver une séance", url: "https://tidycal.com/elodie-nirennold" }],
     },
     mid: {
       title: "Tes liens te coûtent plus qu'ils ne te nourrissent",
       p1: "Tu donnes. Tu t'effaces. Tu surveilles. Tu analyses les silences. Et tu tiens en surface pour que ça tienne autour de toi. Mais intérieurement, il y a une fatigue relationnelle que peu de gens voient.",
       p2: "Recevoir sans culpabiliser. Dire ce que tu penses sans avoir peur de perdre le lien. Rester toi-même sans t'amputer. C'est possible, mais ça ne se fait pas uniquement par la volonté.",
-      aide: "Comment je peux t'aider : une séance de coaching intégratif de 1h30, au cabinet à Levallois-Perret ou en visio, pour comprendre ce qui se joue en toi quand le lien vacille. On repère ensemble où tu t'adaptes jusqu'à t'oublier et ce que tu veux vraiment dans tes relations. Tu repars avec plus d'ancrage et des appuis concrets pour rester en lien sans te trahir, ni t'épuiser.",
+      aide: "Comment je peux t'aider : une séance de coaching intégratif de 1h30, au cabinet à Levallois-Perret ou en visio, pour comprendre ce qui se joue en toi quand le lien vacille. On repère ensemble où tu t'adaptes jusqu'à t'oublier et ce que tu veux vraiment dans tes relations. Tu repars avec plus d'ancrage et des outils concrets pour rester en lien sans te trahir, ni t'épuiser.",
       ctas: [{ label: "Réserver une séance", url: "https://tidycal.com/elodie-nirennold" }],
     },
     high: {
@@ -934,7 +933,7 @@ const RESULTS_DATA = {
       p1: "Tu surveilles l'état du lien en permanence. Tu donnes avant qu'on demande. Tu t'effaces avant qu'on reproche. Et recevoir, vraiment recevoir, sans te sentir aussitôt en dette, tu ne sais plus comment c'est.",
       p2: "Ce n'est pas de la générosité. C'est une stratégie de survie construite depuis longtemps. Et elle t'épuise.",
       p3: "Quelque chose doit changer, pas juste dans ta tête. Dans ton système nerveux, dans tes automatismes, dans la façon dont tu te tiens dans le lien.",
-      aide: "Comment je peux t'aider : une séance de coaching intégratif de 1h30, au cabinet à Levallois-Perret ou en visio, pour comprendre ce qui se joue en toi quand le lien vacille. On repère ensemble où tu t'adaptes jusqu'à t'oublier et ce que tu veux vraiment dans tes relations. Tu repars avec plus d'ancrage et des appuis concrets pour rester en lien sans te trahir, ni t'épuiser.",
+      aide: "Comment je peux t'aider : une séance de coaching intégratif de 1h30, au cabinet à Levallois-Perret ou en visio, pour comprendre ce qui se joue en toi quand le lien vacille. On repère ensemble où tu t'adaptes jusqu'à t'oublier et ce que tu veux vraiment dans tes relations. Tu repars avec plus d'ancrage et des outils concrets pour rester en lien sans te trahir, ni t'épuiser.",
       ctas: [
         { label: "Appel clarté gratuit · 45 min", url: "https://tidycal.com/elodie-nirennold/appel-clarte-gratuit-coaching-integratif" },
         { label: "Réserver une séance", url: "https://tidycal.com/elodie-nirennold" },
@@ -955,16 +954,18 @@ function getBand(score) {
   return 'high';
 }
 
-function renderDimResult(containerId, dimKey, icon, dimName, score, palier) {
+function renderDimResult(containerId, dimKey, icon, dimName, score, palier, showCta) {
   const bandKey = palier === 'elevated' ? 'high' : palier === 'moderate' ? 'mid' : 'low';
   const data = RESULTS_DATA[dimKey][bandKey];
   const container = document.getElementById(containerId);
   const extraP = data.p3 ? '<p>' + data.p3 + '</p>' : '';
-  let ctaHtml;
-  if (palier === 'elevated') {
-    ctaHtml = '<div class="rdc-cta-wrap"><a href="https://tidycal.com/elodie-nirennold" target="_blank" class="rdc-cta-link">👉🏽 Réserver une séance</a><a href="https://tidycal.com/elodie-nirennold/appel-clarte-gratuit-coaching-integratif" target="_blank" class="rdc-cta-link">👉🏽 Appel clarté gratuit · 45 min</a></div>';
-  } else {
-    ctaHtml = '<div class="rdc-cta-wrap"><a href="https://tidycal.com/elodie-nirennold" target="_blank" class="rdc-cta-link">👉🏽 Réserver une séance</a></div>';
+  let ctaHtml = '';
+  if (showCta) {
+    if (dimKey === 'liens') {
+      ctaHtml = '<div class="rdc-cta-wrap"><a href="https://tidycal.com/elodie-nirennold/appel-clarte-gratuit-coaching-integratif" target="_blank" class="rdc-cta-link">👉🏽 Appel clarté gratuit · 45 min</a><a href="https://tidycal.com/elodie-nirennold" target="_blank" class="rdc-cta-link">👉🏽 Réserver une séance</a></div>';
+    } else {
+      ctaHtml = '<div class="rdc-cta-wrap"><a href="https://tidycal.com/elodie-nirennold" target="_blank" class="rdc-cta-link">👉🏽 Réserver une séance</a></div>';
+    }
   }
   container.innerHTML = '<div class="rdc-header"><span class="rdc-icon">' + icon + '</span><span class="rdc-dim-name">' + dimName + '</span></div><h3>' + data.title + '</h3><p>' + data.p1 + '</p><p>' + data.p2 + '</p>' + extraP + '<div class="rdc-aide">' + data.aide + '</div>' + ctaHtml;
 }
@@ -1000,9 +1001,9 @@ function showResults() {
   // Phrase miroir
   var mirrorText;
   if (allZero) {
-    mirrorText = "Ton bilan est lumineux aujourd'hui. Rien ne ressort en tension particulière. Si tu as fait ce bilan, c'est souvent qu'une petite voix cherche quand même quelque chose. Si tu veux, écris-moi, on peut regarder ensemble ce qui t'a mené ici.";
+    mirrorText = "Ton bilan est lumineux aujourd'hui. Rien ne ressort en tension particulière. Si tu as fait ce bilan, c'est souvent qu'une petite voix cherche quand même quelque chose. Si tu veux, écris-moi, on peut regarder ensemble ce qui t'a amené ici.";
   } else if (allLow) {
-    mirrorText = "Rien n'est en zone de forte tension aujourd'hui, et c'est préicieux. Si un domaine ressort un peu plus que les autres, c'est là que tu peux agir en douceur, avant que ça s'installe.";
+    mirrorText = "Rien n'est en zone de forte tension aujourd'hui, et c'est précieux. Si un domaine ressort un peu plus que les autres, c'est là que tu peux agir en douceur, avant que ça s'installe.";
   } else if (highCount >= 3) {
     mirrorText = "Trois domaines ressortent haut. Corps, subconscient, liens : tout est en mouvement en même temps. Ce n'est pas un problème. C'est souvent le signe que quelque chose cherche à se réorganiser en profondeur.";
   } else if (highCount === 2) {
@@ -1018,12 +1019,12 @@ function showResults() {
   if (!allZero && dominants.length > 1) {
     var count = dominants.length === 2 ? 'Deux' : 'Trois';
     var dimParts = dominants.map(function(i) { return DIMENSIONS[i].name + ' ' + DIMENSIONS[i].icon; }).join(' et ');
-    document.getElementById('result-transition').innerHTML = '<p class="transition-phrase">' + count + ' domaines ressortent au même niveau : ' + dimParts + '. Lis les deux. Puis pose une main sur ton ventre et sens lequel résonne le plus fort dans ton corps en ce moment. Pas dans ta tête. Ton corps sait.</p>';
+    document.getElementById('result-transition').innerHTML = '<p class="transition-phrase">' + count + ' domaines ressortent au même niveau : ' + dimParts + '. Lis-les tous. Puis pose une main sur ton ventre et sens lequel résonne le plus fort dans ton corps en ce moment. Pas dans ta tête — ton corps sait ce qui est prioritaire pour lui.</p>';
   } else {
     document.getElementById('result-transition').innerHTML = '';
   }
 
-  // Blocs de domaine
+  // Blocs de domaine — tous affichés, CTA uniquement sur le(s) score(s) le(s) plus haut(s)
   var dimKeys  = ['corps', 'subconscient', 'liens'];
   var dimIcons = ['🌿', '🦋', '♥️'];
   var dimNames = ['Corps', 'Subconscient', 'Liens'];
@@ -1032,13 +1033,12 @@ function showResults() {
     var el = document.getElementById('result-' + key);
     if (allZero) {
       el.style.display = 'none';
-    } else if (dominants.includes(i)) {
+    } else {
       el.style.display = '';
       var palier = getPalier(scores[i]);
-      if (allLow) palier = 'moderate';
-      renderDimResult('result-' + key, key, dimIcons[i], dimNames[i], scores[i], palier);
-    } else {
-      el.style.display = 'none';
+      if (allLow && dominants.includes(i)) palier = 'moderate';
+      var showCta = dominants.includes(i);
+      renderDimResult('result-' + key, key, dimIcons[i], dimNames[i], scores[i], palier, showCta);
     }
   });
 

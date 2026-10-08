@@ -111,6 +111,7 @@ nav {
 }
 .hero-eyebrow::before {
   content:''; display:block; width:32px; height:1px; background:var(--rose); opacity:0.7;
+  flex-shrink:0; margin-top:0.45em;
 }
 
 .hero-tagline {
@@ -1198,7 +1199,6 @@ footer::before {
 
 /* ─── MOBILE NAV STRIP ─── */
 .mobile-nav-strip {
-  display:none;
   overflow-x:auto;
   -webkit-overflow-scrolling:touch;
   scrollbar-width:none;
@@ -1209,6 +1209,8 @@ footer::before {
   padding:0.7rem 1.5rem;
   gap:2.2rem;
   top:56px;
+  /* caché sur desktop */
+  display:none !important;
 }
 .mobile-nav-strip::-webkit-scrollbar { display:none; }
 .mobile-nav-strip a {
@@ -1217,7 +1219,7 @@ footer::before {
   color:var(--brun); text-decoration:none; white-space:nowrap;
 }
 @media(max-width:1100px) {
-  .mobile-nav-strip { display:flex; }
+  .mobile-nav-strip { display:flex !important; }
 }
 
 /* ─── RESPONSIVE ─── */
@@ -1230,6 +1232,7 @@ footer::before {
   .nav-links { display:none; }
   .hero { grid-template-columns:1fr; min-height:auto; }
   .hero-left { padding:8.5rem 2rem 3rem; order:1; }
+  .hero-eyebrow { align-items:flex-start; }
   .hero-right { order:2; height:155vw; max-height:820px; }
   .hero-img { object-position:center 18%; }
   .hero-stat { bottom:1.5rem; right:1.5rem; padding:1rem 1.4rem; }
@@ -2077,15 +2080,15 @@ reveals.forEach(el => observer.observe(el));
 
 <script>
 (function() {
-  var strip = document.querySelector(".mobile-nav-strip");
-  if (!strip) return;
   function positionStrip() {
-    if (window.innerWidth <= 1100) {
-      var nav = document.querySelector("nav");
-      if (nav) strip.style.top = nav.getBoundingClientRect().height + "px";
-    }
+    var strip = document.querySelector(".mobile-nav-strip");
+    var nav = document.querySelector("nav");
+    if (!strip || !nav) return;
+    var h = nav.offsetHeight;
+    strip.style.top = h + "px";
   }
-  positionStrip();
+  document.addEventListener("DOMContentLoaded", positionStrip);
+  window.addEventListener("load", positionStrip);
   window.addEventListener("resize", positionStrip);
 })();
 </script>

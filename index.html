@@ -1197,28 +1197,27 @@ footer::before {
 .reveal-delay-3 { transition-delay:0.36s; }
 
 /* ─── MOBILE NAV STRIP ─── */
-.mobile-nav-strip { display:none; }
+.mobile-nav-strip {
+  display:none;
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+  position:fixed; left:0; right:0; z-index:199;
+  background:rgba(253,250,246,0.97);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(182,154,148,0.18);
+  padding:0.7rem 1.5rem;
+  gap:2.2rem;
+  top:56px;
+}
+.mobile-nav-strip::-webkit-scrollbar { display:none; }
+.mobile-nav-strip a {
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.62rem; letter-spacing:0.2em; text-transform:uppercase;
+  color:var(--brun); text-decoration:none; white-space:nowrap;
+}
 @media(max-width:1100px) {
-  .mobile-nav-strip {
-    display:flex;
-    overflow-x:auto;
-    -webkit-overflow-scrolling:touch;
-    scrollbar-width:none;
-    position:fixed; top:58px; left:0; right:0; z-index:199;
-    background:rgba(253,250,246,0.96);
-    backdrop-filter:blur(16px);
-    border-bottom:1px solid rgba(182,154,148,0.14);
-    padding:0.7rem 1.5rem;
-    gap:2.2rem;
-  }
-  .mobile-nav-strip::-webkit-scrollbar { display:none; }
-  .mobile-nav-strip a {
-    font-family:'Jost', sans-serif; font-weight:300;
-    font-size:0.62rem; letter-spacing:0.2em; text-transform:uppercase;
-    color:var(--brun); text-decoration:none; white-space:nowrap;
-    transition:color 0.3s;
-  }
-  .mobile-nav-strip a:hover { color:var(--brun-fonce); }
+  .mobile-nav-strip { display:flex; }
 }
 
 /* ─── RESPONSIVE ─── */
@@ -1231,8 +1230,8 @@ footer::before {
   .nav-links { display:none; }
   .hero { grid-template-columns:1fr; min-height:auto; }
   .hero-left { padding:8.5rem 2rem 3rem; order:1; }
-  .hero-right { order:2; height:125vw; max-height:680px; }
-  .hero-img { object-position:center 10%; }
+  .hero-right { order:2; height:155vw; max-height:820px; }
+  .hero-img { object-position:center 18%; }
   .hero-stat { bottom:1.5rem; right:1.5rem; padding:1rem 1.4rem; }
   .hero-stat-num { font-size:2rem; }
   .hero-coccinelle { width:70px; height:70px; bottom:2rem; right:1.5rem; }
@@ -2076,5 +2075,19 @@ reveals.forEach(el => observer.observe(el));
 </a>
 
 
+<script>
+(function() {
+  var strip = document.querySelector(".mobile-nav-strip");
+  if (!strip) return;
+  function positionStrip() {
+    if (window.innerWidth <= 1100) {
+      var nav = document.querySelector("nav");
+      if (nav) strip.style.top = nav.getBoundingClientRect().height + "px";
+    }
+  }
+  positionStrip();
+  window.addEventListener("resize", positionStrip);
+})();
+</script>
 </body>
 </html>

@@ -103,14 +103,14 @@ nav {
   background:rgba(253,250,246,0.98);
   backdrop-filter:blur(20px);
   flex-direction:column; align-items:center; justify-content:center;
-  gap:2.5rem;
+  gap:1.6rem;
   opacity:0; pointer-events:none;
   transition:opacity 0.3s;
 }
 .mobile-menu.open { opacity:1; pointer-events:all; }
 .mobile-menu a {
   font-family:'Cormorant Garamond', serif; font-weight:400;
-  font-size:2rem; letter-spacing:0.05em;
+  font-size:1.25rem; letter-spacing:0.04em;
   color:var(--brun-fonce); text-decoration:none;
   transition:color 0.2s;
 }
@@ -128,6 +128,16 @@ nav {
   background:none; border:none; cursor:pointer;
   font-size:1.4rem; color:var(--brun); line-height:1;
 }
+.nav-mobile-rdv {
+  display:none;
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.65rem; letter-spacing:0.18em; text-transform:uppercase;
+  color:var(--blanc); background:var(--vert-sapin);
+  padding:0.55rem 1.1rem; border-radius:50px;
+  text-decoration:none; flex-shrink:0;
+  white-space:nowrap;
+}
+
 
 /* ─── HERO ─── */
 .hero-name { font-family:'Cormorant Garamond', serif; font-weight:300; font-size:clamp(3.5rem,7vw,6rem); line-height:0.95; color:var(--brun-fonce); margin-bottom:0.8rem; letter-spacing:-0.02em; }
@@ -1252,9 +1262,11 @@ footer::before {
   .footer-top { grid-template-columns:1fr; gap:3rem; }
   .footer-nav { grid-template-columns:repeat(2,1fr); gap:2rem; }
   .footer-bottom { flex-direction:column; align-items:flex-start; }
-  nav { padding:0.85rem 1.4rem; }
+  nav { padding:0.85rem 1.4rem; justify-content:space-between; position:relative; }
+  .nav-logo { position:absolute; left:50%; transform:translateX(-50%); }
   .nav-links { display:none; }
   .nav-cta { display:none; }
+  .nav-mobile-rdv { display:flex; align-items:center; }
   .burger-btn { display:flex; }
   .mobile-menu { display:flex; }
   .hero { grid-template-columns:1fr; min-height:auto; }
@@ -1300,6 +1312,7 @@ footer::before {
     <li><a href="#contact">Contact</a></li>
   </ul>
   <a href="https://tidycal.com/elodie-nirennold" target="_blank" class="nav-cta">Prendre rendez-vous</a>
+  <a href="https://tidycal.com/elodie-nirennold" target="_blank" class="nav-mobile-rdv">Rendez-vous</a>
 </nav>
 <!-- Menu mobile overlay -->
 <div class="mobile-menu" id="mobileMenu">

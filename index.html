@@ -1196,6 +1196,31 @@ footer::before {
 .reveal-delay-2 { transition-delay:0.24s; }
 .reveal-delay-3 { transition-delay:0.36s; }
 
+/* ─── MOBILE NAV STRIP ─── */
+.mobile-nav-strip { display:none; }
+@media(max-width:1100px) {
+  .mobile-nav-strip {
+    display:flex;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+    position:fixed; top:58px; left:0; right:0; z-index:199;
+    background:rgba(253,250,246,0.96);
+    backdrop-filter:blur(16px);
+    border-bottom:1px solid rgba(182,154,148,0.14);
+    padding:0.7rem 1.5rem;
+    gap:2.2rem;
+  }
+  .mobile-nav-strip::-webkit-scrollbar { display:none; }
+  .mobile-nav-strip a {
+    font-family:'Jost', sans-serif; font-weight:300;
+    font-size:0.62rem; letter-spacing:0.2em; text-transform:uppercase;
+    color:var(--brun); text-decoration:none; white-space:nowrap;
+    transition:color 0.3s;
+  }
+  .mobile-nav-strip a:hover { color:var(--brun-fonce); }
+}
+
 /* ─── RESPONSIVE ─── */
 @media (max-width:1100px) {
   .footer-inner { padding:4rem 2rem 2.5rem; }
@@ -1205,9 +1230,9 @@ footer::before {
   nav { padding:1.2rem 2rem; }
   .nav-links { display:none; }
   .hero { grid-template-columns:1fr; min-height:auto; }
-  .hero-left { padding:7rem 2rem 3rem; order:1; }
-  .hero-right { order:2; height:90vw; max-height:520px; }
-  .hero-img { object-position:center 5%; }
+  .hero-left { padding:8.5rem 2rem 3rem; order:1; }
+  .hero-right { order:2; height:125vw; max-height:680px; }
+  .hero-img { object-position:center 10%; }
   .hero-stat { bottom:1.5rem; right:1.5rem; padding:1rem 1.4rem; }
   .hero-stat-num { font-size:2rem; }
   .hero-coccinelle { width:70px; height:70px; bottom:2rem; right:1.5rem; }
@@ -1244,6 +1269,12 @@ footer::before {
   </ul>
   <a href="https://tidycal.com/elodie-nirennold" target="_blank" class="nav-cta">Prendre rendez-vous</a>
 </nav>
+<div class="mobile-nav-strip">
+  <a href="#par-ou-commencer">Par où commencer</a>
+  <a href="#approche">L'approche</a>
+  <a href="#temoignages">Témoignages</a>
+  <a href="#contact">Contact</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -1561,7 +1592,7 @@ footer::before {
     </ul>
     <a href="https://programmes.elodienirennold.com/quiz-diagnostic-sablier-interieur" target="_blank" class="btn-primary">Faire mon bilan gratuit</a>
   </div>
-  <div class="quiz-visual reveal reveal-delay-2" style="grid-column:1/-1;margin-top:3rem;">
+  <div class="quiz-visual reveal reveal-delay-2">
     <img src="https://coccinellodie.github.io/elodienirennold.com/Mockup%20quiz%20bilan%20coaching%20Elodie%20Nirennold.png" alt="Bilan sablier intérieur" style="width:100%;max-width:680px;display:block;margin:0 auto;border-radius:24px;box-shadow:0 20px 60px rgba(76,50,13,0.12);">
   </div>
 </section>

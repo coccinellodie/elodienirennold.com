@@ -160,6 +160,50 @@ footer{background:var(--creme-fonce);padding:2.5rem 8rem;display:flex;justify-co
   font-size:0.84rem; line-height:1.95;
   color:rgba(247,241,232,0.72); margin-bottom:0.8rem;
 }
+
+.coaching-desc-cadre-text p.cadre-titre {
+  font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:400;
+  font-size:1.75rem; line-height:1.25; color:var(--creme); margin-bottom:1.4rem;
+}
+.coaching-desc-cadre-text p.cadre-titre.rose { color:#FDFAF6; font-size:1.55rem; }
+.coaching-desc-cadre-text p.cadre-lead {
+  font-family:'Cormorant Garamond', serif; font-weight:300;
+  font-size:1.2rem; line-height:1.5; color:rgba(247,241,232,0.95); margin-bottom:1.2rem;
+}
+.coaching-desc-cadre-text p.cadre-accent {
+  font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:400;
+  font-size:1.35rem; line-height:1.4; color:#CEA39B; margin-top:0.4rem;
+}
+.cadre-rose {
+  margin-top:2.8rem; padding:2.4rem 2.2rem;
+  border-radius:20px;
+  background:linear-gradient(135deg, #CEA39B 0%, #B8928B 100%);
+  border:none;
+}
+.coaching-desc-cadre-text .cadre-rose p { color:#4C320D; }
+.coaching-desc-cadre-text .cadre-rose p.cadre-titre { color:#FDFAF6; }
+.coaching-desc-cadre-text .cadre-rose p.cadre-accent { color:#CEA39B; line-height:1.4; margin:1.2rem 0; }
+.coaching-desc-cadre-text .cadre-rose p.cadre-citation { color:#4C320D; font-size:1.35rem; border-left:1px solid rgba(76,50,13,0.35); }
+.coaching-desc-cadre-text .cadre-rose p.cadre-fin { color:#FDFAF6; border-top:1px solid rgba(253,250,246,0.45); }
+.coaching-desc-cadre-text p.cadre-voix {
+  font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:300;
+  font-size:1.15rem; line-height:1.55; color:rgba(247,241,232,0.92);
+  margin:1.2rem 0;
+}
+.coaching-desc-cadre-text p.cadre-citation {
+  font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:400;
+  font-size:1.6rem; line-height:1.3; color:#CEA39B;
+  margin:1.4rem 0 1.4rem; padding-left:1.2rem; border-left:1px solid rgba(206,163,155,0.5);
+}
+.coaching-desc-cadre-text p.cadre-fin {
+  font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:300;
+  font-size:1.15rem; line-height:1.55; color:var(--creme);
+  margin-top:1.4rem; padding-top:1.4rem; border-top:1px solid rgba(206,163,155,0.3);
+}
+@media(max-width:1100px) {
+  .cadre-rose { padding:1.8rem 1.4rem; }
+  .coaching-desc-cadre-text p.cadre-titre { font-size:1.5rem; }
+}
 .coaching-desc-cadre-cta {
   display:flex; flex-direction:column; gap:1.2rem; align-items:flex-start;
 }
@@ -211,10 +255,10 @@ footer{background:var(--creme-fonce);padding:2.5rem 8rem;display:flex;justify-co
     <h2 class="acc-title">Ostéopathie<br>somato-émotionnelle</h2>
     <p class="acc-subtitle">"Mon corps me parle. Je ne peux plus l'ignorer."</p>
     <p class="acc-desc">Et si tu avais perdu le réflexe de te fier à ton corps ? Et si tu avais oublié qu'il est un allié précieux qui te délivre des informations chaque jour ?</p>
-    <p class="acc-desc">Je suis convaincue que ce qui ne s'exprime pas laisse une trace, dans le corps comme dans le subconscient. Avec le temps, ces tensions non exprimées peuvent peser sur l'équilibre général. La somatisation devient alors le dernier recours de l'organisme pour exprimer ce qui est cristallisé.</p>
+    <p class="acc-desc">Je suis convaincue que tout ce qui ne s'exprime pas s'imprime dans le subconscient et dans les mémoires cellulaires du corps. Les émotions sont de l'énergie en mouvement. Réprimées depuis des années, elles créent des nœuds énergétiques qui entraînent des dysfonctionnements dans notre santé. La somatisation devient alors le dernier recours de l'organisme pour exprimer ce qui est cristallisé.</p>
     <p class="acc-desc">L'approche somato-émotionnelle donne au corps la possibilité de se libérer des contraintes et des mémoires inscrites dans les tissus. À l'aide de techniques manuelles fonctionnelles et énergétiques douces sur l'appareil locomoteur, j'explore les déséquilibres et blocages. En plaçant le corps dans les meilleures conditions possibles, celui-ci retrouve ses capacités naturelles d'équilibration et son potentiel d'auto-guérison.</p>
     <p class="acc-desc">Ma spécialité est de faire le pont entre le corps et l'esprit : collecter les informations et émotions engrammées dans les structures en déséquilibre, adapter la stratégie thérapeutique, et procéder à un soin sur-mesure. L'équilibre du bassin est au cœur de ma pratique, car il constitue l'assise véritable de l'ensemble de l'organisme.</p>
-    <p class="acc-desc">Le massage de réharmonisation et d'ancrage complète ce travail quand le corps a besoin d'une approche plus enveloppante — régulation du système nerveux, relâchement des tensions de fond, retour au ressenti.</p>
+    <p class="acc-desc">Le massage de réharmonisation et d'ancrage complète ce travail quand le corps a besoin d'une approche plus enveloppante : régulation du système nerveux, relâchement des tensions de fond, retour au ressenti.</p>
     <p class="acc-desc" style="font-style:italic;color:var(--rose);font-family:'Cormorant Garamond',serif;font-size:0.95rem;">Séances proposées à partir de 4 ans, avec accord parental.</p>
     <ul class="acc-list">
       <li>Douleurs physiques à composante émotionnelle</li>
@@ -301,7 +345,7 @@ footer{background:var(--creme-fonce);padding:2.5rem 8rem;display:flex;justify-co
         <li>Hypnose ericksonienne et SAJECE</li>
         <li>Histoires métaphoriques et graines de changement</li>
         <li>Accès aux différentes parts de soi</li>
-        <li>Exploration des automatismes du subconscient</li>
+        <li>Reprogrammation des schémas subconscients</li>
       </ul>
     </div>
   </div>
@@ -343,9 +387,9 @@ footer{background:var(--creme-fonce);padding:2.5rem 8rem;display:flex;justify-co
       <div class="coaching-desc-col">
         <h3 class="coaching-desc-col-title">Ce que ça change concrètement</h3>
         <ul class="coaching-desc-list">
-          <li>Désamorcer la peur de l'effondrement — craquer, replonger, perdre pied</li>
+          <li>Désamorcer la peur de l'effondrement : craquer, replonger, perdre pied</li>
           <li>Sortir de la survie relationnelle</li>
-          <li>Faire équipe avec toi-même — sans culpabilité</li>
+          <li>Faire équipe avec toi-même, sans culpabilité</li>
           <li>Apprendre à recevoir sans te sentir aussitôt en dette</li>
           <li>Retrouver une sécurité intérieure stable même quand l'extérieur vacille</li>
           <li>Vivre selon ce qui t'anime, pas selon ce qu'on attend de toi</li>
@@ -368,10 +412,18 @@ footer{background:var(--creme-fonce);padding:2.5rem 8rem;display:flex;justify-co
 
     <div class="coaching-desc-cadre">
       <div class="coaching-desc-cadre-text">
-        <p class="coaching-desc-cadre-title">Séance ponctuelle ou cadre dans la durée ?</p>
-        <p>Les séances ponctuelles ouvrent. Elles soulagent. Elles créent un déplacement réel.</p>
-        <p>Mais sans cadre, l'énergie libérée retourne vers les anciens automatismes. Non par manque de volonté, c'est un fonctionnement physiologique. Tant que le corps reste en alerte, la tête comprend. Le système, lui, revient à ce qu'il connaît.</p>
-        <p>S'engager dans un cadre permet de ne plus dépendre des séances pour aller mieux. De construire une base intérieure stable. Que les changements tiennent.</p>
+        <p class="cadre-titre">Séance ponctuelle ou cadre dans la&nbsp;durée&nbsp;?</p>
+        <p class="cadre-lead">Les séances ponctuelles ouvrent et soulagent.</p>
+        <p>Mais sans cadre, le système revient à ce qu'il connaît. Non par manque de volonté : c'est physiologique.</p>
+        <p class="cadre-accent">Un cadre dans la durée, c'est ce qui fait que les changements tiennent.</p>
+
+        <div class="cadre-rose">
+          <p class="cadre-titre rose">Et si vous vous dites « j'ai déjà&nbsp;essayé… »</p>
+          <p>Thérapie, coaching, livres : vous avez déjà beaucoup compris. Et pourtant, les mêmes schémas reviennent.</p>
+          <p>Ce n'est pas un manque de volonté. Comprendre ne suffit pas à changer : ce qui se rejoue vit dans le corps et le système nerveux. C'est là que je travaille.</p>
+          <p class="cadre-citation">Et si l'envie de tout arrêter surgit en route, ce n'est pas un échec. C'est la matière même du chemin.</p>
+          <p class="cadre-fin">Le cadre est là pour ça. Il ne se dérobe pas.</p>
+        </div>
       </div>
       <div class="coaching-desc-cadre-cta">
         <p class="coaching-desc-cadre-question">Tu veux savoir si cet accompagnement est fait pour toi ?</p>

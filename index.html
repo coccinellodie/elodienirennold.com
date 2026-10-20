@@ -627,6 +627,64 @@ nav {
   background:rgba(206,163,155,0.35); border:1.5px solid rgba(206,163,155,0.5);
 }
 
+
+/* ─── DOUTES / OBJECTIONS ─── */
+.doutes { padding:10rem 8rem; background:var(--blanc); position:relative; overflow:hidden; }
+.doutes::before {
+  content:''; position:absolute; top:-100px; right:-100px;
+  width:420px; height:420px; border-radius:50%;
+  background:radial-gradient(circle, var(--rose-vapeur) 0%, transparent 65%);
+  pointer-events:none;
+}
+.doutes-header { text-align:center; margin-bottom:5rem; position:relative; z-index:1; }
+.doutes-header .section-label { justify-content:center; }
+.doutes-header .section-label::before { display:none; }
+.doutes-title {
+  font-family:'Cormorant Garamond', serif; font-weight:400;
+  font-size:clamp(2.2rem, 3.5vw, 3.2rem); line-height:1.2;
+  color:var(--brun-fonce); margin-bottom:1.4rem; letter-spacing:-0.01em;
+}
+.doutes-sub {
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.86rem; line-height:2; color:var(--brun);
+  max-width:520px; margin:0 auto; letter-spacing:0.02em;
+}
+.doutes-grid {
+  display:grid; grid-template-columns:repeat(2,1fr); gap:1.8rem;
+  max-width:1100px; margin:0 auto; position:relative; z-index:1;
+}
+.doute-card {
+  background:var(--creme); border-radius:24px; padding:3rem 2.8rem;
+  border:1px solid rgba(182,154,148,0.12);
+}
+.doute-voix {
+  font-family:'Cormorant Garamond', serif; font-style:italic; font-weight:400;
+  font-size:1.35rem; line-height:1.35; color:#B69A94; margin-bottom:1.3rem;
+}
+.doute-reponse {
+  font-family:'Jost', sans-serif; font-weight:300;
+  font-size:0.84rem; line-height:1.95; color:var(--brun); letter-spacing:0.01em;
+}
+.doute-card.cle {
+  grid-column:1 / -1; background:var(--vert-sapin);
+  display:grid; grid-template-columns:1fr 1.6fr; gap:3.5rem; align-items:start;
+  padding:3.8rem 4rem;
+}
+.doute-card.cle .doute-voix { color:#CEA39B; font-size:1.7rem; margin-bottom:0; }
+.doute-card.cle .doute-reponse { color:rgba(247,241,232,0.78); margin-bottom:1rem; }
+.doute-card.cle .doute-lien {
+  display:inline-block; margin-top:0.8rem;
+  font-family:'Jost', sans-serif; font-weight:300; font-size:0.68rem;
+  letter-spacing:0.18em; text-transform:uppercase; text-decoration:none;
+  color:var(--creme); border-bottom:1px solid #CEA39B; padding-bottom:0.25rem;
+}
+@media(max-width:1100px) {
+  .doutes { padding:6rem 2rem; }
+  .doutes-grid { grid-template-columns:1fr; gap:1.4rem; }
+  .doute-card { padding:2.4rem 1.8rem; }
+  .doute-card.cle { grid-template-columns:1fr; gap:1.4rem; padding:2.8rem 1.8rem; }
+}
+
 /* ─── APPROCHE ─── */
 .approach {
   padding:11rem 8rem;
@@ -1407,7 +1465,7 @@ footer::before {
       <li>Donner, tu sais faire. C'est recevoir qui te coûte.</li>
       <li>Un regard qui se détourne, un silence inattendu… et tout vacille.</li>
       <li>Tu portes beaucoup. Souvent seul. En te demandant jusqu'où tu tiendras.</li>
-      <li>Tu as compris beaucoup des choses sur toi. Les mêmes schémas reviennent quand même.</li>
+      <li>Tu as compris beaucoup de choses sur toi. Les mêmes schémas reviennent quand même.</li>
       <li>Ton corps a commencé à parler. Il cherche juste à être entendu pour te guider.</li>
     </ul>
   </div>
@@ -1482,7 +1540,7 @@ footer::before {
     <a href="https://coccinellodie.github.io/elodienirennold.com/accompagnements.html#schemas" class="porte-card reveal reveal-delay-1">
       <span class="porte-lettre">B</span>
       <p class="porte-phrase">"J'ai tout compris. Rien ne change vraiment."</p>
-      <p class="porte-desc">Les schémas reviennent malgré le travail fait. La tête comprend. Le corps, lui, continue de réagir comme avant.</p>
+      <p class="porte-desc">Les schémas reviennent malgré le travail fait. La tête comprend. Le corps, lui, continue de réagir comme avant. Ce n'est pas un manque de volonté.</p>
       <span class="porte-tag">Coaching intégratif</span>
     </a>
 
@@ -1580,6 +1638,38 @@ footer::before {
       <p class="approach-card-text" style="font-size:0.78rem;margin-top:0.8rem;opacity:0.8;"><strong style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;">Objectifs de vie :</strong> paix intérieure, liberté émotionnelle, couple épanoui, reconversion, confiance, sens...<br><strong style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;">Objectifs de survie :</strong> éviter le rejet, chercher la reconnaissance, cacher sa vulnérabilité, contrôle et hypervigilance...</p>
       <p class="approach-card-signature">Continuer séance par séance soulage. Un cadre dans la durée transforme.</p>
     </a>
+
+  </div>
+</section>
+
+<!-- DOUTES / OBJECTIONS -->
+<section class="doutes" id="doutes">
+  <div class="doutes-header">
+    <p class="section-label reveal">Ce que tu te dis peut-être</p>
+    <h2 class="doutes-title reveal reveal-delay-1">Tu n'as pas à te battre davantage<br>contre toi-même.</h2>
+    <p class="doutes-sub reveal reveal-delay-2">Ces doutes sont légitimes. Ils retiennent souvent au moment de faire le pas. Voici ce que j'y réponds.</p>
+  </div>
+  <div class="doutes-grid">
+
+    <div class="doute-card reveal">
+      <p class="doute-voix">« J'ai déjà tout essayé. Je suis peut-être juste comme ça. »</p>
+      <p class="doute-reponse">Thérapie, coaching, livres, prises de conscience : tu as déjà beaucoup fait. Si rien ne tient, ce n'est pas que tu es incapable de changer. C'est que le travail s'est surtout fait dans la tête, alors que ce qui se rejoue s'est installé dans ton système nerveux bien avant les mots. C'est précisément à cet endroit que je travaille.</p>
+    </div>
+
+    <div class="doute-card reveal reveal-delay-1">
+      <p class="doute-voix">« Il me manque juste la discipline. Ou la bonne technique. »</p>
+      <p class="doute-reponse">Si c'était une question de volonté, tu aurais réussi depuis longtemps. Tes réactions ne sont pas des défauts à corriger : ce sont des protections qui t'ont permis de tenir. On ne les force pas. On leur montre qu'elles peuvent enfin se relâcher. Tu n'as pas à devenir quelqu'un d'autre pour vivre autrement.</p>
+    </div>
+
+    <div class="doute-card reveal">
+      <p class="doute-voix">« Je devrais pouvoir m'en sortir seul. »</p>
+      <p class="doute-reponse">Tu le peux sûrement. Tu l'as fait toute ta vie. Mais tenir ne veut pas dire aller bien. Être accompagné n'est ni une dette, ni une faiblesse, ni une dépendance. C'est un appui, le temps que ta propre sécurité intérieure prenne le relais.</p>
+    </div>
+
+    <div class="doute-card reveal reveal-delay-1">
+      <p class="doute-voix">« Ce n'est pas encore assez grave. Il y a pire que moi, je ne devrais pas me plaindre. »</p>
+      <p class="doute-reponse">Ce que tu vis n'a pas besoin d'être comparé pour être légitime. Tu n'as pas besoin d'attendre de craquer pour mériter du soutien. Le corps chuchote longtemps avant de crier. Plus tôt tu l'écoutes, moins il y a à réparer.</p>
+    </div>
 
   </div>
 </section>
